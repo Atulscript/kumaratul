@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kumar Atul | Expert Performance Marketing Specialist</title>
+    <meta name="description"
+        content="I help high-growth businesses turn paid traffic into qualified leads and scalable CRM-driven systems.">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+        :root {
+            --bg: #0a0a0b;
+            --surface: #141416;
+            --accent: #6366f1;
+            --accent-glow: rgba(99, 102, 241, 0.15);
+            --text: #ffffff;
+            --text-muted: #94a3b8;
+            --border: rgba(255, 255, 255, 0.08);
+            --glass: rgba(255, 255, 255, 0.03);
+            --font: 'Outfit', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            background-color: var(--bg);
+        }
+
+        body {
+            font-family: var(--font);
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 1.5rem 0;
+            background: rgba(10, 10, 11, 0.85);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--text);
+        }
+
+        .logo img {
+            width: 40px !important;
+            height: 40px !important;
+            border-radius: 50%;
+            border: 2px solid var(--accent);
+            object-fit: cover;
+        }
+
+        .nav {
+            display: flex;
+            gap: 2.5rem;
+        }
+
+        .nav a {
+            color: var(--text-muted);
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .nav a:hover {
+            color: var(--accent);
+        }
+
+        .hero {
+            padding: 14rem 0 8rem;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.8rem, 6vw, 4.5rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.04em;
+            background: linear-gradient(135deg, #fff 0%, #a5b4fc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p.subtile {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            margin-bottom: 3.5rem;
+            max-width: 550px;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+            box-shadow: 0 10px 30px var(--accent-glow);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px var(--accent-glow);
+        }
+
+        .btn-outline {
+            border: 1px solid var(--border);
+            color: var(--text);
+            background: var(--glass);
+        }
+
+        .portrait-container {
+            width: 100%;
+            max-width: 450px;
+            aspect-ratio: 1;
+            background: var(--surface);
+            border-radius: 2.5rem;
+            border: 1px solid var(--border);
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.4);
+            margin: 0 auto;
+        }
+
+        .portrait-container img {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover;
+            display: block;
+            border-radius: 2.5rem;
+        }
+
+        section {
+            padding: 8rem 0;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 4rem;
+            letter-spacing: -0.03em;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .service-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            padding: 2.5rem;
+            border-radius: 1.5rem;
+            transition: all 0.4s;
+        }
+
+        .service-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-5px);
+            background: linear-gradient(180deg, var(--surface) 0%, rgba(99, 102, 241, 0.03) 100%);
+        }
+
+        .service-card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .contrast-box {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 2.5rem;
+            padding: 4rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6rem;
+        }
+
+        .contrast-list {
+            list-style: none;
+        }
+
+        .contrast-list li {
+            padding: 1.25rem 0;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-muted);
+        }
+
+        .contrast-list h4 {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 2rem;
+        }
+
+        .me-col li {
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .me-col li::before {
+            content: '→';
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        footer {
+            padding: 6rem 0 4rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .footer-inner {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+
+        .footer-copy {
+            color: var(--text-muted);
+            margin-top: 1.5rem;
+            max-width: 300px;
+        }
+
+        @media (max-width: 968px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav {
+                display: none;
+            }
+
+            .portrait-container {
+                max-width: 350px;
+                margin-bottom: 2rem;
+            }
+
+            .contrast-box {
+                grid-template-columns: 1fr;
+                padding: 2.5rem;
+                gap: 4rem;
+            }
+
+            .footer-inner {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container header-inner">
+            <a href="/kumaratul/" class="logo">
+                <img src="/kumaratul/assets/images/profile.jpg" alt="Kumar Atul">
+                <span>Atul.</span>
+            </a>
+            <nav class="nav">
+                <a href="#services">Services</a>
+                <a href="#process">Process</a>
+                <a href="#insights">Insights</a>
+                <a href="#contact" class="btn btn-primary" style="padding: 0.6rem 1.2rem; font-size: 0.9rem;">Book a
+                    Call</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <h1>Performance Marketing Specialist</h1>
+                    <p class="subtile">I help high-growth businesses turn paid traffic into qualified leads and
+                        scalable, data-driven systems.</p>
+                    <div class="hero-btns">
+                        <a href="#contact" class="btn btn-primary">Book Strategy Call</a>
+                        <a href="#services" class="btn btn-outline" style="margin-left: 1rem;">Explore Expertise</a>
+                    </div>
+                </div>
+                <div class="hero-portrait">
+                    <div class="portrait-container">
+                        <img src="/kumaratul/assets/images/profile.jpg" alt="Kumar Atul">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services">
+            <div class="container">
+                <h2>Specialized Services</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <h3>Google Ads</h3>
+                        <p>High-intent lead generation focused on search and conversion.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Meta Ads</h3>
+                        <p>Full-funnel demand generation and creative strategy.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Marketing Automation</h3>
+                        <p>Scale your conversion rate without increasing head count.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>CRM Strategy</h3>
+                        <p>End-to-end setups for Salesforce, HubSpot, and Pipedrive.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contrast-section">
+            <div class="container">
+                <h2>The Specialist Advantage</h2>
+                <div class="contrast-box">
+                    <div>
+                        <h4>Typical Agency</h4>
+                        <ul class="contrast-list">
+                            <li>Junior execution</li>
+                            <li>Slow iterations</li>
+                            <li>Spend-focused</li>
+                            <li>Generic playbooks</li>
+                        </ul>
+                    </div>
+                    <div class="me-col">
+                        <h4>Working With Me</h4>
+                        <ul class="contrast-list">
+                            <li>Direct specialist execution</li>
+                            <li>Faster decisions</li>
+                            <li>Quality-focused</li>
+                            <li>Business-specific strategy</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" style="text-align: center;">
+            <div class="container">
+                <div
+                    style="background: var(--surface); padding: 6rem; border-radius: 3rem; border: 1px solid var(--border);">
+                    <h2 style="margin-bottom: 1rem;">Ready for Scale?</h2>
+                    <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto 3rem;">Let's identify the
+                        bottlenecks in your acquisition system on a short intro call.</p>
+                    <a href="#" class="btn btn-primary">Book Strategy Call</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-col">
+                    <a href="/kumaratul/" class="logo">
+                        <img src="/kumaratul/assets/images/profile.jpg" alt="Kumar Atul">
+                        <span>Atul.</span>
+                    </a>
+                    <p class="footer-copy">Direct execution. Strategy first. Scale with high-quality leads.</p>
+                </div>
+                <div class="footer-col" style="padding-left: 2rem;">
+                    <p style="font-weight: 700; margin-bottom: 1.5rem;">Links</p>
+                    <a href="#services"
+                        style="color: var(--text-muted); display: block; margin-bottom: 0.5rem;">Services</a>
+                    <a href="#contact" style="color: var(--text-muted);">Contact</a>
+                </div>
+                <div class="footer-col">
+                    <p style="font-weight: 700; margin-bottom: 1.5rem;">Contact</p>
+                    <p style="color: var(--text-muted);">hello@kumaratul.com</p>
+                </div>
+            </div>
+            <div style="text-align: center; color: var(--text-muted); font-size: 0.8rem;">
+                &copy; 2026 Kumar Atul. Professional Consultant.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('section').forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(30px)';
+                section.style.transition = 'all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1)';
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+
+</html>
