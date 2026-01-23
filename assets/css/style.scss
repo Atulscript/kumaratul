@@ -1,7 +1,4 @@
----
----
-
-// Variables
+--- --- // Variables
 $bg-color: #fcfcfc;
 $text-primary: #121212;
 $text-secondary: #525252;
@@ -47,18 +44,37 @@ ul {
 }
 
 // Typography
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-weight: 700;
   line-height: 1.2;
 }
 
-h1 { font-size: 3.5rem; margin-bottom: 1.5rem; }
-h2 { font-size: 2.5rem; margin-bottom: 3rem; }
-h3 { font-size: 1.5rem; margin-bottom: 1rem; }
+h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
 
 @media (max-width: 768px) {
-  h1 { font-size: 2.5rem; }
-  h2 { font-size: 2rem; }
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
 }
 
 // Header
@@ -71,7 +87,7 @@ h3 { font-size: 1.5rem; margin-bottom: 1rem; }
   backdrop-filter: blur(10px);
   z-index: 100;
 
-  .container {
+  .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -79,9 +95,23 @@ h3 { font-size: 1.5rem; margin-bottom: 1rem; }
 }
 
 .logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
   font-size: 1.5rem;
   font-weight: 700;
-  span { color: $accent-color; }
+
+  span {
+    color: $accent-color;
+  }
+
+  .logo-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid $accent-color;
+  }
 }
 
 .nav {
@@ -107,16 +137,26 @@ h3 { font-size: 1.5rem; margin-bottom: 1rem; }
 .btn-primary {
   background-color: $accent-color;
   color: white;
-  &:hover { background-color: darken($accent-color, 5%); }
+
+  &:hover {
+    background-color: darken($accent-color, 5%);
+  }
 }
 
 .btn-outline {
   border: 1px solid $border-color;
   background: transparent;
-  &:hover { border-color: $accent-color; color: $accent-color; }
+
+  &:hover {
+    border-color: $accent-color;
+    color: $accent-color;
+  }
 }
 
-.btn-sm { padding: 0.5rem 1.25rem; font-size: 0.9rem; }
+.btn-sm {
+  padding: 0.5rem 1.25rem;
+  font-size: 0.9rem;
+}
 
 // Sections
 section {
@@ -125,9 +165,15 @@ section {
 
 // Hero
 .hero {
-  text-align: left;
   padding-top: 8rem;
   padding-bottom: 8rem;
+
+  .hero-container {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    gap: 4rem;
+  }
 
   .subheading {
     color: $text-secondary;
@@ -144,7 +190,10 @@ section {
     .secondary-link {
       font-weight: 500;
       color: $text-secondary;
-      &:hover { color: $accent-color; }
+
+      &:hover {
+        color: $accent-color;
+      }
     }
   }
 
@@ -160,12 +209,21 @@ section {
       display: flex;
       align-items: center;
       gap: 0.5rem;
+
       &::before {
         content: "•";
         color: $accent-color;
         font-weight: bold;
       }
     }
+  }
+
+  .profile-hero {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 20px;
+    box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.1);
+    border: 8px solid white;
   }
 }
 
@@ -192,7 +250,7 @@ section {
   &:hover {
     transform: translateY(-5px);
     border-color: $accent-color;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   }
 
   p {
@@ -230,11 +288,17 @@ section {
     align-items: center;
     gap: 1rem;
 
-    &:last-child { border-bottom: none; }
+    &:last-child {
+      border-bottom: none;
+    }
   }
 
   .me-col {
-    ul li::before { content: "→"; color: $accent-color; font-weight: bold; }
+    ul li::before {
+      content: "→";
+      color: $accent-color;
+      font-weight: bold;
+    }
   }
 }
 
@@ -262,6 +326,7 @@ section {
   .step {
     flex: 1;
     text-align: center;
+
     span {
       display: block;
       width: 40px;
@@ -289,8 +354,14 @@ section {
     margin-bottom: 4rem;
   }
 
-  h4 { margin-bottom: 1.5rem; }
-  ul li { margin-bottom: 0.75rem; color: $text-secondary; }
+  h4 {
+    margin-bottom: 1.5rem;
+  }
+
+  ul li {
+    margin-bottom: 0.75rem;
+    color: $text-secondary;
+  }
 
   .footer-bottom {
     padding-top: 2rem;
@@ -302,9 +373,40 @@ section {
 }
 
 @media (max-width: 768px) {
-  .header .nav { display: none; }
-  .hero .trust-indicators { flex-direction: column; gap: 1rem; }
-  .diff-grid { grid-template-columns: 1fr !important; gap: 2rem !important; }
-  .process-steps { flex-direction: column; }
-  .footer-grid { grid-template-columns: 1fr; }
+  .header .nav {
+    display: none;
+  }
+
+  .hero .hero-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero .trust-indicators {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .hero .cta-group {
+    justify-content: center;
+  }
+
+  .hero .profile-hero {
+    margin: 0 auto;
+    order: -1;
+  }
+
+  .diff-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  .process-steps {
+    flex-direction: column;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
 }
