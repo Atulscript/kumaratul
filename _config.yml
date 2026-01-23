@@ -11,6 +11,7 @@ url: "https://Atulscript.github.io"
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-sass-converter
 
 # Sass settings
 sass:
