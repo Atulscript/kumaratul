@@ -6,12 +6,13 @@ description: >-
 baseurl: "/kumaratul"
 url: "https://Atulscript.github.io"
 
-# Build settings
-# remote_theme: jekyll/minima
+# No theme - Use custom layouts
+theme: none
+remote_theme: none
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-  - jekyll-sass-converter
 
 # Sass settings
 sass:
