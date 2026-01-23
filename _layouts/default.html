@@ -6,23 +6,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {% seo %}
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
-  <link rel="icon" type="image/jpeg" href="{{ site.baseurl }}/assets/images/profile.jpg">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
 </head>
 
 <body>
   <header>
     <div class="container header-inner">
       <a href="{{ site.baseurl }}/" class="logo">
-        <img src="{{ site.baseurl }}/assets/images/profile.jpg" alt="Kumar Atul">
+        <img src="{{ site.baseurl }}/assets/images/profile.jpg" alt="Kumar Atul"
+          style="width:40px;height:40px;border-radius:50%;object-fit:cover;">
         <span>Atul.</span>
       </a>
       <nav class="nav">
         <a href="{{ site.baseurl }}/#services">Services</a>
         <a href="{{ site.baseurl }}/#process">Process</a>
-        <a href="{{ site.baseurl }}/#insights">Insights</a>
-        <a href="{{ site.baseurl }}/#contact" class="btn btn-primary btn-sm" style="padding: 0.6rem 1.25rem;">Book a
-          Call</a>
+        <a href="{{ site.baseurl }}/#contact" class="btn btn-primary btn-sm"
+          style="padding: 0.7rem 1.4rem; border-radius:10px;">Book a Call</a>
       </nav>
     </div>
   </header>
@@ -32,39 +31,33 @@
   </main>
 
   <footer>
-    <div class="container">
-      <div class="footer-inner">
-        <div class="footer-col" style="max-width: 400px;">
-          <a href="{{ site.baseurl }}/" class="logo">
-            <img src="{{ site.baseurl }}/assets/images/profile.jpg" alt="Kumar Atul">
+    <div class="container"
+      style="padding-top: 6rem; padding-bottom: 4rem; border-top: 1px solid rgba(255,255,255,0.08);">
+      <div style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 4rem;">
+        <div>
+          <a href="{{ site.baseurl }}/" class="logo" style="margin-bottom: 1.5rem;">
+            <img src="{{ site.baseurl }}/assets/images/profile.jpg" alt="Kumar Atul"
+              style="width:48px;height:48px;border-radius:50%;object-fit:cover;">
             <span>Atul.</span>
           </a>
-          <p class="footer-copy">Direct specialist execution. Strategy before spend. Focusing on lead quality, not
-            vanity metrics.</p>
+          <p style="color: #94a3b8; max-width: 320px;">Turning paid traffic into high-quality lead flow and scalable
+            systems.</p>
         </div>
-        <div class="footer-col">
-          <p style="font-weight: 600; margin-bottom: 1.5rem;">Services</p>
-          <ul style="list-style: none;">
-            <li><a href="{{ site.baseurl }}/#services"
-                style="color: var(--text-muted); text-decoration: none; display: block; margin-bottom: 0.75rem;">Ad
-                Management</a></li>
-            <li><a href="{{ site.baseurl }}/#services"
-                style="color: var(--text-muted); text-decoration: none; display: block; margin-bottom: 0.75rem;">Automation</a>
-            </li>
-            <li><a href="{{ site.baseurl }}/#services"
-                style="color: var(--text-muted); text-decoration: none; display: block; margin-bottom: 0.75rem;">CRM
-                Strategy</a></li>
-          </ul>
+        <div>
+          <p style="font-weight: 700; margin-bottom: 1.5rem;">Company</p>
+          <a href="{{ site.baseurl }}/#services"
+            style="color:#94a3b8; text-decoration:none; display:block; margin-bottom:0.75rem;">Services</a>
+          <a href="{{ site.baseurl }}/#process" style="color:#94a3b8; text-decoration:none; display:block;">Our
+            Process</a>
         </div>
-        <div class="footer-col">
-          <p style="font-weight: 600; margin-bottom: 1.5rem;">Contact</p>
-          <p style="color: var(--text-muted);">hello@kumaratul.com</p>
-          <a href="{{ site.baseurl }}/#contact" class="btn btn-outline btn-sm" style="margin-top: 1.5rem;">Book Strategy
-            Call</a>
+        <div>
+          <p style="font-weight: 700; margin-bottom: 1.5rem;">Let's Talk</p>
+          <p style="color:#94a3b8;">hello@kumaratul.com</p>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; {{ site.time | date: '%Y' }} Kumar Atul. Built for high-performance marketing.</p>
+      <div
+        style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.08); text-align: center; color:#94a3b8; font-size: 0.9rem;">
+        &copy; {{ site.time | date: '%Y' }} Kumar Atul.
       </div>
     </div>
   </footer>
