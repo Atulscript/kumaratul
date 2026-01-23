@@ -1,22 +1,25 @@
-title: Kumar Atul | Performance Marketing Consultant
+title: Kumar Atul | Performance Marketing Specialist
 email: hello@kumaratul.com
 description: >-
-  I Help Businesses Turn Traffic Into Qualified Leads & Scalable Systems. 
-  Expert Google Ads, Meta Ads, and Marketing Automation.
+  Turn Traffic Into Qualified Leads & Scalable Systems. 
+  Google Ads, Meta Ads, and Marketing Automation Consultant.
 baseurl: "/kumaratul"
 url: "https://Atulscript.github.io"
 
-# No theme - Use custom layouts
+# Completely Disable Default Themes
 theme: none
 remote_theme: none
 
+# Build settings
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
-# Sass settings
-sass:
-  style: compressed
+# Force Jekyll to look at these folders
+include:
+  - _includes
+  - _layouts
+  - assets
 
 # Exclusion
 exclude:
