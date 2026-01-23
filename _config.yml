@@ -3,11 +3,11 @@ email: hello@kumaratul.com
 description: >-
   I Help Businesses Turn Traffic Into Qualified Leads & Scalable Systems. 
   Expert Google Ads, Meta Ads, and Marketing Automation.
-baseurl: ""
-url: "https://kumaratul.com"
+baseurl: "/kumaratul"
+url: "https://Atulscript.github.io"
 
 # Build settings
-remote_theme: jekyll/minima
+# remote_theme: jekyll/minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
