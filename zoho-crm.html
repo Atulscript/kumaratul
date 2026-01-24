@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+        rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+            rel="stylesheet" />
+    </noscript>
+
+    <title>Zoho CRM Optimization | Atul Kumar</title>
+    <meta name="description"
+        content="Streamline your sales process with expert Zoho CRM implementation and automation. Bridge the gap between marketing and sales.">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#0077B5", // LinkedIn Blue
+                        secondary: "#333333", // Dark Charcoal
+                        charcoal: "#333333",
+                        "linkedin-blue": "#0077B5",
+                        "linkedin-gray": "#F3F2EF", // LinkedIn background gray
+                        "linkedin-border": "#EBEBEB",
+                    },
+                    fontFamily: {
+                        display: ["Inter", "sans-serif"],
+                        body: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                    },
+                },
+            },
+        };
+    </script>
+    <style type="text/tailwindcss">
+        .glass-nav {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .hero-pattern {
+            background-image: radial-gradient(circle at 2px 2px, rgba(0, 119, 181, 0.05) 1px, transparent 0);
+            background-size: 30px 30px;
+        }
+        .linkedin-card-shadow {
+            box-shadow: 0 0 0 1px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.08);
+        }
+    </style>
+</head>
+
+<body class="bg-white text-[#333333] font-body transition-colors duration-300">
+    <header class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-linkedin-border bg-white/95">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <img alt="Atul Kumar Portrait" class="w-10 h-10 rounded-full object-cover border border-linkedin-border"
+                    src="/kumaratul/assets/images/profile.jpg" width="40" height="40" decoding="async" />
+                <span class="font-display font-bold text-lg tracking-tight text-secondary">Atul Kumar</span>
+            </div>
+            <div class="hidden md:flex items-center space-x-8">
+                <a class="text-sm font-semibold hover:text-primary transition-colors text-slate-500"
+                    href="index.html">Home</a>
+                <a class="text-sm font-semibold hover:text-primary transition-colors text-slate-500"
+                    href="index.html#why-me">About</a>
+
+                <!-- Ads Dropdown -->
+                <div class="relative group py-4">
+                    <button
+                        class="text-sm font-semibold hover:text-primary transition-colors text-slate-500 flex items-center gap-1">
+                        Ads
+                        <span class="material-symbols-outlined text-sm">expand_more</span>
+                    </button>
+                    <div
+                        class="absolute left-0 top-full w-48 bg-white border border-linkedin-border rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                        <div class="py-2">
+                            <a href="google-ads.html"
+                                class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-primary transition-colors">Google
+                                Ads</a>
+                            <a href="meta-ads.html"
+                                class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-primary transition-colors">Meta
+                                Ads</a>
+                        </div>
+                    </div>
+                </div>
+
+                <a class="text-sm font-semibold text-primary font-bold transition-colors" href="zoho-crm.html">Zoho
+                    CRM</a>
+                <a class="text-sm font-semibold hover:text-primary transition-colors text-slate-500"
+                    href="mailto:hello@kumaratul.com">Contact</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <div class="flex gap-3">
+                    <a class="hidden sm:block border border-secondary text-secondary hover:bg-slate-50 px-4 py-1.5 rounded-full font-semibold text-sm transition-all"
+                        href="mailto:hello@kumaratul.com">
+                        Contact Us
+                    </a>
+                    <a class="bg-primary hover:bg-[#006097] text-white px-4 py-1.5 rounded-full font-semibold text-sm transition-all"
+                        href="#">
+                        Schedule a Call
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="pt-16">
+        <section class="relative bg-white py-20 lg:py-32 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <div
+                            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-linkedin-blue text-[10px] font-bold uppercase tracking-widest mb-8">
+                            <span class="material-symbols-outlined text-[14px]">hub</span>
+                            Authorized CRM Optimization
+                        </div>
+                        <h1 class="text-5xl lg:text-6xl font-extrabold text-[#333] leading-tight mb-8">
+                            Zoho CRM Solutions for <span class="text-[#0077B5]">Lead Mastery.</span>
+                        </h1>
+                        <p class="text-xl text-gray-500 mb-10 leading-relaxed">
+                            Stop losing leads in the gap between marketing and sales. I build intelligent CRM
+                            architectures that automate follow-ups and provide deep attribution insights.
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <button
+                                class="bg-[#0077B5] text-white px-9 py-4 rounded-xl font-bold shadow-lg shadow-blue-500/20 hover:bg-[#006699] transition-all">
+                                Request a CRM Audit
+                            </button>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div class="bg-gray-50 rounded-3xl p-8 border border-gray-100 shadow-inner">
+                            <div class="space-y-4">
+                                <div
+                                    class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex items-center justify-between">
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center text-primary">
+                                            <span class="material-symbols-outlined">person_add</span>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm font-bold">New Lead Created</p>
+                                            <p class="text-[10px] text-gray-400">Automated via Google Ads</p>
+                                        </div>
+                                    </div>
+                                    <span class="text-[10px] font-bold text-green-500">Active</span>
+                                </div>
+                                <div
+                                    class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex items-center justify-between">
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center text-primary">
+                                            <span class="material-symbols-outlined">mail</span>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm font-bold">Follow-up Sequence</p>
+                                            <p class="text-[10px] text-gray-400">Day 1: Introduction</p>
+                                        </div>
+                                    </div>
+                                    <span class="text-[10px] font-bold text-blue-500">Queued</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-white text-secondary py-16 border-t border-linkedin-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-slate-400 text-xs">
+            © 2024 Atul Kumar Performance Marketing.
+        </div>
+    </footer>
+</body>
+
+</html>
