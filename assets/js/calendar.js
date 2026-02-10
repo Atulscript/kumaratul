@@ -17,30 +17,41 @@ document.addEventListener("DOMContentLoaded", () => {
     const modalHTML = `
     <div id="calendar-modal" class="fixed inset-0 z-[100] hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
         <!-- Backdrop -->
-        <div class="fixed inset-0 bg-black/60 backdrop-blur-sm transition-opacity opacity-0" id="modal-backdrop"></div>
+        <div class="fixed inset-0 bg-black/70 backdrop-blur-md transition-opacity opacity-0" id="modal-backdrop"></div>
 
-        <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
+        <div class="fixed inset-0 z-[101] w-screen overflow-y-auto">
             <div class="flex min-h-full items-center justify-center p-4 text-center sm:p-0">
                 <!-- Modal Panel -->
                 <div class="relative transform overflow-hidden rounded-gh-lg bg-white dark:bg-gh-canvas-dark text-left shadow-gh-lg transition-all sm:my-8 sm:w-full sm:max-w-4xl border border-gh-border dark:border-gh-border-dark opacity-0 scale-95" id="modal-panel">
                     
                     <!-- Header -->
                     <div class="flex items-center justify-between px-4 py-3 border-b border-gh-border dark:border-gh-border-dark bg-gh-canvas dark:bg-gh-canvas-dark">
-                        <h3 class="text-gh-fg dark:text-gh-fg-dark font-bold flex items-center gap-2 font-display">
-                            <span class="material-symbols-outlined text-gh-accent">calendar_month</span>
-                            Schedule a Call
-                        </h3>
-                        <div class="flex items-center gap-2">
-                            <button type="button" class="text-gh-fg-muted dark:text-gh-fg-muted-dark hover:text-gh-accent transition-colors outline-none" onclick="closeCalendar()">
-                                <span class="material-symbols-outlined">close</span>
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-gh-accent font-bold">calendar_month</span>
+                            <div>
+                                <h3 class="text-gh-fg dark:text-gh-fg-dark font-bold text-sm lg:text-base leading-none mb-1">
+                                    Strategy Consultation
+                                </h3>
+                                <p class="text-[10px] text-gh-fg-muted dark:text-gh-fg-muted-dark font-medium">
+                                    Select a convenient time for our call
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <a href="${CALENDAR_CONFIG.calendarUrl}" target="_blank" class="hidden sm:flex items-center gap-1 text-gh-accent hover:underline text-xs font-semibold">
+                                Open in new tab <span class="material-symbols-outlined text-xs">open_in_new</span>
+                            </a>
+                            <button type="button" class="p-1 rounded-gh hover:bg-gh-canvas-subtle dark:hover:bg-gh-canvas-subtle-dark text-gh-fg-muted dark:text-gh-fg-muted-dark hover:text-gh-danger transition-colors outline-none" onclick="closeCalendar()">
+                                <span class="material-symbols-outlined font-bold">close</span>
                             </button>
                         </div>
                     </div>
 
                     <!-- Iframe Container -->
-                    <div class="w-full h-[80vh] bg-white relative">
-                        <div id="calendar-loader" class="absolute inset-0 flex items-center justify-center bg-white dark:bg-gh-canvas-dark z-10">
-                            <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-gh-accent"></div>
+                    <div class="w-full h-[75vh] sm:h-[80vh] bg-white relative">
+                        <div id="calendar-loader" class="absolute inset-0 flex flex-col items-center justify-center bg-white dark:bg-gh-canvas-dark z-10">
+                            <div class="animate-spin rounded-full h-10 w-10 border-b-2 border-gh-accent mb-4"></div>
+                            <p class="text-xs text-gh-fg-muted dark:text-gh-fg-muted-dark font-medium animate-pulse">Connecting to Google Calendar...</p>
                         </div>
                         <iframe id="calendar-frame" src="" class="w-full h-full border-0" 
                                 sandbox="allow-scripts allow-same-origin allow-popups allow-forms allow-top-navigation"

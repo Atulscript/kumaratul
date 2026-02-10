@@ -226,16 +226,16 @@
             <!-- CTA -->
             <div class="flex items-center gap-2">
                 <button id="theme-toggle"
-                    class="p-2 rounded-gh hover:bg-gh-canvas-subtle dark:hover:bg-gh-canvas-subtle-dark text-gh-fg-muted dark:text-gh-fg-muted-dark transition-colors flex items-center justify-center"
+                    class="p-2 rounded-gh hover:bg-gh-canvas-subtle dark:hover:bg-gh-canvas-subtle-dark text-gh-fg-muted dark:text-gh-fg-muted-dark transition-colors flex items-center justify-center font-bold"
                     title="Toggle Theme">
                     <span class="material-symbols-outlined dark:hidden">dark_mode</span>
                     <span class="material-symbols-outlined hidden dark:block">light_mode</span>
                 </button>
-                <a class="hidden sm:flex px-3 py-2 rounded-gh hover:bg-gh-canvas-subtle dark:hover:bg-gh-canvas-subtle-dark text-gh-fg dark:text-gh-fg-dark text-sm font-medium transition-all"
-                    href="mailto:hello@kumaratul.com">
+                <a class="hidden sm:flex px-3 py-2 rounded-gh hover:bg-gh-canvas-subtle dark:hover:bg-gh-canvas-subtle-dark text-gh-fg dark:text-gh-fg-dark text-sm font-semibold transition-all border border-transparent hover:border-gh-border dark:hover:border-gh-border-dark"
+                    href="contact.html">
                     Contact
                 </a>
-                <a class="open-calendar bg-gh-success-emphasis hover:bg-gh-success text-white px-4 py-1.5 rounded-gh font-medium text-sm transition-all shadow-gh-sm hover:shadow-gh-md"
+                <a class="open-calendar bg-gh-success-emphasis hover:bg-gh-success text-white px-4 py-1.5 rounded-gh font-bold text-sm transition-all shadow-gh-sm hover:shadow-gh-md"
                     href="javascript:void(0)">
                     Schedule Call
                 </a>
@@ -684,6 +684,9 @@
             const isDark = html.classList.contains('dark');
             localStorage.setItem('theme', isDark ? 'dark' : 'light');
         });
+    </script>
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
     </script>
 </body>
 
