@@ -9,7 +9,7 @@
 
 const CALENDAR_CONFIG = {
     // PASTE YOUR LINK HERE (e.g., "https://calendar.google.com/calendar/u/0/appointments/schedules/...")
-    calendarUrl: "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0umZp4r6FsReCuIBjzVUkS65Cevhx69h_zOPM_EPErG-k6LsBk2rAt1AHyO22D6llRXxEHelbn",
+    calendarUrl: "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0umZp4r6FsReCuIBjzVUkS65Cevhx69h_zOPM_EPErG-k6LsBk2rAt1AHyO22D6llRXxEHelbn?gv=true",
 
     // Message shown if URL is not configured
     demoMessage: "This is a demo booking modal. To make this functional, please add your Google Calendar (or Calendly) link in 'assets/js/calendar.js'."
