@@ -7,11 +7,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
         rel="stylesheet" media="print" onload="this.media='all'" />
     <noscript>
         <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
             rel="stylesheet" />
     </noscript>
 
@@ -25,7 +25,7 @@
     <meta property="og:title" content="Google Ads Management Services | ROI-Focused Strategies - Atul Kumar">
     <meta property="og:description"
         content="Maximize your Google Ads ROI with precision targeting and AI optimization. Expert management for Startups, SMEs, and Enterprises.">
-    <meta property="og:image" content="https://Atulscript.github.io/kumaratul/assets/images/google_ads_hero.png">
+    <meta property="og:image" content="https://Atulscript.github.io/kumaratul/assets/images/google_ads_discord.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Google Ads Management Services | ROI-Focused Strategies">
     <meta name="twitter:description"
@@ -41,19 +41,26 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: "#0077B5", // LinkedIn Blue
-                        secondary: "#333333", // Dark Charcoal
-                        charcoal: "#333333",
-                        "linkedin-blue": "#0077B5",
-                        "linkedin-gray": "#F3F2EF", // LinkedIn background gray
-                        "linkedin-border": "#EBEBEB",
+                        // Discord Color Palette - Consistent with index.html
+                        "discord-bg": "#313338", // Main Chat BG
+                        "discord-sidebar": "#2b2d31", // Sidebar/Secondary BG
+                        "discord-element": "#1e1f22", // Input/Darkest BG
+                        "discord-hover": "#3f4147",
+                        "discord-blurple": "#5865F2", // Brand Color
+                        "discord-blurple-dark": "#4752c4",
+                        "discord-green": "#23a559",
+                        "discord-red": "#da373c",
+                        "discord-text": "#dbdee1", // Primary Text
+                        "discord-muted": "#949ba4", // Secondary Text
+                        "discord-divider": "#1e1f22",
                     },
                     fontFamily: {
-                        display: ["Inter", "sans-serif"],
+                        display: ["'Plus Jakarta Sans'", "sans-serif"],
                         body: ["Inter", "sans-serif"],
                     },
                     borderRadius: {
-                        DEFAULT: "0.5rem",
+                        'discord': '1rem',
+                        'discord-sm': '0.5rem',
                     },
                 },
             },
@@ -61,136 +68,167 @@
     </script>
     <style type="text/tailwindcss">
         .glass-nav {
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
+            background-color: rgba(43, 45, 49, 0.85); /* #2b2d31 with opacity */
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+        .discord-card {
+            background-color: #2b2d31;
+            transition: all 0.2s ease-in-out;
+        }
+        .discord-card:hover {
+            background-color: #232428;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
         }
         .hero-pattern {
-            background-image: radial-gradient(circle at 2px 2px, rgba(0, 119, 181, 0.05) 1px, transparent 0);
-            background-size: 30px 30px;
+            background-image: 
+                radial-gradient(circle at 15% 50%, rgba(88, 101, 242, 0.08) 0%, transparent 25%), 
+                radial-gradient(circle at 85% 30%, rgba(35, 165, 89, 0.05) 0%, transparent 25%);
         }
-        .linkedin-card-shadow {
-            box-shadow: 0 0 0 1px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.08);
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
         }
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        ::-webkit-scrollbar-track {
+            background: #2b2d31; 
         }
-        .audit-step::after {
-            content: "";
-            position: absolute;
-            right: -2rem;
-            top: 50%;
-            width: 1.5rem;
-            height: 2px;
-            background-color: #e5e7eb;
-            display: none;
+        ::-webkit-scrollbar-thumb {
+            background: #1a1b1e; 
+            border-radius: 4px;
         }
-        @media (min-width: 1024px) {
-            .audit-step:not(:last-child)::after {
-                display: block;
-            }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #111214; 
         }
     </style>
 </head>
 
-<body class="bg-white text-[#333333] font-body transition-colors duration-300">
-    <header class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-linkedin-border bg-white/95">
+<body
+    class="bg-discord-bg text-discord-text font-body transition-colors duration-300 antialiased selection:bg-discord-blurple selection:text-white">
+    <!-- Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-discord-divider">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
             <div class="flex items-center gap-3">
-                <img alt="Atul Kumar Portrait" class="w-10 h-10 rounded-full object-cover border border-linkedin-border"
-                    src="/kumaratul/assets/images/profile.jpg" width="40" height="40" decoding="async" />
-                <span class="font-display font-bold text-lg tracking-tight text-secondary">Atul Kumar</span>
-            </div>
-            <div class="hidden md:flex items-center space-x-8">
-                <a class="text-sm font-semibold hover:text-primary transition-colors text-slate-500"
-                    href="index.html">Home</a>
-                <a class="text-sm font-semibold hover:text-primary transition-colors text-slate-500"
-                    href="index.html#why-me">About</a>
-
-                <!-- Ads Dropdown -->
-                <div class="relative group py-4">
-                    <button class="text-sm font-semibold text-primary transition-colors flex items-center gap-1">
-                        Ads
-                        <span class="material-symbols-outlined text-sm">expand_more</span>
-                    </button>
+                <div class="relative group">
+                    <img alt="Atul Kumar Portrait"
+                        class="w-10 h-10 rounded-[14px] object-cover transition-all group-hover:rounded-[10px] group-hover:shadow-lg shadow-black/20"
+                        src="/kumaratul/assets/images/profile.jpg" width="40" height="40" decoding="async" />
                     <div
-                        class="absolute left-0 top-full w-48 bg-white border border-linkedin-border rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                        <div class="py-2">
+                        class="absolute -bottom-1 -right-1 w-4 h-4 bg-discord-bg rounded-full flex items-center justify-center">
+                        <div class="w-2.5 h-2.5 bg-discord-green rounded-full"></div>
+                    </div>
+                </div>
+                <span class="font-display font-bold text-lg text-white">Atul Kumar</span>
+            </div>
+
+            <div class="hidden md:flex items-center space-x-2">
+                <a class="px-3 py-2 rounded-md hover:bg-discord-hover hover:text-white text-discord-muted text-sm font-medium transition-colors flex items-center gap-2"
+                    href="index.html">
+                    <span class="text-xl text-discord-muted">#</span> general
+                </a>
+
+                <!-- Active Channel Style -->
+                <div class="relative group">
+                    <button
+                        class="px-3 py-2 rounded-md bg-discord-hover text-white text-sm font-medium transition-colors flex items-center gap-2">
+                        <span class="text-xl text-discord-muted">#</span> google-ads
+                    </button>
+                    <!-- Dropdown Menu -->
+                    <div
+                        class="absolute left-0 top-full mt-1 w-56 bg-discord-element border border-discord-divider rounded-md shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 overflow-hidden transform origin-top-left">
+                        <div class="p-2 space-y-1">
                             <a href="google-ads.html"
-                                class="block px-4 py-2 text-sm text-primary font-bold bg-slate-50 transition-colors">Google
-                                Ads</a>
+                                class="block px-3 py-2 text-sm text-discord-muted hover:bg-discord-hover hover:text-white rounded flex items-center gap-2 transition-colors bg-discord-hover/50 text-white">
+                                <span class="text-xl text-discord-muted">#</span> google-ads
+                            </a>
                             <a href="meta-ads.html"
-                                class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-primary transition-colors">Meta
-                                Ads</a>
+                                class="block px-3 py-2 text-sm text-discord-muted hover:bg-discord-hover hover:text-white rounded flex items-center gap-2 transition-colors">
+                                <span class="text-xl text-discord-muted">#</span> meta-ads
+                            </a>
                         </div>
                     </div>
                 </div>
 
-                <a class="text-sm font-semibold hover:text-primary transition-colors text-slate-500"
-                    href="zoho-crm.html">Zoho CRM</a>
-                <a class="text-sm font-semibold hover:text-primary transition-colors text-slate-500"
-                    href="mailto:hello@kumaratul.com">Contact</a>
+                <a class="px-3 py-2 rounded-md hover:bg-discord-hover hover:text-white text-discord-muted text-sm font-medium transition-colors flex items-center gap-2"
+                    href="zoho-crm.html">
+                    <span class="text-xl text-discord-muted">#</span> zoho-crm
+                </a>
             </div>
+
             <div class="flex items-center gap-4">
-                <div class="flex gap-3">
-                    <a class="hidden sm:block border border-secondary text-secondary hover:bg-slate-50 px-4 py-1.5 rounded-full font-semibold text-sm transition-all"
-                        href="mailto:hello@kumaratul.com">
-                        Contact Us
-                    </a>
-                    <a class="bg-primary hover:bg-[#006097] text-white px-4 py-1.5 rounded-full font-semibold text-sm transition-all"
-                        href="#">
-                        Schedule a Call
-                    </a>
-                </div>
+                <a class="hidden sm:flex text-discord-text hover:underline text-sm font-semibold transition-all"
+                    href="mailto:hello@kumaratul.com">
+                    Contact
+                </a>
+                <a class="bg-discord-blurple hover:bg-discord-blurple-dark text-white px-5 py-2 rounded-md font-medium text-sm transition-all shadow-md hover:shadow-lg transform active:scale-95"
+                    href="#">
+                    Schedule Call
+                </a>
             </div>
         </nav>
     </header>
 
     <main class="pt-16">
         <!-- Hero Section -->
-        <section class="relative bg-white pt-16 pb-24 lg:pt-24 lg:pb-32 overflow-hidden">
-            <div class="max-w-7xl mx-auto px-6">
+        <section class="relative overflow-hidden hero-pattern py-20 lg:py-32 border-b border-discord-divider">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
-                    <div class="w-full lg:w-1/2">
+                    <div class="w-full lg:w-1/2 order-2 lg:order-1">
                         <div
-                            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-linkedin-blue text-[10px] font-bold uppercase tracking-widest mb-8">
+                            class="inline-flex items-center gap-2 px-3 py-1 rounded bg-discord-blurple/10 text-discord-blurple text-xs font-bold uppercase tracking-wider mb-8 border border-discord-blurple/20">
                             <span class="material-symbols-outlined text-[14px]">verified</span>
-                            Expert-Optimized Management
+                            Google Partner
                         </div>
                         <h1
-                            class="text-5xl lg:text-[4rem] font-extrabold text-[#333] leading-[1.1] mb-8 tracking-tight">
-                            Data-Driven Google Ads Management for <span class="text-[#0077B5]">Maximum ROI.</span>
+                            class="font-display text-4xl lg:text-6xl font-extrabold leading-tight mb-8 text-white tracking-tight">
+                            Google Ads Management for <span class="text-discord-blurple">Maximum ROI.</span>
                         </h1>
-                        <p class="text-lg lg:text-xl text-gray-500 mb-10 leading-relaxed max-w-xl">
+                        <p class="text-lg lg:text-xl text-discord-muted mb-10 leading-relaxed max-w-xl">
                             Stop guessing with your ad spend. I help businesses scale through technical precision,
                             advanced AI optimization, and a relentless focus on bottom-line results.
                         </p>
                         <div class="flex flex-col sm:flex-row gap-4">
-                            <button
-                                class="bg-[#0077B5] text-white px-9 py-4 rounded-xl font-bold shadow-lg shadow-blue-500/20 hover:bg-[#006699] transition-all text-center">
-                                Schedule a Call
-                            </button>
-                            <button
-                                class="bg-white border-2 border-blue-100 text-[#0077B5] px-9 py-4 rounded-xl font-bold hover:bg-blue-50 transition-all text-center">
-                                Contact Us
-                            </button>
+                            <a class="bg-discord-blurple hover:bg-discord-blurple-dark text-white px-8 py-3 rounded-[3px] font-medium text-lg transition-all flex items-center justify-center gap-2 transform active:scale-95 shadow-lg shadow-discord-blurple/20"
+                                href="#">
+                                Schedule Audit
+                            </a>
+                            <a class="bg-discord-hover hover:bg-[#4e5058] text-white px-8 py-3 rounded-[3px] font-medium text-lg transition-all flex items-center justify-center gap-2"
+                                href="mailto:hello@kumaratul.com">
+                                Contact Me
+                            </a>
                         </div>
                     </div>
-                    <div class="w-full lg:w-1/2 relative">
-                        <div class="relative z-10 rounded-3xl overflow-hidden shadow-2xl border-8 border-gray-50/50">
-                            <img alt="Google Ads Performance Dashboard" class="w-full aspect-[4/3] object-cover"
-                                src="/kumaratul/assets/images/google_ads_hero.png" />
-                        </div>
+
+                    <div class="w-full lg:w-1/2 relative order-1 lg:order-2">
+                        <!-- Custom Discord Style Hero Image -->
                         <div
-                            class="absolute -bottom-6 -left-4 lg:-left-10 z-20 bg-white p-6 rounded-2xl shadow-xl flex items-center gap-4 border border-blue-50 max-w-[280px]">
+                            class="relative z-10 rounded-lg overflow-hidden shadow-2xl border border-discord-divider bg-discord-element group hover:border-discord-blurple/50 transition-colors">
                             <div
-                                class="size-12 rounded-full bg-green-50 flex items-center justify-center text-green-600">
-                                <span class="material-symbols-outlined text-3xl">trending_up</span>
+                                class="bg-discord-sidebar px-4 py-2 border-b border-discord-divider flex items-center gap-2">
+                                <div class="w-3 h-3 rounded-full bg-discord-red"></div>
+                                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-discord-green"></div>
+                                <span class="ml-2 text-xs text-discord-muted font-mono">dashboard_final_v3.png</span>
+                            </div>
+                            <img alt="Google Ads Performance Dashboard"
+                                class="w-full aspect-[4/3] object-cover opacity-90 group-hover:opacity-100 transition-opacity"
+                                src="/kumaratul/assets/images/google_ads_discord.png" />
+                        </div>
+
+                        <!-- Floating Stat Card -->
+                        <div
+                            class="absolute -bottom-6 -left-4 lg:-left-10 z-20 bg-discord-element p-4 rounded-md shadow-xl flex items-center gap-4 border-l-4 border-l-discord-green border-t border-r border-b border-discord-divider max-w-[280px]">
+                            <div
+                                class="size-10 rounded-full bg-discord-bg flex items-center justify-center text-discord-green">
+                                <span class="material-symbols-outlined text-2xl">trending_up</span>
                             </div>
                             <div>
-                                <p class="text-[10px] font-extrabold text-gray-400 uppercase tracking-widest mb-0.5">
+                                <p class="text-[10px] font-bold text-discord-muted uppercase tracking-widest mb-0.5">
                                     Verified Result</p>
-                                <p class="text-2xl font-black text-charcoal">+142% <span
-                                        class="text-sm font-semibold text-gray-500">Conv. Rate</span></p>
+                                <p class="text-xl font-bold text-white">+142% <span
+                                        class="text-sm font-medium text-discord-green">Conv. Rate</span></p>
                             </div>
                         </div>
                     </div>
@@ -198,292 +236,201 @@
             </div>
         </section>
 
-        <!-- Budget & Industry -->
-        <section class="py-24 bg-gray-50/50 border-y border-gray-100" id="budget-industry">
+        <!-- Budget & Industry style as "Channels" -->
+        <section class="py-24 bg-discord-sidebar border-y border-discord-divider" id="budget-industry">
             <div class="max-w-7xl mx-auto px-6">
                 <div class="text-center mb-16">
-                    <h2 class="text-3xl lg:text-4xl font-bold text-charcoal mb-6">Tailored for Every Budget & Industry
+                    <h2 class="text-sm font-bold text-discord-blurple tracking-widest uppercase mb-4">Supported Sectors
                     </h2>
-                    <p class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                        I believe that <span class="text-linkedin-blue font-bold">results matter more than budget
-                            size</span>. Whether you're just starting out or dominating your market, I build custom
-                        strategies designed to help your business reach the next level, regardless of your industry.
+                    <h2 class="text-3xl lg:text-4xl font-bold text-white mb-6">Tailored for Every Stage</h2>
+                    <p class="text-lg text-discord-muted max-w-3xl mx-auto leading-relaxed">
+                        Whether you're just starting out or dominating your market, I build custom strategies designed
+                        to help your business reach the next level.
                     </p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Card 1 -->
                     <div
-                        class="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow text-center">
+                        class="bg-discord-element p-8 rounded-md border border-discord-divider hover:border-discord-blurple transition-colors group">
                         <div
-                            class="size-16 rounded-full bg-blue-50 text-linkedin-blue flex items-center justify-center mx-auto mb-6">
-                            <span class="material-symbols-outlined text-3xl">rocket_launch</span>
+                            class="size-14 rounded-full bg-discord-bg text-discord-blurple flex items-center justify-center mx-auto mb-6 group-hover:bg-discord-blurple group-hover:text-white transition-colors">
+                            <span class="material-symbols-outlined text-2xl">rocket_launch</span>
                         </div>
-                        <h3 class="text-xl font-bold text-charcoal mb-3">Startups</h3>
-                        <p class="text-sm text-gray-500 leading-relaxed">Early-stage businesses looking for lean,
-                            high-efficiency campaigns to validate their market and find their first customers.</p>
+                        <h3 class="text-xl font-bold text-white mb-3 text-center">Startups</h3>
+                        <p class="text-sm text-discord-muted leading-relaxed text-center">Early-stage businesses looking
+                            for lean, high-efficiency campaigns to validate their market.</p>
                     </div>
+
+                    <!-- Card 2 -->
                     <div
-                        class="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow text-center">
+                        class="bg-discord-element p-8 rounded-md border border-discord-divider hover:border-discord-green transition-colors group">
                         <div
-                            class="size-16 rounded-full bg-blue-50 text-linkedin-blue flex items-center justify-center mx-auto mb-6">
-                            <span class="material-symbols-outlined text-3xl">storefront</span>
+                            class="size-14 rounded-full bg-discord-bg text-discord-green flex items-center justify-center mx-auto mb-6 group-hover:bg-discord-green group-hover:text-white transition-colors">
+                            <span class="material-symbols-outlined text-2xl">storefront</span>
                         </div>
-                        <h3 class="text-xl font-bold text-charcoal mb-3">SMEs</h3>
-                        <p class="text-sm text-gray-500 leading-relaxed">Established small and medium enterprises
-                            focused on optimizing CPA and scaling sustainable growth across diverse niches.</p>
+                        <h3 class="text-xl font-bold text-white mb-3 text-center">SMEs</h3>
+                        <p class="text-sm text-discord-muted leading-relaxed text-center">Established small and medium
+                            enterprises focused on optimizing CPA and scaling sustainable growth.</p>
                     </div>
+
+                    <!-- Card 3 -->
                     <div
-                        class="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow text-center">
+                        class="bg-discord-element p-8 rounded-md border border-discord-divider hover:border-yellow-500 transition-colors group">
                         <div
-                            class="size-16 rounded-full bg-blue-50 text-linkedin-blue flex items-center justify-center mx-auto mb-6">
-                            <span class="material-symbols-outlined text-3xl">apartment</span>
+                            class="size-14 rounded-full bg-discord-bg text-yellow-500 flex items-center justify-center mx-auto mb-6 group-hover:bg-yellow-500 group-hover:text-white transition-colors">
+                            <span class="material-symbols-outlined text-2xl">apartment</span>
                         </div>
-                        <h3 class="text-xl font-bold text-charcoal mb-3">Enterprises</h3>
-                        <p class="text-sm text-gray-500 leading-relaxed">Large-scale organizations requiring complex
-                            multi-channel strategies, advanced automation, and deep cross-platform reporting.</p>
+                        <h3 class="text-xl font-bold text-white mb-3 text-center">Enterprises</h3>
+                        <p class="text-sm text-discord-muted leading-relaxed text-center">Large-scale organizations
+                            requiring complex multi-channel strategies and advanced reporting.</p>
                     </div>
-                </div>
-                <div class="mt-12 text-center">
-                    <p class="text-sm font-medium text-gray-400 italic">No project is too small for a conversation.
-                        Every industry, every stage, one goal: Performance.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Methodology -->
-        <section class="py-24 bg-white" id="methodology">
+        <!-- Methodology as Code Blocks -->
+        <section class="py-24 bg-discord-bg" id="methodology">
             <div class="max-w-7xl mx-auto px-6">
                 <div class="text-center mb-20">
-                    <h2 class="text-3xl lg:text-4xl font-bold text-charcoal mb-4">Why Choose a Data-Driven Approach?
-                    </h2>
-                    <div class="h-1 w-20 bg-linkedin-blue mx-auto rounded-full mb-6"></div>
-                    <p class="text-gray-500 text-lg max-w-2xl mx-auto">Superior performance isn't built on guesswork. My
-                        methodology combines technical precision with business intelligence.</p>
+                    <h2 class="text-3xl lg:text-4xl font-bold text-white mb-4">Why Data-Driven?</h2>
+                    <p class="text-discord-muted text-lg max-w-2xl mx-auto">Superior performance isn't built on
+                        guesswork. My methodology combines technical precision with business intelligence.</p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-                    <div class="group">
-                        <div
-                            class="size-14 rounded-2xl bg-blue-50 text-linkedin-blue flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                            <span class="material-symbols-outlined text-3xl">settings_input_component</span>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Feature 1 -->
+                    <div class="bg-discord-element p-4 rounded border border-discord-divider">
+                        <div class="flex items-center gap-2 mb-3 text-discord-blurple">
+                            <span class="material-symbols-outlined">settings_input_component</span>
+                            <span class="font-mono text-xs font-bold uppercase">precision.js</span>
                         </div>
-                        <h3 class="text-xl font-bold text-charcoal mb-3">Technical Precision</h3>
-                        <p class="text-sm text-gray-500 leading-relaxed">Deep GA4, GTM, and Server-Side tracking to
-                            capture every conversion accurately across all devices.</p>
+                        <h3 class="text-lg font-bold text-white mb-2">Technical Precision</h3>
+                        <p class="text-sm text-discord-muted">Deep Server-Side tracking to capture every conversion
+                            accurately.</p>
                     </div>
-                    <div class="group">
-                        <div
-                            class="size-14 rounded-2xl bg-blue-50 text-linkedin-blue flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                            <span class="material-symbols-outlined text-3xl">payments</span>
+
+                    <!-- Feature 2 -->
+                    <div class="bg-discord-element p-4 rounded border border-discord-divider">
+                        <div class="flex items-center gap-2 mb-3 text-discord-green">
+                            <span class="material-symbols-outlined">payments</span>
+                            <span class="font-mono text-xs font-bold uppercase">roi.js</span>
                         </div>
-                        <h3 class="text-xl font-bold text-charcoal mb-3">ROI over Clicks</h3>
-                        <p class="text-sm text-gray-500 leading-relaxed">Focusing on bottom-line business growth and
-                            actual profit, moving beyond vanity metrics like CTR or impressions.</p>
+                        <h3 class="text-lg font-bold text-white mb-2">ROI over Clicks</h3>
+                        <p class="text-sm text-discord-muted">Focusing on bottom-line business growth and actual profit.
+                        </p>
                     </div>
-                    <div class="group">
-                        <div
-                            class="size-14 rounded-2xl bg-blue-50 text-linkedin-blue flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                            <span class="material-symbols-outlined text-3xl">psychology</span>
+
+                    <!-- Feature 3 -->
+                    <div class="bg-discord-element p-4 rounded border border-discord-divider">
+                        <div class="flex items-center gap-2 mb-3 text-purple-400">
+                            <span class="material-symbols-outlined">psychology</span>
+                            <span class="font-mono text-xs font-bold uppercase">ai.py</span>
                         </div>
-                        <h3 class="text-xl font-bold text-charcoal mb-3">AI Optimization</h3>
-                        <p class="text-sm text-gray-500 leading-relaxed">Leveraging machine learning for smarter bidding
-                            and predictive insights that keep you ahead of the market.</p>
+                        <h3 class="text-lg font-bold text-white mb-2">AI Optimization</h3>
+                        <p class="text-sm text-discord-muted">Leveraging machine learning for smarter bidding
+                            prediction.</p>
                     </div>
-                    <div class="group">
-                        <div
-                            class="size-14 rounded-2xl bg-blue-50 text-linkedin-blue flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                            <span class="material-symbols-outlined text-3xl">query_stats</span>
+
+                    <!-- Feature 4 -->
+                    <div class="bg-discord-element p-4 rounded border border-discord-divider">
+                        <div class="flex items-center gap-2 mb-3 text-yellow-400">
+                            <span class="material-symbols-outlined">query_stats</span>
+                            <span class="font-mono text-xs font-bold uppercase">report.json</span>
                         </div>
-                        <h3 class="text-xl font-bold text-charcoal mb-3">Full Transparency</h3>
-                        <p class="text-sm text-gray-500 leading-relaxed">Real-time Looker Studio dashboards so you
-                            always know exactly where your budget is invested and what it's earning.</p>
+                        <h3 class="text-lg font-bold text-white mb-2">Full Transparency</h3>
+                        <p class="text-sm text-discord-muted">Real-time Looker Studio dashboards available 24/7.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Audit Blueprint -->
-        <section class="py-24 bg-gray-50" id="audit">
-            <div class="max-w-7xl mx-auto px-6">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl lg:text-4xl font-bold text-charcoal mb-4">The Strategic Audit Blueprint</h2>
-                    <p class="text-gray-600 text-lg max-w-2xl mx-auto">A deep-dive diagnostic process that identifies
-                        exactly where your budget is being wasted and where the growth opportunities lie.</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
-                    <div
-                        class="audit-step relative bg-white p-8 rounded-2xl border border-gray-200 shadow-sm hover:border-linkedin-blue transition-colors">
-                        <div
-                            class="size-12 bg-blue-50 rounded-lg flex items-center justify-center text-linkedin-blue mb-6">
-                            <span class="material-symbols-outlined">health_and_safety</span>
-                        </div>
-                        <h4 class="font-bold text-charcoal mb-2">Tracking Health Check</h4>
-                        <p class="text-xs text-gray-500">Verifying GA4 events and GTM triggers to ensure every
-                            conversion is attributed correctly.</p>
-                    </div>
-                    <div
-                        class="audit-step relative bg-white p-8 rounded-2xl border border-gray-200 shadow-sm hover:border-linkedin-blue transition-colors">
-                        <div
-                            class="size-12 bg-blue-50 rounded-lg flex items-center justify-center text-linkedin-blue mb-6">
-                            <span class="material-symbols-outlined">filter_list_off</span>
-                        </div>
-                        <h4 class="font-bold text-charcoal mb-2">Keyword Leakage Analysis</h4>
-                        <p class="text-xs text-gray-500">Identifying and purging negative keywords and irrelevant search
-                            terms draining your budget.</p>
-                    </div>
-                    <div
-                        class="audit-step relative bg-white p-8 rounded-2xl border border-gray-200 shadow-sm hover:border-linkedin-blue transition-colors">
-                        <div
-                            class="size-12 bg-blue-50 rounded-lg flex items-center justify-center text-linkedin-blue mb-6">
-                            <span class="material-symbols-outlined">auto_graph</span>
-                        </div>
-                        <h4 class="font-bold text-charcoal mb-2">Bidding Strategy Review</h4>
-                        <p class="text-xs text-gray-500">Aligning Smart Bidding algorithms with your specific business
-                            goals and target CPA.</p>
-                    </div>
-                    <div
-                        class="audit-step relative bg-white p-8 rounded-2xl border border-gray-200 shadow-sm hover:border-linkedin-blue transition-colors">
-                        <div
-                            class="size-12 bg-blue-50 rounded-lg flex items-center justify-center text-linkedin-blue mb-6">
-                            <span class="material-symbols-outlined">web_asset</span>
-                        </div>
-                        <h4 class="font-bold text-charcoal mb-2">Landing Page Optimization</h4>
-                        <p class="text-xs text-gray-500">Evaluating post-click experience to boost Quality Score and
-                            conversion rates.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Reporting -->
-        <section class="py-24 bg-white" id="reporting">
+        <!-- Reporting Section (Discord Message Style) -->
+        <section class="py-24 bg-discord-sidebar border-t border-discord-divider" id="reporting">
             <div class="max-w-7xl mx-auto px-6">
                 <div class="flex flex-col lg:flex-row items-center gap-16">
                     <div class="w-full lg:w-2/5">
-                        <h2 class="text-3xl lg:text-4xl font-bold text-charcoal mb-6">Transparent Reporting</h2>
-                        <p class="text-lg text-gray-600 mb-8 leading-relaxed">
-                            No more monthly static PDFs. You get a custom, real-time Looker Studio dashboard that tracks
-                            the metrics that actually matter to your business.
-                        </p>
+                        <h2 class="text-3xl lg:text-4xl font-bold text-white mb-6">Transparent Reporting</h2>
+                        <div
+                            class="font-mono text-sm bg-discord-element p-4 rounded border border-discord-divider text-discord-muted mb-6">
+                            > Loading monthly_report.pdf... <span class="text-discord-red">Error: File
+                                Obsolete</span><br />
+                            > Accessing <span class="text-discord-green">live_dashboard_v2</span>... <span
+                                class="text-discord-green">Success</span>
+                        </div>
                         <ul class="space-y-4">
-                            <li class="flex items-center gap-3 text-gray-700 font-medium">
-                                <span class="material-symbols-outlined text-green-500">check_circle</span>
+                            <li class="flex items-center gap-3 text-discord-text font-medium">
+                                <span class="material-symbols-outlined text-discord-green">check_circle</span>
                                 Real-time ROAS Tracking
                             </li>
-                            <li class="flex items-center gap-3 text-gray-700 font-medium">
-                                <span class="material-symbols-outlined text-green-500">check_circle</span>
+                            <li class="flex items-center gap-3 text-discord-text font-medium">
+                                <span class="material-symbols-outlined text-discord-green">check_circle</span>
                                 Cost Per Acquisition (CPA) Trends
                             </li>
-                            <li class="flex items-center gap-3 text-gray-700 font-medium">
-                                <span class="material-symbols-outlined text-green-500">check_circle</span>
+                            <li class="flex items-center gap-3 text-discord-text font-medium">
+                                <span class="material-symbols-outlined text-discord-green">check_circle</span>
                                 Conversion Rate Path Analysis
                             </li>
                         </ul>
                     </div>
+
                     <div class="w-full lg:w-3/5">
-                        <div class="bg-white rounded-2xl border border-gray-200 shadow-2xl overflow-hidden">
-                            <div
-                                class="bg-gray-100 border-b border-gray-200 px-6 py-3 flex items-center justify-between">
-                                <div class="flex gap-1.5">
-                                    <div class="size-3 rounded-full bg-red-400"></div>
-                                    <div class="size-3 rounded-full bg-yellow-400"></div>
-                                    <div class="size-3 rounded-full bg-green-400"></div>
+                        <!-- "Message" Container -->
+                        <div class="flex items-start gap-4">
+                            <img src="/kumaratul/assets/images/profile.jpg" class="w-10 h-10 rounded-full mt-1">
+                            <div class="flex-1">
+                                <div class="flex items-center gap-2 mb-1">
+                                    <span class="text-white font-bold">Atul Kumar</span>
+                                    <span class="text-xs text-discord-muted">Today at 9:00 AM</span>
                                 </div>
-                                <span class="text-xs font-bold text-gray-400 tracking-widest uppercase">Performance
-                                    Dashboard</span>
-                            </div>
-                            <div class="p-8 bg-gray-50">
-                                <div class="grid grid-cols-3 gap-4 mb-8">
-                                    <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
-                                        <p class="text-[10px] text-gray-400 font-bold uppercase">ROAS</p>
-                                        <p class="text-xl font-bold text-linkedin-blue">4.8x</p>
-                                        <span class="text-[10px] text-green-500">+12% vs last month</span>
+                                <p class="text-discord-text mb-2">Here's the live performance view for this month. 🚀
+                                </p>
+
+                                <!-- Embed Card -->
+                                <div class="bg-discord-bg rounded-md border-l-4 border-l-discord-blurple p-4 max-w-xl">
+                                    <div class="font-bold text-white mb-4">Performance Dashboard Preview</div>
+                                    <div class="grid grid-cols-3 gap-2 mb-4">
+                                        <div class="bg-discord-element p-3 rounded">
+                                            <p class="text-[10px] text-discord-muted uppercase">ROAS</p>
+                                            <p class="text-lg font-bold text-discord-blurple">4.8x</p>
+                                        </div>
+                                        <div class="bg-discord-element p-3 rounded">
+                                            <p class="text-[10px] text-discord-muted uppercase">CPA</p>
+                                            <p class="text-lg font-bold text-white">$24.15</p>
+                                        </div>
+                                        <div class="bg-discord-element p-3 rounded">
+                                            <p class="text-[10px] text-discord-muted uppercase">Conv</p>
+                                            <p class="text-lg font-bold text-white">342</p>
+                                        </div>
                                     </div>
-                                    <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
-                                        <p class="text-[10px] text-gray-400 font-bold uppercase">Avg. CPA</p>
-                                        <p class="text-xl font-bold text-charcoal">$24.15</p>
-                                        <span class="text-[10px] text-green-500">-8% vs last month</span>
+                                    <!-- Fake Chart Line -->
+                                    <div class="h-24 bg-discord-element rounded flex items-end gap-1 p-2">
+                                        <div class="w-full bg-discord-blurple/30 rounded-t h-[40%]"></div>
+                                        <div class="w-full bg-discord-blurple/50 rounded-t h-[60%]"></div>
+                                        <div class="w-full bg-discord-blurple/40 rounded-t h-[50%]"></div>
+                                        <div class="w-full bg-discord-blurple/70 rounded-t h-[80%]"></div>
+                                        <div class="w-full bg-discord-blurple rounded-t h-[95%]"></div>
                                     </div>
-                                    <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
-                                        <p class="text-[10px] text-gray-400 font-bold uppercase">Conversions</p>
-                                        <p class="text-xl font-bold text-charcoal">342</p>
-                                        <span class="text-[10px] text-green-500">+18% vs last month</span>
-                                    </div>
-                                </div>
-                                <div class="bg-white p-6 rounded-xl border border-gray-100 h-48 flex items-end gap-2">
-                                    <div class="w-full bg-blue-100 rounded-t h-[40%]"></div>
-                                    <div class="w-full bg-blue-200 rounded-t h-[60%]"></div>
-                                    <div class="w-full bg-blue-300 rounded-t h-[50%]"></div>
-                                    <div class="w-full bg-blue-400 rounded-t h-[80%]"></div>
-                                    <div class="w-full bg-linkedin-blue rounded-t h-[95%]"></div>
-                                    <div class="w-full bg-blue-500 rounded-t h-[75%]"></div>
-                                    <div class="w-full bg-linkedin-blue rounded-t h-[100%]"></div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ -->
-        <section class="py-24 bg-gray-50 border-t border-gray-100" id="faq">
-            <div class="max-w-4xl mx-auto px-6">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl lg:text-4xl font-bold text-charcoal mb-4">Frequently Asked Questions</h2>
-                    <p class="text-gray-500">Addressing high-intent questions for forward-thinking businesses.</p>
-                </div>
-                <div class="space-y-4">
-                    <div class="bg-white rounded-xl border border-gray-200 p-6 shadow-sm">
-                        <h4 class="text-lg font-bold text-charcoal mb-3 flex justify-between items-center">
-                            How soon can I see results?
-                            <span class="material-symbols-outlined text-gray-300">expand_more</span>
-                        </h4>
-                        <p class="text-gray-500 text-sm leading-relaxed">
-                            While Google's machine learning needs 7-14 days to stabilize, we typically identify
-                            "low-hanging fruit" optimizations within the first 48 hours of an audit. Most accounts see
-                            measurable ROI improvements within the first 30 days.
-                        </p>
-                    </div>
-                    <div class="bg-white rounded-xl border border-gray-200 p-6 shadow-sm">
-                        <h4 class="text-lg font-bold text-charcoal mb-3 flex justify-between items-center">
-                            Do you manage my ad spend directly?
-                            <span class="material-symbols-outlined text-gray-300">expand_more</span>
-                        </h4>
-                        <p class="text-gray-500 text-sm leading-relaxed">
-                            No, transparency is key. You pay Google directly for ad spend via your own account. My fee
-                            is strictly for management, strategy, and technical optimization. You maintain full
-                            ownership of your data and account.
-                        </p>
-                    </div>
-                    <div class="bg-white rounded-xl border border-gray-200 p-6 shadow-sm">
-                        <h4 class="text-lg font-bold text-charcoal mb-3 flex justify-between items-center">
-                            Is there a minimum budget requirement?
-                            <span class="material-symbols-outlined text-gray-300">expand_more</span>
-                        </h4>
-                        <p class="text-gray-500 text-sm leading-relaxed">
-                            I believe results matter more than budget size. I work with early-stage startups and
-                            established enterprises alike. During our initial call, we'll determine if your current
-                            budget is sufficient to achieve your specific growth goals.
-                        </p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- CTA Section -->
-        <section class="py-24 bg-blue-50/60 border-t border-gray-100">
+        <section class="py-24 bg-discord-blurple/10 border-t border-discord-divider">
             <div class="max-w-4xl mx-auto px-6 text-center">
-                <h2 class="text-3xl md:text-4xl font-extrabold text-charcoal mb-6">Ready to Start Your Growth Journey?
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-6">Ready to Start Your Growth Journey?
                 </h2>
-                <p class="text-lg text-gray-600 mb-10">Schedule a discovery call to discuss your goals. Whether you need
-                    a <strong>New Setup</strong> or a <strong>Free Performance Audit</strong>, I'm here to help
-                    businesses of all sizes succeed.</p>
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
                     <button
-                        class="w-full sm:w-auto bg-linkedin-blue text-white px-10 py-4 rounded-xl font-bold shadow-lg shadow-blue-500/20 hover:bg-[#006699] transition-all">
+                        class="w-full sm:w-auto bg-discord-blurple text-white px-10 py-4 rounded font-bold shadow-lg hover:bg-discord-blurple-dark transition-all">
                         Schedule a Call
                     </button>
                     <button
-                        class="w-full sm:w-auto bg-white border-2 border-gray-200 text-charcoal px-10 py-4 rounded-xl font-bold hover:bg-gray-50 transition-all">
+                        class="w-full sm:w-auto bg-discord-element border border-discord-divider text-white px-10 py-4 rounded font-bold hover:bg-discord-hover transition-all">
                         Contact Us
                     </button>
                 </div>
@@ -491,67 +438,17 @@
         </section>
     </main>
 
-    <footer class="bg-white text-secondary py-16 border-t border-linkedin-border">
+    <footer class="bg-discord-element text-discord-muted py-12 border-t border-discord-divider">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-12 mb-16">
-                <div class="col-span-1 md:col-span-2">
-                    <div class="flex items-center gap-3 mb-6">
-                        <img alt="Atul Kumar Footer"
-                            class="w-10 h-10 rounded-full object-cover border border-linkedin-border"
-                            src="/kumaratul/assets/images/profile.jpg" width="40" height="40" loading="lazy"
-                            decoding="async" />
-                        <span class="font-display font-bold text-lg tracking-tight text-secondary">Atul Kumar</span>
-                    </div>
-                    <p class="text-slate-500 max-w-sm mb-8 text-sm">
-                        Performance Marketing Consultant & Google Ads Specialist helping businesses achieve sustainable
-                        growth through technical excellence and data.
-                    </p>
-                    <div class="flex gap-4">
-                        <a class="w-9 h-9 bg-slate-50 border border-linkedin-border rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-colors text-slate-400"
-                            href="#" aria-label="LinkedIn">
-                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                                <path
-                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0-2.761 2.239-5 5-5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z">
-                                </path>
-                            </svg>
-                        </a>
-                        <a class="w-9 h-9 bg-slate-50 border border-linkedin-border rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-colors text-slate-400"
-                            href="#" aria-label="Twitter">
-                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                                <path
-                                    d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z">
-                                </path>
-                            </svg>
-                        </a>
-                    </div>
+            <div class="flex md:flex-row flex-col justify-between items-center gap-6">
+                <div class="flex items-center gap-2">
+                    <img alt="Atul Kumar Footer" class="w-8 h-8 rounded-full grayscale opacity-70"
+                        src="/kumaratul/assets/images/profile.jpg" />
+                    <span class="font-bold text-discord-text text-sm">Atul Kumar</span>
                 </div>
-                <div>
-                    <h4 class="font-bold mb-6 text-xs uppercase tracking-[0.2em] text-slate-400">Navigation</h4>
-                    <ul class="space-y-4">
-                        <li><a class="text-sm text-slate-500 hover:text-primary transition-colors"
-                                href="index.html#services">Services</a></li>
-                        <li><a class="text-sm text-slate-500 hover:text-primary transition-colors"
-                                href="index.html#why-me">Why
-                                Me</a></li>
-                        <li><a class="text-sm text-slate-500 hover:text-primary transition-colors"
-                                href="index.html#approach">Process</a></li>
-                        <li><a class="text-sm text-slate-500 hover:text-primary transition-colors"
-                                href="index.html#comparison">Experience</a></li>
-                    </ul>
+                <div class="text-xs">
+                    © 2024 Atul Kumar Marketing.
                 </div>
-                <div>
-                    <h4 class="font-bold mb-6 text-xs uppercase tracking-[0.2em] text-slate-400">Action</h4>
-                    <div class="flex flex-col gap-2">
-                        <a class="bg-primary hover:bg-[#006097] px-4 py-2 rounded-full font-bold text-xs text-center text-white transition-all"
-                            href="#">Schedule a Call</a>
-                        <a class="border border-secondary hover:bg-slate-50 px-4 py-2 rounded-full font-bold text-xs text-center text-secondary transition-all"
-                            href="mailto:hello@kumaratul.com">Contact Us</a>
-                    </div>
-                </div>
-            </div>
-            <div
-                class="pt-8 mt-16 border-t border-linkedin-border text-center text-slate-400 text-[10px] font-bold uppercase tracking-widest">
-                © 2024 Atul Kumar Marketing. Professional Performance Solutions.
             </div>
         </div>
     </footer>
