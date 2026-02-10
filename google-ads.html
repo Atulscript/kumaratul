@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="scroll-smooth" lang="en">
+<html class="scroll-smooth dark" lang="en">
 
 <head>
     <meta charset="utf-8" />
@@ -41,28 +41,34 @@
             theme: {
                 extend: {
                     colors: {
-                        // GitHub Color Palette
+                        // GitHub Color Palette (Light)
                         "gh-canvas": "#ffffff",
                         "gh-canvas-subtle": "#f6f8fa",
                         "gh-canvas-inset": "#f6f8fa",
                         "gh-border": "#d0d7de",
                         "gh-border-muted": "#d8dee4",
-
                         "gh-fg": "#1f2328",
                         "gh-fg-muted": "#656d76",
                         "gh-fg-subtle": "#6e7781",
 
+                        // GitHub Color Palette (Dark)
+                        "gh-canvas-dark": "#0d1117",
+                        "gh-canvas-subtle-dark": "#161b22",
+                        "gh-border-dark": "#30363d",
+                        "gh-fg-dark": "#e6edf3",
+                        "gh-fg-muted-dark": "#8b949e",
+
                         "gh-accent": "#0969da",
                         "gh-accent-emphasis": "#0969da",
+                        "gh-accent-dark": "#2f81f7",
                         "gh-success": "#1a7f37",
                         "gh-success-emphasis": "#2da44e",
+                        "gh-success-dark": "#3fb950",
                         "gh-danger": "#d1242f",
                         "gh-warning": "#bf8700",
-
                         "gh-btn-bg": "#f6f8fa",
                         "gh-btn-hover": "#f3f4f6",
                         "gh-btn-active": "#ebecf0",
-
                         "gh-header-bg": "#24292f",
                         "gh-header-text": "#ffffff",
                     },
@@ -93,6 +99,15 @@
             -webkit-backdrop-filter: blur(10px);
             border-bottom: 1px solid #d0d7de;
         }
+        .dark .gh-nav {
+            background-color: rgba(13, 17, 23, 0.95);
+            border-bottom-color: #30363d;
+        }
+        
+        .dark body {
+            background-color: #0d1117;
+            color: #e6edf3;
+        }
         
         /* GitHub-style Cards */
         .gh-card {
@@ -100,15 +115,26 @@
             border: 1px solid #d0d7de;
             transition: all 0.2s cubic-bezier(0.3, 0, 0.5, 1);
         }
+        .dark .gh-card {
+            background-color: #0d1117;
+            border-color: #30363d;
+        }
         .gh-card:hover {
             border-color: #d8dee4;
             box-shadow: 0 3px 12px rgba(140, 149, 159, 0.15);
             transform: translateY(-1px);
         }
+        .dark .gh-card:hover {
+            border-color: #444c56;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+        }
         
         /* GitHub-style Hero Pattern */
         .gh-hero-pattern {
             background: linear-gradient(135deg, #f6f8fa 0%, #ffffff 100%);
+        }
+        .dark .gh-hero-pattern {
+            background: linear-gradient(135deg, #161b22 0%, #0d1117 100%);
         }
         
         /* GitHub-style Scrollbar */
@@ -119,18 +145,27 @@
         ::-webkit-scrollbar-track {
             background: #f6f8fa;
         }
+        .dark ::-webkit-scrollbar-track {
+            background: #0d1117;
+        }
         ::-webkit-scrollbar-thumb {
             background: #d0d7de;
             border-radius: 6px;
         }
+        .dark ::-webkit-scrollbar-thumb {
+            background: #30363d;
+        }
         ::-webkit-scrollbar-thumb:hover {
             background: #afb8c1;
+        }
+        .dark ::-webkit-scrollbar-thumb:hover {
+            background: #444c56;
         }
     </style>
 </head>
 
 <body
-    class="bg-gh-canvas text-gh-fg font-sans transition-colors duration-300 antialiased selection:bg-gh-accent selection:text-white">
+    class="bg-gh-canvas dark:bg-gh-canvas-dark text-gh-fg dark:text-gh-fg-dark font-sans transition-colors duration-300 antialiased selection:bg-gh-accent selection:text-white">
     <!-- Navigation -->
     <header class="fixed top-0 left-0 right-0 z-50 gh-nav">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
@@ -145,7 +180,7 @@
                         class="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 bg-gh-success-emphasis rounded-full border-2 border-white">
                     </div>
                 </div>
-                <span class="font-display font-semibold text-lg text-gh-fg">Atul Kumar</span>
+                <span class="font-display font-semibold text-lg text-gh-fg dark:text-gh-fg-dark">Atul Kumar</span>
             </div>
 
             <!-- Navigation Links -->
@@ -189,8 +224,14 @@
             </div>
 
             <!-- CTA -->
-            <div class="flex items-center gap-3">
-                <a class="hidden sm:flex text-gh-fg hover:text-gh-accent text-sm font-medium transition-all"
+            <div class="flex items-center gap-2">
+                <button id="theme-toggle"
+                    class="p-2 rounded-gh hover:bg-gh-canvas-subtle dark:hover:bg-gh-canvas-subtle-dark text-gh-fg-muted dark:text-gh-fg-muted-dark transition-colors flex items-center justify-center"
+                    title="Toggle Theme">
+                    <span class="material-symbols-outlined dark:hidden">dark_mode</span>
+                    <span class="material-symbols-outlined hidden dark:block">light_mode</span>
+                </button>
+                <a class="hidden sm:flex px-3 py-2 rounded-gh hover:bg-gh-canvas-subtle dark:hover:bg-gh-canvas-subtle-dark text-gh-fg dark:text-gh-fg-dark text-sm font-medium transition-all"
                     href="mailto:hello@kumaratul.com">
                     Contact
                 </a>
@@ -204,8 +245,7 @@
 
     <main class="pt-16">
         <!-- Hero Section -->
-        <section
-            class="relative overflow-hidden gh-hero-pattern py-16 lg:py-24 border-b border-gh-border">
+        <section class="relative overflow-hidden gh-hero-pattern py-16 lg:py-24 border-b border-gh-border">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
                     <div class="w-full lg:w-1/2 order-2 lg:order-1">
@@ -237,8 +277,7 @@
 
                     <div class="w-full lg:w-1/2 relative order-1 lg:order-2">
                         <!-- GitHub-style Card Image -->
-                        <div
-                            class="relative z-10 gh-card rounded-gh-lg overflow-hidden shadow-gh-lg group">
+                        <div class="relative z-10 gh-card rounded-gh-lg overflow-hidden shadow-gh-lg group">
                             <div
                                 class="bg-gh-canvas-subtle px-4 py-2 border-b border-gh-border flex items-center justify-between">
                                 <div class="flex items-center gap-2">
@@ -279,7 +318,8 @@
                 <div class="text-center mb-16">
                     <h2 class="text-sm font-semibold text-gh-accent tracking-widest uppercase mb-4">Supported Sectors
                     </h2>
-                    <h2 class="text-3xl lg:text-4xl font-bold text-gh-fg mb-6 leading-tight">Tailored for Every Growth Stage</h2>
+                    <h2 class="text-3xl lg:text-4xl font-bold text-gh-fg mb-6 leading-tight">Tailored for Every Growth
+                        Stage</h2>
                     <p class="text-lg text-gh-fg-muted max-w-3xl mx-auto leading-relaxed">
                         Whether you're just starting out or dominating your market, I build custom strategies designed
                         to help your business reach the next level.
@@ -296,7 +336,8 @@
                         </div>
                         <h3 class="text-xl font-bold text-gh-fg mb-4 text-center">Startups</h3>
                         <p class="text-sm text-gh-fg-muted leading-relaxed text-center">Early-stage businesses looking
-                            for lean, high-efficiency campaigns to validate their market and find product-market fit.</p>
+                            for lean, high-efficiency campaigns to validate their market and find product-market fit.
+                        </p>
                     </div>
 
                     <!-- Card 2 -->
@@ -320,7 +361,8 @@
                         </div>
                         <h3 class="text-xl font-bold text-gh-fg mb-4 text-center">Enterprises</h3>
                         <p class="text-sm text-gh-fg-muted leading-relaxed text-center">Large-scale organizations
-                            requiring complex account structures, advanced attribution models, and white-glove reporting.</p>
+                            requiring complex account structures, advanced attribution models, and white-glove
+                            reporting.</p>
                     </div>
                 </div>
             </div>
@@ -330,7 +372,8 @@
         <section class="py-20 bg-gh-canvas" id="methodology">
             <div class="max-w-7xl mx-auto px-6">
                 <div class="text-center mb-16">
-                    <h2 class="text-sm font-semibold text-gh-success tracking-widest uppercase mb-4">Our Methodology</h2>
+                    <h2 class="text-sm font-semibold text-gh-success tracking-widest uppercase mb-4">Our Methodology
+                    </h2>
                     <h2 class="text-3xl lg:text-4xl font-bold text-gh-fg mb-4">Why Data-Driven?</h2>
                     <p class="text-gh-fg-muted text-lg max-w-2xl mx-auto">Superior performance isn't built on
                         guesswork. My methodology combines technical precision with business intelligence.</p>
@@ -338,45 +381,53 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <!-- Feature 1 -->
-                    <div class="gh-card p-6 rounded-gh-lg hover:shadow-gh-md transition-all bg-white border-t-4 border-t-gh-accent">
+                    <div
+                        class="gh-card p-6 rounded-gh-lg hover:shadow-gh-md transition-all bg-white border-t-4 border-t-gh-accent">
                         <div class="flex items-center gap-2 mb-4 text-gh-accent">
                             <span class="material-symbols-outlined">settings_input_component</span>
                             <span class="font-mono text-[10px] font-bold uppercase">precision.js</span>
                         </div>
                         <h3 class="text-lg font-bold text-gh-fg mb-2">Technical Precision</h3>
-                        <p class="text-sm text-gh-fg-muted leading-relaxed">Deep Server-Side tracking to capture every conversion
+                        <p class="text-sm text-gh-fg-muted leading-relaxed">Deep Server-Side tracking to capture every
+                            conversion
                             accurately and overcome pixel signal loss.</p>
                     </div>
 
                     <!-- Feature 2 -->
-                    <div class="gh-card p-6 rounded-gh-lg hover:shadow-gh-md transition-all bg-white border-t-4 border-t-gh-success">
+                    <div
+                        class="gh-card p-6 rounded-gh-lg hover:shadow-gh-md transition-all bg-white border-t-4 border-t-gh-success">
                         <div class="flex items-center gap-2 mb-4 text-gh-success">
                             <span class="material-symbols-outlined">payments</span>
                             <span class="font-mono text-[10px] font-bold uppercase">roi.js</span>
                         </div>
                         <h3 class="text-lg font-bold text-gh-fg mb-2">ROI over Clicks</h3>
-                        <p class="text-sm text-gh-fg-muted leading-relaxed">Focusing on bottom-line business growth, quality lead scores, and actual profit, not just hollow traffic metrics.
+                        <p class="text-sm text-gh-fg-muted leading-relaxed">Focusing on bottom-line business growth,
+                            quality lead scores, and actual profit, not just hollow traffic metrics.
                         </p>
                     </div>
 
                     <!-- Feature 3 -->
-                    <div class="gh-card p-6 rounded-gh-lg hover:shadow-gh-md transition-all bg-white border-t-4 border-t-purple-500">
+                    <div
+                        class="gh-card p-6 rounded-gh-lg hover:shadow-gh-md transition-all bg-white border-t-4 border-t-purple-500">
                         <div class="flex items-center gap-2 mb-4 text-purple-600">
                             <span class="material-symbols-outlined">psychology</span>
                             <span class="font-mono text-[10px] font-bold uppercase">ai.py</span>
                         </div>
                         <h3 class="text-lg font-bold text-gh-fg mb-2">AI Optimization</h3>
-                        <p class="text-sm text-gh-fg-muted leading-relaxed">Leveraging smart bidding algorithms and predictive modeling for smarter audience acquisition.</p>
+                        <p class="text-sm text-gh-fg-muted leading-relaxed">Leveraging smart bidding algorithms and
+                            predictive modeling for smarter audience acquisition.</p>
                     </div>
 
                     <!-- Feature 4 -->
-                    <div class="gh-card p-6 rounded-gh-lg hover:shadow-gh-md transition-all bg-white border-t-4 border-t-gh-warning">
+                    <div
+                        class="gh-card p-6 rounded-gh-lg hover:shadow-gh-md transition-all bg-white border-t-4 border-t-gh-warning">
                         <div class="flex items-center gap-2 mb-4 text-gh-warning">
                             <span class="material-symbols-outlined">query_stats</span>
                             <span class="font-mono text-[10px] font-bold uppercase">report.json</span>
                         </div>
                         <h3 class="text-lg font-bold text-gh-fg mb-2">Full Transparency</h3>
-                        <p class="text-sm text-gh-fg-muted leading-relaxed">Real-time Looker Studio dashboards available 24/7 so you always know where your money is going.</p>
+                        <p class="text-sm text-gh-fg-muted leading-relaxed">Real-time Looker Studio dashboards available
+                            24/7 so you always know where your money is going.</p>
                     </div>
                 </div>
             </div>
@@ -387,27 +438,33 @@
             <div class="max-w-7xl mx-auto px-6">
                 <div class="flex flex-col lg:flex-row items-center gap-16">
                     <div class="w-full lg:w-2/5">
-                        <h2 class="text-3xl lg:text-4xl font-bold text-gh-fg mb-10 leading-tight">Transparent Reporting Infrastructure</h2>
+                        <h2 class="text-3xl lg:text-4xl font-bold text-gh-fg mb-10 leading-tight">Transparent Reporting
+                            Infrastructure</h2>
                         <div
                             class="font-mono text-xs bg-gh-canvas-inset p-5 rounded-gh border border-gh-border text-gh-fg-muted mb-8 shadow-gh-inset">
-                            <span class="text-gh-accent">></span> loading dashboard_engine... <span class="text-gh-success">DONE</span><br />
-                            <span class="text-gh-accent">></span> syncing real_time_metrics... <span class="text-gh-success">READY</span>
+                            <span class="text-gh-accent">></span> loading dashboard_engine... <span
+                                class="text-gh-success">DONE</span><br />
+                            <span class="text-gh-accent">></span> syncing real_time_metrics... <span
+                                class="text-gh-success">READY</span>
                         </div>
                         <ul class="space-y-6">
                             <li class="flex items-center gap-4 text-gh-fg font-medium">
-                                <div class="w-6 h-6 rounded-full bg-gh-success/10 flex items-center justify-center text-gh-success flex-shrink-0">
+                                <div
+                                    class="w-6 h-6 rounded-full bg-gh-success/10 flex items-center justify-center text-gh-success flex-shrink-0">
                                     <span class="material-symbols-outlined text-sm">check</span>
                                 </div>
                                 Real-time ROAS Tracking
                             </li>
                             <li class="flex items-center gap-4 text-gh-fg font-medium">
-                                <div class="w-6 h-6 rounded-full bg-gh-success/10 flex items-center justify-center text-gh-success flex-shrink-0">
+                                <div
+                                    class="w-6 h-6 rounded-full bg-gh-success/10 flex items-center justify-center text-gh-success flex-shrink-0">
                                     <span class="material-symbols-outlined text-sm">check</span>
                                 </div>
                                 Cost Per Acquisition (CPA) Trends
                             </li>
                             <li class="flex items-center gap-4 text-gh-fg font-medium">
-                                <div class="w-6 h-6 rounded-full bg-gh-success/10 flex items-center justify-center text-gh-success flex-shrink-0">
+                                <div
+                                    class="w-6 h-6 rounded-full bg-gh-success/10 flex items-center justify-center text-gh-success flex-shrink-0">
                                     <span class="material-symbols-outlined text-sm">check</span>
                                 </div>
                                 Conversion Funnel Path Analysis
@@ -419,15 +476,18 @@
                         <!-- GitHub Pull Request Style Dashboard Preview -->
                         <div class="gh-card rounded-gh-lg overflow-hidden shadow-gh-lg bg-white">
                             <div class="bg-gh-canvas-subtle p-4 border-b border-gh-border flex items-center gap-4">
-                                <img src="/kumaratul/assets/images/profile.jpg" class="w-10 h-10 rounded-full border border-gh-border">
+                                <img src="/kumaratul/assets/images/profile.jpg"
+                                    class="w-10 h-10 rounded-full border border-gh-border">
                                 <div class="flex-1">
                                     <div class="flex items-center gap-2">
                                         <span class="text-gh-fg font-bold">Atul Kumar</span>
                                         <span class="text-xs text-gh-fg-muted">pushed 16 commits just now</span>
                                     </div>
                                     <div class="flex items-center gap-2">
-                                        <span class="bg-gh-success/10 text-gh-success text-[10px] font-bold px-1.5 py-0.5 rounded border border-gh-success/20 flex items-center gap-1">
-                                            <span class="material-symbols-outlined text-[12px]">check_circle</span> All checks passed
+                                        <span
+                                            class="bg-gh-success/10 text-gh-success text-[10px] font-bold px-1.5 py-0.5 rounded border border-gh-success/20 flex items-center gap-1">
+                                            <span class="material-symbols-outlined text-[12px]">check_circle</span> All
+                                            checks passed
                                         </span>
                                     </div>
                                 </div>
@@ -436,26 +496,41 @@
                                 <p class="text-sm font-semibold text-gh-fg mb-4">Performance Dashboard Preview</p>
                                 <div class="grid grid-cols-3 gap-4 mb-6">
                                     <div class="p-4 rounded-gh border border-gh-border bg-gh-canvas-subtle">
-                                        <p class="text-[10px] text-gh-fg-muted uppercase font-bold tracking-wider mb-1">ROAS</p>
+                                        <p class="text-[10px] text-gh-fg-muted uppercase font-bold tracking-wider mb-1">
+                                            ROAS</p>
                                         <p class="text-2xl font-bold text-gh-accent">4.8x</p>
                                     </div>
                                     <div class="p-4 rounded-gh border border-gh-border bg-gh-canvas-subtle">
-                                        <p class="text-[10px] text-gh-fg-muted uppercase font-bold tracking-wider mb-1">CPA</p>
+                                        <p class="text-[10px] text-gh-fg-muted uppercase font-bold tracking-wider mb-1">
+                                            CPA</p>
                                         <p class="text-2xl font-bold text-gh-fg">$24.15</p>
                                     </div>
                                     <div class="p-4 rounded-gh border border-gh-border bg-gh-canvas-subtle">
-                                        <p class="text-[10px] text-gh-fg-muted uppercase font-bold tracking-wider mb-1">Conv</p>
+                                        <p class="text-[10px] text-gh-fg-muted uppercase font-bold tracking-wider mb-1">
+                                            Conv</p>
                                         <p class="text-2xl font-bold text-gh-fg">342</p>
                                     </div>
                                 </div>
                                 <!-- Simple Chart -->
                                 <div class="h-32 flex items-end gap-1.5 px-2">
-                                    <div class="flex-1 bg-gh-accent opacity-20 hover:opacity-100 transition-opacity rounded-t h-[30%]"></div>
-                                    <div class="flex-1 bg-gh-accent opacity-30 hover:opacity-100 transition-opacity rounded-t h-[45%]"></div>
-                                    <div class="flex-1 bg-gh-accent opacity-50 hover:opacity-100 transition-opacity rounded-t h-[60%]"></div>
-                                    <div class="flex-1 bg-gh-accent opacity-40 hover:opacity-100 transition-opacity rounded-t h-[55%]"></div>
-                                    <div class="flex-1 bg-gh-accent opacity-70 hover:opacity-100 transition-opacity rounded-t h-[75%]"></div>
-                                    <div class="flex-1 bg-gh-accent opacity-60 hover:opacity-100 transition-opacity rounded-t h-[65%]"></div>
+                                    <div
+                                        class="flex-1 bg-gh-accent opacity-20 hover:opacity-100 transition-opacity rounded-t h-[30%]">
+                                    </div>
+                                    <div
+                                        class="flex-1 bg-gh-accent opacity-30 hover:opacity-100 transition-opacity rounded-t h-[45%]">
+                                    </div>
+                                    <div
+                                        class="flex-1 bg-gh-accent opacity-50 hover:opacity-100 transition-opacity rounded-t h-[60%]">
+                                    </div>
+                                    <div
+                                        class="flex-1 bg-gh-accent opacity-40 hover:opacity-100 transition-opacity rounded-t h-[55%]">
+                                    </div>
+                                    <div
+                                        class="flex-1 bg-gh-accent opacity-70 hover:opacity-100 transition-opacity rounded-t h-[75%]">
+                                    </div>
+                                    <div
+                                        class="flex-1 bg-gh-accent opacity-60 hover:opacity-100 transition-opacity rounded-t h-[65%]">
+                                    </div>
                                     <div class="flex-1 bg-gh-accent rounded-t h-[90%] shadow-gh-sm"></div>
                                 </div>
                             </div>
@@ -471,22 +546,30 @@
                 <div class="mb-12 flex items-center gap-4 border-b border-gh-border pb-6">
                     <span class="material-symbols-outlined text-gh-fg-muted">chat_bubble</span>
                     <h2 class="text-2xl font-bold text-gh-fg">Verified Results</h2>
-                    <span class="bg-gh-canvas-subtle border border-gh-border text-gh-fg-muted px-2 py-0.5 rounded-full text-xs font-semibold">12 Projects Completed</span>
+                    <span
+                        class="bg-gh-canvas-subtle border border-gh-border text-gh-fg-muted px-2 py-0.5 rounded-full text-xs font-semibold">12
+                        Projects Completed</span>
                 </div>
 
                 <div class="space-y-12 max-w-4xl">
                     <!-- Review 1 -->
-                    <div class="gh-card rounded-gh-lg overflow-hidden flex flex-col sm:flex-row gap-0 sm:gap-4 p-0 bg-white shadow-gh-sm">
-                        <div class="bg-gh-canvas-subtle p-6 border-b sm:border-b-0 sm:border-r border-gh-border flex flex-row sm:flex-col items-center gap-4 sm:w-52 shrink-0">
-                            <div class="w-14 h-14 rounded-full bg-gradient-to-br from-blue-400 to-gh-accent border-2 border-white shadow-gh-sm"></div>
+                    <div
+                        class="gh-card rounded-gh-lg overflow-hidden flex flex-col sm:flex-row gap-0 sm:gap-4 p-0 bg-white shadow-gh-sm">
+                        <div
+                            class="bg-gh-canvas-subtle p-6 border-b sm:border-b-0 sm:border-r border-gh-border flex flex-row sm:flex-col items-center gap-4 sm:w-52 shrink-0">
+                            <div
+                                class="w-14 h-14 rounded-full bg-gradient-to-br from-blue-400 to-gh-accent border-2 border-white shadow-gh-sm">
+                            </div>
                             <div class="text-center sm:text-left">
                                 <p class="text-sm font-bold text-gh-fg">Sarah J.</p>
                                 <p class="text-xs text-gh-fg-muted font-medium">SaaS Founder</p>
                             </div>
                         </div>
                         <div class="p-8">
-                            <div class="flex items-center gap-2 mb-4 text-[10px] text-gh-fg-muted font-bold uppercase tracking-wider">
-                                <span class="bg-gh-accent/10 text-gh-accent px-2 py-0.5 rounded-full border border-gh-accent/20">Contributor</span>
+                            <div
+                                class="flex items-center gap-2 mb-4 text-[10px] text-gh-fg-muted font-bold uppercase tracking-wider">
+                                <span
+                                    class="bg-gh-accent/10 text-gh-accent px-2 py-0.5 rounded-full border border-gh-accent/20">Contributor</span>
                                 <span>commented 2 days ago</span>
                             </div>
                             <p class="text-gh-fg leading-relaxed text-lg">
@@ -499,22 +582,29 @@
                     </div>
 
                     <!-- Review 2 -->
-                    <div class="gh-card rounded-gh-lg overflow-hidden flex flex-col sm:flex-row gap-0 sm:gap-4 p-0 bg-white shadow-gh-sm">
-                        <div class="bg-gh-canvas-subtle p-6 border-b sm:border-b-0 sm:border-r border-gh-border flex flex-row sm:flex-col items-center gap-4 sm:w-52 shrink-0">
-                            <div class="w-14 h-14 rounded-full bg-gradient-to-br from-gh-success to-gh-success-emphasis border-2 border-white shadow-gh-sm"></div>
+                    <div
+                        class="gh-card rounded-gh-lg overflow-hidden flex flex-col sm:flex-row gap-0 sm:gap-4 p-0 bg-white shadow-gh-sm">
+                        <div
+                            class="bg-gh-canvas-subtle p-6 border-b sm:border-b-0 sm:border-r border-gh-border flex flex-row sm:flex-col items-center gap-4 sm:w-52 shrink-0">
+                            <div
+                                class="w-14 h-14 rounded-full bg-gradient-to-br from-gh-success to-gh-success-emphasis border-2 border-white shadow-gh-sm">
+                            </div>
                             <div class="text-center sm:text-left">
                                 <p class="text-sm font-bold text-gh-fg">Mike T.</p>
                                 <p class="text-xs text-gh-fg-muted font-medium">Ecom Owner</p>
                             </div>
                         </div>
                         <div class="p-8">
-                            <div class="flex items-center gap-2 mb-4 text-[10px] text-gh-fg-muted font-bold uppercase tracking-wider">
-                                <span class="bg-gh-success/10 text-gh-success px-2 py-0.5 rounded-full border border-gh-success/20">Verified</span>
+                            <div
+                                class="flex items-center gap-2 mb-4 text-[10px] text-gh-fg-muted font-bold uppercase tracking-wider">
+                                <span
+                                    class="bg-gh-success/10 text-gh-success px-2 py-0.5 rounded-full border border-gh-success/20">Verified</span>
                                 <span>commented last week</span>
                             </div>
                             <p class="text-gh-fg leading-relaxed text-lg">
                                 The ROAS on our Meta campaigns went from 1.5x to <span
-                                    class="bg-gh-success/10 px-1 font-semibold text-gh-success italic">4.2x</span> after he
+                                    class="bg-gh-success/10 px-1 font-semibold text-gh-success italic">4.2x</span> after
+                                he
                                 restructured our creatives. It feels like we finally have a predictable revenue engine.
                             </p>
                         </div>
@@ -526,13 +616,16 @@
         <!-- CTA Section -->
         <section class="py-20 bg-gh-canvas-subtle">
             <div class="max-w-4xl mx-auto px-6 text-center">
-                <div class="gh-card rounded-gh-lg p-12 bg-white shadow-gh-lg border-2 border-gh-accent relative overflow-hidden">
+                <div
+                    class="gh-card rounded-gh-lg p-12 bg-white shadow-gh-lg border-2 border-gh-accent relative overflow-hidden">
                     <div class="absolute -top-12 -right-12 w-48 h-48 bg-gh-accent opacity-[0.03] rounded-full"></div>
-                    
-                    <h2 class="text-3xl md:text-5xl font-extrabold text-gh-fg mb-8 tracking-tight">Ready to Start Your Growth Journey?
+
+                    <h2 class="text-3xl md:text-5xl font-extrabold text-gh-fg mb-8 tracking-tight">Ready to Start Your
+                        Growth Journey?
                     </h2>
-                    <p class="text-lg text-gh-fg-muted mb-12 max-w-2xl mx-auto leading-relaxed">Join high-scaling brands using technical Google Ads strategies to dominate their niche. Stop guessing; start growing.</p>
-                    
+                    <p class="text-lg text-gh-fg-muted mb-12 max-w-2xl mx-auto leading-relaxed">Join high-scaling brands
+                        using technical Google Ads strategies to dominate their niche. Stop guessing; start growing.</p>
+
                     <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
                         <button onclick="window.location.href='javascript:void(0)'"
                             class="open-calendar w-full sm:w-auto bg-gh-success-emphasis text-white px-10 py-4 rounded-gh font-bold text-lg shadow-gh-sm hover:bg-gh-success transition-all transform hover:-translate-y-0.5">
@@ -556,12 +649,15 @@
                         src="/kumaratul/assets/images/profile.jpg" />
                     <span class="font-bold text-gh-fg text-lg">Atul Kumar</span>
                 </div>
-                
+
                 <div class="flex flex-wrap justify-center gap-8">
                     <a href="index.html" class="text-sm font-medium hover:text-gh-accent transition-colors">Home</a>
-                    <a href="google-ads.html" class="text-sm font-medium text-gh-fg hover:text-gh-accent transition-colors">Google Ads</a>
-                    <a href="meta-ads.html" class="text-sm font-medium hover:text-gh-accent transition-colors">Meta Ads</a>
-                    <a href="zoho-crm.html" class="text-sm font-medium hover:text-gh-accent transition-colors">Zoho CRM</a>
+                    <a href="google-ads.html"
+                        class="text-sm font-medium text-gh-fg hover:text-gh-accent transition-colors">Google Ads</a>
+                    <a href="meta-ads.html" class="text-sm font-medium hover:text-gh-accent transition-colors">Meta
+                        Ads</a>
+                    <a href="zoho-crm.html" class="text-sm font-medium hover:text-gh-accent transition-colors">Zoho
+                        CRM</a>
                 </div>
 
                 <div class="text-xs font-mono text-gh-fg-subtle">
@@ -571,6 +667,24 @@
         </div>
     </footer>
     <script src="assets/js/calendar.js"></script>
+    <script>
+        // Theme Toggle Script
+        const themeToggle = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'light') {
+            html.classList.remove('dark');
+        } else {
+            html.classList.add('dark');
+        }
+
+        themeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            const isDark = html.classList.contains('dark');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        });
+    </script>
 </body>
 
 </html>

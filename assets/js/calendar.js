@@ -17,28 +17,30 @@ document.addEventListener("DOMContentLoaded", () => {
     const modalHTML = `
     <div id="calendar-modal" class="fixed inset-0 z-[100] hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
         <!-- Backdrop -->
-        <div class="fixed inset-0 bg-black/80 backdrop-blur-sm transition-opacity opacity-0" id="modal-backdrop"></div>
+        <div class="fixed inset-0 bg-black/60 backdrop-blur-sm transition-opacity opacity-0" id="modal-backdrop"></div>
 
         <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
             <div class="flex min-h-full items-center justify-center p-4 text-center sm:p-0">
                 <!-- Modal Panel -->
-                <div class="relative transform overflow-hidden rounded-lg bg-[#2b2d31] text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-4xl border border-[#1e1f22] opacity-0 scale-95" id="modal-panel">
+                <div class="relative transform overflow-hidden rounded-gh-lg bg-white dark:bg-gh-canvas-dark text-left shadow-gh-lg transition-all sm:my-8 sm:w-full sm:max-w-4xl border border-gh-border dark:border-gh-border-dark opacity-0 scale-95" id="modal-panel">
                     
                     <!-- Header -->
-                    <div class="flex items-center justify-between px-4 py-3 border-b border-[#1e1f22] bg-[#2b2d31]">
-                        <h3 class="text-white font-bold flex items-center gap-2 font-display">
-                            <span class="material-symbols-outlined text-[#5865F2]">calendar_month</span>
+                    <div class="flex items-center justify-between px-4 py-3 border-b border-gh-border dark:border-gh-border-dark bg-gh-canvas dark:bg-gh-canvas-dark">
+                        <h3 class="text-gh-fg dark:text-gh-fg-dark font-bold flex items-center gap-2 font-display">
+                            <span class="material-symbols-outlined text-gh-accent">calendar_month</span>
                             Schedule a Call
                         </h3>
-                        <button type="button" class="text-[#949ba4] hover:text-white transition-colors outline-none" onclick="closeCalendar()">
-                            <span class="material-symbols-outlined">close</span>
-                        </button>
+                        <div class="flex items-center gap-2">
+                            <button type="button" class="text-gh-fg-muted dark:text-gh-fg-muted-dark hover:text-gh-accent transition-colors outline-none" onclick="closeCalendar()">
+                                <span class="material-symbols-outlined">close</span>
+                            </button>
+                        </div>
                     </div>
 
                     <!-- Iframe Container -->
                     <div class="w-full h-[80vh] bg-white relative">
-                        <div id="calendar-loader" class="absolute inset-0 flex items-center justify-center bg-[#2b2d31] z-10">
-                            <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-[#5865F2]"></div>
+                        <div id="calendar-loader" class="absolute inset-0 flex items-center justify-center bg-white dark:bg-gh-canvas-dark z-10">
+                            <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-gh-accent"></div>
                         </div>
                         <iframe id="calendar-frame" src="" class="w-full h-full border-0" 
                                 sandbox="allow-scripts allow-same-origin allow-popups allow-forms allow-top-navigation"
