@@ -7,33 +7,33 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
         rel="stylesheet" media="print" onload="this.media='all'" />
     <noscript>
         <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
             rel="stylesheet" />
     </noscript>
 
-    <title>Atul Kumar | Performance Marketing & CRM Specialist</title>
+    <title>Atul Kumar — Performance Marketing & Growth Specialist | Ads, Funnels, Email, CRM</title>
     <meta name="description"
-        content="Scale your business with expert Google Ads, Meta Ads, and Zoho CRM strategies. 8+ years experience helping brands maximize ROI. Book a free audit.">
+        content="Full-stack growth marketer. I build end-to-end revenue systems — paid ads, conversion funnels, Email/WhatsApp/SMS automation, and CRM pipelines. 8+ years scaling 50+ brands profitably.">
 
-    <!-- Open Graph / Social Media -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://Atulscript.github.io/kumaratul/">
-    <meta property="og:title" content="Atul Kumar | Performance Marketing & CRM Specialist">
+    <meta property="og:title" content="Atul Kumar — Performance Marketing & Growth Specialist">
     <meta property="og:description"
-        content="Scale your business with expert Google Ads, Meta Ads, and Zoho CRM strategies. 8+ years experience.">
-    <meta property="og:image" content="https://Atulscript.github.io/kumaratul/assets/images/profile.jpg">
+        content="Paid ads, funnels, Email/WhatsApp/SMS automation & CRM — complete revenue systems that scale.">
+    <meta property="og:image" content="https://Atulscript.github.io/kumaratul/assets/images/profile.png">
+    <link rel="icon" type="image/png" href="assets/images/profile.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Atul Kumar | Performance Marketing Specialist">
-    <meta name="twitter:description" content="Data-driven growth through Google Ads, Meta Ads, and CRM precision.">
-
     <link rel="canonical" href="https://Atulscript.github.io/kumaratul/" />
+
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
         rel="stylesheet" />
+    <!-- Font Awesome for Social Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script>
         tailwind.config = {
@@ -41,336 +41,372 @@
             theme: {
                 extend: {
                     colors: {
-                        // GitHub Color Palette (Light)
                         "gh-canvas": "#ffffff",
                         "gh-canvas-subtle": "#f6f8fa",
-                        "gh-canvas-inset": "#f6f8fa",
                         "gh-border": "#d0d7de",
                         "gh-border-muted": "#d8dee4",
                         "gh-fg": "#1f2328",
                         "gh-fg-muted": "#656d76",
-                        "gh-fg-subtle": "#6e7781",
-
-                        // GitHub Color Palette (Dark)
                         "gh-canvas-dark": "#0d1117",
-                        "gh-canvas-subtle-dark": "#161b22",
+                        "gh-subtle-dark": "#161b22",
+                        "gh-inset-dark": "#010409",
                         "gh-border-dark": "#30363d",
                         "gh-fg-dark": "#e6edf3",
-                        "gh-fg-muted-dark": "#8b949e",
-
-                        "gh-accent": "#0969da",
-                        "gh-accent-emphasis": "#0969da",
-                        "gh-accent-dark": "#2f81f7",
-
-                        "gh-success": "#1a7f37",
-                        "gh-success-emphasis": "#2da44e",
-                        "gh-success-dark": "#3fb950",
-
-                        "gh-danger": "#d1242f",
-                        "gh-warning": "#bf8700",
-
-                        "gh-btn-bg": "#f6f8fa",
-                        "gh-btn-hover": "#f3f4f6",
-                        "gh-btn-active": "#ebecf0",
-
-                        "gh-header-bg": "#24292f",
-                        "gh-header-text": "#ffffff",
+                        "gh-muted-dark": "#8b949e",
+                        "gh-accent": "#2f81f7",
+                        "gh-accent-muted": "#388bfd26",
+                        "gh-green": "#3fb950",
+                        "gh-green-muted": "#238636",
+                        "gh-purple": "#a371f7",
+                        "gh-yellow": "#d29922",
+                        "gh-red": "#f85149",
+                        "gh-orange": "#db6d28",
                     },
                     fontFamily: {
-                        sans: ["-apple-system", "BlinkMacSystemFont", "'Segoe UI'", "'Noto Sans'", "Helvetica", "Arial", "sans-serif"],
-                        display: ["'Plus Jakarta Sans'", "sans-serif"],
-                        body: ["Inter", "sans-serif"],
-                    },
-                    borderRadius: {
-                        'gh': '6px',
-                        'gh-lg': '12px',
-                    },
-                    boxShadow: {
-                        'gh-sm': '0 1px 0 rgba(31, 35, 40, 0.04)',
-                        'gh-md': '0 3px 6px rgba(140, 149, 159, 0.15)',
-                        'gh-lg': '0 8px 24px rgba(140, 149, 159, 0.2)',
-                        'gh-inset': 'inset 0 1px 0 rgba(208, 215, 222, 0.2)',
+                        sans: ["Inter", "-apple-system", "BlinkMacSystemFont", "'Segoe UI'", "Helvetica", "Arial", "sans-serif"],
+                        mono: ["'JetBrains Mono'", "SFMono-Regular", "Consolas", "'Liberation Mono'", "Menlo", "monospace"],
                     },
                 },
             },
         };
     </script>
     <style type="text/tailwindcss">
-        /* GitHub-style Navigation */
-        .gh-nav {
-            background-color: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border-bottom: 1px solid #d0d7de;
+        /* Base */
+        body { background-color: #0d1117; color: #e6edf3; }
+        .light body { background-color: #fff; color: #1f2328; }
+
+        /* Glow effects */
+        .glow-accent { box-shadow: 0 0 30px rgba(47,129,247,0.15), 0 0 60px rgba(47,129,247,0.05); }
+        .glow-green { box-shadow: 0 0 30px rgba(63,185,80,0.12); }
+        .glow-purple { box-shadow: 0 0 20px rgba(163,113,247,0.12); }
+
+
+
+
+        /* Gradient text */
+        .gradient-text {
+            background: linear-gradient(135deg, #2f81f7, #a371f7, #3fb950);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
-        .dark .gh-nav {
-            background-color: rgba(13, 17, 23, 0.95);
-            border-bottom-color: #30363d;
+
+
+
+        /* Card glow on hover */
+        .card-glow {
+            position: relative;
+            transition: all 0.3s ease;
         }
+        .card-glow::before {
+            content: '';
+            position: absolute;
+            inset: -1px;
+            border-radius: inherit;
+            background: linear-gradient(135deg, #2f81f7, #a371f7);
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: -1;
+        }
+        .card-glow:hover::before { opacity: 1; }
+        .card-glow:hover { border-color: transparent; }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #010409; }
+        ::-webkit-scrollbar-thumb { background: #30363d; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #484f58; }
+
+        /* Shimmer effect for buttons/badges */
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+        .shimmer {
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            background-size: 200% 100%;
+            animation: shimmer 3s infinite linear;
+        }
+
+        /* Float animation */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        .float { animation: float 6s ease-in-out infinite; }
+        .float-delayed { animation: float 7s ease-in-out infinite 1s; }
+
+        /* Animated Profile Ring */
+        @keyframes rotate-bg {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .profile-ring-animate {
+            background: conic-gradient(from 0deg, transparent, transparent, #2f81f7, #a371f7, #3fb950, transparent);
+            animation: rotate-bg 4s linear infinite;
+        }
+
+        /* Status pulse */
+        @keyframes status-pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.2); opacity: 0.7; }
+        }
+        .status-pulse { animation: status-pulse 2s ease-in-out infinite; }
+
+        /* Smooth reveal stagger */
+        .reveal { opacity: 0; transform: translateY(15px); transition: all 0.7s cubic-bezier(0.16,1,0.3,1); }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.15s; }
+        .reveal-delay-3 { transition-delay: 0.2s; }
+
+        /* Glassmorphism */
+        .glass { background: rgba(22, 27, 34, 0.7); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
         
-        .dark body {
-            background-color: #0d1117;
-            color: #e6edf3;
-        }
-        
-        /* GitHub-style Cards */
-        .gh-card {
-            background-color: #ffffff;
-            border: 1px solid #d0d7de;
-            transition: all 0.2s cubic-bezier(0.3, 0, 0.5, 1);
-        }
-        .dark .gh-card {
-            background-color: #0d1117;
-            border-color: #30363d;
-        }
-        .gh-card:hover {
-            border-color: #d8dee4;
-            box-shadow: 0 3px 12px rgba(140, 149, 159, 0.15);
-            transform: translateY(-1px);
-        }
-        .dark .gh-card:hover {
-            border-color: #444c56;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-        }
-        
-        /* GitHub-style Hero Pattern */
-        .gh-hero-pattern {
-            background: linear-gradient(135deg, #f6f8fa 0%, #ffffff 100%);
-        }
-        .dark .gh-hero-pattern {
-            background: linear-gradient(135deg, #161b22 0%, #0d1117 100%);
-        }
-        
-        /* GitHub-style Gradient Overlay */
-        .gh-gradient {
-            background: linear-gradient(180deg, rgba(246, 248, 250, 0) 0%, rgba(246, 248, 250, 1) 100%);
-        }
-        .dark .gh-gradient {
-            background: linear-gradient(180deg, rgba(13, 17, 23, 0) 0%, rgba(13, 17, 23, 1) 100%);
-        }
-        
-        /* GitHub-style Step Numbers */
-        .gh-step-number {
-            -webkit-text-stroke: 2px #f6f8fa;
-            color: transparent;
-            font-weight: 800;
-        }
-        .dark .gh-step-number {
-            -webkit-text-stroke: 2px #30363d;
-        }
-        
-        /* GitHub-style Scrollbar */
-        ::-webkit-scrollbar {
-            width: 10px;
-            height: 10px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #f6f8fa;
-        }
-        .dark ::-webkit-scrollbar-track {
-            background: #0d1117;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #d0d7de;
-            border-radius: 6px;
-        }
-        .dark ::-webkit-scrollbar-thumb {
-            background: #30363d;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #afb8c1;
-        }
-        .dark ::-webkit-scrollbar-thumb:hover {
-            background: #444c56;
-        }
-        
-        /* Smooth Animations */
-        .gh-fade-in {
-            animation: fadeInUp 0.6s ease-out;
-        }
-        
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+        /* Grid background */
+        .grid-bg { background-image: radial-gradient(#30363d 0.5px, transparent 0.5px); background-size: 24px 24px; }
     </style>
 </head>
 
-<body
-    class="bg-gh-canvas dark:bg-gh-canvas-dark text-gh-fg dark:text-gh-fg-dark font-sans transition-colors duration-300 antialiased selection:bg-gh-accent selection:text-white">
-    <!-- Navigation -->
-    <header class="fixed top-0 left-0 right-0 z-50 gh-nav">
-        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-            <!-- Logo -->
+<body class="font-sans antialiased selection:bg-gh-accent/30 selection:text-white overflow-x-hidden">
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- NAVIGATION -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <header
+        class="fixed top-0 left-0 right-0 z-50 bg-gh-inset-dark/80 backdrop-blur-xl border-b border-gh-border-dark/50">
+        <nav class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
             <div class="flex items-center gap-3">
-                <div class="relative group">
-                    <img alt="Atul Kumar Portrait"
-                        class="w-10 h-10 rounded-full object-cover transition-all group-hover:shadow-md border-2 border-gh-border dark:border-gh-border-dark"
-                        src="/kumaratul/assets/images/profile.jpg" width="40" height="40" decoding="async" />
-                    <!-- Online Status -->
+                <div class="relative">
+                    <img alt="Atul Kumar" class="w-8 h-8 rounded-full object-cover border border-gh-border-dark"
+                        src="assets/images/profile.png" width="32" height="32" />
                     <div
-                        class="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 bg-gh-success-emphasis rounded-full border-2 border-white">
+                        class="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 bg-gh-green rounded-full border-2 border-gh-inset-dark">
                     </div>
                 </div>
-                <span class="font-display font-semibold text-lg text-gh-fg dark:text-gh-fg-dark">Atul Kumar</span>
+                <span class="font-semibold text-[15px] text-gh-fg-dark">Atul Kumar</span>
             </div>
 
-            <!-- Navigation Links -->
-            <div class="hidden md:flex items-center space-x-1">
-                <a class="px-3 py-2 rounded-gh hover:bg-gh-canvas-subtle dark:hover:bg-gh-canvas-subtle-dark text-gh-fg-muted dark:text-gh-fg-muted-dark text-sm font-medium transition-colors"
-                    href="index.html">
-                    Home
-                </a>
-                <a class="px-3 py-2 rounded-gh hover:bg-gh-canvas-subtle dark:hover:bg-gh-canvas-subtle-dark text-gh-fg-muted dark:text-gh-fg-muted-dark text-sm font-medium transition-colors"
-                    href="#why-me">
-                    About
-                </a>
-
-                <!-- Services Dropdown -->
-                <div class="relative group">
-                    <button
-                        class="px-3 py-2 rounded-gh hover:bg-gh-canvas-subtle dark:hover:bg-gh-canvas-subtle-dark text-gh-fg-muted dark:text-gh-fg-muted-dark text-sm font-medium transition-colors flex items-center gap-1">
-                        Services
-                        <span class="material-symbols-outlined text-sm">expand_more</span>
-                    </button>
-                    <!-- Dropdown Menu -->
-                    <div
-                        class="absolute left-0 top-full mt-1 w-48 bg-white dark:bg-gh-canvas-dark border border-gh-border dark:border-gh-border-dark rounded-gh shadow-gh-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                        <div class="py-1">
-                            <a href="google-ads.html"
-                                class="block px-4 py-2 text-sm text-gh-fg dark:text-gh-fg-dark hover:bg-gh-canvas-subtle dark:hover:bg-gh-canvas-subtle-dark transition-colors">
-                                Google Ads
-                            </a>
-                            <a href="meta-ads.html"
-                                class="block px-4 py-2 text-sm text-gh-fg dark:text-gh-fg-dark hover:bg-gh-canvas-subtle dark:hover:bg-gh-canvas-subtle-dark transition-colors">
-                                Meta Ads
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <a class="px-3 py-2 rounded-gh hover:bg-gh-canvas-subtle dark:hover:bg-gh-canvas-subtle-dark text-gh-fg-muted dark:text-gh-fg-muted-dark text-sm font-medium transition-colors"
-                    href="zoho-crm.html">
-                    Zoho CRM
-                </a>
+            <div class="hidden md:flex items-center gap-1">
+                <a class="px-3 py-1.5 rounded-md text-[15px] text-gh-fg-dark hover:bg-gh-subtle-dark transition-colors"
+                    href="#about">About</a>
+                <a class="px-3 py-1.5 rounded-md text-[15px] text-gh-muted-dark hover:bg-gh-subtle-dark hover:text-gh-fg-dark transition-colors"
+                    href="#expertise">Expertise</a>
+                <a class="px-3 py-1.5 rounded-md text-[15px] text-gh-muted-dark hover:bg-gh-subtle-dark hover:text-gh-fg-dark transition-colors"
+                    href="#insights">Insights</a>
+                <a class="px-3 py-1.5 rounded-md text-[15px] text-gh-muted-dark hover:bg-gh-subtle-dark hover:text-gh-fg-dark transition-colors"
+                    href="#newsletter">Newsletter</a>
             </div>
 
-            <!-- CTA -->
             <div class="flex items-center gap-2">
-                <button id="theme-toggle"
-                    class="p-2 rounded-gh hover:bg-gh-canvas-subtle dark:hover:bg-gh-canvas-subtle-dark text-gh-fg-muted dark:text-gh-fg-muted-dark transition-colors flex items-center justify-center font-bold"
-                    title="Toggle Theme">
-                    <span class="material-symbols-outlined dark:hidden">dark_mode</span>
-                    <span class="material-symbols-outlined hidden dark:block">light_mode</span>
-                </button>
-                <a class="hidden sm:flex px-3 py-2 rounded-gh hover:bg-gh-canvas-subtle dark:hover:bg-gh-canvas-subtle-dark text-gh-fg dark:text-gh-fg-dark text-sm font-semibold transition-all border border-transparent hover:border-gh-border dark:hover:border-gh-border-dark"
-                    href="contact.html">
-                    Contact
-                </a>
-                <a class="open-calendar bg-gh-success-emphasis hover:bg-gh-success text-white px-4 py-1.5 rounded-gh font-bold text-sm transition-all shadow-gh-sm hover:shadow-gh-md"
+                <a class="open-calendar hidden sm:inline-flex text-[15px] font-medium text-gh-fg-dark bg-gh-subtle-dark hover:bg-gh-border-dark/60 px-3 py-1.5 rounded-md border border-gh-border-dark transition-all"
                     href="javascript:void(0)">
-                    Schedule Call
+                    Schedule a Call
                 </a>
+                <button id="mobile-menu-button"
+                    class="md:hidden p-1.5 text-gh-fg-dark hover:bg-gh-subtle-dark rounded-md transition-colors"
+                    aria-label="Menu">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
             </div>
         </nav>
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-gh-inset-dark border-b border-gh-border-dark overflow-hidden transition-all duration-300">
+            <div class="px-4 py-3 space-y-1">
+                <a class="block px-3 py-2 rounded-md text-[15px] text-gh-fg-dark hover:bg-gh-subtle-dark transition-colors"
+                    href="#about">About</a>
+                <a class="block px-3 py-2 rounded-md text-[15px] text-gh-muted-dark hover:bg-gh-subtle-dark hover:text-gh-fg-dark transition-colors"
+                    href="#expertise">Expertise</a>
+                <a class="block px-3 py-2 rounded-md text-[15px] text-gh-muted-dark hover:bg-gh-subtle-dark hover:text-gh-fg-dark transition-colors"
+                    href="#insights">Insights</a>
+                <a class="block px-3 py-2 rounded-md text-[15px] text-gh-muted-dark hover:bg-gh-subtle-dark hover:text-gh-fg-dark transition-colors"
+                    href="#newsletter">Newsletter</a>
+                <a class="open-calendar block px-3 py-2 mt-4 rounded-md text-[15px] font-bold text-white bg-gh-accent hover:bg-gh-accent/90 transition-colors text-center"
+                    href="javascript:void(0)">Schedule a Call</a>
+            </div>
+        </div>
     </header>
 
     <main class="pt-16">
-        <!-- Hero Section -->
-        <section
-            class="relative overflow-hidden gh-hero-pattern py-16 lg:py-24 border-b border-gh-border dark:border-gh-border-dark">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid lg:grid-cols-2 gap-12 items-center">
-                    <div class="order-2 lg:order-1">
-                        <div
-                            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gh-success-emphasis/10 text-gh-success-emphasis text-xs font-semibold uppercase tracking-wide mb-6 border border-gh-success-emphasis/20">
-                            Performance Marketing Specialist
+
+        <!-- ═══════════════════════════════════════════════ -->
+        <!-- HERO — Profile Style -->
+        <!-- ═══════════════════════════════════════════════ -->
+        <section class="relative overflow-hidden border-b border-gh-border-dark grid-bg" id="about">
+            <!-- Background orbs -->
+            <div class="absolute top-20 -left-32 w-96 h-96 bg-gh-accent/10 rounded-full blur-[120px] float"></div>
+            <div class="absolute bottom-10 right-10 w-72 h-72 bg-gh-purple/10 rounded-full blur-[120px] float-delayed">
+            </div>
+            <div
+                class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 pointer-events-none">
+            </div>
+
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 py-20 lg:py-28 relative">
+                <div class="grid lg:grid-cols-5 gap-12 items-start">
+                    <!-- Left: Profile -->
+                    <div class="lg:col-span-2 flex flex-col items-center lg:items-start reveal">
+                        <div class="relative mb-6">
+                            <!-- Animated active border ring -->
+                            <div class="absolute -inset-1 rounded-full profile-ring-animate blur-[2px]"></div>
+
+                            <div
+                                class="w-32 h-32 sm:w-48 sm:h-48 rounded-full overflow-hidden border-2 border-gh-border-dark glow-accent mx-auto lg:mx-0 group relative z-10 bg-gh-canvas-dark">
+                                <img alt="Atul Kumar"
+                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    src="assets/images/profile.png" />
+                            </div>
+                            <div
+                                class="absolute bottom-1 right-1 sm:bottom-2 sm:right-2 w-6 h-6 sm:w-8 sm:h-8 bg-gh-green rounded-full border-4 border-gh-canvas-dark flex items-center justify-center z-20 shadow-lg">
+                                <div class="absolute inset-0 rounded-full bg-gh-green status-pulse"></div>
+                                <span class="text-white text-xs sm:text-sm relative z-10">✓</span>
+                            </div>
                         </div>
-                        <h1
-                            class="font-display text-4xl lg:text-6xl font-bold leading-tight mb-6 text-gh-fg dark:text-gh-fg-dark tracking-tight">
-                            Data-Driven <br /><span class="text-gh-accent">Performance</span> <br />Marketing
-                        </h1>
-                        <p class="text-lg text-gh-fg dark:text-gh-fg-dark-muted mb-10 leading-relaxed max-w-xl">
-                            Hey there! 👋 I'm Atul. I help scaling brands maximize ROI through precision strategies in
-                            Google Ads, Meta Ads, and CRM Optimization.
+                        <h1 class="text-3xl font-bold text-gh-fg-dark mb-1 tracking-tight">Atul Kumar</h1>
+                        <p class="text-xl font-medium gradient-text mb-4">Architecting Automated Growth Engines</p>
+                        <p class="text-[15px] text-gh-muted-dark leading-snug text-center lg:text-left max-w-md mb-8">
+                            I build high-performance marketing systems 🚀 — from precision ads that find your customers,
+                            to intelligent funnels that convert them, and multi-channel automations that keep them
+                            coming back.
+                            Turn ad spend into <strong class="text-gh-fg-dark">predictable revenue</strong> 💰.
                         </p>
-                        <div class="flex flex-wrap gap-4 items-center">
-                            <a class="open-calendar bg-gh-success-emphasis hover:bg-gh-success text-white px-6 py-2.5 rounded-gh font-semibold text-base transition-all flex items-center gap-2 shadow-gh-sm hover:shadow-gh-md"
-                                href="javascript:void(0)">
-                                Schedule a Call
-                                <span class="material-symbols-outlined text-lg">calendar_month</span>
+
+                        <!-- GitHub-style stats -->
+                        <div class="flex flex-wrap gap-3 mb-3">
+                            <div class="flex items-center gap-1.5 text-[15px] text-gh-muted-dark">
+                                <span class="material-symbols-outlined text-[15px]">apartment</span>
+                                <span>Performance Marketer</span>
+                            </div>
+                            <div class="flex items-center gap-1.5 text-[15px] text-gh-muted-dark">
+                                <span class="material-symbols-outlined text-[15px]">location_on</span>
+                                <span>India</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-3 mb-6">
+                            <div class="flex items-center gap-1.5 text-[15px] text-gh-muted-dark">
+                                <span class="material-symbols-outlined text-[15px]">link</span>
+                                <a href="mailto:getintouch.atul@gmail.com"
+                                    class="text-gh-accent hover:underline">getintouch.atul@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <!-- Social Connections -->
+                        <div class="flex items-center gap-4 mb-8">
+                            <a href="https://linkedin.com" target="_blank"
+                                class="text-gh-muted-dark hover:text-gh-accent transition-colors" title="LinkedIn">
+                                <i class="fa-brands fa-linkedin text-2xl"></i>
                             </a>
-                            <a class="bg-gh-btn-bg hover:bg-gh-btn-hover text-gh-fg dark:text-gh-fg-dark px-6 py-2.5 rounded-gh font-semibold text-base transition-all flex items-center gap-2 border border-gh-border dark:border-gh-border-dark shadow-gh-sm"
-                                href="mailto:hello@kumaratul.com">
-                                Contact Me
+                            <a href="https://x.com" target="_blank"
+                                class="text-gh-muted-dark hover:text-gh-accent transition-colors" title="X (Twitter)">
+                                <i class="fa-brands fa-x-twitter text-2xl"></i>
+                            </a>
+                            <a href="https://github.com/Atulscript" target="_blank"
+                                class="text-gh-muted-dark hover:text-gh-accent transition-colors" title="GitHub">
+                                <i class="fa-brands fa-github text-2xl"></i>
                             </a>
                         </div>
 
-                        <!-- Social Proof (GitHub-style badges) -->
-                        <div class="mt-10 flex flex-wrap gap-3">
-                            <div
-                                class="flex items-center gap-2 px-3 py-1.5 bg-white dark:bg-gh-canvas-dark border border-gh-border dark:border-gh-border-dark rounded-full text-sm text-gh-fg dark:text-gh-fg-dark-muted hover:border-gh-border dark:border-gh-border-dark-muted transition-colors">
-                                <span>🚀</span> <span class="font-semibold text-gh-fg dark:text-gh-fg-dark">50+</span>
-                                Brands Scaled
+
+
+                        <!-- Hero CTA -->
+                        <a href="javascript:void(0)"
+                            class="open-calendar w-full inline-flex items-center justify-center gap-2 px-5 py-3 bg-gh-accent hover:bg-gh-accent/90 text-white text-[15px] font-semibold rounded-lg transition-all hover:shadow-lg hover:shadow-gh-accent/20 relative overflow-hidden group">
+                            <div class="absolute inset-0 shimmer opacity-0 group-hover:opacity-100 transition-opacity">
                             </div>
-                            <div
-                                class="flex items-center gap-2 px-3 py-1.5 bg-white dark:bg-gh-canvas-dark border border-gh-border dark:border-gh-border-dark rounded-full text-sm text-gh-fg dark:text-gh-fg-dark-muted hover:border-gh-border dark:border-gh-border-dark-muted transition-colors">
-                                <span>📈</span> <span class="font-semibold text-gh-fg dark:text-gh-fg-dark">8+</span>
-                                Years XP
-                            </div>
-                            <div
-                                class="flex items-center gap-2 px-3 py-1.5 bg-white dark:bg-gh-canvas-dark border border-gh-border dark:border-gh-border-dark rounded-full text-sm text-gh-fg dark:text-gh-fg-dark-muted hover:border-gh-border dark:border-gh-border-dark-muted transition-colors">
-                                <span>💸</span> <span class="font-semibold text-gh-fg dark:text-gh-fg-dark">ROI</span>
-                                Focused
-                            </div>
-                        </div>
+                            <span class="material-symbols-outlined text-[15px] relative z-10">calendar_today</span>
+                            <span class="relative z-10">Schedule a Call</span>
+                        </a>
                     </div>
 
-                    <!-- Hero Image (GitHub Style) -->
-                    <div class="order-1 lg:order-2 flex justify-center">
-                        <div class="relative w-full max-w-sm group">
-                            <div class="gh-card rounded-gh-lg overflow-hidden shadow-gh-lg">
-                                <div
-                                    class="bg-gh-canvas dark:bg-gh-canvas-dark-subtle p-3 border-b border-gh-border dark:border-gh-border-dark flex items-center justify-between">
-                                    <div class="flex items-center gap-2">
-                                        <img src="/kumaratul/assets/images/profile.jpg"
-                                            class="w-6 h-6 rounded-full border border-gh-border dark:border-gh-border-dark">
-                                        <span class="text-xs font-semibold text-gh-fg dark:text-gh-fg-dark">atul-kumar /
-                                            readme.md</span>
+                    <!-- Right: About Detail -->
+                    <div class="lg:col-span-3 reveal-delay-1">
+                        <div
+                            class="glass border border-gh-border-dark rounded-xl overflow-hidden hover:border-gh-accent/40 transition-all duration-500 hover:shadow-2xl hover:shadow-gh-accent/5">
+                            <!-- Card header -->
+                            <div
+                                class="flex items-center gap-2 px-5 py-3 bg-gh-subtle-dark/50 border-b border-gh-border-dark">
+                                <span
+                                    class="material-symbols-outlined text-[15px] text-gh-muted-dark status-pulse">waving_hand</span>
+                                <span
+                                    class="text-[13px] font-medium text-gh-fg-dark uppercase tracking-wider opacity-70">Happy
+                                    to have you here 😊</span>
+                            </div>
+                            <!-- Content -->
+                            <div class="p-8 space-y-10">
+                                <div>
+                                    <h2 class="text-2xl font-bold text-gh-fg-dark mb-4 leading-tight">Architecting
+                                        Revenue Infrastructure 👋</h2>
+                                    <p class="text-gh-muted-dark text-[15px] leading-relaxed mb-6">
+                                        I'm a <strong class="text-gh-fg-dark font-semibold">performance-focused growth
+                                            architect</strong> with 8+ years experience.
+                                        I don't just run ads; I build <strong class="text-gh-accent">end-to-end revenue
+                                            systems</strong> that scale brands predictably by connecting precision
+                                        acquisition with deep CRM automation.
+                                    </p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span
+                                            class="px-3 py-1 rounded-full bg-gh-accent/10 text-gh-accent text-[12px] font-semibold border border-gh-accent/20 hover:bg-gh-accent hover:text-white transition-colors cursor-default">Paid
+                                            Advertising</span>
+                                        <span
+                                            class="px-3 py-1 rounded-full bg-gh-purple/10 text-gh-purple text-[12px] font-semibold border border-gh-purple/20 hover:bg-gh-purple hover:text-white transition-colors cursor-default">Zoho
+                                            CRM</span>
+                                        <span
+                                            class="px-3 py-1 rounded-full bg-gh-yellow/10 text-gh-yellow text-[12px] font-semibold border border-gh-yellow/20 hover:bg-gh-yellow hover:text-white transition-colors cursor-default">Analytics
+                                            & BI</span>
+                                        <span
+                                            class="px-3 py-1 rounded-full bg-gh-red/10 text-gh-red text-[12px] font-semibold border border-gh-red/20 hover:bg-gh-red hover:text-white transition-colors cursor-default">Lifecycle
+                                            Automation</span>
                                     </div>
-                                    <span
-                                        class="material-symbols-outlined text-gh-fg dark:text-gh-fg-dark-muted text-sm">more_horiz</span>
                                 </div>
-                                <div class="p-4 bg-gh-canvas dark:bg-gh-canvas-dark">
-                                    <div class="flex items-center gap-3 mb-4">
-                                        <div class="leading-tight">
-                                            <div class="flex items-center gap-2">
-                                                <span class="text-gh-fg dark:text-gh-fg-dark font-bold text-sm">Atul
-                                                    Kumar</span>
+
+                                <div class="grid sm:grid-cols-2 gap-8">
+                                    <div>
+                                        <h3
+                                            class="text-sm font-bold text-gh-fg-dark mb-4 uppercase tracking-widest opacity-60 flex items-center gap-2">
+                                            <span class="material-symbols-outlined text-[18px]">target</span> Roadmap
+                                        </h3>
+                                        <ul class="space-y-3">
+                                            <li class="flex items-start gap-3 group">
                                                 <span
-                                                    class="px-1.5 py-0.5 rounded-full border border-gh-border dark:border-gh-border-dark text-[10px] text-gh-fg dark:text-gh-fg-dark-muted font-medium">Pro</span>
+                                                    class="w-1.5 h-1.5 rounded-full bg-gh-green mt-1.5 group-hover:scale-150 transition-transform"></span>
+                                                <span class="text-gh-muted-dark text-[14px]">Scalable Acquisition
+                                                    Engines (G-Ads & Meta)</span>
+                                            </li>
+                                            <li class="flex items-start gap-3 group">
+                                                <span
+                                                    class="w-1.5 h-1.5 rounded-full bg-gh-green mt-1.5 group-hover:scale-150 transition-transform"></span>
+                                                <span class="text-gh-muted-dark text-[14px]">Behavioral Funnel
+                                                    Architecture</span>
+                                            </li>
+                                            <li class="flex items-start gap-3 group">
+                                                <span
+                                                    class="w-1.5 h-1.5 rounded-full bg-gh-green mt-1.5 group-hover:scale-150 transition-transform"></span>
+                                                <span class="text-gh-muted-dark text-[14px]">Multi-Channel Retention
+                                                    Chains</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h3
+                                            class="text-sm font-bold text-gh-fg-dark mb-4 uppercase tracking-widest opacity-60 flex items-center gap-2">
+                                            <span class="material-symbols-outlined text-[18px]">equalizer</span>
+                                            Performance
+                                        </h3>
+                                        <div class="grid grid-cols-2 gap-3">
+                                            <div
+                                                class="bg-gh-inset-dark/40 border border-gh-border-dark p-3 rounded-lg hover:border-gh-accent transition-colors">
+                                                <div class="text-xl font-bold text-gh-accent">50+</div>
+                                                <div class="text-[11px] text-gh-muted-dark uppercase font-semibold">
+                                                    Brands</div>
                                             </div>
-                                            <span class="text-xs text-gh-fg dark:text-gh-fg-dark-muted">Performance
-                                                Specialist</span>
+                                            <div
+                                                class="bg-gh-inset-dark/40 border border-gh-border-dark p-3 rounded-lg hover:border-gh-green transition-colors">
+                                                <div class="text-xl font-bold text-gh-green">3.8x</div>
+                                                <div class="text-[11px] text-gh-muted-dark uppercase font-semibold">Avg
+                                                    ROAS</div>
+                                            </div>
                                         </div>
                                     </div>
-
-                                    <img alt="Atul Kumar - Performance Marketer"
-                                        class="w-full h-auto rounded-gh border border-gh-border dark:border-gh-border-dark mb-4 shadow-gh-sm"
-                                        src="/kumaratul/assets/images/profile.jpg" width="384" height="384" />
-
-                                    <div
-                                        class="bg-gh-canvas dark:bg-gh-canvas-dark-subtle p-3 rounded-gh border border-gh-border dark:border-gh-border-dark">
-                                        <p class="font-bold text-gh-success mb-1 text-sm">Achievement Unlocked! 🏆</p>
-                                        <p class="text-xs text-gh-fg dark:text-gh-fg-dark-muted">+142% Conversion Rate
-                                            for SaaS Client.</p>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -379,631 +415,523 @@
             </div>
         </section>
 
-        <!-- Services Section -->
-        <section
-            class="py-16 bg-gh-canvas dark:bg-gh-canvas-dark-subtle border-b border-gh-border dark:border-gh-border-dark"
-            id="services">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto mb-12">
-                    <h2 class="text-sm font-semibold text-gh-success-emphasis tracking-wide uppercase mb-4">Services
-                    </h2>
-                    <h3 class="font-display text-3xl lg:text-4xl font-bold mb-6 text-gh-fg dark:text-gh-fg-dark">
-                        Core Expertise
-                    </h3>
-                    <p class="text-gh-fg dark:text-gh-fg-dark-muted">Select a service to boost your growth metrics.</p>
+        <!-- ═══════════════════════════════════════════════ -->
+        <!-- SERVICES -->
+        <!-- ═══════════════════════════════════════════════ -->
+        <section class="py-20 border-b border-gh-border-dark bg-gh-canvas-dark" id="expertise">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                <div class="text-center mb-16 reveal">
+                    <h2 class="text-3xl font-bold text-gh-fg-dark mb-4 tracking-tight">Full-Funnel Expertise</h2>
+                    <p class="text-[15px] text-gh-muted-dark max-w-xl mx-auto">From the first impression to the final
+                        conversion —
+                        every touchpoint is engineered for maximum ROI.</p>
                 </div>
 
-                <div class="grid lg:grid-cols-3 gap-6">
-                    <!-- Service 1 -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <a href="google-ads.html"
-                        class="gh-card p-6 rounded-gh-lg group relative overflow-hidden block hover:shadow-gh-md transition-all duration-300">
+                        class="group relative bg-gh-subtle-dark border border-gh-border-dark rounded-xl p-6 hover:border-gh-accent/40 transition-all overflow-hidden reveal reveal-delay-1">
                         <div
-                            class="absolute top-0 left-0 w-full h-1 bg-gh-accent transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left">
+                            class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-gh-accent to-gh-accent/0">
                         </div>
-                        <div
-                            class="w-12 h-12 bg-gh-canvas dark:bg-gh-canvas-dark-subtle rounded-full flex items-center justify-center text-gh-accent mb-6 group-hover:text-white group-hover:bg-gh-accent transition-colors">
-                            <span class="material-symbols-outlined text-2xl">ads_click</span>
-                        </div>
-                        <h4 class="font-display text-xl font-bold mb-3 text-gh-fg dark:text-gh-fg-dark">Paid Ads</h4>
-                        <p class="text-gh-fg dark:text-gh-fg-dark-muted mb-4 text-sm leading-relaxed">
-                            Full-funnel campaign management focused on high-intent search and data-driven creative
-                            testing.
-                        </p>
-                        <div class="flex gap-2">
-                            <span
-                                class="bg-gh-canvas dark:bg-gh-canvas-dark-subtle text-gh-fg dark:text-gh-fg-dark-muted text-xs px-2 py-1 rounded-full border border-gh-border dark:border-gh-border-dark">Google</span>
-                            <span
-                                class="bg-gh-canvas dark:bg-gh-canvas-dark-subtle text-gh-fg dark:text-gh-fg-dark-muted text-xs px-2 py-1 rounded-full border border-gh-border dark:border-gh-border-dark">Meta</span>
-                        </div>
+                        <span
+                            class="material-symbols-outlined text-3xl text-gh-accent mb-4 block group-hover:scale-110 transition-transform">ads_click</span>
+                        <h3 class="text-lg font-bold text-gh-fg-dark mb-2 group-hover:text-gh-accent transition-colors">
+                            Precision Advertising</h3>
+                        <p class="text-[15px] text-gh-muted-dark leading-snug mb-4">Hyper-targeted Google & Meta
+                            campaigns designed to find your ideal customers
+                            at the lowest possible CPA. Data-backed creative testing included.</p>
+                        <span
+                            class="text-sm text-gh-accent font-medium flex items-center gap-1 group-hover:gap-2 transition-all">Learn
+                            more <span class="material-symbols-outlined text-[15px]">arrow_forward</span></span>
                     </a>
 
-                    <!-- Service 2 -->
                     <div
-                        class="gh-card p-6 rounded-gh-lg group relative overflow-hidden hover:shadow-gh-md transition-all duration-300">
+                        class="relative bg-gh-subtle-dark border border-gh-border-dark rounded-xl p-6 hover:border-gh-orange/40 transition-all overflow-hidden">
                         <div
-                            class="absolute top-0 left-0 w-full h-1 bg-gh-success-emphasis transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left">
+                            class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-gh-orange to-gh-orange/0">
                         </div>
-                        <div
-                            class="w-12 h-12 bg-gh-canvas dark:bg-gh-canvas-dark-subtle rounded-full flex items-center justify-center text-gh-success-emphasis mb-6 group-hover:text-white group-hover:bg-gh-success-emphasis transition-colors">
-                            <span class="material-symbols-outlined text-2xl">analytics</span>
-                        </div>
-                        <h4 class="font-display text-xl font-bold mb-3 text-gh-fg dark:text-gh-fg-dark">Marketing
-                            Analytics</h4>
-                        <p class="text-gh-fg dark:text-gh-fg-dark-muted mb-4 text-sm leading-relaxed">
-                            Advanced measurement frameworks and real-time visualization to unlock actionable insights.
-                        </p>
-                        <div class="flex gap-2">
+                        <span class="material-symbols-outlined text-3xl text-gh-orange mb-4 block">filter_alt</span>
+                        <h3 class="text-lg font-bold text-gh-fg-dark mb-2">Funnel Design</h3>
+                        <p class="text-[15px] text-gh-muted-dark leading-snug mb-4">Landing pages, lead magnets,
+                            tripwires, and upsell flows — stitched together into a <strong
+                                class="text-gh-fg-dark">conversion machine</strong> that turns strangers into paying
+                            customers.</p>
+                        <div class="flex gap-2 flex-wrap">
                             <span
-                                class="bg-gh-canvas dark:bg-gh-canvas-dark-subtle text-gh-fg dark:text-gh-fg-dark-muted text-xs px-2 py-1 rounded-full border border-gh-border dark:border-gh-border-dark">GA4</span>
+                                class="px-2 py-0.5 rounded bg-gh-canvas-dark text-[10px] text-gh-muted-dark border border-gh-border-dark">Landing
+                                Pages</span>
                             <span
-                                class="bg-gh-canvas dark:bg-gh-canvas-dark-subtle text-gh-fg dark:text-gh-fg-dark-muted text-xs px-2 py-1 rounded-full border border-gh-border dark:border-gh-border-dark">GTM</span>
+                                class="px-2 py-0.5 rounded bg-gh-canvas-dark text-[10px] text-gh-muted-dark border border-gh-border-dark">Lead
+                                Gen</span>
+                            <span
+                                class="px-2 py-0.5 rounded bg-gh-canvas-dark text-[10px] text-gh-muted-dark border border-gh-border-dark">Upsells</span>
                         </div>
                     </div>
 
-                    <!-- Service 3 -->
+                    <div
+                        class="relative bg-gh-subtle-dark border border-gh-border-dark rounded-xl p-6 hover:border-gh-red/40 transition-all overflow-hidden">
+                        <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-gh-red to-gh-red/0">
+                        </div>
+                        <span class="material-symbols-outlined text-3xl text-gh-red mb-4 block">forward_to_inbox</span>
+                        <h3 class="text-lg font-bold text-gh-fg-dark mb-2">Email, WhatsApp & SMS</h3>
+                        <p class="text-[15px] text-gh-muted-dark leading-snug mb-4">Automated drip sequences, broadcast
+                            campaigns, and trigger-based messaging that <strong class="text-gh-fg-dark">nurture leads
+                                and reactivate dormant customers</strong> on autopilot.</p>
+                        <div class="flex gap-2 flex-wrap">
+                            <span
+                                class="px-2 py-0.5 rounded bg-gh-canvas-dark text-[10px] text-gh-muted-dark border border-gh-border-dark">Email</span>
+                            <span
+                                class="px-2 py-0.5 rounded bg-gh-canvas-dark text-[10px] text-gh-muted-dark border border-gh-border-dark">WhatsApp</span>
+                            <span
+                                class="px-2 py-0.5 rounded bg-gh-canvas-dark text-[10px] text-gh-muted-dark border border-gh-border-dark">SMS</span>
+                        </div>
+                    </div>
+
                     <a href="zoho-crm.html"
-                        class="gh-card p-6 rounded-gh-lg group relative overflow-hidden block hover:shadow-gh-md transition-all duration-300">
+                        class="group relative bg-gh-subtle-dark border border-gh-border-dark rounded-xl p-6 hover:border-gh-purple/40 transition-all overflow-hidden">
                         <div
-                            class="absolute top-0 left-0 w-full h-1 bg-gh-warning transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left">
+                            class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-gh-purple to-gh-purple/0">
                         </div>
-                        <div
-                            class="w-12 h-12 bg-gh-canvas dark:bg-gh-canvas-dark-subtle rounded-full flex items-center justify-center text-gh-warning mb-6 group-hover:text-white group-hover:bg-gh-warning transition-colors">
-                            <span class="material-symbols-outlined text-2xl">hub</span>
-                        </div>
-                        <h4 class="font-display text-xl font-bold mb-3 text-gh-fg dark:text-gh-fg-dark">Zoho CRM</h4>
-                        <p class="text-gh-fg dark:text-gh-fg-dark-muted mb-4 text-sm leading-relaxed">
-                            End-to-end CRM architecture and automation to nurture leads and bridge the gap between
-                            marketing and sales.
-                        </p>
-                        <div class="flex gap-2">
-                            <span
-                                class="bg-gh-canvas dark:bg-gh-canvas-dark-subtle text-gh-fg dark:text-gh-fg-dark-muted text-xs px-2 py-1 rounded-full border border-gh-border dark:border-gh-border-dark">Automation</span>
-                        </div>
+                        <span class="material-symbols-outlined text-3xl text-gh-purple mb-4 block">hub</span>
+                        <h3 class="text-lg font-bold text-gh-fg-dark mb-2 group-hover:text-gh-purple transition-colors">
+                            CRM & Automation</h3>
+                        <p class="text-[15px] text-gh-muted-dark leading-snug mb-4">Zoho CRM pipelines, lead scoring,
+                            workflow automation — so your <strong class="text-gh-fg-dark">sales team closes
+                                deals</strong>, not chases spreadsheets.</p>
+                        <span
+                            class="text-sm text-gh-purple font-medium flex items-center gap-1 group-hover:gap-2 transition-all">Learn
+                            more <span class="material-symbols-outlined text-[15px]">arrow_forward</span></span>
                     </a>
-                </div>
-            </div>
-        </section>
 
-        <!-- "Connected Apps" / Tech Stack Section -->
-        <section
-            class="py-12 border-b border-gh-border dark:border-gh-border-dark bg-gh-canvas dark:bg-gh-canvas-dark-subtle">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <p
-                    class="text-center text-xs font-bold text-gh-fg dark:text-gh-fg-dark-muted uppercase tracking-widest mb-8">
-                    Integrated
-                    Tech Stack</p>
-                <div class="flex flex-wrap justify-center gap-8 opacity-80">
-                    <!-- Google Ads -->
-                    <div class="flex items-center gap-2 group cursor-default" title="Google Ads">
-                        <span
-                            class="material-symbols-outlined text-2xl text-gh-fg dark:text-gh-fg-dark-muted group-hover:text-gh-accent transition-colors">ads_click</span>
-                        <span
-                            class="font-semibold text-gh-fg dark:text-gh-fg-dark-muted group-hover:text-gh-fg dark:text-gh-fg-dark transition-colors">Google
-                            Ads</span>
+                    <div
+                        class="relative bg-gh-subtle-dark border border-gh-border-dark rounded-xl p-6 hover:border-gh-green/40 transition-all overflow-hidden">
+                        <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-gh-green to-gh-green/0">
+                        </div>
+                        <span class="material-symbols-outlined text-3xl text-gh-green mb-4 block">analytics</span>
+                        <h3 class="text-lg font-bold text-gh-fg-dark mb-2">Analytics & Tracking</h3>
+                        <p class="text-[15px] text-gh-muted-dark leading-snug mb-4">GA4, GTM, server-side tagging,
+                            enhanced conversions — so you know <strong class="text-gh-fg-dark">exactly which channel and
+                                creative</strong> is making you money.</p>
+                        <div class="flex gap-2 flex-wrap">
+                            <span
+                                class="px-2 py-0.5 rounded bg-gh-canvas-dark text-[10px] text-gh-muted-dark border border-gh-border-dark">GA4</span>
+                            <span
+                                class="px-2 py-0.5 rounded bg-gh-canvas-dark text-[10px] text-gh-muted-dark border border-gh-border-dark">GTM</span>
+                            <span
+                                class="px-2 py-0.5 rounded bg-gh-canvas-dark text-[10px] text-gh-muted-dark border border-gh-border-dark">Looker
+                                Studio</span>
+                        </div>
                     </div>
-                    <!-- GA4 -->
-                    <div class="flex items-center gap-2 group cursor-default" title="Google Analytics 4">
-                        <span
-                            class="material-symbols-outlined text-2xl text-gh-fg dark:text-gh-fg-dark-muted group-hover:text-gh-accent transition-colors">analytics</span>
-                        <span
-                            class="font-semibold text-gh-fg dark:text-gh-fg-dark-muted group-hover:text-gh-fg dark:text-gh-fg-dark transition-colors">GA4</span>
-                    </div>
-                    <!-- GTM -->
-                    <div class="flex items-center gap-2 group cursor-default" title="Google Tag Manager">
-                        <span
-                            class="material-symbols-outlined text-2xl text-gh-fg dark:text-gh-fg-dark-muted group-hover:text-gh-accent transition-colors">code</span>
-                        <span
-                            class="font-semibold text-gh-fg dark:text-gh-fg-dark-muted group-hover:text-gh-fg dark:text-gh-fg-dark transition-colors">GTM</span>
-                    </div>
-                    <!-- Meta Ads -->
-                    <div class="flex items-center gap-2 group cursor-default" title="Meta Ads">
-                        <span
-                            class="material-symbols-outlined text-2xl text-gh-fg dark:text-gh-fg-dark-muted group-hover:text-gh-accent transition-colors">campaign</span>
-                        <span
-                            class="font-semibold text-gh-fg dark:text-gh-fg-dark-muted group-hover:text-gh-fg dark:text-gh-fg-dark transition-colors">Meta
-                            Ads</span>
-                    </div>
-                    <!-- Zoho CRM -->
-                    <div class="flex items-center gap-2 group cursor-default" title="Zoho CRM">
-                        <span
-                            class="material-symbols-outlined text-2xl text-gh-fg dark:text-gh-fg-dark-muted group-hover:text-gh-accent transition-colors">hub</span>
-                        <span
-                            class="font-semibold text-gh-fg dark:text-gh-fg-dark-muted group-hover:text-gh-fg dark:text-gh-fg-dark transition-colors">Zoho
-                            CRM</span>
-                    </div>
-                    <!-- Looker Studio -->
-                    <div class="flex items-center gap-2 group cursor-default" title="Looker Studio">
-                        <span
-                            class="material-symbols-outlined text-2xl text-gh-fg dark:text-gh-fg-dark-muted group-hover:text-gh-accent transition-colors">monitoring</span>
-                        <span
-                            class="font-semibold text-gh-fg dark:text-gh-fg-dark-muted group-hover:text-gh-fg dark:text-gh-fg-dark transition-colors">Looker</span>
+
+                    <div
+                        class="relative bg-gh-subtle-dark border border-gh-border-dark rounded-xl p-6 hover:border-gh-yellow/40 transition-all overflow-hidden">
+                        <div
+                            class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-gh-yellow to-gh-yellow/0">
+                        </div>
+                        <span class="material-symbols-outlined text-3xl text-gh-yellow mb-4 block">trending_up</span>
+                        <h3 class="text-lg font-bold text-gh-fg-dark mb-2">Growth Strategy</h3>
+                        <p class="text-[15px] text-gh-muted-dark leading-snug mb-4">Channel mix, budget allocation,
+                            scaling playbooks — I help you find <strong class="text-gh-fg-dark">what works and pour fuel
+                                on it</strong> until it prints money.</p>
+                        <div class="flex gap-2 flex-wrap">
+                            <span
+                                class="px-2 py-0.5 rounded bg-gh-canvas-dark text-[10px] text-gh-muted-dark border border-gh-border-dark">Strategy</span>
+                            <span
+                                class="px-2 py-0.5 rounded bg-gh-canvas-dark text-[10px] text-gh-muted-dark border border-gh-border-dark">Scaling</span>
+                            <span
+                                class="px-2 py-0.5 rounded bg-gh-canvas-dark text-[10px] text-gh-muted-dark border border-gh-border-dark">ROI</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- GitHub Pro Style Comparison Section -->
-        <section class="py-16 bg-gh-canvas dark:bg-gh-canvas-dark" id="comparison">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-12">
-                    <h2 class="text-sm font-semibold text-gh-accent tracking-wide uppercase mb-4">Upgrade Your Strategy
+        <!-- ═══════════════════════════════════════════════ -->
+        <!-- HOW I WORK — Process -->
+        <!-- ═══════════════════════════════════════════════ -->
+        <section class="py-20 border-b border-gh-border-dark bg-gh-inset-dark" id="insights">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6">
+                <div class="text-center mb-14">
+                    <h2 class="text-4xl font-bold text-gh-fg-dark mb-3 tracking-tight">From Zero to Revenue Machine ⚙️
                     </h2>
-                    <h3 class="font-display text-3xl lg:text-4xl font-bold text-gh-fg dark:text-gh-fg-dark">Why Go <span
-                            class="bg-gradient-to-r from-gh-accent to-gh-success-emphasis bg-clip-text text-transparent">Pro?</span>
-                    </h3>
+                    <p class="text-[15px] text-gh-muted-dark max-w-2xl mx-auto">Every engagement follows a proven 4-step
+                        framework. No fluff, no vanity reports — just a clear path to profitable growth 📈.</p>
                 </div>
 
-                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                    <!-- Standard (The Bad Option) -->
-                    <div
-                        class="gh-card p-8 rounded-gh-lg bg-gh-canvas dark:bg-gh-canvas-dark-subtle border-gh-border dark:border-gh-border-dark opacity-80">
-                        <h4 class="text-xl font-bold text-gh-fg dark:text-gh-fg-dark-muted mb-6">Generic Agency</h4>
-                        <ul class="space-y-4">
-                            <li class="flex items-start gap-3 text-gh-fg dark:text-gh-fg-dark-muted">
-                                <span class="material-symbols-outlined text-gh-danger shrink-0">close</span>
-                                <span>Managed by Junior Interns</span>
-                            </li>
-                            <li class="flex items-start gap-3 text-gh-fg dark:text-gh-fg-dark-muted">
-                                <span class="material-symbols-outlined text-gh-danger shrink-0">close</span>
-                                <span>Monthly "PDF" Reports</span>
-                            </li>
-                            <li class="flex items-start gap-3 text-gh-fg dark:text-gh-fg-dark-muted">
-                                <span class="material-symbols-outlined text-gh-danger shrink-0">close</span>
-                                <span>Focus on "Clicks" & "Traffic"</span>
-                            </li>
-                            <li class="flex items-start gap-3 text-gh-fg dark:text-gh-fg-dark-muted">
-                                <span class="material-symbols-outlined text-gh-danger shrink-0">close</span>
-                                <span>Slow Response Time (Tickets)</span>
-                            </li>
-                        </ul>
+                <div class="space-y-0">
+                    <div class="flex gap-5 items-start">
+                        <div class="flex flex-col items-center">
+                            <div
+                                class="w-10 h-10 rounded-full bg-gh-accent/15 flex items-center justify-center text-gh-accent text-[15px] font-bold border border-gh-accent/30">
+                                1</div>
+                            <div class="w-[2px] h-16 bg-gradient-to-b from-gh-accent/30 to-gh-purple/30 mt-2"></div>
+                        </div>
+                        <div class="pb-10">
+                            <h4 class="text-[15px] font-bold text-gh-fg-dark mb-1.5">Audit & Diagnose</h4>
+                            <p class="text-[15px] text-gh-muted-dark leading-snug">I tear apart your current campaigns,
+                                funnels, CRM, and messaging channels. Where is budget leaking? Which touchpoints
+                                convert? Where are leads dying? I find the gaps that cost you money.</p>
+                        </div>
                     </div>
+                    <div class="flex gap-5 items-start">
+                        <div class="flex flex-col items-center">
+                            <div
+                                class="w-10 h-10 rounded-full bg-gh-purple/15 flex items-center justify-center text-gh-purple text-[15px] font-bold border border-gh-purple/30">
+                                2</div>
+                            <div class="w-[2px] h-16 bg-gradient-to-b from-gh-purple/30 to-gh-green/30 mt-2"></div>
+                        </div>
+                        <div class="pb-10">
+                            <h4 class="text-[15px] font-bold text-gh-fg-dark mb-1.5">Architect the System</h4>
+                            <p class="text-[15px] text-gh-muted-dark leading-snug">I design the full revenue engine: ad
+                                campaigns → landing pages → lead capture → email/WhatsApp nurture → CRM pipeline →
+                                close. Every piece connected, every step measured.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-5 items-start">
+                        <div class="flex flex-col items-center">
+                            <div
+                                class="w-10 h-10 rounded-full bg-gh-green/15 flex items-center justify-center text-gh-green text-[15px] font-bold border border-gh-green/30">
+                                3</div>
+                            <div class="w-[2px] h-16 bg-gradient-to-b from-gh-green/30 to-gh-yellow/30 mt-2"></div>
+                        </div>
+                        <div class="pb-10">
+                            <h4 class="text-[15px] font-bold text-gh-fg-dark mb-1.5">Launch & Activate</h4>
+                            <p class="text-[15px] text-gh-muted-dark leading-snug">Ads go live. Funnels start capturing.
+                                Email & WhatsApp drips trigger automatically. CRM routes leads to your sales team in
+                                real-time. Everything is tracked from pixel to payment.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-5 items-start">
+                        <div class="flex flex-col items-center">
+                            <div
+                                class="w-10 h-10 rounded-full bg-gh-yellow/15 flex items-center justify-center text-gh-yellow text-[15px] font-bold border border-gh-yellow/30">
+                                4</div>
+                        </div>
+                        <div class="pb-10">
+                            <h4 class="text-lg font-bold text-gh-fg-dark mb-1.5">Optimize & Scale 🚀</h4>
+                            <p class="text-[15px] text-gh-muted-dark leading-snug">Daily optimization. A/B test
+                                creatives, refine audiences, tighten funnels, improve email open rates. Kill losers
+                                fast, scale winners hard — until the system prints money on autopilot 💸.</p>
+                        </div>
+                    </div>
+                </div>
 
-                    <!-- Pro (You - The Good Option) -->
+                <!-- Philosophy cards -->
+                <div class="grid md:grid-cols-3 gap-6 mt-16 reveal reveal-delay-3">
                     <div
-                        class="gh-card p-8 rounded-gh-lg border-2 border-gh-accent bg-white shadow-gh-lg transform scale-105 relative">
-                        <div
-                            class="absolute -top-3 left-1/2 -translate-x-1/2 bg-gh-accent text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
-                            Recommended
-                        </div>
-                        <h4 class="text-xl font-bold text-gh-fg dark:text-gh-fg-dark mb-6 flex items-center gap-2">
-                            Atul Kumar <span class="material-symbols-outlined text-gh-accent">verified</span>
-                        </h4>
-                        <ul class="space-y-4">
-                            <li class="flex items-start gap-3 text-gh-fg dark:text-gh-fg-dark">
-                                <span class="material-symbols-outlined text-gh-success shrink-0">check_circle</span>
-                                <span><strong>Personal Attention</strong> from an expert</span>
-                            </li>
-                            <li class="flex items-start gap-3 text-gh-fg dark:text-gh-fg-dark">
-                                <span class="material-symbols-outlined text-gh-success shrink-0">check_circle</span>
-                                <span><strong>Real-Time</strong> Live Dashboards</span>
-                            </li>
-                            <li class="flex items-start gap-3 text-gh-fg dark:text-gh-fg-dark">
-                                <span class="material-symbols-outlined text-gh-success shrink-0">check_circle</span>
-                                <span>Focus on <strong>Revenue & ROAS</strong></span>
-                            </li>
-                            <li class="flex items-start gap-3 text-gh-fg dark:text-gh-fg-dark">
-                                <span class="material-symbols-outlined text-gh-success shrink-0">check_circle</span>
-                                <span>Direct Slack/WhatsApp Access</span>
-                            </li>
-                        </ul>
-                        <div class="mt-8 pt-6 border-t border-gh-border dark:border-gh-border-dark">
-                            <a href="mailto:hello@kumaratul.com"
-                                class="block w-full bg-gh-success-emphasis hover:bg-gh-success text-white text-center font-bold py-3 rounded-gh transition-colors shadow-gh-sm">
-                                Switch to Pro
-                            </a>
-                        </div>
+                        class="bg-gh-subtle-dark border border-gh-border-dark rounded-xl p-6 hover:border-gh-accent/30 transition-all group">
+                        <div class="text-2xl mb-4 group-hover:scale-110 transition-transform">🎯</div>
+                        <h4 class="font-bold text-gh-fg-dark mb-2 text-[15px]">Revenue-Fist Architecture</h4>
+                        <p class="text-sm text-gh-muted-dark leading-snug">Every pixel and line of tracking ties back to
+                            your bottom line. We optimize for profit, not just paper-thin ROAS.</p>
+                    </div>
+                    <div
+                        class="bg-gh-subtle-dark border border-gh-border-dark rounded-xl p-6 hover:border-gh-green/30 transition-all group">
+                        <div class="text-2xl mb-4 group-hover:scale-110 transition-transform">🧪</div>
+                        <h4 class="font-bold text-gh-fg-dark mb-2 text-[15px]">Iterative Growth Loops</h4>
+                        <p class="text-sm text-gh-muted-dark leading-snug">Continuous A/B testing across creatives,
+                            audiences,
+                            and landing pages ensures we never stop learning and scaling.</p>
+                    </div>
+                    <div
+                        class="bg-gh-subtle-dark border border-gh-border-dark rounded-xl p-6 hover:border-gh-purple/30 transition-all group">
+                        <div class="text-2xl mb-4 group-hover:scale-110 transition-transform">⚙️</div>
+                        <h4 class="font-bold text-gh-fg-dark mb-2 text-[15px]">Automated CRM Pipelines</h4>
+                        <p class="text-sm text-gh-muted-dark leading-snug">Bridge the gap between marketing and sales
+                            with
+                            automated lead scoring, nurturing, and seamless CRM handoffs.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Why Me Section (GitHub Style) -->
-        <section
-            class="py-16 bg-gh-canvas dark:bg-gh-canvas-dark-subtle border-b border-gh-border dark:border-gh-border-dark"
-            id="why-me">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid lg:grid-cols-2 gap-20 items-center">
-                    <div>
-                        <div class="gh-card rounded-gh-lg p-6 shadow-gh-md bg-white">
-                            <h4
-                                class="text-gh-fg dark:text-gh-fg-dark-muted font-bold text-xs uppercase mb-6 tracking-wider">
-                                Core
-                                Competencies
-                            </h4>
-
-                            <!-- Role 1 -->
-                            <div
-                                class="flex items-center gap-4 mb-4 p-3 hover:bg-gh-canvas dark:bg-gh-canvas-dark-subtle rounded-gh cursor-default transition-colors group">
-                                <div
-                                    class="w-10 h-10 rounded-full bg-gh-canvas dark:bg-gh-canvas-dark-subtle flex items-center justify-center group-hover:bg-gh-accent group-hover:text-white transition-colors">
-                                    <span
-                                        class="material-symbols-outlined text-gh-accent group-hover:text-white">verified</span>
-                                </div>
-                                <div class="flex-1">
-                                    <h5 class="text-gh-fg dark:text-gh-fg-dark font-bold text-sm">Senior Expertise</h5>
-                                    <p class="text-xs text-gh-fg dark:text-gh-fg-dark-muted">8+ years of experience
-                                        across diverse
-                                        industries.</p>
-                                </div>
-                                <div class="w-2.5 h-2.5 rounded-full bg-gh-success"></div>
-                            </div>
-
-                            <!-- Role 2 -->
-                            <div
-                                class="flex items-center gap-4 mb-4 p-3 hover:bg-gh-canvas dark:bg-gh-canvas-dark-subtle rounded-gh cursor-default transition-colors group">
-                                <div
-                                    class="w-10 h-10 rounded-full bg-gh-canvas dark:bg-gh-canvas-dark-subtle flex items-center justify-center group-hover:bg-gh-accent group-hover:text-white transition-colors">
-                                    <span
-                                        class="material-symbols-outlined text-gh-accent group-hover:text-white">forum</span>
-                                </div>
-                                <div class="flex-1">
-                                    <h5 class="text-gh-fg dark:text-gh-fg-dark font-bold text-sm">Direct Comm</h5>
-                                    <p class="text-xs text-gh-fg dark:text-gh-fg-dark-muted">No middle managers. Direct
-                                        DM access.</p>
-                                </div>
-                                <div class="w-2.5 h-2.5 rounded-full bg-gh-success"></div>
-                            </div>
-
-                            <!-- Role 3 -->
-                            <div
-                                class="flex items-center gap-4 p-3 hover:bg-gh-canvas dark:bg-gh-canvas-dark-subtle rounded-gh cursor-default transition-colors group">
-                                <div
-                                    class="w-10 h-10 rounded-full bg-gh-canvas dark:bg-gh-canvas-dark-subtle flex items-center justify-center group-hover:bg-gh-accent group-hover:text-white transition-colors">
-                                    <span
-                                        class="material-symbols-outlined text-gh-accent group-hover:text-white">query_stats</span>
-                                </div>
-                                <div class="flex-1">
-                                    <h5 class="text-gh-fg dark:text-gh-fg-dark font-bold text-sm">Data Driven</h5>
-                                    <p class="text-xs text-gh-fg dark:text-gh-fg-dark-muted">Decisions based on
-                                        analytics, not vibes.</p>
-                                </div>
-                                <div class="w-2.5 h-2.5 rounded-full bg-gh-success"></div>
-                            </div>
-                        </div>
+        <!-- ═══════════════════════════════════════════════ -->
+        <!-- TOOLS & PLATFORMS -->
+        <!-- ═══════════════════════════════════════════════ -->
+        <section class="py-16 border-b border-gh-border-dark bg-gh-canvas-dark">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                <h3 class="text-lg font-bold text-gh-fg-dark mb-8 text-center">Tools & Platforms in My Stack</h3>
+                <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 gap-3">
+                    <div
+                        class="bg-gh-subtle-dark border border-gh-border-dark rounded-xl p-3 text-center hover:border-gh-accent/30 transition-all">
+                        <span class="material-symbols-outlined text-xl text-gh-accent mb-1.5 block">campaign</span>
+                        <span class="text-[10px] font-medium text-gh-fg-dark">Google Ads</span>
                     </div>
+                    <div
+                        class="bg-gh-subtle-dark border border-gh-border-dark rounded-xl p-3 text-center hover:border-gh-green/30 transition-all">
+                        <span class="material-symbols-outlined text-xl text-gh-green mb-1.5 block">share</span>
+                        <span class="text-[10px] font-medium text-gh-fg-dark">Meta Ads</span>
+                    </div>
+                    <div
+                        class="bg-gh-subtle-dark border border-gh-border-dark rounded-xl p-3 text-center hover:border-gh-purple/30 transition-all">
+                        <span class="material-symbols-outlined text-xl text-gh-purple mb-1.5 block">hub</span>
+                        <span class="text-[10px] font-medium text-gh-fg-dark">Zoho CRM</span>
+                    </div>
+                    <div
+                        class="bg-gh-subtle-dark border border-gh-border-dark rounded-xl p-3 text-center hover:border-gh-yellow/30 transition-all">
+                        <span class="material-symbols-outlined text-xl text-gh-yellow mb-1.5 block">monitoring</span>
+                        <span class="text-[10px] font-medium text-gh-fg-dark">GA4 / GTM</span>
+                    </div>
+                    <div
+                        class="bg-gh-subtle-dark border border-gh-border-dark rounded-xl p-3 text-center hover:border-gh-orange/30 transition-all">
+                        <span class="material-symbols-outlined text-xl text-gh-orange mb-1.5 block">dashboard</span>
+                        <span class="text-[10px] font-medium text-gh-fg-dark">Looker Studio</span>
+                    </div>
+                    <div
+                        class="bg-gh-subtle-dark border border-gh-border-dark rounded-xl p-3 text-center hover:border-gh-red/30 transition-all">
+                        <span class="material-symbols-outlined text-xl text-gh-red mb-1.5 block">mail</span>
+                        <span class="text-[10px] font-medium text-gh-fg-dark">Email Tools</span>
+                    </div>
+                    <div
+                        class="bg-gh-subtle-dark border border-gh-border-dark rounded-xl p-3 text-center hover:border-gh-green/30 transition-all">
+                        <span class="material-symbols-outlined text-xl text-gh-green mb-1.5 block">chat</span>
+                        <span class="text-[10px] font-medium text-gh-fg-dark">WhatsApp</span>
+                    </div>
+                    <div
+                        class="bg-gh-subtle-dark border border-gh-border-dark rounded-xl p-3 text-center hover:border-gh-accent/30 transition-all">
+                        <span class="material-symbols-outlined text-xl text-gh-accent mb-1.5 block">sms</span>
+                        <span class="text-[10px] font-medium text-gh-fg-dark">SMS</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                    <div>
-                        <h2 class="text-sm font-semibold text-gh-success tracking-widest uppercase mb-4">The Advantage
-                        </h2>
-                        <h3
-                            class="font-display text-3xl lg:text-4xl font-bold mb-8 text-gh-fg dark:text-gh-fg-dark leading-tight">
-                            Personalized Growth, <br /> Professional Precision
-                        </h3>
-                        <p class="text-gh-fg dark:text-gh-fg-dark-muted mb-8 leading-relaxed text-lg">
-                            Most agencies pass your account to junior associates. I personally oversee every click and
-                            conversion. Think of me as a specialized bot for your business growth—but with actual human
-                            intelligence. 🤖
+        <!-- ═══════════════════════════════════════════════ -->
+        <!-- TESTIMONIALS -->
+        <!-- ═══════════════════════════════════════════════ -->
+        <section class="py-20 border-b border-gh-border-dark bg-gh-inset-dark">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6">
+                <div class="text-center mb-14">
+                    <h2 class="text-3xl font-bold text-gh-fg-dark mb-3 tracking-tight">What People Say</h2>
+                    <p class="text-[15px] text-gh-muted-dark">Real feedback from real brands I've worked with.</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-5">
+                    <div
+                        class="bg-gh-subtle-dark border border-gh-border-dark rounded-xl p-6 hover:border-gh-accent/20 transition-all">
+                        <div class="flex gap-1 mb-4">
+                            <span class="text-gh-yellow text-[15px]">★★★★★</span>
+                        </div>
+                        <p class="text-[15px] text-gh-muted-dark leading-snug mb-5">"He restructured our campaigns and
+                            <span class="text-gh-green font-semibold">slashed CPA by 40%</span> in the first month. The
+                            real-time dashboards give us visibility we never had before."
                         </p>
-                        <div class="flex flex-wrap gap-4">
-                            <a class="open-calendar bg-gh-success-emphasis hover:bg-gh-success text-white px-6 py-2.5 rounded-gh font-semibold text-sm transition-all flex items-center gap-2 shadow-gh-sm transform active:scale-95"
-                                href="javascript:void(0)">
-                                Schedule Call
-                            </a>
-                            <a class="bg-gh-btn-bg hover:bg-gh-btn-hover text-gh-fg dark:text-gh-fg-dark px-6 py-2.5 rounded-gh font-semibold text-sm transition-all flex items-center gap-2 border border-gh-border dark:border-gh-border-dark shadow-gh-sm"
-                                href="mailto:hello@kumaratul.com">
-                                Send Message
-                                <span class="material-symbols-outlined text-lg">arrow_right_alt</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- GitHub Action Style Workflow Section -->
-        <section class="py-16 bg-gh-canvas dark:bg-gh-canvas-dark border-b border-gh-border dark:border-gh-border-dark"
-            id="approach">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto mb-12">
-                    <h2 class="text-sm font-semibold text-gh-success tracking-widest uppercase mb-4">Growth Protocol
-                    </h2>
-                    <h3 class="font-display text-3xl lg:text-4xl font-bold mb-6 text-gh-fg dark:text-gh-fg-dark">4-Step
-                        Strategic Workflow
-                    </h3>
-                    <p class="text-gh-fg dark:text-gh-fg-dark-muted">Standard operating procedure for scaling accounts.
-                    </p>
-                </div>
-
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <!-- Step 1 -->
-                    <div class="group gh-card rounded-gh-lg overflow-hidden hover:shadow-gh-md transition-all">
-                        <div
-                            class="bg-gh-canvas dark:bg-gh-canvas-dark-subtle p-3 border-b border-gh-border dark:border-gh-border-dark flex items-center justify-between">
-                            <span class="font-mono text-[10px] text-gh-fg dark:text-gh-fg-dark-muted">actions /
-                                audit.yml</span>
-                            <span
-                                class="material-symbols-outlined text-gh-fg dark:text-gh-fg-dark-muted text-xs">search</span>
-                        </div>
-                        <div class="p-5">
-                            <h4 class="text-gh-fg dark:text-gh-fg-dark font-bold mb-3">Discovery Phase</h4>
-                            <p class="text-sm text-gh-fg dark:text-gh-fg-dark-muted leading-relaxed mb-4">
-                                Deep dive analysis of your current ad account structure, conversion tracking, and
-                                leakages.
-                            </p>
-                            <div
-                                class="bg-gh-canvas dark:bg-gh-canvas-dark-inset p-2 rounded-gh text-xs font-mono text-gh-fg dark:text-gh-fg-dark border border-gh-border dark:border-gh-border-dark">
-                                <span class="text-gh-accent">status:</span> <span class="text-gh-success">active</span>
+                        <div class="flex items-center gap-3 pt-4 border-t border-gh-border-dark">
+                            <div class="w-8 h-8 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex-shrink-0">
+                            </div>
+                            <div>
+                                <p class="text-sm font-semibold text-gh-fg-dark">Sarah J.</p>
+                                <p class="text-[10px] text-gh-muted-dark">SaaS Founder</p>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Step 2 -->
-                    <div class="group gh-card rounded-gh-lg overflow-hidden hover:shadow-gh-md transition-all">
-                        <div
-                            class="bg-gh-canvas dark:bg-gh-canvas-dark-subtle p-3 border-b border-gh-border dark:border-gh-border-dark flex items-center justify-between">
-                            <span class="font-mono text-[10px] text-gh-fg dark:text-gh-fg-dark-muted">actions /
-                                build.yml</span>
-                            <span
-                                class="material-symbols-outlined text-gh-fg dark:text-gh-fg-dark-muted text-xs">architecture</span>
-                        </div>
-                        <div class="p-5">
-                            <h4 class="text-gh-fg dark:text-gh-fg-dark font-bold mb-3">Strategy Design</h4>
-                            <p class="text-sm text-gh-fg dark:text-gh-fg-dark-muted leading-relaxed mb-4">
-                                Creating a custom roadmap aligned with your specific KPI targets and budget constraints.
-                            </p>
-                            <div
-                                class="bg-gh-canvas dark:bg-gh-canvas-dark-inset p-2 rounded-gh text-xs font-mono text-gh-fg dark:text-gh-fg-dark border border-gh-border dark:border-gh-border-dark">
-                                <span class="text-gh-accent">step:</span> <span
-                                    class="text-gh-success">custom_plan</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Step 3 -->
-                    <div class="group gh-card rounded-gh-lg overflow-hidden hover:shadow-gh-md transition-all">
-                        <div
-                            class="bg-gh-canvas dark:bg-gh-canvas-dark-subtle p-3 border-b border-gh-border dark:border-gh-border-dark flex items-center justify-between">
-                            <span class="font-mono text-[10px] text-gh-fg dark:text-gh-fg-dark-muted">actions /
-                                deploy.yml</span>
-                            <span
-                                class="material-symbols-outlined text-gh-fg dark:text-gh-fg-dark-muted text-xs">rocket_launch</span>
-                        </div>
-                        <div class="p-5">
-                            <h4 class="text-gh-fg dark:text-gh-fg-dark font-bold mb-3">Implementation</h4>
-                            <p class="text-sm text-gh-fg dark:text-gh-fg-dark-muted leading-relaxed mb-4">
-                                Executing the build with precise GTM tagging, creative uploads, and audience
-                                segmentation.
-                            </p>
-                            <div
-                                class="bg-gh-canvas dark:bg-gh-canvas-dark-inset p-2 rounded-gh text-xs font-mono text-gh-fg dark:text-gh-fg-dark border border-gh-border dark:border-gh-border-dark">
-                                <span class="text-gh-accent">run:</span> <span class="text-gh-success">launch</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Step 4 -->
-                    <div class="group gh-card rounded-gh-lg overflow-hidden hover:shadow-gh-md transition-all">
-                        <div
-                            class="bg-gh-canvas dark:bg-gh-canvas-dark-subtle p-3 border-b border-gh-border dark:border-gh-border-dark flex items-center justify-between">
-                            <span class="font-mono text-[10px] text-gh-fg dark:text-gh-fg-dark-muted">actions /
-                                scale.yml</span>
-                            <span
-                                class="material-symbols-outlined text-gh-fg dark:text-gh-fg-dark-muted text-xs">trending_up</span>
-                        </div>
-                        <div class="p-5">
-                            <h4 class="text-gh-fg dark:text-gh-fg-dark font-bold mb-3">Optimization</h4>
-                            <p class="text-sm text-gh-fg dark:text-gh-fg-dark-muted leading-relaxed mb-4">
-                                Daily checks and weekly sprints to cut CPA and scale winning ad sets aggressively.
-                            </p>
-                            <div
-                                class="bg-gh-canvas dark:bg-gh-canvas-dark-inset p-2 rounded-gh text-xs font-mono text-gh-fg dark:text-gh-fg-dark border border-gh-border dark:border-gh-border-dark">
-                                <span class="text-gh-accent">loop:</span> <span
-                                    class="text-gh-success">continuous</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mt-16 text-center">
-                    <a class="bg-gh-success-emphasis hover:bg-gh-success text-white px-10 py-4 rounded-gh font-bold text-lg transition-all inline-flex items-center gap-3 shadow-gh-sm transform hover:-translate-y-1"
-                        href="javascript:void(0)">
-                        <span>Start Workflow</span>
-                        <span class="material-symbols-outlined">play_arrow</span>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- GitHub Issue Style Reviews Section -->
-        <section class="py-16 bg-gh-canvas dark:bg-gh-canvas-dark-subtle" id="reviews">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="mb-12 flex items-center gap-3 border-b border-gh-border dark:border-gh-border-dark pb-4">
-                    <span class="material-symbols-outlined text-gh-fg dark:text-gh-fg-dark-muted">chat_bubble</span>
-                    <h2 class="text-2xl font-bold text-gh-fg dark:text-gh-fg-dark">Client Testimonials</h2>
-                    <span
-                        class="bg-gh-canvas dark:bg-gh-canvas-dark-inset border border-gh-border dark:border-gh-border-dark text-gh-fg dark:text-gh-fg-dark-muted px-2 py-0.5 rounded-full text-xs font-medium">14
-                        Issues Closed</span>
-                </div>
-
-                <div class="space-y-8 max-w-4xl">
-                    <!-- Review 1 -->
                     <div
-                        class="gh-card rounded-gh-lg overflow-hidden flex flex-col sm:flex-row gap-0 sm:gap-4 p-0 bg-white">
-                        <div
-                            class="bg-gh-canvas dark:bg-gh-canvas-dark-subtle p-4 border-b sm:border-b-0 sm:border-r border-gh-border dark:border-gh-border-dark flex flex-row sm:flex-col items-center gap-4 sm:w-48 shrink-0">
-                            <div
-                                class="w-12 h-12 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 border border-gh-border dark:border-gh-border-dark">
-                            </div>
-                            <div class="text-center sm:text-left">
-                                <p class="text-sm font-bold text-gh-fg dark:text-gh-fg-dark">Sarah J.</p>
-                                <p class="text-[10px] text-gh-fg dark:text-gh-fg-dark-muted">SaaS Founder</p>
-                            </div>
+                        class="bg-gh-subtle-dark border border-gh-border-dark rounded-xl p-6 hover:border-gh-green/20 transition-all">
+                        <div class="flex gap-1 mb-4">
+                            <span class="text-gh-yellow text-[15px]">★★★★★</span>
                         </div>
-                        <div class="p-6">
-                            <div class="flex items-center gap-2 mb-4 text-xs text-gh-fg dark:text-gh-fg-dark-muted">
-                                <span
-                                    class="bg-gh-canvas dark:bg-gh-canvas-dark-subtle px-2 py-0.5 rounded-full border border-gh-border dark:border-gh-border-dark">Contributor</span>
-                                <span>commented 2 days ago</span>
-                            </div>
-                            <p class="text-gh-fg dark:text-gh-fg-dark leading-relaxed">
-                                Honestly, working with Atul was a game changer. We were wasting so much on broad match
-                                keywords. He came in, fixed our GTM, and <span
-                                    class="bg-gh-accent/10 text-gh-accent px-1.5 py-0.5 rounded-gh font-semibold italic">slashed
-                                    our CPA by
-                                    40%</span> in the first month. Highly recommend! 🚀
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Review 2 -->
-                    <div
-                        class="gh-card rounded-gh-lg overflow-hidden flex flex-col sm:flex-row gap-0 sm:gap-4 p-0 bg-white">
-                        <div
-                            class="bg-gh-canvas dark:bg-gh-canvas-dark-subtle p-4 border-b sm:border-b-0 sm:border-r border-gh-border dark:border-gh-border-dark flex flex-row sm:flex-col items-center gap-4 sm:w-48 shrink-0">
-                            <div
-                                class="w-12 h-12 rounded-full bg-gradient-to-br from-gh-success to-gh-success-emphasis border border-gh-border dark:border-gh-border-dark">
-                            </div>
-                            <div class="text-center sm:text-left">
-                                <p class="text-sm font-bold text-gh-fg dark:text-gh-fg-dark">Mike T.</p>
-                                <p class="text-[10px] text-gh-fg dark:text-gh-fg-dark-muted">Ecom Owner</p>
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <div class="flex items-center gap-2 mb-4 text-xs text-gh-fg dark:text-gh-fg-dark-muted">
-                                <span
-                                    class="bg-gh-canvas dark:bg-gh-canvas-dark-subtle px-2 py-0.5 rounded-full border border-gh-border dark:border-gh-border-dark">Verified</span>
-                                <span>commented last week</span>
-                            </div>
-                            <p class="text-gh-fg dark:text-gh-fg-dark leading-relaxed">
-                                The ROAS on our Meta campaigns went from 1.5x to <span
-                                    class="bg-gh-success/10 text-gh-success px-1.5 py-0.5 rounded-gh font-semibold italic">4.2x</span>
-                                after he
-                                restructured our creatives. It feels like we finally have a predictable revenue engine.
-                            </p>
-                            <!-- "Attachment" style -->
-                            <div
-                                class="mt-4 flex items-center gap-2 p-2 border border-gh-border dark:border-gh-border-dark rounded-gh bg-gh-canvas dark:bg-gh-canvas-dark-subtle max-w-xs">
-                                <span class="material-symbols-outlined text-gh-success text-sm">trending_up</span>
-                                <span
-                                    class="text-xs font-mono text-gh-fg dark:text-gh-fg-dark-muted">roas_chart_q3.png</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Review 3 -->
-                    <div
-                        class="gh-card rounded-gh-lg overflow-hidden flex flex-col sm:flex-row gap-0 sm:gap-4 p-0 bg-white">
-                        <div
-                            class="bg-gh-canvas dark:bg-gh-canvas-dark-subtle p-4 border-b sm:border-b-0 sm:border-r border-gh-border dark:border-gh-border-dark flex flex-row sm:flex-col items-center gap-4 sm:w-48 shrink-0">
-                            <div
-                                class="w-12 h-12 rounded-full bg-gradient-to-br from-yellow-400 to-orange-500 border border-gh-border dark:border-gh-border-dark">
-                            </div>
-                            <div class="text-center sm:text-left">
-                                <p class="text-sm font-bold text-gh-fg dark:text-gh-fg-dark">David R.</p>
-                                <p class="text-[10px] text-gh-fg dark:text-gh-fg-dark-muted">Real Estate</p>
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <div class="flex items-center gap-2 mb-4 text-xs text-gh-fg dark:text-gh-fg-dark-muted">
-                                <span
-                                    class="bg-gh-canvas dark:bg-gh-canvas-dark-subtle px-2 py-0.5 rounded-full border border-gh-border dark:border-gh-border-dark">Member</span>
-                                <span>commented last month</span>
-                            </div>
-                            <p class="text-gh-fg dark:text-gh-fg-dark leading-relaxed">
-                                Finally someone who understands CRM! He automated our entire Zoho pipeline. No more
-                                manual lead entry. It saves my sales team easily 10 hours a week.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA Section (GitHub Style) -->
-        <section class="py-20 bg-gh-canvas dark:bg-gh-canvas-dark border-t border-gh-border dark:border-gh-border-dark">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="gh-card rounded-gh-lg p-10 shadow-gh-lg relative overflow-hidden bg-white">
-                    <div
-                        class="absolute right-0 top-0 w-48 h-48 bg-gh-accent opacity-[0.03] rounded-bl-full pointer-events-none">
-                    </div>
-
-                    <div class="flex flex-col items-center text-center relative z-10">
-                        <div class="relative mb-6">
-                            <img alt="Atul Kumar Profile"
-                                class="w-20 h-20 rounded-full object-cover border-4 border-gh-canvas-subtle shadow-gh-sm"
-                                src="/kumaratul/assets/images/profile.jpg" />
-                            <div
-                                class="absolute -bottom-1 -right-1 w-6 h-6 bg-gh-success-emphasis rounded-full border-4 border-white">
-                            </div>
-                        </div>
-
-                        <div
-                            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gh-accent/10 text-gh-accent text-[10px] font-bold uppercase tracking-widest mb-4">
-                            <span class="material-symbols-outlined text-[12px]">verified</span> Expert Verification
-                        </div>
-
-                        <h3 class="text-gh-fg dark:text-gh-fg-dark font-bold text-3xl lg:text-4xl mb-4 tracking-tight">
-                            Ready to scale your
-                            business?</h3>
-                        <p class="text-gh-fg dark:text-gh-fg-dark-muted mb-10 text-lg max-w-xl leading-relaxed">
-                            Join a network of scaling brands receiving data-driven strategies for performance
-                            growth. Stop guessing; start scaling.
+                        <p class="text-[15px] text-gh-muted-dark leading-snug mb-5">"Our Meta ROAS went from 1.5x to
+                            <span class="text-gh-green font-semibold">4.2x</span>. It feels like we finally have a
+                            predictable revenue engine instead of guessing which ads work."
                         </p>
+                        <div class="flex items-center gap-3 pt-4 border-t border-gh-border-dark">
+                            <div
+                                class="w-8 h-8 rounded-full bg-gradient-to-br from-green-400 to-green-600 flex-shrink-0">
+                            </div>
+                            <div>
+                                <p class="text-sm font-semibold text-gh-fg-dark">Mike T.</p>
+                                <p class="text-[10px] text-gh-muted-dark">E-commerce Owner</p>
+                            </div>
+                        </div>
+                    </div>
 
-                        <div class="flex flex-col sm:flex-row gap-4 w-full justify-center">
-                            <a class="open-calendar bg-gh-success-emphasis hover:bg-gh-success text-white px-10 py-4 rounded-gh font-bold text-lg transition-all shadow-gh-sm hover:shadow-gh-md text-center"
-                                href="javascript:void(0)">
-                                Schedule Strategy Call
+                    <div
+                        class="bg-gh-subtle-dark border border-gh-border-dark rounded-xl p-6 hover:border-gh-purple/20 transition-all">
+                        <div class="flex gap-1 mb-4">
+                            <span class="text-gh-yellow text-[15px]">★★★★★</span>
+                        </div>
+                        <p class="text-[15px] text-gh-muted-dark leading-snug mb-5">"He automated our entire Zoho
+                            pipeline. No more manual lead entry — saves my sales team <span
+                                class="text-gh-green font-semibold">10 hours a week</span>. ROI was immediate."</p>
+                        <div class="flex items-center gap-3 pt-4 border-t border-gh-border-dark">
+                            <div
+                                class="w-8 h-8 rounded-full bg-gradient-to-br from-yellow-400 to-orange-500 flex-shrink-0">
+                            </div>
+                            <div>
+                                <p class="text-sm font-semibold text-gh-fg-dark">David R.</p>
+                                <p class="text-[10px] text-gh-muted-dark">Real Estate</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════ -->
+        <!-- NEWSLETTER -->
+        <!-- ═══════════════════════════════════════════════ -->
+        <section class="py-20 border-b border-gh-border-dark bg-gh-canvas-dark relative overflow-hidden"
+            id="newsletter">
+            <div
+                class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-gh-accent/5 rounded-full blur-3xl -translate-y-1/2">
+            </div>
+
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 relative text-center">
+                <span class="material-symbols-outlined text-4xl text-gh-accent mb-4 block">newspaper</span>
+                <h2 class="text-3xl lg:text-4xl font-bold text-gh-fg-dark mb-4 tracking-tight">
+                    Growth Insights, <span class="gradient-text">Delivered Weekly</span>
+                </h2>
+                <p class="text-gh-muted-dark mb-8 max-w-md mx-auto leading-snug text-[15px]">
+                    Frameworks, case studies, and tactical advice on performance marketing, analytics, and growth
+                    strategy. No fluff.
+                </p>
+
+                <div class="max-w-xl mx-auto">
+                    <form id="newsletter-form" class="flex flex-col sm:flex-row gap-3"
+                        onsubmit="handleNewsletterSubmit(event)">
+                        <input type="email" name="email" required
+                            class="newsletter-input w-full sm:flex-1 px-4 py-3 bg-gh-subtle-dark border border-gh-border-dark rounded-lg text-[15px] text-gh-fg-dark placeholder-gh-muted-dark outline-none transition-all"
+                            placeholder="your@email.com" />
+                        <button type="submit"
+                            class="w-full sm:w-auto px-6 py-3 bg-gh-accent hover:bg-gh-accent/90 text-white text-[15px] font-semibold rounded-lg transition-all hover:shadow-lg hover:shadow-gh-accent/20 whitespace-nowrap flex items-center justify-center gap-2">
+                            Subscribe
+                        </button>
+                    </form>
+                    <p class="text-[11px] text-gh-muted-dark mt-3">Join 500+ marketers. Unsubscribe anytime.</p>
+                    <div id="newsletter-success" class="hidden mt-4 text-[15px] text-gh-green font-medium">
+                        ✅ Thanks for subscribing! Check your inbox to confirm.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════ -->
+        <!-- CTA -->
+        <!-- ═══════════════════════════════════════════════ -->
+        <section class="py-20 bg-gh-canvas-dark overflow-hidden">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center reveal">
+                <div
+                    class="bg-gh-subtle-dark border border-gh-border-dark rounded-2xl p-12 glow-accent relative overflow-hidden group hover:border-gh-accent/40 transition-all duration-500">
+                    <div
+                        class="absolute top-0 right-0 w-64 h-64 bg-gh-accent/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4 group-hover:bg-gh-accent/20 transition-all duration-700">
+                    </div>
+                    <div class="relative z-10">
+                        <div
+                            class="w-20 h-20 rounded-full overflow-hidden mx-auto mb-6 border-2 border-gh-border-dark shadow-xl hover:scale-105 transition-transform">
+                            <img alt="Atul Kumar" class="w-full h-full object-cover" src="assets/images/profile.png" />
+                        </div>
+                        <h3 class="text-3xl font-bold text-gh-fg-dark mb-4 tracking-tight">Ready to build your revenue
+                            engine?</h3>
+                        <p class="text-lg text-gh-muted-dark mb-10 max-w-2xl mx-auto leading-relaxed">
+                            No hacks. No guesswork. Just a battle-tested infrastructure that transforms strangers into
+                            loyal customers 📈.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center w-full max-w-md mx-auto">
+                            <a href="javascript:void(0)"
+                                class="open-calendar flex-1 inline-flex items-center justify-center gap-2 px-8 py-4 bg-gh-accent hover:bg-gh-accent/90 text-white text-base font-bold rounded-xl transition-all hover:shadow-2xl hover:shadow-gh-accent/30 relative overflow-hidden group/btn">
+                                <div
+                                    class="absolute inset-0 shimmer opacity-0 group-hover/btn:opacity-100 transition-opacity">
+                                </div>
+                                <span class="material-symbols-outlined text-[15px] relative z-10">calendar_today</span>
+                                <span class="relative z-10">Schedule a Call</span>
                             </a>
-                            <a class="bg-gh-btn-bg hover:bg-gh-btn-hover text-gh-fg dark:text-gh-fg-dark px-10 py-4 rounded-gh font-bold text-lg transition-all border border-gh-border dark:border-gh-border-dark shadow-gh-sm text-center"
-                                href="contact.html">
-                                Contact Directly
+                            <a href="mailto:getintouch.atul@gmail.com"
+                                class="flex-1 inline-flex items-center justify-center gap-2 px-8 py-4 bg-gh-canvas-dark border border-gh-border-dark rounded-xl text-base font-semibold text-gh-fg-dark hover:bg-gh-subtle-dark hover:border-gh-muted-dark transition-all">
+                                <span class="material-symbols-outlined text-[15px]">mail</span>
+                                Contact
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
     </main>
 
-    <footer
-        class="bg-gh-canvas dark:bg-gh-canvas-dark-subtle py-12 border-t border-gh-border dark:border-gh-border-dark">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
-                <div class="flex items-center gap-3">
-                    <img alt="Atul Kumar Logo"
-                        class="w-8 h-8 rounded-full border border-gh-border dark:border-gh-border-dark"
-                        src="/kumaratul/assets/images/profile.jpg" />
-                    <span class="font-bold text-gh-fg dark:text-gh-fg-dark text-sm">Atul Kumar</span>
+    <!-- FOOTER -->
+    <footer class="py-8 bg-gh-inset-dark border-t border-gh-border-dark">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="flex items-center gap-2">
+                    <img alt="Atul Kumar" class="w-5 h-5 rounded-full border border-gh-border-dark"
+                        src="assets/images/profile.png" />
+                    <span class="text-sm text-gh-muted-dark">© 2025 Atul Kumar</span>
                 </div>
-
-                <div class="flex flex-wrap justify-center gap-6">
-                    <a href="index.html"
-                        class="text-xs text-gh-fg dark:text-gh-fg-dark-muted hover:text-gh-accent">Home</a>
-                    <a href="google-ads.html"
-                        class="text-xs text-gh-fg dark:text-gh-fg-dark-muted hover:text-gh-accent">Google Ads</a>
-                    <a href="meta-ads.html"
-                        class="text-xs text-gh-fg dark:text-gh-fg-dark-muted hover:text-gh-accent">Meta Ads</a>
-                    <a href="zoho-crm.html"
-                        class="text-xs text-gh-fg dark:text-gh-fg-dark-muted hover:text-gh-accent">Zoho CRM</a>
+                <div class="flex flex-wrap justify-center gap-4 text-sm text-gh-muted-dark">
+                    <a href="index.html" class="hover:text-gh-accent transition-colors">Home</a>
+                    <a href="google-ads.html" class="hover:text-gh-accent transition-colors">Google Ads</a>
+                    <a href="meta-ads.html" class="hover:text-gh-accent transition-colors">Meta Ads</a>
+                    <a href="zoho-crm.html" class="hover:text-gh-accent transition-colors">Zoho CRM</a>
+                    <a href="contact.html" class="hover:text-gh-accent transition-colors">Contact</a>
                 </div>
-
-                <div class="text-xs text-gh-fg dark:text-gh-fg-dark-subtle">
-                    © 2024 Atul Kumar. All rights reserved.
+                <div class="flex items-center gap-4">
+                    <a href="https://linkedin.com" target="_blank"
+                        class="text-gh-muted-dark hover:text-gh-accent transition-colors">
+                        <i class="fa-brands fa-linkedin text-lg"></i>
+                    </a>
+                    <a href="https://x.com" target="_blank"
+                        class="text-gh-muted-dark hover:text-gh-accent transition-colors">
+                        <i class="fa-brands fa-x-twitter text-lg"></i>
+                    </a>
+                    <a href="https://github.com/Atulscript" target="_blank"
+                        class="text-gh-muted-dark hover:text-gh-accent transition-colors">
+                        <i class="fa-brands fa-github text-lg"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </footer>
+
     <script src="assets/js/calendar.js"></script>
     <script>
-        // Theme Toggle Script
-        const themeToggle = document.getElementById('theme-toggle');
-        const html = document.documentElement;
+        // ── Scroll Reveal ──
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-        // Check for saved theme - Ensure dark by default if no preference
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme === 'light') {
-            html.classList.remove('dark');
-        } else {
-            html.classList.add('dark');
+        // ── Newsletter ──
+        function handleNewsletterSubmit(e) {
+            e.preventDefault();
+            const email = e.target.querySelector('input[name="email"]').value;
+            window.open(`https://substack.com/sign-in?redirect=%2F&email=${encodeURIComponent(email)}`, '_blank');
+            document.getElementById('newsletter-success').classList.remove('hidden');
+            e.target.reset();
         }
 
-        themeToggle.addEventListener('click', () => {
-            html.classList.toggle('dark');
-            const isDark = html.classList.contains('dark');
-            localStorage.setItem('theme', isDark ? 'dark' : 'light');
-        });
+        // ── Theme (dark by default) ──
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'light') {
+            document.documentElement.classList.remove('dark');
+        } else {
+            document.documentElement.classList.add('dark');
+        }
+
+        // ── Mobile Menu Toggle ──
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                const icon = mobileMenuButton.querySelector('.material-symbols-outlined');
+                if (icon) {
+                    icon.textContent = mobileMenu.classList.contains('hidden') ? 'menu' : 'close';
+                }
+            });
+
+            // Close menu on link click
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    const icon = mobileMenuButton.querySelector('.material-symbols-outlined');
+                    if (icon) icon.textContent = 'menu';
+                });
+            });
+        }
     </script>
+
 </body>
 
 </html>
