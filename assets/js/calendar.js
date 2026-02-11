@@ -6,7 +6,7 @@
 const CAL = {
     apiKey: "AIzaSyA0r5uNFwvreve3aVJ3Ieb-ClBlKQzm1Ro",
     calendarId: "getintouch.atul@gmail.com",
-    appsScriptUrl: "YOUR_APPS_SCRIPT_URL_HERE",
+    appsScriptUrl: "https://script.google.com/macros/s/AKfycbyNFatd3XOPaDAsmmQVf0O5IYryPtasXOUqZERinTaguknQNOEpZDXdN3NkTR2ddLrHjA/exec",
     tz: "Asia/Kolkata",
     hours: { s: 10, e: 18 }, dur: 30,
     offDays: [0, 6], minDays: 1, maxDays: 60,
