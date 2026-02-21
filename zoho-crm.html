@@ -139,7 +139,24 @@
                     class="open-calendar rounded-lg border border-sky/50 bg-sky/20 px-4 py-2 text-sm font-semibold text-white hover:bg-sky/30">Schedule
                     Call</a>
             </div>
+            <button id="mobile-menu-button"
+                class="p-1.5 text-gh-fg-dark hover:bg-gh-subtle-dark rounded-md transition-colors md:hidden"
+                aria-label="Menu">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
         </nav>
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-ink border-b border-edge overflow-hidden transition-all duration-300">
+            <div class="px-4 py-3 space-y-1">
+                <a class="block px-3 py-2 rounded-md text-sm text-mist hover:bg-slate hover:text-white transition-colors"
+                    href="about.html">About</a>
+                <a class="block px-3 py-2 rounded-md text-sm text-mist hover:bg-slate hover:text-white transition-colors"
+                    href="contact.html">Contact</a>
+                <a class="open-calendar block px-3 py-2 mt-4 rounded-md text-sm font-bold text-white bg-sky hover:bg-sky/90 transition-colors text-center"
+                    href="javascript:void(0)">Schedule a Call</a>
+            </div>
+        </div>
     </header>
 
     <main class="pt-16">
@@ -153,7 +170,7 @@
                         Automated & Scalable Systems
                     </span>
                     <h1
-                        class="font-sans text-4xl font-extrabold leading-tight text-white md:text-5xl lg:text-5xl tracking-tight">
+                        class="font-sans text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-extrabold leading-tight text-white tracking-tight">
                         Build a Smart, Automated & <span class="text-sky">Scalable Business System</span>
                     </h1>
                     <p class="mt-6 max-w-2xl text-lg leading-relaxed text-mist">
@@ -259,7 +276,7 @@
                 <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                     <!-- Service 1 -->
                     <article
-                        class="reveal group rounded-2xl border border-edge bg-card p-8 hover:border-sky/40 transition-all">
+                        class="reveal group rounded-2xl border border-edge bg-card p-6 sm:p-8 hover:border-sky/40 transition-all">
                         <div
                             class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-sky/10 text-sky group-hover:bg-sky group-hover:text-ink transition-colors">
                             <span class="material-symbols-outlined">architecture</span>
@@ -279,7 +296,7 @@
 
                     <!-- Service 2 -->
                     <article
-                        class="reveal group rounded-2xl border border-edge bg-card p-8 hover:border-teal/40 transition-all">
+                        class="reveal group rounded-2xl border border-edge bg-card p-6 sm:p-8 hover:border-teal/40 transition-all">
                         <div
                             class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-teal/10 text-teal group-hover:bg-teal group-hover:text-ink transition-colors">
                             <span class="material-symbols-outlined">settings_suggest</span>
@@ -552,6 +569,22 @@
             leadSuccess.classList.remove("hidden");
             leadForm.reset();
         });
+
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                const icon = mobileMenuButton.querySelector('.material-symbols-outlined');
+                if (icon) {
+                    icon.textContent = mobileMenu.classList.contains('hidden') ? 'menu' : 'close';
+                }
+            });
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+            });
+        }
     </script>
 </body>
 

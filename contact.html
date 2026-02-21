@@ -108,16 +108,39 @@
                 <a class="px-3 py-2 rounded-gh bg-gh-canvas-subtle dark:bg-gh-canvas-subtle-dark text-gh-fg dark:text-gh-fg-dark text-sm font-semibold"
                     href="contact.html">Contact</a>
             </div>
-
-            <div class="flex items-center gap-2">
-                <button id="theme-toggle"
-                    class="p-2 rounded-gh hover:bg-gh-canvas-subtle dark:hover:bg-gh-canvas-subtle-dark text-gh-fg-muted dark:text-gh-fg-muted-dark transition-colors">
-                    <span class="material-symbols-outlined dark:hidden">dark_mode</span>
-                    <span class="material-symbols-outlined hidden dark:block">light_mode</span>
-                </button>
-                <a class="open-calendar bg-gh-success-emphasis hover:bg-gh-success text-white px-4 py-1.5 rounded-gh font-medium text-sm transition-all"
+            <button id="mobile-menu-button"
+                class="p-2 rounded-gh hover:bg-gh-canvas-subtle dark:hover:bg-gh-canvas-subtle-dark md:hidden transition-colors">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </nav>
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-gh-canvas dark:bg-gh-canvas-dark border-b border-gh-border dark:border-gh-border-dark overflow-hidden transition-all duration-300">
+            <div class="px-4 py-3 space-y-1">
+                <a class="block px-3 py-2 rounded-gh hover:bg-gh-canvas-subtle dark:hover:bg-gh-canvas-subtle-dark text-gh-fg-muted dark:text-gh-fg-muted-dark text-sm font-medium transition-colors"
+                    href="index.html">Home</a>
+                <a class="block px-3 py-2 rounded-gh hover:bg-gh-canvas-subtle dark:hover:bg-gh-canvas-subtle-dark text-gh-fg-muted dark:text-gh-fg-muted-dark text-sm font-medium transition-colors"
+                    href="google-ads.html">Google Ads</a>
+                <a class="block px-3 py-2 rounded-gh hover:bg-gh-canvas-subtle dark:hover:bg-gh-canvas-subtle-dark text-gh-fg-muted dark:text-gh-fg-muted-dark text-sm font-medium transition-colors"
+                    href="meta-ads.html">Meta Ads</a>
+                <a class="block px-3 py-2 rounded-gh hover:bg-gh-canvas-subtle dark:hover:bg-gh-canvas-subtle-dark text-gh-fg-muted dark:text-gh-fg-muted-dark text-sm font-medium transition-colors"
+                    href="zoho-crm.html">Zoho CRM</a>
+                <a class="block px-3 py-2 rounded-gh bg-gh-canvas-subtle dark:bg-gh-canvas-subtle-dark text-gh-fg dark:text-gh-fg-dark text-sm font-semibold"
+                    href="contact.html">Contact</a>
+                <a class="open-calendar block px-3 py-2 mt-4 rounded-gh bg-gh-success-emphasis hover:bg-gh-success text-white font-medium text-sm transition-all text-center"
                     href="javascript:void(0)">Schedule Call</a>
             </div>
+        </div>
+
+        <div class="flex items-center gap-2">
+            <button id="theme-toggle"
+                class="p-2 rounded-gh hover:bg-gh-canvas-subtle dark:hover:bg-gh-canvas-subtle-dark text-gh-fg-muted dark:text-gh-fg-muted-dark transition-colors">
+                <span class="material-symbols-outlined dark:hidden">dark_mode</span>
+                <span class="material-symbols-outlined hidden dark:block">light_mode</span>
+            </button>
+            <a class="open-calendar bg-gh-success-emphasis hover:bg-gh-success text-white px-4 py-1.5 rounded-gh font-medium text-sm transition-all"
+                href="javascript:void(0)">Schedule Call</a>
+        </div>
         </nav>
     </header>
 
@@ -222,6 +245,22 @@
             html.classList.toggle('dark');
             localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
         });
+
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                const icon = mobileMenuButton.querySelector('.material-symbols-outlined');
+                if (icon) {
+                    icon.textContent = mobileMenu.classList.contains('hidden') ? 'menu' : 'close';
+                }
+            });
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+            });
+        }
     </script>
 </body>
 
