@@ -4,504 +4,645 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Meta Ads Growth Specialist | Atul Kumar</title>
+    <meta name="description"
+        content="Meta Ads (Facebook & Instagram) landing page focused on high-ROAS scaling, creative-led growth, and precision retargeting for DTC and Lead Gen brands." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
         rel="stylesheet" media="print" onload="this.media='all'" />
     <noscript>
         <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
             rel="stylesheet" />
     </noscript>
-
-    <title>Meta Ads Management (Facebook & Instagram) | Scale Your Growth - Atul Kumar</title>
-    <meta name="description"
-        content="Dominate Facebook & Instagram with high-converting creative strategies and advanced audience targeting. See how we drive profit. Book a call.">
-
-    <!-- Open Graph / Social Media -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://Atulscript.github.io/kumaratul/meta-ads.html">
-    <meta property="og:title" content="Meta Ads Management (Facebook & Instagram) | Scale Your Growth - Atul Kumar">
-    <meta property="og:description"
-        content="Dominate Facebook & Instagram with high-converting creative strategies. Expert management.">
-    <meta property="og:image" content="https://Atulscript.github.io/kumaratul/assets/images/meta_ads_discord.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Meta Ads Management | Scale Your Growth">
-    <meta name="twitter:description" content="High-converting Facebook & Instagram Ads management.">
 
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
         rel="stylesheet" />
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
     <script>
         tailwind.config = {
             darkMode: "class",
             theme: {
                 extend: {
                     colors: {
-                        // GitHub Color Palette (Light)
                         "gh-canvas": "#ffffff",
                         "gh-canvas-subtle": "#f6f8fa",
-                        "gh-canvas-inset": "#f6f8fa",
                         "gh-border": "#d0d7de",
                         "gh-border-muted": "#d8dee4",
                         "gh-fg": "#1f2328",
                         "gh-fg-muted": "#656d76",
-                        "gh-fg-subtle": "#6e7781",
-
-                        // GitHub Color Palette (Dark)
-                        "gh-canvas-dark": "#0d1117",
-                        "gh-canvas-subtle-dark": "#161b22",
-                        "gh-border-dark": "#30363d",
+                        "gh-canvas-dark": "#161b22",
+                        "gh-subtle-dark": "#21262d",
+                        "gh-inset-dark": "#0d1117",
+                        "gh-border-dark": "#3d444d",
                         "gh-fg-dark": "#e6edf3",
-                        "gh-fg-muted-dark": "#8b949e",
-
-                        "gh-accent": "#0969da",
-                        "gh-accent-emphasis": "#0969da",
-                        "gh-accent-dark": "#2f81f7",
-                        "gh-success": "#1a7f37",
-                        "gh-success-emphasis": "#2da44e",
-                        "gh-success-dark": "#3fb950",
-                        "gh-danger": "#d1242f",
-                        "gh-warning": "#bf8700",
-                        "gh-btn-bg": "#f6f8fa",
-                        "gh-btn-hover": "#f3f4f6",
-                        "gh-btn-active": "#ebecf0",
-                        "gh-header-bg": "#24292f",
-                        "gh-header-text": "#ffffff",
+                        "gh-muted-dark": "#8b949e",
+                        "gh-accent": "#a371f7", // Switched accent to purple for Meta/FB vibe
+                        "gh-accent-muted": "#a371f726",
+                        "gh-green": "#3fb950",
+                        "gh-green-muted": "#238636",
+                        "gh-purple": "#a371f7",
+                        "gh-yellow": "#d29922",
+                        "gh-red": "#f85149",
+                        "gh-orange": "#db6d28",
+                        ink: "#0d1117",
+                        slate: "#21262d",
+                        mist: "#8b949e",
+                        edge: "#3d444d",
+                        sky: "#a371f7",
+                        teal: "#3fb950",
+                        amber: "#d29922",
+                        card: "#161b22"
                     },
                     fontFamily: {
-                        sans: ["-apple-system", "BlinkMacSystemFont", "'Segoe UI'", "'Noto Sans'", "Helvetica", "Arial", "sans-serif"],
-                        display: ["'Plus Jakarta Sans'", "sans-serif"],
-                        body: ["Inter", "sans-serif"],
-                    },
-                    borderRadius: {
-                        'gh': '6px',
-                        'gh-lg': '12px',
+                        sans: ["Inter", "-apple-system", "BlinkMacSystemFont", "'Segoe UI'", "Helvetica", "Arial", "sans-serif"],
+                        mono: ["'JetBrains Mono'", "SFMono-Regular", "Consolas", "'Liberation Mono'", "Menlo", "monospace"],
+                        display: ["Inter", "-apple-system", "BlinkMacSystemFont", "'Segoe UI'", "Helvetica", "Arial", "sans-serif"],
+                        body: ["Inter", "-apple-system", "BlinkMacSystemFont", "'Segoe UI'", "Helvetica", "Arial", "sans-serif"]
                     },
                     boxShadow: {
-                        'gh-sm': '0 1px 0 rgba(31, 35, 40, 0.04)',
-                        'gh-md': '0 3px 6px rgba(140, 149, 159, 0.15)',
-                        'gh-lg': '0 8px 24px rgba(140, 149, 159, 0.2)',
-                        'gh-inset': 'inset 0 1px 0 rgba(208, 215, 222, 0.2)',
-                    },
-                },
-            },
+                        soft: "0 10px 35px rgba(13,17,23,0.45)",
+                        pulse: "0 0 0 1px rgba(163,113,247,0.25), 0 10px 35px rgba(163,113,247,0.22)"
+                    }
+                }
+            }
         };
     </script>
+
     <style type="text/tailwindcss">
-        /* GitHub-style Navigation */
-        .gh-nav {
-            background-color: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border-bottom: 1px solid #d0d7de;
-        }
-        .dark .gh-nav {
-            background-color: rgba(13, 17, 23, 0.95);
-            border-bottom-color: #30363d;
-        }
-        
-        .dark body {
-            background-color: #0d1117;
+        body {
+            background: radial-gradient(circle at 10% -10%, rgba(163, 113, 247, 0.16), transparent 38%),
+                radial-gradient(circle at 90% 10%, rgba(47, 129, 247, 0.13), transparent 42%),
+                #161b22;
             color: #e6edf3;
         }
-        
-        /* GitHub-style Cards */
-        .gh-card {
-            background-color: #ffffff;
-            border: 1px solid #d0d7de;
-            transition: all 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+
+        .mesh {
+            background-image: linear-gradient(rgba(61, 68, 77, 0.65) 1px, transparent 1px),
+                linear-gradient(to right, rgba(61, 68, 77, 0.65) 1px, transparent 1px);
+            background-size: 28px 28px;
+            mask-image: radial-gradient(circle at center, black 40%, transparent 92%);
         }
-        .dark .gh-card {
-            background-color: #0d1117;
-            border-color: #30363d;
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(16px);
+            transition: all 0.65s cubic-bezier(0.22, 1, 0.36, 1);
         }
-        .gh-card:hover {
-            border-color: #d8dee4;
-            box-shadow: 0 3px 12px rgba(140, 149, 159, 0.15);
-            transform: translateY(-1px);
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
-        .dark .gh-card:hover {
-            border-color: #444c56;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+
+        .pill {
+            @apply inline-flex items-center gap-2 rounded-full border border-gh-accent/30 bg-gh-accent/10 px-3 py-1 text-xs font-semibold tracking-wide text-gh-accent;
         }
-        
-        /* GitHub-style Hero Pattern */
-        .gh-hero-pattern {
-            background: linear-gradient(135deg, #f6f8fa 0%, #ffffff 100%);
-        }
-        .dark .gh-hero-pattern {
-            background: linear-gradient(135deg, #161b22 0%, #0d1117 100%);
-        }
-        
-        /* GitHub-style Scrollbar */
-        ::-webkit-scrollbar {
-            width: 10px;
-            height: 10px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #f6f8fa;
-        }
-        .dark ::-webkit-scrollbar-track {
-            background: #0d1117;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #d0d7de;
-            border-radius: 6px;
-        }
-        .dark ::-webkit-scrollbar-thumb {
-            background: #30363d;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #afb8c1;
-        }
-        .dark ::-webkit-scrollbar-thumb:hover {
-            background: #444c56;
+
+        .field {
+            @apply rounded-xl border border-gh-border-dark bg-gh-subtle-dark/70 px-4 py-3 text-sm text-gh-fg-dark placeholder:text-gh-muted-dark focus:border-gh-accent focus:ring-gh-accent/30;
         }
     </style>
 </head>
 
-<body
-    class="bg-gh-canvas dark:bg-gh-canvas-dark text-gh-fg dark:text-gh-fg-dark font-sans transition-colors duration-300 antialiased selection:bg-gh-accent selection:text-white">
-    <!-- Navigation -->
-    <header class="fixed top-0 left-0 right-0 z-50 gh-nav">
-        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-            <!-- Logo -->
-            <div class="flex items-center gap-3">
-                <div class="relative group">
-                    <img alt="Atul Kumar Portrait"
-                        class="w-10 h-10 rounded-full object-cover transition-all group-hover:shadow-md border-2 border-gh-border"
-                        src="/kumaratul/assets/images/profile.jpg" width="40" height="40" decoding="async" />
-                    <!-- Online Status -->
-                    <div
-                        class="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 bg-gh-success-emphasis rounded-full border-2 border-white">
-                    </div>
+<body class="font-sans antialiased overflow-x-hidden selection:bg-gh-accent/30">
+    <header class="fixed inset-x-0 top-0 z-50 border-b border-edge/80 bg-ink/85 backdrop-blur">
+        <nav class="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-4 sm:px-6">
+            <a href="index.html" class="flex items-center gap-3">
+                <img alt="Atul Kumar" class="h-9 w-9 rounded-full border border-edge object-cover"
+                    src="assets/images/profile.png" width="36" height="36" />
+                <div>
+                    <p class="font-display text-sm font-semibold text-white">Atul Kumar</p>
+                    <p class="text-[11px] uppercase tracking-[0.16em] text-mist">Meta Ads Specialist</p>
                 </div>
-                <span class="font-display font-semibold text-lg text-gh-fg dark:text-gh-fg-dark">Atul Kumar</span>
-            </div>
-
-            <!-- Navigation Links -->
-            <div class="hidden md:flex items-center space-x-1">
-                <a class="px-3 py-2 rounded-gh hover:bg-gh-canvas-subtle text-gh-fg-muted text-sm font-medium transition-colors"
-                    href="index.html">
-                    Home
-                </a>
-                <a class="px-3 py-2 rounded-gh hover:bg-gh-canvas-subtle text-gh-fg-muted text-sm font-medium transition-colors"
-                    href="index.html#why-me">
-                    About
-                </a>
-
-                <!-- Services Dropdown (Active) -->
-                <div class="relative group">
-                    <button
-                        class="px-3 py-2 rounded-gh bg-gh-canvas-subtle text-gh-fg text-sm font-semibold transition-colors flex items-center gap-1">
-                        Services
-                        <span class="material-symbols-outlined text-sm">expand_more</span>
-                    </button>
-                    <!-- Dropdown Menu -->
-                    <div
-                        class="absolute left-0 top-full mt-1 w-48 bg-white border border-gh-border rounded-gh shadow-gh-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                        <div class="py-1">
-                            <a href="google-ads.html"
-                                class="block px-4 py-2 text-sm text-gh-fg hover:bg-gh-canvas-subtle transition-colors">
-                                Google Ads
-                            </a>
-                            <a href="meta-ads.html"
-                                class="block px-4 py-2 text-sm text-gh-fg bg-gh-canvas-subtle transition-colors">
-                                Meta Ads
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <a class="px-3 py-2 rounded-gh hover:bg-gh-canvas-subtle text-gh-fg-muted text-sm font-medium transition-colors"
-                    href="zoho-crm.html">
-                    Zoho CRM
-                </a>
-            </div>
-
-            <!-- CTA -->
-            <div class="flex items-center gap-2">
-                <button id="theme-toggle"
-                    class="p-2 rounded-gh hover:bg-gh-canvas-subtle dark:hover:bg-gh-canvas-subtle-dark text-gh-fg-muted dark:text-gh-fg-muted-dark transition-colors flex items-center justify-center font-bold"
-                    title="Toggle Theme">
-                    <span class="material-symbols-outlined dark:hidden">dark_mode</span>
-                    <span class="material-symbols-outlined hidden dark:block">light_mode</span>
-                </button>
-                <a class="hidden sm:flex px-3 py-2 rounded-gh hover:bg-gh-canvas-subtle dark:hover:bg-gh-canvas-subtle-dark text-gh-fg dark:text-gh-fg-dark text-sm font-semibold transition-all border border-transparent hover:border-gh-border dark:hover:border-gh-border-dark"
-                    href="contact.html">
-                    Contact
-                </a>
-                <a class="open-calendar bg-gh-success-emphasis hover:bg-gh-success text-white px-4 py-1.5 rounded-gh font-bold text-sm transition-all shadow-gh-sm hover:shadow-gh-md"
-                    href="javascript:void(0)">
-                    Schedule Call
-                </a>
+            </a>
+            <div class="hidden items-center gap-2 md:flex">
+                <a href="about.html"
+                    class="rounded-md px-3 py-2 text-sm text-mist hover:bg-slate hover:text-white">About</a>
+                <a href="contact.html"
+                    class="rounded-md px-3 py-2 text-sm text-mist hover:bg-slate hover:text-white">Contact</a>
+                <a href="javascript:void(0)"
+                    class="open-calendar rounded-lg border border-sky/50 bg-sky/20 px-4 py-2 text-sm font-semibold text-white hover:bg-sky/30">Schedule
+                    Call</a>
             </div>
         </nav>
     </header>
 
     <main class="pt-16">
-        <!-- Hero Section -->
-        <section class="relative overflow-hidden gh-hero-pattern py-16 lg:py-24 border-b border-gh-border">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
-                    <div class="w-full lg:w-1/2 order-2 lg:order-1">
-                        <div
-                            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-100 text-purple-700 text-xs font-bold uppercase tracking-wider mb-8 border border-purple-200">
-                            <span class="material-symbols-outlined text-[14px]">verified</span>
-                            Scale through Social Precision
+        <section class="relative overflow-hidden border-b border-edge py-16 md:py-24">
+            <div class="mesh pointer-events-none absolute inset-0 opacity-70"></div>
+            <div
+                class="relative mx-auto grid max-w-6xl gap-10 px-4 sm:px-6 lg:grid-cols-[1.08fr_0.92fr] lg:items-center">
+                <div class="reveal">
+                    <span class="pill mb-5">
+                        <span class="h-2 w-2 rounded-full bg-teal"></span>
+                        Freelance Meta Ads & Conversion Specialist
+                    </span>
+                    <h1 class="font-display text-4xl font-extrabold leading-tight text-white md:text-5xl lg:text-6xl">
+                        Scale ROAS With Creative-Led Meta Systems.
+                    </h1>
+                    <p class="mt-5 max-w-2xl text-lg leading-relaxed text-mist">
+                        Stop burning budget on "lookalike" audiences. I build Meta ecosystems that win on creative
+                        testing, scientific scale, and robust server-side measurement.
+                        I turn social scrolls into predictable revenue.
+                    </p>
+
+                    <div class="mt-8 grid gap-3 sm:grid-cols-2">
+                        <div class="rounded-xl border border-edge bg-card/70 p-4">
+                            <p class="text-[11px] font-semibold uppercase tracking-[0.14em] text-mist">Focus</p>
+                            <p class="mt-2 text-sm font-medium text-white">1:1 Execution | No Outsourcing</p>
                         </div>
-                        <h1
-                            class="font-display text-4xl lg:text-6xl font-extrabold leading-tight mb-8 text-gh-fg tracking-tight">
-                            Meta Ads (FB/IG) for <span class="text-purple-600">Omnichannel Growth.</span>
-                        </h1>
-                        <p class="text-lg lg:text-xl text-gh-fg-muted mb-10 leading-relaxed max-w-xl">
-                            Dominate Facebook and Instagram with data-driven creative testing and advanced audience
-                            synthesis. We turn social presence into bottom-line profit.
-                        </p>
-                        <div class="flex flex-col sm:flex-row gap-4">
-                            <a class="open-calendar bg-gh-success-emphasis hover:bg-gh-success text-white px-8 py-3 rounded-gh font-semibold text-lg transition-all flex items-center justify-center gap-2 transform active:scale-95 shadow-gh-sm"
-                                href="javascript:void(0)">
-                                Start Scaling
-                                <span class="material-symbols-outlined">rocket_launch</span>
-                            </a>
-                            <a class="bg-gh-btn-bg hover:bg-gh-btn-hover text-gh-fg px-8 py-3 rounded-gh font-semibold text-lg transition-all flex items-center justify-center gap-2 border border-gh-border shadow-gh-sm"
-                                href="mailto:hello@kumaratul.com">
-                                Case Studies
-                            </a>
+                        <div class="rounded-xl border border-edge bg-card/70 p-4">
+                            <p class="text-[11px] font-semibold uppercase tracking-[0.14em] text-mist">Response</p>
+                            <p class="mt-2 text-sm font-medium text-white">Under 24 hours (weekdays)</p>
                         </div>
                     </div>
 
-                    <div class="w-full lg:w-1/2 relative order-1 lg:order-2">
-                        <!-- GitHub-style Card Image -->
-                        <div class="relative z-10 gh-card rounded-gh-lg overflow-hidden shadow-gh-lg group">
-                            <div
-                                class="bg-gh-canvas-subtle px-4 py-2 border-b border-gh-border flex items-center justify-between">
-                                <div class="flex items-center gap-2">
-                                    <span class="w-3 h-3 rounded-full bg-gh-danger"></span>
-                                    <span class="w-3 h-3 rounded-full bg-gh-warning"></span>
-                                    <span class="w-3 h-3 rounded-full bg-gh-success"></span>
-                                    <span class="ml-2 text-xs text-gh-fg-muted font-mono">meta_dashboard.png</span>
-                                </div>
-                                <span class="material-symbols-outlined text-gh-fg-muted text-sm">download</span>
-                            </div>
-                            <img alt="Meta Ads Performance Dashboard"
-                                class="w-full aspect-[4/3] object-cover opacity-95 group-hover:opacity-100 transition-opacity"
-                                src="/kumaratul/assets/images/meta_ads_discord.png" />
-                        </div>
-
-                        <!-- Floating Stat Badge -->
-                        <div
-                            class="absolute -bottom-6 -right-4 lg:-right-10 z-20 bg-white p-4 rounded-gh-lg shadow-gh-lg flex items-center gap-4 border border-gh-border border-l-4 border-l-purple-500 max-w-[280px]">
-                            <div
-                                class="size-10 rounded-full bg-purple-50 flex items-center justify-center text-purple-600">
-                                <span class="material-symbols-outlined text-2xl">ads_click</span>
-                            </div>
-                            <div>
-                                <p class="text-[10px] font-bold text-gh-fg-muted uppercase tracking-widest mb-0.5">
-                                    Click-Through Rate</p>
-                                <p class="text-xl font-bold text-gh-fg">3.8% <span
-                                        class="text-sm font-medium text-gh-success">^ Top 10%</span></p>
-                            </div>
-                        </div>
+                    <div class="mt-8 flex flex-wrap items-center gap-4">
+                        <a href="#lead-form"
+                            class="rounded-xl bg-sky px-6 py-3 text-sm font-semibold text-ink transition hover:-translate-y-0.5 hover:bg-sky/90">Get
+                            My Meta Scaling Roadmap</a>
+                        <a href="javascript:void(0)"
+                            class="open-calendar rounded-xl border border-edge bg-slate px-6 py-3 text-sm font-semibold text-white transition hover:border-sky/40">Book
+                            A Strategy Call</a>
                     </div>
                 </div>
+
+                <aside id="lead-form" class="reveal lg:justify-self-end">
+                    <div class="w-full rounded-2xl border border-edge bg-card/95 p-6 shadow-soft sm:p-7 lg:w-[430px]">
+                        <div class="mb-5 flex items-center justify-between">
+                            <h2 class="font-display text-2xl font-bold text-white">Request Growth Audit</h2>
+                            <span class="rounded-md bg-amber/20 px-2 py-1 text-[11px] font-semibold text-amber">Active
+                                Scaling Only</span>
+                        </div>
+                        <p class="mb-6 text-sm text-mist">I'll analyze your current account structure and creative
+                            win-rate. No generic reports.</p>
+
+                        <form id="leadCaptureForm" class="space-y-3">
+                            <input class="field w-full" type="text" name="name" placeholder="Full name" required />
+                            <input class="field w-full" type="email" name="email" placeholder="Work email" required />
+                            <input class="field w-full" type="url" name="website" placeholder="Brand / Website URL"
+                                required />
+                            <select class="field w-full" name="budget" required>
+                                <option value="" selected disabled>Monthly Meta Ads Budget</option>
+                                <option value="Under $5k">Under $5k</option>
+                                <option value="$5k - $15k">$5k - $15k</option>
+                                <option value="$15k - $50k">$15k - $50k</option>
+                                <option value="$50k+">$50k+</option>
+                            </select>
+                            <textarea class="field w-full" name="goal" rows="3"
+                                placeholder="What is your biggest blocker? (ROAS drop, High CPA, Creative fatigue?)"
+                                required></textarea>
+                            <button type="submit"
+                                class="w-full rounded-xl bg-teal px-4 py-3 text-sm font-semibold text-ink transition hover:bg-teal/90">Send
+                                My Meta Audit Request</button>
+                        </form>
+
+                        <div id="leadSuccess"
+                            class="mt-4 hidden rounded-xl border border-teal/40 bg-teal/10 p-4 text-sm text-teal">
+                            Audit request sent! Expect a personal loom video or reply within 24 hours.
+                        </div>
+
+                        <div class="mt-5 grid grid-cols-2 gap-3 text-sm">
+                            <a id="emailFallback" href="mailto:getintouch.atul@gmail.com"
+                                class="rounded-lg border border-edge bg-slate px-3 py-2 text-center font-medium text-white hover:border-sky/40">
+                                Email Directly
+                            </a>
+                            <a href="javascript:void(0)"
+                                class="open-calendar rounded-lg border border-sky/40 bg-sky/20 px-3 py-2 text-center font-medium text-white hover:bg-sky/30">
+                                Book Call
+                            </a>
+                        </div>
+                    </div>
+                </aside>
             </div>
         </section>
 
-        <section class="py-20 bg-gh-canvas-subtle border-b border-gh-border" id="strategy">
-            <div class="max-w-7xl mx-auto px-6 text-center">
-                <h2 class="text-sm font-semibold text-gh-accent tracking-widest uppercase mb-4">Tactical Approach</h2>
-                <h2 class="text-3xl lg:text-4xl font-bold mb-12 text-gh-fg">High-Impact Meta Strategies</h2>
-                <div class="grid md:grid-cols-3 gap-8">
-                    <!-- Strategy 1 -->
-                    <div
-                        class="p-10 gh-card rounded-gh-lg shadow-gh-sm hover:shadow-gh-md transition-all duration-300 group bg-white border-t-4 border-t-gh-accent">
-                        <div
-                            class="w-16 h-16 bg-gh-canvas-subtle rounded-full flex items-center justify-center text-gh-accent mx-auto mb-8 group-hover:bg-gh-accent group-hover:text-white transition-colors">
-                            <span class="material-symbols-outlined text-3xl">analytics</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-4 text-gh-fg">Advanced Pixel Tracking</h3>
-                        <p class="text-gh-fg-muted text-sm leading-relaxed">Full CAPI implementation and offline
-                            conversion tracking
-                            to feed the algorithm better data and overcome signal loss.</p>
-                    </div>
-
-                    <!-- Strategy 2 -->
-                    <div
-                        class="p-10 gh-card rounded-gh-lg shadow-gh-sm hover:shadow-gh-md transition-all duration-300 group bg-white border-t-4 border-t-purple-500">
-                        <div
-                            class="w-16 h-16 bg-gh-canvas-subtle rounded-full flex items-center justify-center text-purple-600 mx-auto mb-8 group-hover:bg-purple-600 group-hover:text-white transition-colors">
-                            <span class="material-symbols-outlined text-3xl">movie</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-4 text-gh-fg">Creative Optimization</h3>
-                        <p class="text-gh-fg-muted text-sm leading-relaxed">Continuous A/B testing of hooks, reels, and
-                            static assets.
-                            We find the winning creative through rapid iterations.</p>
-                    </div>
-
-                    <!-- Strategy 3 -->
-                    <div
-                        class="p-10 gh-card rounded-gh-lg shadow-gh-sm hover:shadow-gh-md transition-all duration-300 group bg-white border-t-4 border-t-gh-success">
-                        <div
-                            class="w-16 h-16 bg-gh-canvas-subtle rounded-full flex items-center justify-center text-gh-success mx-auto mb-8 group-hover:bg-gh-success group-hover:text-white transition-colors">
-                            <span class="material-symbols-outlined text-3xl">groups</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-4 text-gh-fg">Audience Synthesis</h3>
-                        <p class="text-gh-fg-muted text-sm leading-relaxed">Lookalike modeling and deep retargeting
-                            frameworks to
-                            capture high-intent users and maximize customer lifetime value.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Reviews Section -->
-        <section class="py-16 bg-gh-canvas" id="reviews">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="mb-12 flex items-center gap-4 border-b border-gh-border pb-6">
-                    <span class="material-symbols-outlined text-gh-fg-muted">chat_bubble</span>
-                    <h2 class="text-2xl font-bold text-gh-fg">Verified Success</h2>
-                    <span
-                        class="bg-gh-canvas-subtle border border-gh-border text-gh-fg-muted px-2 py-0.5 rounded-full text-xs font-semibold">12
-                        Projects Completed</span>
-                </div>
-
-                <div class="space-y-12 max-w-4xl">
-                    <!-- Review 1 -->
-                    <div
-                        class="gh-card rounded-gh-lg overflow-hidden flex flex-col sm:flex-row gap-0 sm:gap-4 p-0 bg-white shadow-gh-sm">
-                        <div
-                            class="bg-gh-canvas-subtle p-6 border-b sm:border-b-0 sm:border-r border-gh-border flex flex-row sm:flex-col items-center gap-4 sm:w-52 shrink-0">
-                            <div
-                                class="w-14 h-14 rounded-full bg-gradient-to-br from-blue-400 to-gh-accent border-2 border-white shadow-gh-sm">
-                            </div>
-                            <div class="text-center sm:text-left">
-                                <p class="text-sm font-bold text-gh-fg">Sarah J.</p>
-                                <p class="text-xs text-gh-fg-muted font-medium">SaaS Founder</p>
-                            </div>
-                        </div>
-                        <div class="p-8">
-                            <div
-                                class="flex items-center gap-2 mb-4 text-[10px] text-gh-fg-muted font-bold uppercase tracking-wider">
-                                <span
-                                    class="bg-gh-accent/10 text-gh-accent px-2 py-0.5 rounded-full border border-gh-accent/20">Contributor</span>
-                                <span>commented 2 days ago</span>
-                            </div>
-                            <p class="text-gh-fg leading-relaxed text-lg">
-                                Honestly, working with Atul was a game changer. We were wasting so much on broad match
-                                keywords. He came in, fixed our GTM, and <span
-                                    class="bg-gh-accent/10 px-1 font-semibold text-gh-accent italic">slashed our CPA by
-                                    40%</span> in the first month. Highly recommend! 🚀
+        <section class="border-b border-edge bg-gh-canvas-dark/60 py-16 md:py-20">
+            <div class="mx-auto grid max-w-6xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.92fr_1.08fr] lg:items-start">
+                <aside class="reveal rounded-2xl border border-edge bg-card p-6 shadow-soft">
+                    <div class="flex items-center gap-4">
+                        <img src="assets/images/profile.png" alt="Atul Kumar"
+                            class="h-20 w-20 rounded-xl border border-edge object-cover" />
+                        <div>
+                            <h2 class="font-display text-2xl font-bold text-white">Atul Kumar</h2>
+                            <p class="text-sm text-mist">Freelance Meta Ads & Conversion Specialist</p>
+                            <p class="mt-1 text-xs uppercase tracking-[0.14em] text-sky">1:1 Execution | No Outsourcing
                             </p>
                         </div>
                     </div>
 
-                    <!-- Review 2 -->
-                    <div
-                        class="gh-card rounded-gh-lg overflow-hidden flex flex-col sm:flex-row gap-0 sm:gap-4 p-0 bg-white shadow-gh-sm">
-                        <div
-                            class="bg-gh-canvas-subtle p-6 border-b sm:border-b-0 sm:border-r border-gh-border flex flex-row sm:flex-col items-center gap-4 sm:w-52 shrink-0">
-                            <div
-                                class="w-14 h-14 rounded-full bg-gradient-to-br from-gh-success to-gh-success-emphasis border-2 border-white shadow-gh-sm">
-                            </div>
-                            <div class="text-center sm:text-left">
-                                <p class="text-sm font-bold text-gh-fg">Mike T.</p>
-                                <p class="text-xs text-gh-fg-muted font-medium">Ecom Owner</p>
-                            </div>
+                    <div class="mt-5 grid gap-3 text-sm">
+                        <div class="rounded-lg border border-edge/70 bg-slate/40 px-4 py-3 text-mist">
+                            <span class="font-semibold text-white">Primary Focus:</span> Facebook, Instagram, Reels,
+                            Lead Funnels
                         </div>
-                        <div class="p-8">
-                            <div
-                                class="flex items-center gap-2 mb-4 text-[10px] text-gh-fg-muted font-bold uppercase tracking-wider">
-                                <span
-                                    class="bg-gh-success/10 text-gh-success px-2 py-0.5 rounded-full border border-gh-success/20">Verified</span>
-                                <span>commented last week</span>
-                            </div>
-                            <p class="text-gh-fg leading-relaxed text-lg">
-                                The ROAS on our Meta campaigns went from 1.5x to <span
-                                    class="bg-gh-success/10 px-1 font-semibold text-gh-success italic">4.2x</span> after
-                                he
-                                restructured our creatives. It feels like we finally have a predictable revenue engine.
-                            </p>
+                        <div class="rounded-lg border border-edge/70 bg-slate/40 px-4 py-3 text-mist">
+                            <span class="font-semibold text-white">Response Window:</span> Under 24 hours (weekdays)
                         </div>
+                        <div class="rounded-lg border border-edge/70 bg-slate/40 px-4 py-3 text-mist">
+                            <span class="font-semibold text-white">Working Style:</span> Weekly optimization,
+                            transparent reporting, measurable KPIs
+                        </div>
+                    </div>
+
+                    <div class="mt-5 flex flex-wrap gap-3">
+                        <a href="javascript:void(0)"
+                            class="open-calendar rounded-lg bg-sky px-4 py-2 text-sm font-semibold text-ink hover:bg-sky/90 transition-all">Book
+                            A Strategy Call</a>
+                        <a href="https://linkedin.com/in/atulscript" target="_blank" rel="noopener"
+                            class="rounded-lg border border-edge bg-slate px-4 py-2 text-sm font-semibold text-white hover:border-sky/40">View
+                            LinkedIn</a>
+                    </div>
+                </aside>
+
+                <div class="reveal">
+                    <p class="text-[11px] font-semibold uppercase tracking-[0.18em] text-teal">Professional Profile</p>
+                    <h2 class="mt-3 font-display text-3xl font-bold text-white">Strategic Meta Ads Management With
+                        Direct Accountability</h2>
+                    <p class="mt-4 text-sm leading-relaxed text-mist">
+                        You work directly with me from audit to scaling. I combine campaign architecture, tracking
+                        precision, and creative-focused landing page thinking
+                        to improve qualified lead flow, not just platform metrics. I treat your ad budget as a
+                        high-performance investment.
+                    </p>
+
+                    <div class="mt-6 grid gap-4 md:grid-cols-2">
+                        <article class="rounded-xl border border-edge bg-card/80 p-5">
+                            <h3 class="font-display text-lg font-semibold text-white">Core Expertise</h3>
+                            <p class="mt-2 text-sm text-mist">Meta account architecture, CAPI & pixel tracking, creative
+                                hook testing, broad targeting scale, and funnel alignment.</p>
+                        </article>
+                        <article class="rounded-xl border border-edge bg-card/80 p-5">
+                            <h3 class="font-display text-lg font-semibold text-white">Engagement Model</h3>
+                            <p class="mt-2 text-sm text-mist">Freelancer-led 1:1 communication, faster approvals, direct
+                                implementation, and consistent weekly progress updates.</p>
+                        </article>
+                    </div>
+
+                    <div class="mt-6 rounded-xl border border-edge bg-card/80 p-5">
+                        <h3 class="font-display text-lg font-semibold text-white">What You Receive After The Discovery
+                            Call</h3>
+                        <ul class="mt-3 space-y-2 text-sm text-mist">
+                            <li><span class="text-white font-medium">Priority leak report</span> with top performance
+                                blockers.</li>
+                            <li><span class="text-white font-medium">90-day action roadmap</span> mapped to budget and
+                                business goals.</li>
+                            <li><span class="text-white font-medium">Clear KPI framework</span> focused on qualified
+                                leads, ROAS, and profitability.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- CTA Section -->
-        <section class="py-20 bg-gh-canvas-subtle border-t border-gh-border">
-            <div class="max-w-4xl mx-auto px-6 text-center">
-                <div
-                    class="gh-card rounded-gh-lg p-12 bg-white shadow-gh-lg border-2 border-purple-500 relative overflow-hidden">
-                    <div class="absolute -top-12 -right-12 w-48 h-48 bg-purple-500 opacity-[0.03] rounded-full"></div>
+        <section class="border-b border-edge bg-gh-subtle-dark/45 py-12">
+            <div class="mx-auto max-w-6xl px-4 sm:px-6">
+                <div class="reveal mb-8 text-center">
+                    <p class="text-[11px] font-semibold uppercase tracking-[0.18em] text-sky">Formal Credentials</p>
+                    <h2 class="mt-2 font-display text-2xl font-bold text-white">Credentials, Standards, And Delivery
+                        Framework</h2>
+                </div>
+                <div class="grid grid-cols-2 gap-3 md:grid-cols-4 lg:grid-cols-8">
+                    <article class="reveal rounded-xl border border-edge bg-card/80 p-3 text-center">
+                        <span class="material-symbols-outlined text-lg text-sky">workspace_premium</span>
+                        <p class="mt-1 text-xs font-semibold text-white">8+ Years</p>
+                        <p class="text-[10px] text-mist">Performance Marketing</p>
+                    </article>
+                    <article class="reveal rounded-xl border border-edge bg-card/80 p-3 text-center">
+                        <span class="material-symbols-outlined text-lg text-teal">payments</span>
+                        <p class="mt-1 text-xs font-semibold text-white">$5M+ Spend</p>
+                        <p class="text-[10px] text-mist">Campaign Management</p>
+                    </article>
+                    <article class="reveal rounded-xl border border-edge bg-card/80 p-3 text-center">
+                        <span class="material-symbols-outlined text-lg text-amber">business_center</span>
+                        <p class="mt-1 text-xs font-semibold text-white">50+ Brands</p>
+                        <p class="text-[10px] text-mist">Cross-Industry Work</p>
+                    </article>
+                    <article class="reveal rounded-xl border border-edge bg-card/80 p-3 text-center">
+                        <span class="material-symbols-outlined text-lg text-sky">travel_explore</span>
+                        <p class="mt-1 text-xs font-semibold text-white">Meta Ads</p>
+                        <p class="text-[10px] text-mist">FB + IG + Reels</p>
+                    </article>
+                    <article class="reveal rounded-xl border border-edge bg-card/80 p-3 text-center">
+                        <span class="material-symbols-outlined text-lg text-teal">analytics</span>
+                        <p class="mt-1 text-xs font-semibold text-white">GA4 + CAPI</p>
+                        <p class="text-[10px] text-mist">Attribution and Events</p>
+                    </article>
+                    <article class="reveal rounded-xl border border-edge bg-card/80 p-3 text-center">
+                        <span class="material-symbols-outlined text-lg text-sky">web</span>
+                        <p class="mt-1 text-xs font-semibold text-white">Landing CRO</p>
+                        <p class="text-[10px] text-mist">Copy and UX Refinement</p>
+                    </article>
+                    <article class="reveal rounded-xl border border-edge bg-card/80 p-3 text-center">
+                        <span class="material-symbols-outlined text-lg text-amber">update</span>
+                        <p class="mt-1 text-xs font-semibold text-white">Weekly Cadence</p>
+                        <p class="text-[10px] text-mist">Testing and Reporting</p>
+                    </article>
+                    <article class="reveal rounded-xl border border-edge bg-card/80 p-3 text-center">
+                        <span class="material-symbols-outlined text-lg text-teal">person</span>
+                        <p class="mt-1 text-xs font-semibold text-white">Direct 1:1</p>
+                        <p class="text-[10px] text-mist">No Outsourcing</p>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-                    <h2 class="text-3xl md:text-5xl font-extrabold text-gh-fg mb-8 tracking-tight">Ready to Scale Your
-                        Social Presence?
-                    </h2>
-                    <p class="text-lg text-gh-fg-muted mb-12 max-w-2xl mx-auto leading-relaxed">Join high-scaling brands
-                        using advanced Meta Ads strategies to dominate Facebook and Instagram. Stop guessing; start
-                        growing.</p>
+        <section class="border-b border-edge py-16 md:py-20">
+            <div class="mx-auto max-w-6xl px-4 sm:px-6">
+                <div class="reveal mb-10 text-center">
+                    <p class="text-[11px] font-semibold uppercase tracking-[0.18em] text-teal">Why Campaigns Stall</p>
+                    <h2 class="mt-3 font-display text-3xl font-bold text-white">Three Leaks That Kill Performance</h2>
+                </div>
+                <div class="grid gap-5 md:grid-cols-3">
+                    <article class="reveal rounded-2xl border border-edge bg-card p-6">
+                        <span class="material-symbols-outlined text-sky">gpp_bad</span>
+                        <h3 class="mt-3 font-display text-xl font-semibold text-white">Broken Signal Quality</h3>
+                        <p class="mt-2 text-sm leading-relaxed text-mist">Weak conversion events, duplicate pixels, and
+                            no server-side backup make bidding unstable after iOS14.</p>
+                    </article>
+                    <article class="reveal rounded-2xl border border-edge bg-card p-6">
+                        <span class="material-symbols-outlined text-amber">tune</span>
+                        <h3 class="mt-3 font-display text-xl font-semibold text-white">Creative Fatigue</h3>
+                        <p class="mt-2 text-sm leading-relaxed text-mist">Scaling budgets blindly without a constant
+                            testing sandbox of new hooks and angles leads to CPA spikes.</p>
+                    </article>
+                    <article class="reveal rounded-2xl border border-edge bg-card p-6">
+                        <span class="material-symbols-outlined text-teal">speed</span>
+                        <h3 class="mt-3 font-display text-xl font-semibold text-white">Landing Page Friction</h3>
+                        <p class="mt-2 text-sm leading-relaxed text-mist">Social clicks are impulsive. If the page is
+                            slow or doesn't match the ad's promise, they exit instantly.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-                    <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
-                        <button onclick="window.location.href='javascript:void(0)'"
-                            class="open-calendar w-full sm:w-auto bg-gh-success-emphasis text-white px-10 py-4 rounded-gh font-bold text-lg shadow-gh-sm hover:bg-gh-success transition-all transform hover:-translate-y-0.5">
-                            Start Scaling Audit
-                        </button>
-                        <button onclick="window.location.href='mailto:hello@kumaratul.com'"
-                            class="w-full sm:w-auto bg-gh-btn-bg border border-gh-border text-gh-fg px-10 py-4 rounded-gh font-bold text-lg hover:bg-gh-btn-hover transition-all">
-                            View Case Studies
-                        </button>
+        <section class="border-b border-edge bg-gh-subtle-dark/55 py-16 md:py-20">
+            <div class="mx-auto max-w-6xl px-4 sm:px-6">
+                <div class="reveal mb-10 text-center">
+                    <p class="text-[11px] font-semibold uppercase tracking-[0.18em] text-sky">What You Get</p>
+                    <h2 class="mt-3 font-display text-3xl font-bold text-white">Execution Plan Built For Growth</h2>
+                </div>
+                <div class="grid gap-4 md:grid-cols-2">
+                    <div class="reveal rounded-xl border border-edge bg-card p-5">
+                        <h3 class="font-display text-lg font-semibold text-white">Creative Testing Sandbox</h3>
+                        <p class="mt-2 text-sm text-mist">A scientific framework to isolate hooks, angles, and visual
+                            styles daily to find the "Unicorns" that scale your account.</p>
                     </div>
+                    <div class="reveal rounded-xl border border-edge bg-card p-5">
+                        <h3 class="font-display text-lg font-semibold text-white">Tracking & CAPI Cleanup</h3>
+                        <p class="mt-2 text-sm text-mist">Auditing pixel events and implementing server-side Conversion
+                            API so Meta's algorithm sees data clearly.</p>
+                    </div>
+                    <div class="reveal rounded-xl border border-edge bg-card p-5">
+                        <h3 class="font-display text-lg font-semibold text-white">Broad Scaling Architecture</h3>
+                        <p class="mt-2 text-sm text-mist">Consolidated account structure using broad targeting to
+                            leverage Meta's AI for consistent, predictable ROAS.</p>
+                    </div>
+                    <div class="reveal rounded-xl border border-edge bg-card p-5">
+                        <h3 class="font-display text-lg font-semibold text-white">Weekly Optimization Cadence</h3>
+                        <p class="mt-2 text-sm text-mist">Negative audience mining, creative asset performance updates,
+                            and bid adjustments tied to profit targets.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="border-b border-edge py-16 md:py-20">
+            <div class="mx-auto max-w-6xl px-4 sm:px-6">
+                <div class="reveal mb-10 text-center">
+                    <p class="text-[11px] font-semibold uppercase tracking-[0.18em] text-teal">Best Fit Clients</p>
+                    <h2 class="mt-3 font-display text-3xl font-bold text-white">Who This Is Perfect For</h2>
+                    <p class="mx-auto mt-3 max-w-2xl text-sm text-mist">I work best with founders and lean teams that
+                        want to collaborate directly with me and move fast.</p>
+                </div>
+                <div class="grid gap-5 md:grid-cols-2">
+                    <article class="reveal rounded-2xl border border-edge bg-card p-6">
+                        <h3 class="font-display text-xl font-semibold text-white">Good Fit</h3>
+                        <ul class="mt-4 space-y-3 text-sm text-mist">
+                            <li class="rounded-lg border border-edge/70 bg-slate/40 px-4 py-3">You are already spending
+                                on Meta Ads and need to scale past a ROAS plateau.</li>
+                            <li class="rounded-lg border border-edge/70 bg-slate/40 px-4 py-3">You have a steady
+                                pipeline of creative assets (UGC, static, video) for testing.</li>
+                            <li class="rounded-lg border border-edge/70 bg-slate/40 px-4 py-3">You can approve copy and
+                                landing changes or campaign tests within 24-48 hours.</li>
+                        </ul>
+                    </article>
+                    <article class="reveal rounded-2xl border border-edge bg-card p-6">
+                        <h3 class="font-display text-xl font-semibold text-white">Not A Fit (Yet)</h3>
+                        <ul class="mt-4 space-y-3 text-sm text-mist">
+                            <li class="rounded-lg border border-edge/70 bg-slate/40 px-4 py-3">You expect instant scale
+                                without fixing broken tracking or website conversion leaks.</li>
+                            <li class="rounded-lg border border-edge/70 bg-slate/40 px-4 py-3">You do not have any
+                                budget or resources for new creative testing.</li>
+                            <li class="rounded-lg border border-edge/70 bg-slate/40 px-4 py-3">You want vanity metrics
+                                like "likes" instead of cost-per-qualified-lead or ROAS.</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="border-b border-edge bg-card/60 py-16 md:py-20">
+            <div class="mx-auto max-w-6xl px-4 sm:px-6">
+                <div class="reveal mb-10 text-center">
+                    <p class="text-[11px] font-semibold uppercase tracking-[0.18em] text-amber">Selected Outcomes</p>
+                    <h2 class="mt-3 font-display text-3xl font-bold text-white">Recent Scaling Snapshots</h2>
+                </div>
+                <div class="grid gap-5 lg:grid-cols-3">
+                    <article class="reveal rounded-2xl border border-edge bg-card p-6">
+                        <p class="text-[11px] font-semibold uppercase tracking-[0.14em] text-mist">B2B SaaS</p>
+                        <h3 class="mt-2 font-display text-lg font-semibold text-white">Lowered CPA by 34%</h3>
+                        <p class="mt-3 text-sm text-mist">Rebuilt creative angles, added exclusion layers, and replaced
+                            weak lead events with SQL-focused conversions.</p>
+                        <p class="mt-4 text-xs text-amber">Timeline: 6 weeks</p>
+                    </article>
+                    <article class="reveal rounded-2xl border border-edge bg-card p-6">
+                        <p class="text-[11px] font-semibold uppercase tracking-[0.14em] text-mist">Ecommerce Brand</p>
+                        <h3 class="mt-2 font-display text-lg font-semibold text-white">ROAS up from 2.1 to 3.4</h3>
+                        <p class="mt-3 text-sm text-mist">Refined creative testing signals, separated margin-safe
+                            products, and tuned broad scaling with stronger asset controls.</p>
+                        <p class="mt-4 text-xs text-amber">Timeline: 8 weeks</p>
+                    </article>
+                    <article class="reveal rounded-2xl border border-edge bg-card p-6">
+                        <p class="text-[11px] font-semibold uppercase tracking-[0.14em] text-mist">Local Service</p>
+                        <h3 class="mt-2 font-display text-lg font-semibold text-white">Qualified calls up 62%</h3>
+                        <p class="mt-3 text-sm text-mist">Aligned ad-copy promises with landing proof blocks and reduced
+                            form friction using trust-first messaging hierarchy.</p>
+                        <p class="mt-4 text-xs text-amber">Timeline: 5 weeks</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="border-b border-edge py-16 md:py-20 lg:py-24">
+            <div class="mx-auto max-w-6xl px-4 sm:px-6">
+                <div class="reveal mb-10 text-center">
+                    <p class="text-[11px] font-semibold uppercase tracking-[0.18em] text-sky">Comparison</p>
+                    <h2 class="mt-3 font-display text-3xl font-bold text-white">Why Businesses Hire Me Directly</h2>
+                </div>
+                <div class="reveal overflow-hidden rounded-2xl border border-edge bg-card">
+                    <div
+                        class="grid grid-cols-4 border-b border-edge/80 bg-slate/60 px-4 py-3 text-xs font-semibold uppercase tracking-[0.12em] text-mist">
+                        <span>Criteria</span>
+                        <span>DIY / In-House</span>
+                        <span>Generic Agency</span>
+                        <span>Direct With Me</span>
+                    </div>
+                    <div class="grid grid-cols-4 px-4 py-3 text-sm text-mist">
+                        <span class="font-medium text-white">Creative Depth</span>
+                        <span>Basic testing</span>
+                        <span>Stock assets</span>
+                        <span class="text-sky font-medium">UGC + Hook testing framework</span>
+                    </div>
+                    <div class="grid grid-cols-4 border-t border-edge/70 px-4 py-3 text-sm text-mist">
+                        <span class="font-medium text-white">Tracking Accuracy</span>
+                        <span>Pixel only</span>
+                        <span>Mixed quality</span>
+                        <span class="text-sky font-medium">Server-side CAPI integration</span>
+                    </div>
+                    <div class="grid grid-cols-4 border-t border-edge/70 px-4 py-3 text-sm text-mist">
+                        <span class="font-medium text-white">Scaling Speed</span>
+                        <span>Slow / Cautious</span>
+                        <span>Monthly batch changes</span>
+                        <span class="text-sky font-medium">Weekly testing and fast scaling</span>
+                    </div>
+                    <div class="grid grid-cols-4 border-t border-edge/70 px-4 py-3 text-sm text-mist">
+                        <span class="font-medium text-white">KPI Focus</span>
+                        <span>Likes / Reach</span>
+                        <span>Dashboard metrics</span>
+                        <span class="text-sky font-medium">ROI / Cost-per-Qualified-Lead</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="border-b border-edge py-16 md:py-20">
+            <div class="mx-auto grid max-w-6xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+                <div class="reveal">
+                    <p class="text-[11px] font-semibold uppercase tracking-[0.18em] text-amber">Process</p>
+                    <h2 class="mt-3 font-display text-3xl font-bold text-white">How I Move In The First 14 Days</h2>
+                    <ol class="mt-7 space-y-4">
+                        <li class="rounded-xl border border-edge bg-card p-4 text-sm text-mist"><span
+                                class="font-semibold text-white">Day 1-2:</span> Deep account + creative asset audit.
+                        </li>
+                        <li class="rounded-xl border border-edge bg-card p-4 text-sm text-mist"><span
+                                class="font-semibold text-white">Day 3-4:</span> Priority leak fixes and CAPI setup.
+                        </li>
+                        <li class="rounded-xl border border-edge bg-card p-4 text-sm text-mist"><span
+                                class="font-semibold text-white">Day 5-8:</span> Campaign restructure and Testing
+                            Sandbox launch.</li>
+                        <li class="rounded-xl border border-edge bg-card p-4 text-sm text-mist"><span
+                                class="font-semibold text-white">Day 9-14:</span> First scale cycle with reporting
+                            baseline.</li>
+                    </ol>
+                </div>
+                <div class="reveal rounded-2xl border border-edge bg-card p-7 shadow-pulse">
+                    <h3 class="font-display text-2xl font-bold text-white">Ready To Work 1:1 With A Freelancer?</h3>
+                    <p class="mt-3 text-sm text-mist">If you want direct accountability, no account handoff, and faster
+                        iterations, I will run your growth workflow personally.
+                        I track social clicks to real revenue outcomes.</p>
+                    <div class="mt-6 flex flex-wrap gap-3">
+                        <a href="javascript:void(0)"
+                            class="open-calendar rounded-lg bg-sky px-5 py-3 text-sm font-semibold text-ink hover:bg-sky/90 transition-all">Book
+                            Strategy Call</a>
+                        <a href="#lead-form"
+                            class="rounded-lg border border-edge bg-slate px-5 py-3 text-sm font-semibold text-white hover:border-sky/40 transition-all">Submit
+                            Audit Form</a>
+                    </div>
+                    <div class="mt-6 border-t border-edge pt-5 text-xs text-mist">
+                        Response window: under 24 hours on weekdays.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-20 pb-32">
+            <div class="mx-auto max-w-4xl px-4 sm:px-6">
+                <div class="reveal mb-8 text-center">
+                    <h2 class="font-display text-3xl font-bold text-white">Frequently Asked Questions</h2>
+                </div>
+                <div class="space-y-3">
+                    <details class="reveal rounded-xl border border-edge bg-card p-5">
+                        <summary class="cursor-pointer font-display text-base font-semibold text-white">Do you only work
+                            with high budgets?</summary>
+                        <p class="mt-3 text-sm text-mist text-left">Internal data shows that accounts spending $100+/day
+                            benefit most from my testing framework, but I work with any scalability-ready brand.</p>
+                    </details>
+                    <details class="reveal rounded-xl border border-edge bg-card p-5 text-left">
+                        <summary class="cursor-pointer font-display text-base font-semibold text-white">Can you optimize
+                            my landing page too?</summary>
+                        <p class="mt-3 text-sm text-mist">Absolutely. Meta traffic is higher friction than Search. I
+                            optimize copy and UX to ensure those social clicks convert.</p>
+                    </details>
+                    <details class="reveal rounded-xl border border-edge bg-card p-5 text-left">
+                        <summary class="cursor-pointer font-display text-base font-semibold text-white">How fast can we
+                            start?</summary>
+                        <p class="mt-3 text-sm text-mist">Audit and tracking setup typically begin within the same week
+                            as the discovery call.</p>
+                    </details>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="bg-gh-canvas text-gh-fg-muted py-16 border-t border-gh-border">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-10">
-                <div class="flex items-center gap-3">
-                    <img alt="Atul Kumar Footer" class="w-10 h-10 rounded-full border border-gh-border"
-                        src="/kumaratul/assets/images/profile.jpg" />
-                    <span class="font-bold text-gh-fg text-lg">Atul Kumar</span>
-                </div>
-
-                <div class="flex flex-wrap justify-center gap-8">
-                    <a href="index.html" class="text-sm font-medium hover:text-gh-accent transition-colors">Home</a>
-                    <a href="google-ads.html" class="text-sm font-medium hover:text-gh-accent transition-colors">Google
-                        Ads</a>
-                    <a href="meta-ads.html"
-                        class="text-sm font-medium text-gh-fg hover:text-gh-accent transition-colors">Meta Ads</a>
-                    <a href="zoho-crm.html" class="text-sm font-medium hover:text-gh-accent transition-colors">Zoho
-                        CRM</a>
-                </div>
-
-                <div class="text-xs font-mono text-gh-fg-subtle">
-                    © 2024 Atul Kumar Professional Marketing.
-                </div>
+    <footer class="border-t border-edge bg-ink py-10">
+        <div
+            class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 px-4 text-sm text-mist sm:px-6 md:flex-row">
+            <div class="flex items-center gap-3">
+                <img alt="Atul Kumar" class="h-6 w-6 rounded-full border border-edge" src="assets/images/profile.png" />
+                <span class="font-medium">© 2026 Atul Kumar — Growth Architect</span>
+            </div>
+            <div class="flex flex-wrap items-center justify-center gap-6">
+                <a href="privacy-policy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+                <a href="terms.html" class="hover:text-white transition-colors">Terms & Conditions</a>
+                <a href="contact.html" class="hover:text-white transition-colors">Contact</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="https://linkedin.com/in/atulscript" target="_blank" class="hover:text-sky transition-colors"><i
+                        class="fa-brands fa-linkedin text-xl"></i></a>
+                <a href="https://github.com/Atulscript" target="_blank" class="hover:text-sky transition-colors"><i
+                        class="fa-brands fa-github text-xl"></i></a>
             </div>
         </div>
     </footer>
+
     <script src="assets/js/calendar.js"></script>
     <script>
-        // Theme Toggle Script
-        const themeToggle = document.getElementById('theme-toggle');
-        const html = document.documentElement;
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
 
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme === 'light') {
-            html.classList.remove('dark');
-        } else {
-            html.classList.add('dark');
-        }
+        document.querySelectorAll(".reveal").forEach((node) => revealObserver.observe(node));
 
-        themeToggle.addEventListener('click', () => {
-            html.classList.toggle('dark');
-            const isDark = html.classList.contains('dark');
-            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        const leadForm = document.getElementById("leadCaptureForm");
+        const leadSuccess = document.getElementById("leadSuccess");
+        const salesEmail = "getintouch.atul@gmail.com";
+
+        leadForm.addEventListener("submit", (event) => {
+            event.preventDefault();
+            const formData = new FormData(leadForm);
+            const name = formData.get("name");
+
+            const subject = `Meta Ads Audit Request - ${name}`;
+            const body = `Name: ${name}\nEmail: ${formData.get("email")}\nWebsite: ${formData.get("website")}\nBudget: ${formData.get("budget")}\nGoal: ${formData.get("goal")}\n\nSource: Meta-Ads LP`;
+
+            const mailtoUrl = `mailto:${salesEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+            window.location.href = mailtoUrl;
+            leadSuccess.classList.remove("hidden");
+            leadForm.reset();
         });
     </script>
 </body>
