@@ -4,8 +4,16 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Atul Kumar | Performance Marketing & Revenue Systems Specialist</title>
+    <meta name="description"
+        content="Atul Kumar - Specialist in Google Ads, Meta Ads, Zoho CRM Automation, and Analytics. Building scalable revenue systems for global brands." />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
         rel="stylesheet" media="print" onload="this.media='all'" />
@@ -15,26 +23,14 @@
             rel="stylesheet" />
     </noscript>
 
-    <title>Atul Kumar — Performance Marketing & Growth Specialist | Ads, Funnels, Email, CRM</title>
-    <meta name="description"
-        content="Full-stack growth marketer. I build end-to-end revenue systems — paid ads, conversion funnels, Email/WhatsApp/SMS automation, and CRM pipelines. 8+ years scaling 50+ brands profitably.">
-
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://Atulscript.github.io/kumaratul/">
-    <meta property="og:title" content="Atul Kumar — Performance Marketing & Growth Specialist">
-    <meta property="og:description"
-        content="Paid ads, funnels, Email/WhatsApp/SMS automation & CRM — complete revenue systems that scale.">
-    <meta property="og:image" content="https://Atulscript.github.io/kumaratul/assets/images/profile.png">
-    <link rel="icon" type="image/png" href="assets/images/profile.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <link rel="canonical" href="https://Atulscript.github.io/kumaratul/" />
-
+    <!-- Icons -->
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
         rel="stylesheet" />
-    <!-- Font Awesome for Social Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
     <script>
         tailwind.config = {
             darkMode: "class",
@@ -47,146 +43,129 @@
                         "gh-border-muted": "#d8dee4",
                         "gh-fg": "#1f2328",
                         "gh-fg-muted": "#656d76",
-                        "gh-canvas-dark": "#161b22",
+                        "gh-canvas-dark": "#0d1117",
+                        "gh-canvas-subtle-dark": "#161b22",
                         "gh-subtle-dark": "#21262d",
-                        "gh-inset-dark": "#0d1117",
-                        "gh-border-dark": "#3d444d",
+                        "gh-inset-dark": "#010409",
+                        "gh-border-dark": "#30363d",
                         "gh-fg-dark": "#e6edf3",
                         "gh-muted-dark": "#8b949e",
                         "gh-accent": "#2f81f7",
-                        "gh-accent-muted": "#388bfd26",
-                        "gh-green": "#3fb950",
-                        "gh-green-muted": "#238636",
+                        "gh-green": "#238636",
                         "gh-purple": "#a371f7",
                         "gh-yellow": "#d29922",
                         "gh-red": "#f85149",
-                        "gh-orange": "#db6d28",
+                        "gh-orange": "#d29922"
+                    },
+                    borderRadius: {
+                        "gh": "6px",
                     },
                     fontFamily: {
-                        sans: ["Inter", "-apple-system", "BlinkMacSystemFont", "'Segoe UI'", "Helvetica", "Arial", "sans-serif"],
+                        sans: ["Inter", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica", "Arial", "sans-serif"],
                         mono: ["'JetBrains Mono'", "SFMono-Regular", "Consolas", "'Liberation Mono'", "Menlo", "monospace"],
-                    },
-                },
-            },
+                    }
+                }
+            }
         };
     </script>
-    <style type="text/tailwindcss">
-        /* Base */
-        body { background-color: #161b22; color: #e6edf3; }
-        .light body { background-color: #fff; color: #1f2328; }
 
-        /* Glow effects */
-        .glow-accent { box-shadow: 0 0 30px rgba(47,129,247,0.15), 0 0 60px rgba(47,129,247,0.05); }
-        .glow-green { box-shadow: 0 0 30px rgba(63,185,80,0.12); }
-        .glow-purple { box-shadow: 0 0 20px rgba(163,113,247,0.12); }
-
-
-
-
-        /* Gradient text */
-        .gradient-text {
-            background: linear-gradient(135deg, #2f81f7, #a371f7, #3fb950);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+    <style type="text/css">
+        .glass {
+            background: rgba(13, 17, 23, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
         }
 
-
-
-        /* Card glow on hover */
-        .card-glow {
-            position: relative;
-            transition: all 0.3s ease;
-        }
-        .card-glow::before {
-            content: '';
-            position: absolute;
-            inset: -1px;
-            border-radius: inherit;
-            background: linear-gradient(135deg, #2f81f7, #a371f7);
+        .reveal {
             opacity: 0;
-            transition: opacity 0.3s;
-            z-index: -1;
+            transform: translateY(20px);
+            transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
         }
-        .card-glow:hover::before { opacity: 1; }
-        .card-glow:hover { border-color: transparent; }
 
-        /* Scrollbar */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #010409; }
-        ::-webkit-scrollbar-thumb { background: #30363d; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #484f58; }
-
-        /* Shimmer effect for buttons/badges */
-        @keyframes shimmer {
-            0% { background-position: -200% 0; }
-            100% { background-position: 200% 0; }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
         }
+
         .shimmer {
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            background: linear-gradient(90deg,
+                    rgba(255, 255, 255, 0) 0%,
+                    rgba(255, 255, 255, 0.05) 50%,
+                    rgba(255, 255, 255, 0) 100%);
             background-size: 200% 100%;
-            animation: shimmer 3s infinite linear;
+            animation: shimmer 2s infinite;
         }
 
-        /* Float animation */
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-15px); }
-        }
-        .float { animation: float 6s ease-in-out infinite; }
-        .float-delayed { animation: float 7s ease-in-out infinite 1s; }
+        @keyframes shimmer {
+            0% {
+                background-position: -200% 0;
+            }
 
-        /* Animated Profile Ring */
-        @keyframes rotate-bg {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        .profile-ring-animate {
-            background: conic-gradient(from 0deg, transparent, transparent, #2f81f7, #a371f7, #3fb950, transparent);
-            animation: rotate-bg 4s linear infinite;
+            100% {
+                background-position: 200% 0;
+            }
         }
 
-        /* Status pulse */
-        @keyframes status-pulse {
-            0%, 100% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(1.2); opacity: 0.7; }
+        .status-pulse {
+            animation: pulse-sm 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
         }
-        .status-pulse { animation: status-pulse 2s ease-in-out infinite; }
 
-        /* Smooth reveal stagger */
-        .reveal { opacity: 0; transform: translateY(15px); transition: all 0.7s cubic-bezier(0.16,1,0.3,1); }
-        .reveal.visible { opacity: 1; transform: translateY(0); }
-        .reveal-delay-1 { transition-delay: 0.1s; }
-        .reveal-delay-2 { transition-delay: 0.15s; }
-        .reveal-delay-3 { transition-delay: 0.2s; }
+        @keyframes pulse-sm {
 
-        /* Glassmorphism */
-        .glass { background: rgba(33, 38, 45, 0.7); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
-        
-        /* Grid background */
-        .grid-bg { background-image: radial-gradient(#444c56 0.5px, transparent 0.5px); background-size: 24px 24px; }
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: .5;
+            }
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #2f81f7, #a371f7, #2f81f7);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradient-flow 4s linear infinite;
+        }
+
+        @keyframes gradient-flow {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            100% {
+                background-position: 200% 50%;
+            }
+        }
     </style>
 </head>
 
-<body class="font-sans antialiased selection:bg-gh-accent/30 selection:text-white overflow-x-hidden">
+<body class="bg-gh-inset-dark text-gh-fg-dark font-sans selection:bg-gh-accent selection:text-white">
 
     <!-- ═══════════════════════════════════════════════ -->
     <!-- NAVIGATION -->
     <!-- ═══════════════════════════════════════════════ -->
-    <header
-        class="fixed top-0 left-0 right-0 z-50 bg-gh-inset-dark/80 backdrop-blur-xl border-b border-gh-border-dark/50">
-        <nav class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-            <div class="flex items-center gap-3">
-                <div class="relative">
-                    <img alt="Atul Kumar" class="w-8 h-8 rounded-full object-cover border border-gh-border-dark"
-                        src="assets/images/profile.png" width="32" height="32" />
+    <nav
+        class="sticky top-0 z-50 w-full border-b border-gh-border-dark bg-gh-canvas-dark/80 backdrop-blur-md transition-all duration-300">
+        <div class="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
+            <div class="flex items-center gap-4">
+                <a class="flex items-center gap-2.5 group" href="index.html">
                     <div
-                        class="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 bg-gh-green rounded-full border-2 border-gh-inset-dark">
+                        class="w-8 h-8 rounded-full overflow-hidden border border-gh-border-dark group-hover:border-gh-accent transition-colors">
+                        <img alt="Atul Kumar" class="w-full h-full object-cover" src="assets/images/profile.png" />
                     </div>
-                </div>
-                <span class="font-semibold text-[15px] text-gh-fg-dark">Atul Kumar</span>
+                    <div class="flex flex-col">
+                        <span class="text-[14px] font-bold tracking-tight text-gh-fg-dark leading-none">Atul
+                            Kumar</span>
+                        <span class="text-[11px] text-gh-muted-dark font-medium leading-none mt-1">@Atulscript</span>
+                    </div>
+                </a>
             </div>
 
+            <!-- Desktop Nav -->
             <div class="hidden md:flex items-center gap-1">
                 <a class="px-3 py-1.5 rounded-md text-[15px] text-gh-fg-dark hover:bg-gh-subtle-dark transition-colors"
                     href="index.html">Home</a>
@@ -200,19 +179,21 @@
                     href="contact.html">Contact</a>
             </div>
 
-            <div class="flex items-center gap-2">
-                <a class="open-calendar hidden sm:inline-flex text-[15px] font-medium text-gh-fg-dark bg-gh-subtle-dark hover:bg-gh-border-dark/60 px-3 py-1.5 rounded-md border border-gh-border-dark transition-all"
+            <!-- Header Actions -->
+            <div class="flex items-center gap-3">
+                <a class="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-md border border-gh-border-dark bg-gh-subtle-dark text-[13px] font-semibold text-gh-fg-dark hover:bg-gh-border-dark transition-colors open-calendar"
                     href="javascript:void(0)">
-                    Schedule a Call
+                    <span class="material-symbols-outlined text-[16px]">calendar_today</span>
+                    Book Call
                 </a>
                 <button id="mobile-menu-button"
-                    class="md:hidden p-1.5 text-gh-fg-dark hover:bg-gh-subtle-dark rounded-md transition-colors"
-                    aria-label="Menu">
+                    class="md:hidden flex items-center justify-center p-2 rounded-md hover:bg-gh-subtle-dark text-gh-muted-dark hover:text-gh-fg-dark transition-colors">
                     <span class="material-symbols-outlined">menu</span>
                 </button>
             </div>
-        </nav>
-        <!-- Mobile Navigation Menu -->
+        </div>
+
+        <!-- Mobile Nav Menu -->
         <div id="mobile-menu"
             class="hidden md:hidden bg-gh-inset-dark border-b border-gh-border-dark overflow-hidden transition-all duration-300">
             <div class="px-4 py-3 space-y-1">
@@ -230,74 +211,68 @@
                     href="javascript:void(0)">Schedule a Call</a>
             </div>
         </div>
-    </header>
+    </nav>
 
-    <main class="pt-16">
-
+    <main>
         <!-- ═══════════════════════════════════════════════ -->
-        <!-- HERO — Profile Style -->
+        <!-- HERO SECTION -->
         <!-- ═══════════════════════════════════════════════ -->
-        <section class="relative overflow-hidden border-b border-gh-border-dark grid-bg" id="about">
-            <!-- Background orbs -->
-            <div class="absolute top-20 -left-32 w-96 h-96 bg-gh-accent/10 rounded-full blur-[120px] float"></div>
-            <div class="absolute bottom-10 right-10 w-72 h-72 bg-gh-purple/10 rounded-full blur-[120px] float-delayed">
-            </div>
-            <div
-                class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 pointer-events-none">
-            </div>
-
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 py-20 lg:py-28 relative">
+        <section
+            class="relative pt-10 pb-24 md:pt-16 md:pb-32 overflow-hidden bg-gh-canvas-dark border-b border-gh-border-dark">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6">
                 <div class="grid lg:grid-cols-5 gap-12 items-start">
-                    <!-- Left: Profile -->
-                    <div class="lg:col-span-2 flex flex-col items-center lg:items-start reveal">
-                        <div class="relative mb-6">
-                            <!-- Animated active border ring -->
-                            <div class="absolute -inset-1 rounded-full profile-ring-animate blur-[2px]"></div>
 
+                    <!-- Left: Personal Overview -->
+                    <div class="lg:col-span-2 flex flex-col items-center lg:items-start reveal">
+                        <div class="relative mb-8 group">
                             <div
-                                class="w-32 h-32 sm:w-48 sm:h-48 rounded-full overflow-hidden border-2 border-gh-border-dark glow-accent mx-auto lg:mx-0 group relative z-10 bg-gh-canvas-dark">
-                                <img alt="Atul Kumar"
-                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                class="absolute -inset-1 bg-gradient-to-r from-gh-accent via-gh-purple to-gh-accent rounded-full opacity-25 blur-sm group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-gradient-flow">
+                            </div>
+                            <div
+                                class="relative w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-2 border-gh-border-dark p-1 bg-gh-canvas-dark">
+                                <img alt="Atul Kumar" class="w-full h-full object-cover rounded-full"
                                     src="assets/images/profile.png" />
                             </div>
                             <div
-                                class="absolute bottom-1 right-1 sm:bottom-2 sm:right-2 w-6 h-6 sm:w-8 sm:h-8 bg-gh-green rounded-full border-4 border-gh-canvas-dark flex items-center justify-center z-20 shadow-lg">
-                                <div class="absolute inset-0 rounded-full bg-gh-green status-pulse"></div>
-                                <span class="text-white text-xs sm:text-sm relative z-10">✓</span>
+                                class="absolute bottom-4 right-2 w-5 h-5 bg-gh-green border-4 border-gh-canvas-dark rounded-full">
                             </div>
                         </div>
-                        <h1 class="text-3xl sm:text-4xl font-bold text-gh-fg-dark mb-2 tracking-tight">Atul Kumar</h1>
-                        <p
-                            class="text-lg sm:text-xl font-medium gradient-text mb-4 tracking-tight text-center lg:text-left">
-                            Digital Ads • Automation • Analytics • Connected</p>
+
+                        <h1
+                            class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gh-fg-dark mb-4 tracking-tight text-center lg:text-left">
+                            Atul Kumar
+                        </h1>
+                        <p class="text-lg md:text-xl font-medium text-gh-accent mb-6 text-center lg:text-left">
+                            Performance Marketer & Revenue Architect
+                        </p>
                         <p class="text-[15px] text-gh-muted-dark leading-snug text-center lg:text-left max-w-md mb-8">
-                            I build profitable growth systems using <strong class="text-gh-fg-dark">Google Ads, Meta
-                                Ads, Zoho CRM, GA4, and GTM</strong> — connecting acquisition, tracking, and automation
-                            into one measurable revenue engine.
-                            From the first click to the final sale, every step is tracked, optimized, and automated.
+                            Building high-performance revenue engines using <span class="text-white">Precision Ads, CRM
+                                Automation,</span> and <span class="text-white">Advanced Analytics.</span> I help global
+                            brands turn clicks into compounding growth.
                         </p>
 
                         <!-- GitHub-style stats -->
-                        <div class="flex flex-wrap gap-3 mb-3">
+                        <div class="flex flex-wrap gap-3 mb-3 justify-center lg:justify-start">
                             <div class="flex items-center gap-1.5 text-[15px] text-gh-muted-dark">
                                 <span class="material-symbols-outlined text-[15px]">settings_suggest</span>
-                                <span>Performance Marketing • Automation • Analytics</span>
+                                <span class="text-center lg:text-left">Performance Marketing • Automation •
+                                    Analytics</span>
                             </div>
                             <div class="flex items-center gap-1.5 text-[15px] text-gh-muted-dark">
                                 <span class="material-symbols-outlined text-[15px]">location_on</span>
                                 <span>India</span>
                             </div>
                         </div>
-                        <div class="flex flex-wrap gap-3 mb-6">
+                        <div class="flex flex-wrap gap-3 mb-6 justify-center lg:justify-start">
                             <div class="flex items-center gap-1.5 text-[15px] text-gh-muted-dark">
                                 <span class="material-symbols-outlined text-[15px]">link</span>
-                                <a href="mailto:getintouch.atul@gmail.com"
-                                    class="text-gh-accent hover:underline">getintouch.atul@gmail.com</a>
+                                <a href="mailto:connect@kumaratul.com"
+                                    class="text-gh-accent hover:underline">connect@kumaratul.com</a>
                             </div>
                         </div>
 
                         <!-- Social Connections -->
-                        <div class="flex items-center gap-4 mb-8">
+                        <div class="flex items-center gap-4 mb-8 justify-center lg:justify-start">
                             <a href="https://linkedin.com" target="_blank"
                                 class="text-gh-muted-dark hover:text-gh-accent transition-colors" title="LinkedIn">
                                 <i class="fa-brands fa-linkedin text-2xl"></i>
@@ -311,8 +286,6 @@
                                 <i class="fa-brands fa-github text-2xl"></i>
                             </a>
                         </div>
-
-
 
                         <!-- Hero CTA -->
                         <div class="w-full flex flex-col sm:flex-row gap-3">
@@ -347,7 +320,7 @@
                             </div>
                             <!-- Content -->
                             <div class="p-8 space-y-10">
-                                <div>
+                                <div class="text-center lg:text-left">
                                     <h2 class="text-2xl font-bold text-gh-fg-dark mb-4 leading-tight tracking-tight">
                                         Performance Marketing Backed by Systems 👋</h2>
                                     <p class="text-gh-muted-dark text-[15px] leading-relaxed mb-6">
@@ -359,8 +332,7 @@
                                         No guesswork. No broken tracking. No lost leads. Just clean data and measurable
                                         growth.
                                     </p>
-                                    <div class="flex flex-wrap gap-2">
-
+                                    <div class="flex flex-wrap gap-2 justify-center lg:justify-start">
                                         <a href="google-ads.html"
                                             class="px-3 py-1 rounded-full bg-gh-accent/10 text-gh-accent text-[12px] font-semibold border border-gh-accent/20 hover:bg-gh-accent hover:text-white transition-all flex items-center gap-1.5 group/badge">
                                             Google Ads
@@ -372,120 +344,67 @@
                                             Ads</span>
                                         <span
                                             class="px-3 py-1 rounded-full bg-gh-green/10 text-gh-green text-[12px] font-semibold border border-gh-green/20 hover:bg-gh-green hover:text-white transition-colors cursor-default">Zoho
-                                            CRM & Automation</span>
+                                            CRM</span>
                                         <span
                                             class="px-3 py-1 rounded-full bg-gh-yellow/10 text-gh-yellow text-[12px] font-semibold border border-gh-yellow/20 hover:bg-gh-yellow hover:text-white transition-colors cursor-default">Analytics</span>
-                                        <span
-                                            class="px-3 py-1 rounded-full bg-gh-red/10 text-gh-red text-[12px] font-semibold border border-gh-red/20 hover:bg-gh-red hover:text-white transition-colors cursor-default">Vibe
-                                            Coding</span>
                                     </div>
                                 </div>
 
-                                <div class="grid sm:grid-cols-2 gap-8">
-                                    <div>
+                                <div class="grid sm:grid-cols-2 gap-10">
+                                    <div class="text-center sm:text-left">
                                         <h3
-                                            class="text-sm font-bold text-gh-fg-dark mb-4 uppercase tracking-widest opacity-60 flex items-center gap-2">
+                                            class="text-sm font-bold text-gh-fg-dark mb-4 uppercase tracking-widest opacity-60 flex items-center justify-center sm:justify-start gap-2">
                                             <span class="material-symbols-outlined text-[18px]">target</span> Roadmap
                                         </h3>
                                         <ul class="space-y-3">
-                                            <li class="flex items-start gap-3 group">
+                                            <li
+                                                class="flex items-center sm:items-start gap-3 justify-center sm:justify-start group">
                                                 <span
-                                                    class="w-1.5 h-1.5 rounded-full bg-gh-green mt-1.5 group-hover:scale-150 transition-transform"></span>
+                                                    class="w-1.5 h-1.5 rounded-full bg-gh-green group-hover:scale-150 transition-transform hidden sm:block mt-1.5"></span>
                                                 <span class="text-gh-muted-dark text-[14px]">Scalable Acquisition
-                                                    Engines (G-Ads & Meta)</span>
+                                                    Engines</span>
                                             </li>
-                                            <li class="flex items-start gap-3 group">
+                                            <li
+                                                class="flex items-center sm:items-start gap-3 justify-center sm:justify-start group">
                                                 <span
-                                                    class="w-1.5 h-1.5 rounded-full bg-gh-green mt-1.5 group-hover:scale-150 transition-transform"></span>
+                                                    class="w-1.5 h-1.5 rounded-full bg-gh-green group-hover:scale-150 transition-transform hidden sm:block mt-1.5"></span>
                                                 <span class="text-gh-muted-dark text-[14px]">Behavioral Funnel
                                                     Architecture</span>
                                             </li>
-                                            <li class="flex items-start gap-3 group">
+                                            <li
+                                                class="flex items-center sm:items-start gap-3 justify-center sm:justify-start group">
                                                 <span
-                                                    class="w-1.5 h-1.5 rounded-full bg-gh-green mt-1.5 group-hover:scale-150 transition-transform"></span>
+                                                    class="w-1.5 h-1.5 rounded-full bg-gh-green group-hover:scale-150 transition-transform hidden sm:block mt-1.5"></span>
                                                 <span class="text-gh-muted-dark text-[14px]">Multi-Channel Retention
                                                     Chains</span>
                                             </li>
                                         </ul>
                                     </div>
-                                    <div>
+                                    <div class="text-center sm:text-left">
                                         <h3
-                                            class="text-sm font-bold text-gh-fg-dark mb-4 uppercase tracking-widest opacity-60 flex items-center gap-2">
+                                            class="text-sm font-bold text-gh-fg-dark mb-4 uppercase tracking-widest opacity-60 flex items-center justify-center sm:justify-start gap-2">
                                             <span class="material-symbols-outlined text-[18px]">equalizer</span>
                                             Performance
                                         </h3>
-                                        <div class="grid grid-cols-2 gap-3">
+                                        <div class="grid grid-cols-2 gap-3 max-w-[240px] mx-auto sm:mx-0">
                                             <div
-                                                class="bg-gh-inset-dark/40 border border-gh-border-dark p-3 rounded-lg hover:border-gh-accent transition-colors">
+                                                class="bg-gh-inset-dark/40 border border-gh-border-dark p-3 rounded-lg hover:border-gh-accent transition-colors text-center">
                                                 <div class="text-xl font-bold text-gh-accent">50+</div>
                                                 <div class="text-[11px] text-gh-muted-dark uppercase font-semibold">
                                                     Brands</div>
                                             </div>
                                             <div
-                                                class="bg-gh-inset-dark/40 border border-gh-border-dark p-3 rounded-lg hover:border-gh-green transition-colors">
+                                                class="bg-gh-inset-dark/40 border border-gh-border-dark p-3 rounded-lg hover:border-gh-green transition-colors text-center">
                                                 <div class="text-xl font-bold text-gh-green">3.8x</div>
                                                 <div class="text-[11px] text-gh-muted-dark uppercase font-semibold">Avg
                                                     ROAS</div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div>
-                                        <h3
-                                            class="text-sm font-bold text-gh-fg-dark mb-4 uppercase tracking-widest opacity-60 flex items-center gap-2">
-                                            <span class="material-symbols-outlined text-[18px]">hub</span> Growth
-                                            Ecosystem
-                                        </h3>
-                                        <div class="flex flex-wrap gap-x-4 gap-y-2">
-                                            <div class="flex items-center gap-1.5 text-gh-muted-dark text-[13px]">
-                                                <i class="fa-brands fa-google text-gh-accent"></i> Ads
-                                            </div>
-                                            <div class="flex items-center gap-1.5 text-gh-muted-dark text-[13px]">
-                                                <i class="fa-brands fa-meta text-gh-purple"></i> Ads
-                                            </div>
-                                            <div class="flex items-center gap-1.5 text-gh-muted-dark text-[13px]">
-                                                <i class="fa-solid fa-database text-gh-green"></i> ZOHO CRM
-                                            </div>
-                                            <div class="flex items-center gap-1.5 text-gh-muted-dark text-[13px]">
-                                                <i class="fa-solid fa-envelope text-gh-red"></i> Marketing
-                                            </div>
-                                            <div class="flex items-center gap-1.5 text-gh-muted-dark text-[13px]">
-                                                <i class="fa-brands fa-whatsapp text-gh-green"></i> Marketing
-                                            </div>
-                                            <div class="flex items-center gap-1.5 text-gh-muted-dark text-[13px]">
-                                                <i class="fa-solid fa-chart-line text-gh-yellow"></i> GTM/GA4
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div>
-                                        <h3
-                                            class="text-sm font-bold text-gh-fg-dark mb-4 uppercase tracking-widest opacity-60 flex items-center gap-2">
-                                            <span class="material-symbols-outlined text-[18px]">insights</span> Scale
-                                            Strategies
-                                        </h3>
-                                        <div class="space-y-3">
-                                            <div
-                                                class="flex items-center justify-between text-[13px] text-gh-muted-dark">
-                                                <span>Conversion-First Ad Performance</span>
-                                                <span class="text-gh-accent">95%</span>
-                                            </div>
-                                            <div class="w-full bg-gh-border-dark/30 rounded-full h-1">
-                                                <div class="bg-gh-accent h-1 rounded-full" style="width: 95%"></div>
-                                            </div>
-                                            <div
-                                                class="flex items-center justify-between text-[13px] text-gh-muted-dark">
-                                                <span>Automated Customer Acquisition</span>
-                                                <span class="text-gh-purple">88%</span>
-                                            </div>
-                                            <div class="w-full bg-gh-border-dark/30 rounded-full h-1">
-                                                <div class="bg-gh-purple h-1 rounded-full" style="width: 88%"></div>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
 
                                 <div class="pt-6 border-t border-gh-border-dark/30">
-                                    <div class="flex items-center justify-between gap-4">
+                                    <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
                                         <div class="flex items-center gap-2.5 whitespace-nowrap">
                                             <div class="relative flex h-2 w-2 flex-shrink-0">
                                                 <span
@@ -494,12 +413,12 @@
                                                     class="relative inline-flex rounded-full h-2 w-2 bg-gh-green"></span>
                                             </div>
                                             <span
-                                                class="text-[9px] sm:text-[10px] font-bold text-gh-fg-dark uppercase tracking-wider opacity-40">Status:
-                                                <span class="text-gh-green opacity-100">Revenue Optimization Active
+                                                class="text-[10px] font-bold text-gh-fg-dark uppercase tracking-wider opacity-40">Status:
+                                                <span class="text-gh-green opacity-100 uppercase">Optimization Active
                                                     ⚡</span></span>
                                         </div>
                                         <div
-                                            class="flex items-center gap-1.5 font-mono text-[9px] sm:text-[11px] bg-gh-inset-dark/50 px-3 py-1.5 rounded-full border border-gh-border-dark/50 shadow-inner overflow-hidden">
+                                            class="flex items-center gap-1.5 font-mono text-[11px] bg-gh-inset-dark/50 px-3 py-1.5 rounded-full border border-gh-border-dark/50 shadow-inner">
                                             <span class="text-gh-purple">max</span><span>(</span><span
                                                 class="text-gh-accent">ROAS</span><span>) {</span>
                                             <span class="text-gh-green animate-pulse">scale()</span>
@@ -513,7 +432,6 @@
                     </div>
                 </div>
             </div>
-            </div>
         </section>
 
         <!-- ═══════════════════════════════════════════════ -->
@@ -524,118 +442,109 @@
                 <div class="text-center mb-16 reveal">
                     <h2 class="text-3xl font-bold text-gh-fg-dark mb-4 tracking-tight">Full-Funnel Expertise</h2>
                     <p class="text-[15px] text-gh-muted-dark max-w-xl mx-auto">From the first impression to the final
-                        conversion —
-                        every touchpoint is engineered for maximum ROI.</p>
+                        conversion — every touchpoint is engineered for maximum ROI.</p>
                 </div>
 
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <a href="google-ads.html"
-                        class="group relative bg-gh-subtle-dark border border-gh-border-dark rounded-xl p-6 hover:border-gh-accent/40 transition-all overflow-hidden reveal reveal-delay-1">
+                        class="group relative bg-gh-subtle-dark border border-gh-border-dark rounded-xl p-8 hover:border-gh-accent/40 transition-all overflow-hidden reveal">
                         <div
                             class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-gh-accent to-gh-accent/0">
                         </div>
                         <span
-                            class="material-symbols-outlined text-3xl text-gh-accent mb-4 block group-hover:scale-110 transition-transform">ads_click</span>
-                        <h3 class="text-lg font-bold text-gh-fg-dark mb-2 group-hover:text-gh-accent transition-colors">
+                            class="material-symbols-outlined text-3xl text-gh-accent mb-6 block group-hover:scale-110 transition-transform">ads_click</span>
+                        <h3 class="text-xl font-bold text-gh-fg-dark mb-2 group-hover:text-gh-accent transition-colors">
                             High-Intent Google Ads</h3>
-                        <p class="text-[15px] text-gh-muted-dark leading-snug mb-4">Search, Shopping & Performance Max
-                            campaigns designed to capture demand at the right moment — optimized for <strong
-                                class="text-gh-fg-dark">conversions, not vanity clicks.</strong></p>
+                        <p class="text-[15px] text-gh-muted-dark leading-snug mb-6">Search & Performance Max campaigns
+                            designed to capture demand at the right moment — optimized for <strong
+                                class="text-gh-fg-dark">conversions, not just clicks.</strong></p>
                         <span
                             class="text-sm text-gh-accent font-medium flex items-center gap-1 group-hover:gap-2 transition-all">Learn
                             more <span class="material-symbols-outlined text-[15px]">arrow_forward</span></span>
                     </a>
 
                     <a href="meta-ads.html"
-                        class="group relative bg-gh-subtle-dark border border-gh-border-dark rounded-xl p-6 hover:border-gh-purple/40 transition-all overflow-hidden reveal reveal-delay-2">
+                        class="group relative bg-gh-subtle-dark border border-gh-border-dark rounded-xl p-8 hover:border-gh-purple/40 transition-all overflow-hidden reveal">
                         <div
                             class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-gh-purple to-gh-purple/0">
                         </div>
                         <span
-                            class="material-symbols-outlined text-3xl text-gh-purple mb-4 block group-hover:scale-110 transition-transform">share</span>
-                        <h3 class="text-lg font-bold text-gh-fg-dark mb-2 group-hover:text-gh-purple transition-colors">
+                            class="material-symbols-outlined text-3xl text-gh-purple mb-6 block group-hover:scale-110 transition-transform">share</span>
+                        <h3 class="text-xl font-bold text-gh-fg-dark mb-2 group-hover:text-gh-purple transition-colors">
                             Scalable Meta Ads</h3>
-                        <p class="text-[15px] text-gh-muted-dark leading-snug mb-4">Facebook & Instagram campaigns
-                            engineered for <strong class="text-gh-fg-dark">consistent lead flow, creative testing, and
-                                audience scaling.</strong> Winning on creative-led strategy.</p>
+                        <p class="text-[15px] text-gh-muted-dark leading-snug mb-6">Facebook & Instagram campaigns
+                            engineered for <strong class="text-gh-fg-dark">lead flow, creative testing, and audience
+                                scaling.</strong> Winning on creative strategy.</p>
                         <span
                             class="text-sm text-gh-purple font-medium flex items-center gap-1 group-hover:gap-2 transition-all">Learn
                             more <span class="material-symbols-outlined text-[15px]">arrow_forward</span></span>
                     </a>
 
                     <div
-                        class="relative bg-gh-subtle-dark border border-gh-border-dark rounded-xl p-6 hover:border-gh-red/40 transition-all overflow-hidden reveal reveal-delay-1">
+                        class="relative bg-gh-subtle-dark border border-gh-border-dark rounded-xl p-8 hover:border-gh-red/40 transition-all overflow-hidden reveal">
                         <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-gh-red to-gh-red/0">
                         </div>
-                        <span class="material-symbols-outlined text-3xl text-gh-red mb-4 block">forward_to_inbox</span>
-                        <h3 class="text-lg font-bold text-gh-fg-dark mb-2">Omnichannel Automation</h3>
-                        <p class="text-[15px] text-gh-muted-dark leading-snug mb-4">Email, WhatsApp & SMS automation
-                            fully connected to your CRM. Lead assignment, follow-up triggers, and drip sequences that
-                            <strong class="text-gh-fg-dark">nurture leads on autopilot.</strong>
-                        </p>
-                        <div class="flex gap-2 flex-wrap">
+                        <span class="material-symbols-outlined text-3xl text-gh-red mb-6 block">forward_to_inbox</span>
+                        <h3 class="text-xl font-bold text-gh-fg-dark mb-2">Omnichannel Automation</h3>
+                        <p class="text-[15px] text-gh-muted-dark leading-snug mb-6">Email & WhatsApp automation
+                            connected to your CRM. Lead assignment and drip sequences that <strong
+                                class="text-gh-fg-dark">nurture leads on autopilot.</strong></p>
+                        <div class="flex gap-2">
                             <span
-                                class="px-2 py-0.5 rounded bg-gh-canvas-dark text-[10px] text-gh-muted-dark border border-gh-border-dark">Email</span>
+                                class="px-2 py-0.5 rounded bg-gh-canvas-dark text-[10px] text-gh-muted-dark border border-gh-border-dark uppercase tracking-wider">Email</span>
                             <span
-                                class="px-2 py-0.5 rounded bg-gh-canvas-dark text-[10px] text-gh-muted-dark border border-gh-border-dark">WhatsApp</span>
-                            <span
-                                class="px-2 py-0.5 rounded bg-gh-canvas-dark text-[10px] text-gh-muted-dark border border-gh-border-dark">SMS</span>
+                                class="px-2 py-0.5 rounded bg-gh-canvas-dark text-[10px] text-gh-muted-dark border border-gh-border-dark uppercase tracking-wider">WhatsApp</span>
                         </div>
                     </div>
 
                     <a href="zoho-crm.html"
-                        class="group relative bg-gh-subtle-dark border border-gh-border-dark rounded-xl p-6 hover:border-gh-orange/40 transition-all overflow-hidden reveal reveal-delay-3">
+                        class="group relative bg-gh-subtle-dark border border-gh-border-dark rounded-xl p-8 hover:border-gh-orange/40 transition-all overflow-hidden reveal lg:col-span-1">
                         <div
                             class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-gh-orange to-gh-orange/0">
                         </div>
                         <span
-                            class="material-symbols-outlined text-3xl text-gh-orange mb-4 block group-hover:scale-110 transition-transform">hub</span>
-                        <h3 class="text-lg font-bold text-gh-fg-dark mb-2 group-hover:text-gh-orange transition-colors">
+                            class="material-symbols-outlined text-3xl text-gh-orange mb-6 block group-hover:scale-110 transition-transform">hub</span>
+                        <h3 class="text-xl font-bold text-gh-fg-dark mb-2 group-hover:text-gh-orange transition-colors">
                             Zoho CRM & Automation</h3>
-                        <p class="text-[15px] text-gh-muted-dark leading-snug mb-4">Custom pipelines, Deluge automation,
-                            lead routing, and marketing/sales integration. <strong class="text-gh-fg-dark">Fully
-                                connected ecosystem</strong> for sales efficiency.</p>
+                        <p class="text-[15px] text-gh-muted-dark leading-snug mb-6">Custom pipelines, Deluge automation,
+                            and marketing integration. <strong class="text-gh-fg-dark">Fully connected
+                                ecosystem</strong> for sales efficiency.</p>
                         <span
                             class="text-sm text-gh-orange font-medium flex items-center gap-1 group-hover:gap-2 transition-all">Learn
                             more <span class="material-symbols-outlined text-[15px]">arrow_forward</span></span>
                     </a>
 
-                    <div id="analytics"
-                        class="relative bg-gh-subtle-dark border border-gh-border-dark rounded-xl p-6 hover:border-gh-green/40 transition-all overflow-hidden reveal reveal-delay-2">
+                    <div
+                        class="relative bg-gh-subtle-dark border border-gh-border-dark rounded-xl p-8 hover:border-gh-green/40 transition-all overflow-hidden reveal">
                         <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-gh-green to-gh-green/0">
                         </div>
-                        <span class="material-symbols-outlined text-3xl text-gh-green mb-4 block">analytics</span>
-                        <h3 class="text-lg font-bold text-gh-fg-dark mb-2">Analytics (GA4 + GTM)</h3>
-                        <p class="text-[15px] text-gh-muted-dark leading-snug mb-4">Server-side tracking, CAPI, and
-                            event tracking that ensures you know <strong class="text-gh-fg-dark">exactly which campaign
-                                and creative</strong> drives revenue.</p>
-                        <div class="flex gap-2 flex-wrap">
+                        <span class="material-symbols-outlined text-3xl text-gh-green mb-6 block">analytics</span>
+                        <h3 class="text-xl font-bold text-gh-fg-dark mb-2">GA4 + GTM Data Infrastructure</h3>
+                        <p class="text-[15px] text-gh-muted-dark leading-snug mb-6">Server-side tracking, CAPI, and
+                            event tracking that ensures you know <strong class="text-gh-fg-dark">exactly which
+                                creative</strong> drives revenue.</p>
+                        <div class="flex gap-2">
                             <span
-                                class="px-2 py-0.5 rounded bg-gh-canvas-dark text-[10px] text-gh-muted-dark border border-gh-border-dark">GA4</span>
+                                class="px-2 py-0.5 rounded bg-gh-canvas-dark text-[10px] text-gh-muted-dark border border-gh-border-dark uppercase tracking-wider">GA4</span>
                             <span
-                                class="px-2 py-0.5 rounded bg-gh-canvas-dark text-[10px] text-gh-muted-dark border border-gh-border-dark">GTM</span>
-                            <span
-                                class="px-2 py-0.5 rounded bg-gh-canvas-dark text-[10px] text-gh-muted-dark border border-gh-border-dark">CAPI</span>
+                                class="px-2 py-0.5 rounded bg-gh-canvas-dark text-[10px] text-gh-muted-dark border border-gh-border-dark uppercase tracking-wider">GTM</span>
                         </div>
                     </div>
 
                     <div
-                        class="relative bg-gh-subtle-dark border border-gh-border-dark rounded-xl p-6 hover:border-gh-yellow/40 transition-all overflow-hidden reveal reveal-delay-3">
+                        class="relative bg-gh-subtle-dark border border-gh-border-dark rounded-xl p-8 hover:border-gh-yellow/40 transition-all overflow-hidden reveal">
                         <div
                             class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-gh-yellow to-gh-yellow/0">
                         </div>
-                        <span class="material-symbols-outlined text-3xl text-gh-yellow mb-4 block">trending_up</span>
-                        <h3 class="text-lg font-bold text-gh-fg-dark mb-2">Integrated Reporting</h3>
-                        <p class="text-[15px] text-gh-muted-dark leading-snug mb-4">Cross-channel performance analysis
-                            from G-Ads, Meta, GA4, and Zoho CRM. <strong class="text-gh-fg-dark">Clear insights, zero
-                                data silos</strong>, and ROI clarity.</p>
-                        <div class="flex gap-2 flex-wrap">
+                        <span class="material-symbols-outlined text-3xl text-gh-yellow mb-6 block">trending_up</span>
+                        <h3 class="text-xl font-bold text-gh-fg-dark mb-2">Integrated Reporting</h3>
+                        <p class="text-[15px] text-gh-muted-dark leading-snug mb-6">Cross-channel analysis from Ads,
+                            GA4, and CRM. <strong class="text-gh-fg-dark">Clear insights, zero data silos</strong>, and
+                            ROI clarity.</p>
+                        <div class="flex gap-2">
                             <span
-                                class="px-2 py-0.5 rounded bg-gh-canvas-dark text-[10px] text-gh-muted-dark border border-gh-border-dark">Reporting</span>
-                            <span
-                                class="px-2 py-0.5 rounded bg-gh-canvas-dark text-[10px] text-gh-muted-dark border border-gh-border-dark">Dashboards</span>
-                            <span
-                                class="px-2 py-0.5 rounded bg-gh-canvas-dark text-[10px] text-gh-muted-dark border border-gh-border-dark">ROI</span>
+                                class="px-2 py-0.5 rounded bg-gh-canvas-dark text-[10px] text-gh-muted-dark border border-gh-border-dark uppercase tracking-wider">ROI
+                                Clarity</span>
                         </div>
                     </div>
                 </div>
@@ -643,137 +552,72 @@
         </section>
 
         <!-- ═══════════════════════════════════════════════ -->
-        <!-- HOW I WORK — Process -->
+        <!-- HOW I WORK -->
         <!-- ═══════════════════════════════════════════════ -->
         <section class="py-20 border-b border-gh-border-dark bg-gh-inset-dark" id="insights">
             <div class="max-w-4xl mx-auto px-4 sm:px-6">
-                <div class="text-center mb-10 sm:mb-14 reveal">
-                    <h2 class="text-2xl sm:text-4xl font-bold text-gh-fg-dark mb-3 tracking-tight">From Click to
-                        Customer: The 4-Step System ⚙️</h2>
-                    <p class="text-[15px] text-gh-muted-dark max-w-2xl mx-auto">No guesswork. No vanity reports. Just a
-                        structured revenue architecture designed to scale your business predictably.</p>
+                <div class="text-center mb-16 reveal">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-gh-fg-dark mb-4 tracking-tight">The 4-Step Revenue
+                        System ⚙️</h2>
+                    <p class="text-[15px] text-gh-muted-dark max-w-2xl mx-auto">No guesswork. Just a structured
+                        architecture designed to scale your business predictably.</p>
                 </div>
 
-                <div class="space-y-0">
-                    <div class="flex gap-5 items-start">
-                        <div class="flex flex-col items-center">
-                            <div
-                                class="w-10 h-10 rounded-full bg-gh-accent/15 flex items-center justify-center text-gh-accent text-[15px] font-bold border border-gh-accent/30">
-                                1</div>
-                            <div class="w-[2px] h-16 bg-gradient-to-b from-gh-accent/30 to-gh-purple/30 mt-2"></div>
-                        </div>
-                        <div class="pb-10">
-                            <h4 class="text-[15px] font-bold text-gh-fg-dark mb-1.5">1. Audit & Diagnose</h4>
-                            <p class="text-[15px] text-gh-muted-dark leading-snug">Review ads, analytics, tracking
-                                setup, and CRM structure. Identify data gaps and revenue leaks.</p>
+                <div class="grid gap-12">
+                    <!-- Step 1 -->
+                    <div
+                        class="reveal flex flex-col md:flex-row gap-8 items-center md:items-start text-center md:text-left">
+                        <div
+                            class="flex-shrink-0 w-12 h-12 rounded-full bg-gh-accent/10 border border-gh-accent/20 flex items-center justify-center text-gh-accent font-bold">
+                            1</div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gh-fg-dark mb-2">Tracking & Analytics (Foundation)</h3>
+                            <p class="text-gh-muted-dark text-[15px] leading-relaxed max-w-2xl">I audit and set up GA4,
+                                GTM, and conversion API (CAPI) to ensure every lead and sale is attributed correctly. No
+                                more flying blind.</p>
                         </div>
                     </div>
-                    <div class="flex gap-5 items-start">
-                        <div class="flex flex-col items-center">
-                            <div
-                                class="w-10 h-10 rounded-full bg-gh-purple/15 flex items-center justify-center text-gh-purple text-[15px] font-bold border border-gh-purple/30">
-                                2</div>
-                            <div class="w-[2px] h-16 bg-gradient-to-b from-gh-purple/30 to-gh-green/30 mt-2"></div>
+
+                    <!-- Step 2 -->
+                    <div
+                        class="reveal flex flex-col md:flex-row gap-8 items-center md:items-start text-center md:text-left">
+                        <div
+                            class="flex-shrink-0 w-12 h-12 rounded-full bg-gh-purple/10 border border-gh-purple/20 flex items-center justify-center text-gh-purple font-bold">
+                            2</div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gh-fg-dark mb-2">Omnichannel Acquisition</h3>
+                            <p class="text-gh-muted-dark text-[15px] leading-relaxed max-w-2xl">Deploy high-intent ads
+                                on Google and creative-first scaling on Meta Ads. I manage the budget dynamically where
+                                the best ROI lives.</p>
                         </div>
-                        <div class="pb-10">
-                            <h4 class="text-[15px] font-bold text-gh-fg-dark mb-1.5">2. Architect the Infrastructure
-                            </h4>
-                            <p class="text-[15px] text-gh-muted-dark leading-snug">Connect Ads → Landing Pages → GA4 &
-                                GTM → Lead Capture → Zoho CRM → Automation. Every touchpoint is measured and connected.
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div
+                        class="reveal flex flex-col md:flex-row gap-8 items-center md:items-start text-center md:text-left">
+                        <div
+                            class="flex-shrink-0 w-12 h-12 rounded-full bg-gh-green/10 border border-gh-green/20 flex items-center justify-center text-gh-green font-bold">
+                            3</div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gh-fg-dark mb-2">Zoho CRM & Lead Funnels</h3>
+                            <p class="text-gh-muted-dark text-[15px] leading-relaxed max-w-2xl">Leads don't just sit in
+                                email. I build Zoho CRM pipelines and automated follow-up sequences so no lead is
+                                wasted.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div
+                        class="reveal flex flex-col md:flex-row gap-8 items-center md:items-start text-center md:text-left">
+                        <div
+                            class="flex-shrink-0 w-12 h-12 rounded-full bg-gh-yellow/10 border border-gh-yellow/20 flex items-center justify-center text-gh-yellow font-bold">
+                            4</div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gh-fg-dark mb-2">Optimization & Scale</h3>
+                            <p class="text-gh-muted-dark text-[15px] leading-relaxed max-w-2xl">Weekly audits of
+                                results, creative testing, and technical refinements. We build for compounding growth.
                             </p>
                         </div>
-                    </div>
-                    <div class="flex gap-5 items-start">
-                        <div class="flex flex-col items-center">
-                            <div
-                                class="w-10 h-10 rounded-full bg-gh-green/15 flex items-center justify-center text-gh-green text-[15px] font-bold border border-gh-green/30">
-                                3</div>
-                            <div class="w-[2px] h-16 bg-gradient-to-b from-gh-green/30 to-gh-yellow/30 mt-2"></div>
-                        </div>
-                        <div class="pb-10">
-                            <h4 class="text-[15px] font-bold text-gh-fg-dark mb-1.5">3. Launch & Activate</h4>
-                            <p class="text-[15px] text-gh-muted-dark leading-snug">Campaigns go live. Events fire
-                                correctly. Leads enter CRM instantly. Automation starts immediately.</p>
-                        </div>
-                    </div>
-                    <div class="flex gap-5 items-start">
-                        <div class="flex flex-col items-center">
-                            <div
-                                class="w-10 h-10 rounded-full bg-gh-yellow/15 flex items-center justify-center text-gh-yellow text-[15px] font-bold border border-gh-yellow/30">
-                                4</div>
-                        </div>
-                        <div class="pb-10">
-                            <h4 class="text-[15px] font-bold text-gh-fg-dark mb-1.5">4. Optimize & Scale</h4>
-                            <p class="text-[15px] text-gh-muted-dark leading-snug">Data-driven decisions using real
-                                conversion data — scale what works, eliminate what doesn’t. Only revenue-focused
-                                optimization.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Philosophy cards -->
-                <div class="grid md:grid-cols-3 gap-6 mt-16 reveal reveal-delay-3">
-                    <div
-                        class="bg-gh-subtle-dark border border-gh-border-dark rounded-xl p-6 hover:border-gh-accent/30 transition-all group">
-                        <div class="text-2xl mb-4 group-hover:scale-110 transition-transform">🎯</div>
-                        <h4 class="font-bold text-gh-fg-dark mb-2 text-[15px]">Ads Backed by Tracking</h4>
-                        <p class="text-sm text-gh-muted-dark leading-snug">Every pixel and line of tracking
-                            (GA4/GTM/CAPI) is engineered to tie back to your bottom line. No data silos.</p>
-                    </div>
-                    <div
-                        class="bg-gh-subtle-dark border border-gh-border-dark rounded-xl p-6 hover:border-gh-green/30 transition-all group">
-                        <div class="text-2xl mb-4 group-hover:scale-110 transition-transform">⚙️</div>
-                        <h4 class="font-bold text-gh-fg-dark mb-2 text-[15px]">CRM Connected to Campaigns</h4>
-                        <p class="text-sm text-gh-muted-dark leading-snug">Bridge the gap between ads and sales with
-                            automated lead scoring, nurturing, and real-time CRM handoffs.</p>
-                    </div>
-                    <div
-                        class="bg-gh-subtle-dark border border-gh-border-dark rounded-xl p-6 hover:border-gh-purple/30 transition-all group">
-                        <div class="text-2xl mb-4 group-hover:scale-110 transition-transform">📈</div>
-                        <h4 class="font-bold text-gh-fg-dark mb-2 text-[15px]">Revenue-Focused Scaling</h4>
-                        <p class="text-sm text-gh-muted-dark leading-snug">Scale what works hard — using attribution
-                            clarity and real conversion data, rather than just vanity ROAS.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ═══════════════════════════════════════════════ -->
-        <!-- TOOLS & PLATFORMS -->
-        <!-- ═══════════════════════════════════════════════ -->
-        <section class="py-16 border-b border-gh-border-dark bg-gh-canvas-dark">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6">
-                <h3 class="text-lg font-bold text-gh-fg-dark mb-8 text-center">Tools & Platforms in My Stack</h3>
-                <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-3">
-                    <div
-                        class="bg-gh-subtle-dark border border-gh-border-dark rounded-xl p-3 text-center hover:border-gh-accent/30 transition-all">
-                        <span class="material-symbols-outlined text-xl text-gh-accent mb-1.5 block">campaign</span>
-                        <span class="text-[10px] font-medium text-gh-fg-dark">Google Ads</span>
-                    </div>
-                    <div
-                        class="bg-gh-subtle-dark border border-gh-border-dark rounded-xl p-3 text-center hover:border-gh-green/30 transition-all">
-                        <span class="material-symbols-outlined text-xl text-gh-green mb-1.5 block">share</span>
-                        <span class="text-[10px] font-medium text-gh-fg-dark">Meta Ads</span>
-                    </div>
-                    <div
-                        class="bg-gh-subtle-dark border border-gh-border-dark rounded-xl p-3 text-center hover:border-gh-purple/30 transition-all">
-                        <span class="material-symbols-outlined text-xl text-gh-purple mb-1.5 block">hub</span>
-                        <span class="text-[10px] font-medium text-gh-fg-dark">Zoho CRM</span>
-                    </div>
-                    <div
-                        class="bg-gh-subtle-dark border border-gh-border-dark rounded-xl p-3 text-center hover:border-gh-yellow/30 transition-all">
-                        <span class="material-symbols-outlined text-xl text-gh-yellow mb-1.5 block">monitoring</span>
-                        <span class="text-[10px] font-medium text-gh-fg-dark">GA4 / GTM</span>
-                    </div>
-                    <div
-                        class="bg-gh-subtle-dark border border-gh-border-dark rounded-xl p-3 text-center hover:border-gh-orange/30 transition-all">
-                        <span class="material-symbols-outlined text-xl text-gh-orange mb-1.5 block">auto_awesome</span>
-                        <span class="text-[10px] font-medium text-gh-fg-dark">Zoho Campaigns</span>
-                    </div>
-                    <div
-                        class="bg-gh-subtle-dark border border-gh-border-dark rounded-xl p-3 text-center hover:border-gh-red/30 transition-all">
-                        <span class="material-symbols-outlined text-xl text-gh-red mb-1.5 block">bolt</span>
-                        <span class="text-[10px] font-medium text-gh-fg-dark">Automation Flow</span>
                     </div>
                 </div>
             </div>
@@ -782,68 +626,56 @@
         <!-- ═══════════════════════════════════════════════ -->
         <!-- TESTIMONIALS -->
         <!-- ═══════════════════════════════════════════════ -->
-        <section class="py-20 border-b border-gh-border-dark bg-gh-inset-dark">
-            <div class="max-w-5xl mx-auto px-4 sm:px-6">
-                <div class="text-center mb-14">
-                    <h2 class="text-3xl font-bold text-gh-fg-dark mb-3 tracking-tight">What People Say</h2>
-                    <p class="text-[15px] text-gh-muted-dark">Real feedback from real brands I've worked with.</p>
+        <section class="py-20 border-b border-gh-border-dark bg-gh-canvas-dark">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                <div class="text-center mb-16 reveal">
+                    <h2 class="text-3xl font-bold text-gh-fg-dark mb-4 tracking-tight">What Clients Say</h2>
+                    <p class="text-[15px] text-gh-muted-dark max-w-xl mx-auto">Real feedback from brands focused on
+                        growth.</p>
                 </div>
 
-                <div class="grid md:grid-cols-3 gap-5">
-                    <div
-                        class="bg-gh-subtle-dark border border-gh-border-dark rounded-xl p-6 hover:border-gh-accent/20 transition-all">
-                        <div class="flex gap-1 mb-4">
-                            <span class="text-gh-yellow text-[15px]">★★★★★</span>
-                        </div>
-                        <p class="text-[15px] text-gh-muted-dark leading-snug mb-5">"He restructured our campaigns and
-                            <span class="text-gh-green font-semibold">slashed CPA by 40%</span> in the first month. The
-                            real-time dashboards give us visibility we never had before."
-                        </p>
-                        <div class="flex items-center gap-3 pt-4 border-t border-gh-border-dark">
-                            <div class="w-8 h-8 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex-shrink-0">
-                            </div>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-gh-subtle-dark border border-gh-border-dark rounded-xl p-8 reveal">
+                        <div class="flex gap-1 mb-4 text-gh-yellow">★★★★★</div>
+                        <p class="text-[15px] text-gh-muted-dark leading-relaxed mb-6">"He restructured our campaigns
+                            and <span class="text-gh-green font-semibold">slashed CPA by 40%</span> in the first month.
+                            The visibility we have now is incredible."</p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full bg-gh-border-dark"></div>
                             <div>
-                                <p class="text-sm font-semibold text-gh-fg-dark">Sarah J.</p>
-                                <p class="text-[10px] text-gh-muted-dark">SaaS Founder</p>
+                                <p class="text-sm font-bold text-gh-fg-dark">Sarah J.</p>
+                                <p class="text-[11px] text-gh-muted-dark uppercase tracking-wider font-semibold">SaaS
+                                    Founder</p>
                             </div>
                         </div>
                     </div>
 
-                    <div
-                        class="bg-gh-subtle-dark border border-gh-border-dark rounded-xl p-6 hover:border-gh-green/20 transition-all">
-                        <div class="flex gap-1 mb-4">
-                            <span class="text-gh-yellow text-[15px]">★★★★★</span>
-                        </div>
-                        <p class="text-[15px] text-gh-muted-dark leading-snug mb-5">"Our Meta ROAS went from 1.5x to
-                            <span class="text-gh-green font-semibold">4.2x</span>. It feels like we finally have a
-                            predictable revenue engine instead of guessing which ads work."
-                        </p>
-                        <div class="flex items-center gap-3 pt-4 border-t border-gh-border-dark">
-                            <div
-                                class="w-8 h-8 rounded-full bg-gradient-to-br from-green-400 to-green-600 flex-shrink-0">
-                            </div>
+                    <div class="bg-gh-subtle-dark border border-gh-border-dark rounded-xl p-8 reveal">
+                        <div class="flex gap-1 mb-4 text-gh-yellow">★★★★★</div>
+                        <p class="text-[15px] text-gh-muted-dark leading-relaxed mb-6">"Our Meta ROAS went from 1.5x to
+                            <span class="text-gh-green font-semibold">4.2x</span>. We finally have a predictable revenue
+                            engine instead of guessing."</p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full bg-gh-border-dark"></div>
                             <div>
-                                <p class="text-sm font-semibold text-gh-fg-dark">Mike T.</p>
-                                <p class="text-[10px] text-gh-muted-dark">E-commerce Owner</p>
+                                <p class="text-sm font-bold text-gh-fg-dark">Mike T.</p>
+                                <p class="text-[11px] text-gh-muted-dark uppercase tracking-wider font-semibold">
+                                    E-commerce Owner</p>
                             </div>
                         </div>
                     </div>
 
-                    <div
-                        class="bg-gh-subtle-dark border border-gh-border-dark rounded-xl p-6 hover:border-gh-purple/20 transition-all">
-                        <div class="flex gap-1 mb-4">
-                            <span class="text-gh-yellow text-[15px]">★★★★★</span>
-                        </div>
-                        <p class="text-[15px] text-gh-muted-dark leading-snug mb-5">"He automated our entire Zoho
-                            pipeline. No more manual lead entry — saves my sales team <span
-                                class="text-gh-green font-semibold">10 hours a week</span>. ROI was immediate."</p>
-                        <div class="flex items-center gap-3 pt-4 border-t border-gh-border-dark">
-                            <div
-                                class="w-8 h-8 rounded-full bg-gradient-to-br from-yellow-400 to-orange-500 flex-shrink-0">
-                            </div>
+                    <div class="bg-gh-subtle-dark border border-gh-border-dark rounded-xl p-8 reveal">
+                        <div class="flex gap-1 mb-4 text-gh-yellow">★★★★★</div>
+                        <p class="text-[15px] text-gh-muted-dark leading-relaxed mb-6">"Automated our entire Zoho
+                            pipeline. Saves my sales team <span class="text-gh-green font-semibold">10 hours a
+                                week</span>. ROI was almost immediate."</p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full bg-gh-border-dark"></div>
                             <div>
-                                <p class="text-sm font-semibold text-gh-fg-dark">David R.</p>
-                                <p class="text-[10px] text-gh-muted-dark">Real Estate</p>
+                                <p class="text-sm font-bold text-gh-fg-dark">David R.</p>
+                                <p class="text-[11px] text-gh-muted-dark uppercase tracking-wider font-semibold">Real
+                                    Estate</p>
                             </div>
                         </div>
                     </div>
@@ -852,168 +684,76 @@
         </section>
 
         <!-- ═══════════════════════════════════════════════ -->
-        <!-- NEWSLETTER -->
+        <!-- CTA SECTION -->
         <!-- ═══════════════════════════════════════════════ -->
-        <section class="py-20 border-b border-gh-border-dark bg-gh-canvas-dark relative overflow-hidden"
-            id="newsletter">
-            <div
-                class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-gh-accent/5 rounded-full blur-3xl -translate-y-1/2">
-            </div>
+        <section class="py-24 bg-gh-canvas-dark relative overflow-hidden">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 text-center reveal">
+                <h2 class="text-3xl md:text-5xl font-extrabold text-gh-fg-dark mb-6 tracking-tight">Ready to Audit Your
+                    Growth?</h2>
+                <p class="text-lg text-gh-muted-dark mb-10 max-w-2xl mx-auto">Let’s find the leaks in your funnel and
+                    build a system that scales.</p>
 
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 relative text-center">
-                <span class="material-symbols-outlined text-4xl text-gh-accent mb-4 block">newspaper</span>
-                <h2 class="text-3xl lg:text-4xl font-bold text-gh-fg-dark mb-4 tracking-tight">
-                    Growth Insights, <span class="gradient-text">Delivered Weekly</span>
-                </h2>
-                <p class="text-gh-muted-dark mb-8 max-w-md mx-auto leading-snug text-[15px]">
-                    Frameworks, case studies, and tactical advice on performance marketing, analytics, and growth
-                    strategy. No fluff.
-                </p>
-
-                <div class="max-w-xl mx-auto">
-                    <form id="newsletter-form" class="flex flex-col sm:flex-row gap-3"
-                        onsubmit="handleNewsletterSubmit(event)">
-                        <input type="email" name="email" required
-                            class="newsletter-input w-full sm:flex-1 px-4 py-3 bg-gh-subtle-dark border border-gh-border-dark rounded-lg text-[15px] text-gh-fg-dark placeholder-gh-muted-dark outline-none transition-all"
-                            placeholder="your@email.com" />
-                        <button type="submit"
-                            class="w-full sm:w-auto px-6 py-3 bg-gh-accent hover:bg-gh-accent/90 text-white text-[15px] font-semibold rounded-lg transition-all hover:shadow-lg hover:shadow-gh-accent/20 whitespace-nowrap flex items-center justify-center gap-2">
-                            Subscribe
-                        </button>
-                    </form>
-                    <p class="text-[11px] text-gh-muted-dark mt-3">Join 500+ marketers. Unsubscribe anytime.</p>
-                    <div id="newsletter-success" class="hidden mt-4 text-[15px] text-gh-green font-medium">
-                        ✅ Thanks for subscribing! Check your inbox to confirm.
-                    </div>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="javascript:void(0)"
+                        class="open-calendar px-8 py-4 bg-gh-accent hover:bg-gh-accent/90 text-white font-bold rounded-xl transition-all shadow-xl shadow-gh-accent/20">Schedule
+                        Your Strategy Audit</a>
+                    <a href="mailto:connect@kumaratul.com"
+                        class="px-8 py-4 bg-gh-subtle-dark border border-gh-border-dark text-gh-fg-dark font-bold rounded-xl hover:bg-gh-border-dark transition-all">Contact
+                        Directly</a>
                 </div>
             </div>
         </section>
-
-        <!-- ═══════════════════════════════════════════════ -->
-        <!-- CTA -->
-        <!-- ═══════════════════════════════════════════════ -->
-        <section class="py-20 bg-gh-canvas-dark overflow-hidden">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center reveal">
-                <div
-                    class="bg-gh-subtle-dark border border-gh-border-dark rounded-2xl p-6 sm:p-12 glow-accent relative overflow-hidden group hover:border-gh-accent/40 transition-all duration-500">
-                    <div
-                        class="absolute top-0 right-0 w-64 h-64 bg-gh-accent/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4 group-hover:bg-gh-accent/20 transition-all duration-700">
-                    </div>
-                    <div class="relative z-10">
-                        <div
-                            class="w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden mx-auto mb-6 border-2 border-gh-border-dark shadow-xl hover:scale-105 transition-transform">
-                            <img alt="Atul Kumar" class="w-full h-full object-cover" src="assets/images/profile.png" />
-                        </div>
-                        <h3 class="text-2xl sm:text-3xl font-bold text-gh-fg-dark mb-4 tracking-tight">Ready to Turn
-                            Your Ads Into a
-                            Predictable Revenue System?</h3>
-                        <p class="text-base sm:text-lg text-gh-muted-dark mb-10 max-w-2xl mx-auto leading-relaxed">
-                            Let’s audit your campaigns, analytics, and CRM — and build a system that scales your brand
-                            with precision 📈.
-                        </p>
-                        <div class="flex flex-col sm:flex-row gap-4 justify-center w-full max-w-md mx-auto">
-                            <a href="javascript:void(0)"
-                                class="open-calendar flex-1 inline-flex items-center justify-center gap-2 px-8 py-4 bg-gh-accent hover:bg-gh-accent/90 text-white text-base font-bold rounded-xl transition-all hover:shadow-2xl hover:shadow-gh-accent/30 relative overflow-hidden group/btn">
-                                <div
-                                    class="absolute inset-0 shimmer opacity-0 group-hover/btn:opacity-100 transition-opacity">
-                                </div>
-                                <span class="material-symbols-outlined text-[15px] relative z-10">calendar_today</span>
-                                <span class="relative z-10">Schedule a Call</span>
-                            </a>
-                            <a href="mailto:getintouch.atul@gmail.com"
-                                class="flex-1 inline-flex items-center justify-center gap-2 px-8 py-4 bg-gh-canvas-dark border border-gh-border-dark rounded-xl text-base font-semibold text-gh-fg-dark hover:bg-gh-subtle-dark hover:border-gh-muted-dark transition-all">
-                                <span class="material-symbols-outlined text-[15px]">mail</span>
-                                Contact
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
     </main>
 
-    <!-- FOOTER -->
-    <footer class="py-8 bg-gh-inset-dark border-t border-gh-border-dark">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-                <div class="flex items-center gap-2">
-                    <img alt="Atul Kumar" class="w-5 h-5 rounded-full border border-gh-border-dark"
-                        src="assets/images/profile.png" />
-                    <span class="text-sm text-gh-muted-dark">© 2026 Atul Kumar</span>
-                </div>
-                <div class="flex flex-wrap justify-center gap-4 text-sm text-gh-muted-dark">
-                    <a href="privacy-policy.html" class="hover:text-gh-accent transition-colors">Privacy Policy</a>
-                    <a href="terms.html" class="hover:text-gh-accent transition-colors">Terms & Conditions</a>
-                    <a href="contact.html" class="hover:text-gh-accent transition-colors">Contact</a>
-                </div>
-                <div class="flex items-center gap-4">
-                    <a href="https://linkedin.com" target="_blank"
-                        class="text-gh-muted-dark hover:text-gh-accent transition-colors">
-                        <i class="fa-brands fa-linkedin text-lg"></i>
-                    </a>
-                    <a href="https://x.com" target="_blank"
-                        class="text-gh-muted-dark hover:text-gh-accent transition-colors">
-                        <i class="fa-brands fa-x-twitter text-lg"></i>
-                    </a>
-                    <a href="https://github.com/Atulscript" target="_blank"
-                        class="text-gh-muted-dark hover:text-gh-accent transition-colors">
-                        <i class="fa-brands fa-github text-lg"></i>
-                    </a>
-                </div>
+    <footer class="py-12 border-t border-gh-border-dark bg-gh-inset-dark">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+            <div class="flex flex-wrap justify-center gap-6 mb-6">
+                <a href="privacy-policy.html" class="text-sm text-gh-muted-dark hover:text-gh-fg-dark">Privacy
+                    Policy</a>
+                <a href="terms.html" class="text-sm text-gh-muted-dark hover:text-gh-fg-dark">Terms</a>
+                <a href="contact.html" class="text-sm text-gh-muted-dark hover:text-gh-fg-dark">Contact</a>
             </div>
+            <p class="text-sm text-gh-muted-dark">© 2026 Atul Kumar. All rights reserved.</p>
         </div>
     </footer>
 
     <script src="assets/js/calendar.js"></script>
     <script>
-        // ── Scroll Reveal ──
+        // Reveal Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
         const observer = new IntersectionObserver((entries) => {
-            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
-        }, { threshold: 0.1 });
-        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-        // ── Newsletter ──
-        function handleNewsletterSubmit(e) {
-            e.preventDefault();
-            const email = e.target.querySelector('input[name="email"]').value;
-            window.open(`https://substack.com/sign-in?redirect=%2F&email=${encodeURIComponent(email)}`, '_blank');
-            document.getElementById('newsletter-success').classList.remove('hidden');
-            e.target.reset();
-        }
-
-        // ── Theme (dark by default) ──
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme === 'light') {
-            document.documentElement.classList.remove('dark');
-        } else {
-            document.documentElement.classList.add('dark');
-        }
-
-        // ── Mobile Menu Toggle ──
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        if (mobileMenuButton && mobileMenu) {
-            mobileMenuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-                const icon = mobileMenuButton.querySelector('.material-symbols-outlined');
-                if (icon) {
-                    icon.textContent = mobileMenu.classList.contains('hidden') ? 'menu' : 'close';
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
                 }
             });
+        }, observerOptions);
 
-            // Close menu on link click
-            mobileMenu.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
-                    const icon = mobileMenuButton.querySelector('.material-symbols-outlined');
-                    if (icon) icon.textContent = 'menu';
-                });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn?.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = menuBtn.querySelector('.material-symbols-outlined');
+            if (icon) icon.textContent = mobileMenu.classList.contains('hidden') ? 'menu' : 'close';
+        });
+
+        // Close menu on link click
+        mobileMenu?.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                const icon = menuBtn.querySelector('.material-symbols-outlined');
+                if (icon) icon.textContent = 'menu';
             });
-        }
+        });
     </script>
-
 </body>
 
 </html>

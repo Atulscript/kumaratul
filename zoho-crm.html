@@ -150,7 +150,13 @@
             class="hidden md:hidden bg-ink border-b border-edge overflow-hidden transition-all duration-300">
             <div class="px-4 py-3 space-y-1">
                 <a class="block px-3 py-2 rounded-md text-sm text-mist hover:bg-slate hover:text-white transition-colors"
-                    href="about.html">About</a>
+                    href="index.html">Home</a>
+                <a class="block px-3 py-2 rounded-md text-sm text-mist hover:bg-slate hover:text-white transition-colors"
+                    href="zoho-crm.html">Zoho</a>
+                <a class="block px-3 py-2 rounded-md text-sm text-mist hover:bg-slate hover:text-white transition-colors"
+                    href="meta-ads.html">Meta Ads</a>
+                <a class="block px-3 py-2 rounded-md text-sm text-mist hover:bg-slate hover:text-white transition-colors"
+                    href="google-ads.html">Google Ads</a>
                 <a class="block px-3 py-2 rounded-md text-sm text-mist hover:bg-slate hover:text-white transition-colors"
                     href="contact.html">Contact</a>
                 <a class="open-calendar block px-3 py-2 mt-4 rounded-md text-sm font-bold text-white bg-sky hover:bg-sky/90 transition-colors text-center"
@@ -164,8 +170,8 @@
         <section class="relative overflow-hidden border-b border-edge py-16 md:py-24 lg:py-32">
             <div class="mesh pointer-events-none absolute inset-0 opacity-70"></div>
             <div class="relative mx-auto grid max-w-6xl gap-10 px-4 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-                <div class="reveal">
-                    <span class="pill mb-5">
+                <div class="reveal text-center lg:text-left">
+                    <span class="pill mb-5 mx-auto lg:mx-0">
                         <span class="h-2 w-2 rounded-full bg-teal"></span>
                         Automated & Scalable Systems
                     </span>
@@ -173,14 +179,14 @@
                         class="font-sans text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-extrabold leading-tight text-white tracking-tight">
                         Build a Smart, Automated & <span class="text-sky">Scalable Business System</span>
                     </h1>
-                    <p class="mt-6 max-w-2xl text-lg leading-relaxed text-mist">
+                    <p class="mt-6 max-w-2xl text-lg leading-relaxed text-mist mx-auto lg:mx-0">
                         We help businesses streamline operations using the full power of the <span
                             class="text-white font-medium">Zoho ecosystem</span>. From CRM setup to advanced automation
                         and custom integrations, we design systems that reduce manual work, improve visibility, and
                         accelerate growth.
                     </p>
 
-                    <div class="mt-8 flex flex-wrap items-center gap-4">
+                    <div class="mt-8 flex flex-wrap items-center justify-center lg:justify-start gap-4">
                         <a href="#consult-form"
                             class="rounded-xl bg-sky px-6 py-4 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-sky/90 shadow-lg shadow-sky/20">Design
                             My Zoho System</a>
@@ -553,7 +559,7 @@
 
         const leadForm = document.getElementById("leadCaptureForm");
         const leadSuccess = document.getElementById("leadSuccess");
-        const salesEmail = "getintouch.atul@gmail.com";
+        const salesEmail = "connect@kumaratul.com";
 
         leadForm.addEventListener("submit", (event) => {
             event.preventDefault();
@@ -563,7 +569,7 @@
             const subject = `Zoho System Consultation - ${name}`;
             const body = `Name: ${name}\nEmail: ${formData.get("email")}\nWebsite: ${formData.get("website")}\nNeed: ${formData.get("leads_count")}\nRequirement: ${formData.get("blocker")}\n\nSource: Zoho-Architect LP`;
 
-            const mailtoUrl = `mailto:${salesEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            const mailtoUrl = `mailto:connect@kumaratul.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
             window.location.href = mailtoUrl;
             leadSuccess.classList.remove("hidden");

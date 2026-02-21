@@ -18,7 +18,7 @@ function doPost(e) {
   try {
     var data = JSON.parse(e.postData.contents);
 
-    var calendarId = "getintouch.atul@gmail.com";
+    var calendarId = "connect@kumaratul.com";
     var calendar = CalendarApp.getCalendarById(calendarId);
 
     if (!calendar) {

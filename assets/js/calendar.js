@@ -5,7 +5,7 @@
  */
 const CAL = {
     apiKey: "AIzaSyA0r5uNFwvreve3aVJ3Ieb-ClBlKQzm1Ro",
-    calendarId: "getintouch.atul@gmail.com",
+    calendarId: "connect@kumaratul.com",
     appsScriptUrl: "https://script.google.com/macros/s/AKfycbyNFatd3XOPaDAsmmQVf0O5IYryPtasXOUqZERinTaguknQNOEpZDXdN3NkTR2ddLrHjA/exec",
     tz: "Asia/Kolkata",
     hours: { s: 10, e: 18 }, dur: 30,

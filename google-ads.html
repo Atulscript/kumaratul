@@ -142,10 +142,16 @@
             class="hidden md:hidden bg-ink border-b border-edge overflow-hidden transition-all duration-300">
             <div class="px-4 py-3 space-y-1">
                 <a class="block px-3 py-2 rounded-md text-sm text-mist hover:bg-slate hover:text-white transition-colors"
-                    href="about.html">About</a>
+                    href="index.html">Home</a>
+                <a class="block px-3 py-2 rounded-md text-sm text-mist hover:bg-slate hover:text-white transition-colors"
+                    href="zoho-crm.html">Zoho</a>
+                <a class="block px-3 py-2 rounded-md text-sm text-mist hover:bg-slate hover:text-white transition-colors"
+                    href="meta-ads.html">Meta Ads</a>
+                <a class="block px-3 py-2 rounded-md text-sm text-mist hover:bg-slate hover:text-white transition-colors"
+                    href="google-ads.html">Google Ads</a>
                 <a class="block px-3 py-2 rounded-md text-sm text-mist hover:bg-slate hover:text-white transition-colors"
                     href="contact.html">Contact</a>
-                <a class="open-calendar block px-3 py-2 mt-4 rounded-md text-sm font-bold text-white bg-gh-accent hover:bg-gh-accent/90 transition-colors text-center"
+                <a class="open-calendar block px-3 py-2 mt-4 rounded-md text-sm font-bold text-white bg-sky hover:bg-sky/90 transition-colors text-center"
                     href="javascript:void(0)">Schedule a Call</a>
             </div>
         </div>
@@ -156,22 +162,23 @@
             <div class="mesh pointer-events-none absolute inset-0 opacity-70"></div>
             <div
                 class="relative mx-auto grid max-w-6xl gap-10 px-4 sm:px-6 lg:grid-cols-[1.08fr_0.92fr] lg:items-center">
-                <div class="reveal">
-                    <span class="pill mb-5">
-                        <span class="h-2 w-2 rounded-full bg-teal"></span>
-                        Independent Google Ads Consultant
+                <div class="reveal text-center lg:text-left">
+                    <span class="pill mb-6 mx-auto lg:mx-0">
+                        <span class="h-2 w-2 rounded-full bg-sky lg:animate-pulse"></span>
+                        High-Intent Google Ads Systems
                     </span>
                     <h1
-                        class="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-white tracking-tight">
-                        Turn Ad Clicks Into Qualified Calls, Not Just Traffic.
+                        class="font-display text-4xl font-extrabold leading-tight tracking-tight text-white md:text-5xl lg:text-6xl">
+                        Scale Your Revenue With <span class="text-sky">Precision Google Ads</span>
                     </h1>
-                    <p class="mt-5 max-w-2xl text-lg leading-relaxed text-mist">
-                        I rebuild underperforming Google Ads accounts with clean tracking, tighter intent mapping, and
-                        landing pages that move visitors to action.
-                        If you are spending and not scaling profitably, this is your fix.
+                    <p class="mt-6 max-w-2xl text-lg leading-relaxed text-mist mx-auto lg:mx-0">
+                        I build and manage Search & Performance Max campaigns that target demand at the exact moment of
+                        intent. No vanity metrics — just
+                        <span class="text-white font-medium">qualified leads, high ROAS, and transparent technical
+                            tracking.</span>
                     </p>
 
-                    <div class="mt-8 grid gap-3 sm:grid-cols-2">
+                    <div class="mt-10 grid gap-6 sm:grid-cols-2 max-w-lg mx-auto lg:mx-0">
                         <div class="rounded-xl border border-edge bg-card/70 p-4">
                             <p class="text-[11px] font-semibold uppercase tracking-[0.14em] text-mist">Focus</p>
                             <p class="mt-2 text-sm font-medium text-white">Search, Shopping, PMAX, Lead Gen Funnels</p>
@@ -183,7 +190,7 @@
                         </div>
                     </div>
 
-                    <div class="mt-8 flex flex-wrap items-center gap-4">
+                    <div class="mt-8 flex flex-wrap items-center justify-center lg:justify-start gap-4">
                         <a href="#lead-form"
                             class="rounded-xl bg-sky px-6 py-3 text-sm font-semibold text-ink transition hover:-translate-y-0.5 hover:bg-sky/90">Get
                             My 90-Day Growth Plan</a>
@@ -230,7 +237,7 @@
                         </div>
 
                         <div class="mt-5 grid grid-cols-2 gap-3 text-sm">
-                            <a id="emailFallback" href="mailto:getintouch.atul@gmail.com"
+                            <a id="emailFallback" href="mailto:connect@kumaratul.com"
                                 class="rounded-lg border border-edge bg-slate px-3 py-2 text-center font-medium text-white hover:border-sky/40">
                                 Email Directly
                             </a>
@@ -673,7 +680,7 @@
         const leadForm = document.getElementById("leadCaptureForm");
         const leadSuccess = document.getElementById("leadSuccess");
         const emailFallback = document.getElementById("emailFallback");
-        const salesEmail = "getintouch.atul@gmail.com";
+        const salesEmail = "connect@kumaratul.com";
 
         leadForm.addEventListener("submit", (event) => {
             event.preventDefault();
