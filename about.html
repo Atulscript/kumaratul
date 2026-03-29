@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html class="scroll-smooth dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="robots" content="index, follow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+        rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+            rel="stylesheet" />
+    </noscript>
+
+    <title>About Atul Kumar — Performance Marketing & Growth Systems Specialist</title>
+    <meta name="description"
+        content="Performance marketer and growth specialist focused on Paid Ads, Analytics, and CRM-driven marketing systems. 8+ years experience helping 20+ brands scale.">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="About Atul Kumar — Growth Systems Specialist">
+    <meta property="og:description"
+        content="I don't just run ads. I build growth systems that connect Traffic, Tracking, Conversion, and CRM.">
+    <meta property="og:image" content="assets/images/profile.png">
+    <link rel="icon" type="image/png" href="assets/images/profile.png">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/site-core.css" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "gh-canvas": "#ffffff",
+                        "gh-canvas-subtle": "#f6f8fa",
+                        "gh-border": "#d0d7de",
+                        "gh-border-muted": "#d8dee4",
+                        "gh-fg": "#1f2328",
+                        "gh-fg-muted": "#656d76",
+                        "gh-canvas-dark": "#161b22",
+                        "gh-subtle-dark": "#21262d",
+                        "gh-inset-dark": "#0d1117",
+                        "gh-border-dark": "#3d444d",
+                        "gh-fg-dark": "#e6edf3",
+                        "gh-muted-dark": "#8b949e",
+                        "gh-accent": "#2f81f7",
+                        "gh-accent-muted": "#388bfd26",
+                        "gh-green": "#3fb950",
+                        "gh-green-muted": "#238636",
+                        "gh-purple": "#a371f7",
+                        "gh-yellow": "#d29922",
+                        "gh-red": "#f85149",
+                        "gh-orange": "#db6d28",
+                    },
+                    fontFamily: {
+                        sans: ["Inter", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica", "Arial", "sans-serif"],
+                        mono: ["'JetBrains Mono'", "SFMono-Regular", "Consolas", "'Liberation Mono'", "Menlo", "monospace"],
+                    },
+                }
+            }
+        };
+    </script>
+    <style type="text/tailwindcss">
+        :root {
+            --accent-rgb: 47, 129, 247;
+        }
+        body { background-color: #0d1117; color: #e6edf3; }
+        
+        /* Glassmorphism */
+        .glass { background: rgba(22, 27, 34, 0.75); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(48, 54, 61, 0.5); }
+        .glass-hover:hover { background: rgba(33, 38, 45, 0.85); border-color: rgba(47, 129, 247, 0.3); }
+
+        /* Gradient text */
+        .gradient-text {
+            background: linear-gradient(135deg, #2f81f7, #a371f7, #3fb950);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Float animation */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        .float { animation: float 6s ease-in-out infinite; }
+
+        /* Grid Background Overlay */
+        .grid-overlay {
+            background-image: radial-gradient(#30363d 0.5px, transparent 0.5px);
+            background-size: 24px 24px;
+            mask-image: radial-gradient(circle at center, black 40%, transparent 95%);
+        }
+
+        /* Timeline Connector */
+        .timeline-connector {
+            position: absolute;
+            left: 11px;
+            top: 28px;
+            bottom: -12px;
+            width: 2px;
+            background: linear-gradient(to bottom, #30363d, transparent);
+        }
+
+        /* Reveal Animation */
+        .reveal { opacity: 0; transform: translateY(20px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+        
+        /* Tooltip-like Badge */
+        .pill-badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.125rem 0.625rem;
+            border-radius: 9999px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border: 1px solid #30363d;
+            background-color: #161b22;
+            color: #8b949e;
+        }
+
+        /* Card Decoration */
+        .card-accent {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(to right, transparent, var(--gh-accent), transparent);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .glass:hover .card-accent { opacity: 1; }
+
+        /* Marquee Animation for Tools */
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .marquee-container {
+            display: flex;
+            width: fit-content;
+            animation: marquee 30s linear infinite;
+        }
+        .marquee-container:hover { animation-play-state: paused; }
+    </style>
+</head>
+
+<body class="font-sans antialiased text-gh-fg-dark selection:bg-gh-accent/30 overflow-x-hidden">
+
+    <!-- NAVIGATION -->
+    <nav class="sticky top-0 z-50 w-full border-b border-gh-border-dark bg-gh-canvas-dark/80 backdrop-blur-md transition-all duration-300">
+        <div class="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
+            <!-- Left: Logo -->
+            <div class="flex items-center gap-4">
+                <a class="flex items-center gap-2.5 group" href="index.html">
+                    <div class="w-8 h-8 rounded-full overflow-hidden border border-gh-border-dark group-hover:border-gh-accent transition-colors">
+                        <img alt="Atul Kumar" class="w-full h-full object-cover" src="assets/images/profile.png" />
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-[14px] font-bold tracking-tight text-gh-fg-dark leading-none">Atul Kumar</span>
+                        <span class="text-[11px] text-gh-muted-dark font-medium leading-none mt-1">Growth, Backed by Data</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Center: Menu (Desktop) -->
+            <div class="hidden md:flex items-center justify-center flex-1 gap-1">
+                <a class="px-3 py-1.5 rounded-md text-[14px] font-medium text-gh-muted-dark hover:bg-gh-subtle-dark hover:text-gh-fg-dark transition-colors" href="index.html">🏠 Home</a>
+                <a class="px-3 py-1.5 rounded-md text-[14px] font-medium text-gh-fg-dark bg-gh-subtle-dark border border-gh-border-dark" href="about.html">📑 About</a>
+                
+                <!-- What I Do Dropdown -->
+                <div class="relative group/what">
+                    <button class="flex items-center gap-0.5 px-3 py-1.5 rounded-md text-[14px] font-medium text-gh-muted-dark hover:bg-gh-subtle-dark hover:text-gh-fg-dark transition-colors">
+                        🛠️ What I Do <span class="material-symbols-outlined text-[16px] group-hover/what:rotate-180 transition-transform duration-200">expand_more</span>
+                    </button>
+                    <div class="absolute top-full left-1/2 -translate-x-1/2 mt-1 w-64 bg-gh-canvas-dark border border-gh-border-dark rounded-xl shadow-2xl py-2 hidden group-hover/what:block z-50 overflow-hidden">
+                        <a href="ga4-gtm.html" class="flex items-center gap-3 px-4 py-2.5 text-[13px] text-gh-muted-dark hover:bg-gh-subtle-dark hover:text-gh-fg-dark transition-colors">
+                            <span class="material-symbols-outlined text-[18px] text-gh-green">analytics</span>
+                            <div class="flex flex-col">
+                                <span class="font-semibold text-gh-fg-dark">Analytics & Tracking</span>
+                                <span class="text-[11px] opacity-70">GA4 + GTM Implementation</span>
+                            </div>
+                        </a>
+                        <a href="zoho-crm.html" class="flex items-center gap-3 px-4 py-2.5 text-[13px] text-gh-muted-dark hover:bg-gh-subtle-dark hover:text-gh-fg-dark transition-colors">
+                            <span class="material-symbols-outlined text-[18px] text-gh-yellow">hub</span>
+                            <div class="flex flex-col">
+                                <span class="font-semibold text-gh-fg-dark">CRM & Automation</span>
+                                <span class="text-[11px] opacity-70">Zoho CRM Workflows</span>
+                            </div>
+                        </a>
+                        <a href="google-ads.html" class="flex items-center gap-3 px-4 py-2.5 text-[13px] text-gh-muted-dark hover:bg-gh-subtle-dark hover:text-gh-fg-dark transition-colors">
+                            <span class="material-symbols-outlined text-[18px] text-gh-accent">ads_click</span>
+                            <div class="flex flex-col">
+                                <span class="font-semibold text-gh-fg-dark">Google Ads</span>
+                                <span class="text-[11px] opacity-70">Search & Performance Max</span>
+                            </div>
+                        </a>
+                        <a href="meta-ads.html" class="flex items-center gap-3 px-4 py-2.5 text-[13px] text-gh-muted-dark hover:bg-gh-subtle-dark hover:text-gh-fg-dark transition-colors">
+                            <span class="material-symbols-outlined text-[18px] text-gh-purple">thumb_up</span>
+                            <div class="flex flex-col">
+                                <span class="font-semibold text-gh-fg-dark">Meta Ads</span>
+                                <span class="text-[11px] opacity-70">Facebook & Instagram</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <a class="px-3 py-1.5 rounded-md text-[14px] font-medium text-gh-muted-dark hover:bg-gh-subtle-dark hover:text-gh-fg-dark transition-colors" href="contact.html">💬 Contact</a>
+            </div>
+
+            <!-- Right: CTA -->
+            <div class="flex items-center gap-3">
+                <a class="hidden sm:flex items-center gap-1.5 px-4 py-1.5 rounded-lg bg-gh-accent text-[13px] font-bold text-white hover:bg-gh-accent/90 transition-all shadow-lg shadow-gh-accent/20 open-calendar" href="javascript:void(0)">
+                    <span class="material-symbols-outlined text-[18px]">calendar_today</span> Book a Discovery Call
+                </a>
+                <button id="mobile-menu-button" class="md:hidden flex items-center justify-center p-2 rounded-md hover:bg-gh-subtle-dark text-gh-muted-dark hover:text-gh-fg-dark transition-colors">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gh-canvas-dark border-b border-gh-border-dark overflow-hidden transition-all duration-300">
+            <div class="px-4 py-4 space-y-1">
+                <a class="block px-3 py-2 rounded-md text-[15px] font-medium text-gh-muted-dark hover:bg-gh-subtle-dark hover:text-gh-fg-dark" href="index.html">🏠 Home</a>
+                <a class="block px-3 py-2 rounded-md text-[15px] font-medium text-gh-muted-dark hover:bg-gh-subtle-dark hover:text-gh-fg-dark" href="about.html">✨ About</a>
+                
+                <div class="py-2">
+                    <p class="px-3 text-[11px] font-bold text-gh-muted-dark uppercase tracking-wider mb-1">🛠️ What I Do</p>
+                    <a class="block px-3 py-2 pl-6 rounded-md text-[14px] text-gh-muted-dark hover:bg-gh-subtle-dark hover:text-gh-fg-dark" href="ga4-gtm.html">Analytics & Tracking</a>
+                    <a class="block px-3 py-2 pl-6 rounded-md text-[14px] text-gh-muted-dark hover:bg-gh-subtle-dark hover:text-gh-fg-dark" href="zoho-crm.html">CRM & Automation</a>
+                    <a class="block px-3 py-2 pl-6 rounded-md text-[14px] text-gh-muted-dark hover:bg-gh-subtle-dark hover:text-gh-fg-dark" href="google-ads.html">Google Ads</a>
+                    <a class="block px-3 py-2 pl-6 rounded-md text-[14px] text-gh-muted-dark hover:bg-gh-subtle-dark hover:text-gh-fg-dark" href="meta-ads.html">Meta Ads</a>
+                </div>
+
+                <a class="block px-3 py-2 rounded-md text-[15px] font-medium text-gh-muted-dark hover:bg-gh-subtle-dark hover:text-gh-fg-dark" href="contact.html">💬 Contact</a>
+                <a class="block px-3 py-2.5 mt-4 rounded-xl text-[14px] font-bold text-white bg-gh-accent hover:bg-gh-accent/90 transition-all text-center shadow-lg shadow-gh-accent/20 open-calendar" href="javascript:void(0)">
+                        WhatsApp Me
+                    </div>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-4">
+
+        <!-- ═══════════════════════════════════════════════ -->
+        <!-- HERO SEGMENT -->
+        <!-- ═══════════════════════════════════════════════ -->
+        <section class="relative py-10 md:py-16 border-b border-gh-border-dark overflow-hidden">
+            <div class="absolute inset-0 grid-overlay opacity-30"></div>
+            <div class="absolute top-40 -left-40 w-96 h-96 bg-gh-accent/10 rounded-full blur-[140px] float"></div>
+            <div class="absolute bottom-10 right-0 w-80 h-80 bg-gh-purple/10 rounded-full blur-[120px]"></div>
+
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 relative">
+                <div class="flex flex-col lg:flex-row items-center gap-12">
+                    <div class="lg:w-2/3 text-center lg:text-left reveal">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gh-accent/10 border border-gh-accent/20 text-gh-accent text-xs font-bold mb-6 tracking-wide">
+                            <span class="relative flex h-2 w-2">
+                                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-gh-accent opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-2 w-2 bg-gh-accent"></span>
+                            </span>
+                            AVAILABLE FOR Q2 2026 PROJECTS
+                        </div>
+                        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight tracking-tight text-white mt-6">
+                        Independent Consultant <br/>
+                        <span class="text-gh-accent">& Growth Architect</span>
+                    </h1>
+                        <p class="text-[16px] md:text-[18px] text-gh-muted-dark max-w-3xl mb-10 leading-relaxed font-medium">
+                            Hi, I’m <strong class="text-white">Atul Kumar</strong> — a performance marketer and growth specialist focused on Paid Ads, Analytics, and CRM-driven marketing systems. I connect the dots between <strong class="text-gh-accent">Traffic</strong> and <strong class="text-gh-accent">Revenue</strong>.
+                        </p>
+                        
+                        <!-- Core System Visual -->
+                        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 mb-10">
+                            <div class="flex items-center gap-3 bg-gh-subtle-dark border border-gh-border-dark rounded-xl px-4 py-3">
+                                <span class="material-symbols-outlined text-gh-accent">ads_click</span>
+                                <span class="text-sm font-semibold">Traffic</span>
+                            </div>
+                            <span class="material-symbols-outlined text-gh-muted-dark opacity-40">trending_flat</span>
+                            <div class="flex items-center gap-3 bg-gh-subtle-dark border border-gh-border-dark rounded-xl px-4 py-3">
+                                <span class="material-symbols-outlined text-gh-purple">analytics</span>
+                                <span class="text-sm font-semibold">Tracking</span>
+                            </div>
+                            <span class="material-symbols-outlined text-gh-muted-dark opacity-40">trending_flat</span>
+                            <div class="flex items-center gap-3 bg-gh-subtle-dark border border-gh-border-dark rounded-xl px-4 py-3">
+                                <span class="material-symbols-outlined text-gh-green">conversion_path</span>
+                                <span class="text-sm font-semibold">Conversion</span>
+                            </div>
+                            <span class="material-symbols-outlined text-gh-muted-dark opacity-40">trending_flat</span>
+                            <div class="flex items-center gap-3 bg-gh-subtle-dark border border-gh-border-dark rounded-xl px-4 py-3">
+                                <span class="material-symbols-outlined text-gh-orange">database</span>
+                                <span class="text-sm font-semibold">CRM</span>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                            <a href="javascript:void(0)" class="open-calendar inline-flex items-center justify-center gap-2 px-8 py-4 text-white font-bold rounded-xl btn-primary-highlight transition-all shadow-xl">
+                                Let’s Build Your System
+                                <span class="material-symbols-outlined">rocket_launch</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/3 flex justify-center reveal reveal-delay-2">
+                        <div class="relative">
+                            <div class="absolute -inset-4 rounded-full bg-gradient-to-tr from-gh-accent/20 via-gh-purple/20 to-gh-green/20 blur-2xl animate-pulse"></div>
+                            <div class="w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden border border-gh-border-dark relative z-10 shadow-2xl skew-y-2 hover:skew-y-0 transition-transform duration-500">
+                                <img src="assets/images/profile.png" alt="Atul Kumar" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" />
+                                <div class="absolute inset-0 bg-gradient-to-t from-gh-inset-dark/80 via-transparent to-transparent"></div>
+                                <div class="absolute bottom-6 left-6 right-6">
+                                    <div class="text-xl font-bold text-white mb-0.5">8+ Years</div>
+                                    <div class="text-xs font-semibold text-gh-muted-dark uppercase tracking-widest">Growth Experience</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════ -->
+        <!-- CORE STATS -->
+        <!-- ═══════════════════════════════════════════════ -->
+        <section class="border-b border-gh-border-dark bg-gh-inset-dark/50">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-10">
+                    <div class="text-center reveal">
+                        <div class="text-3xl md:text-4xl font-extrabold text-gh-fg-dark mb-2 tracking-tighter">8+</div>
+                        <div class="text-[11px] font-bold text-gh-muted-dark uppercase tracking-widest">Years in Digital</div>
+                    </div>
+                    <div class="text-center reveal" style="transition-delay: 0.1s;">
+                        <div class="text-3xl md:text-4xl font-extrabold text-gh-accent mb-2 tracking-tighter">20+</div>
+                        <div class="text-[11px] font-bold text-gh-muted-dark uppercase tracking-widest">Brands Scaled</div>
+                    </div>
+                    <div class="text-center reveal" style="transition-delay: 0.2s;">
+                        <div class="text-3xl md:text-4xl font-extrabold text-gh-purple mb-2 tracking-tighter">Full</div>
+                        <div class="text-[11px] font-bold text-gh-muted-dark uppercase tracking-widest">Funnel Experts</div>
+                    </div>
+                    <div class="text-center reveal" style="transition-delay: 0.3s;">
+                        <h2 class="text-2xl sm:text-3xl font-extrabold text-white mb-3 tracking-tight">The Growth Methodology</h2>
+                    <p class="text-[14px] sm:text-[15px] text-mist max-w-xl mx-auto">Standardization of your conversion data is the only unfair advantage in ads.</p>
+ROI Focused</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════ -->
+        <!-- EXPERIENCE TIMELINE -->
+        <!-- ═══════════════════════════════════════════════ -->
+        <section class="py-24 border-b border-gh-border-dark" id="experience">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6">
+                <div class="flex items-center gap-4 mb-16 reveal">
+                    <span class="material-symbols-outlined text-gh-accent text-4xl">work_history</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-gh-fg-dark tracking-tighter">Professional Journey</h2>
+                </div>
+
+                <div class="space-y-12">
+                    <!-- NEXT IAS -->
+                    <div class="relative pl-10 reveal">
+                        <div class="timeline-connector"></div>
+                        <div class="absolute left-0 top-1 w-6 h-6 rounded-full bg-gh-accent border-4 border-gh-inset-dark flex items-center justify-center z-10"></div>
+                        
+                        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
+                            <div>
+                                <h3 class="text-2xl font-bold text-gh-fg-dark tracking-tight">Digital Marketing Manager — NEXT IAS (Made Easy Group)</h3>
+                                <div class="flex items-center gap-4 mt-3">
+                                    <div class="flex items-center gap-1.5 text-sm text-gh-muted-dark">
+                                        <span class="material-symbols-outlined text-[18px]">location_on</span> Delhi
+                                    </div>
+                                    <div class="flex items-center gap-1.5 text-xs font-bold text-gh-accent px-3 py-1 rounded-full bg-gh-accent/10 border border-gh-accent/20 uppercase tracking-widest">
+                                        Feb 2022 – Present
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="glass p-6 rounded-2xl mb-8">
+                            <p class="mt-6 max-w-2xl text-[15px] sm:text-[17px] leading-relaxed text-mist mx-auto lg:mx-0 font-normal">
+                        I bridge the gap between media buying and tracking architecture. No fluff — just building lean, high-output revenue engines.
+                    </p>
+        </p>
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <ul class="space-y-4">
+                                    <li class="flex gap-3">
+                                        <span class="material-symbols-outlined text-gh-accent text-[18px] mt-0.5">check_circle</span>
+                                        <span class="text-[14px]">Advanced tracking systems using GTM & GA4</span>
+                                    </li>
+                                    <li class="flex gap-3">
+                                        <span class="material-symbols-outlined text-gh-accent text-[18px] mt-0.5">check_circle</span>
+                                        <span class="text-[14px]">Real-time reporting dashboards for CXOs</span>
+                                    </li>
+                                </ul>
+                                <div class="p-5 border border-gh-orange/20 bg-gh-orange/5 rounded-xl">
+                                    <div class="flex items-center gap-2 mb-3">
+                                        <span class="material-symbols-outlined text-gh-orange text-[20px]">star</span>
+                                        <span class="text-xs font-bold text-gh-orange uppercase tracking-widest">Key Performance Highlight</span>
+                                    </div>
+                                    <p class="text-[13px] leading-relaxed text-gh-fg-dark">
+                                        Implemented complete <strong>Zoho CRM ecosystem from scratch</strong>. Designed full lead lifecycle (MQL → SQL → Conversion) and automated workflows for WhatsApp, Email & SMS.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Elements Production -->
+                    <div class="relative pl-10 reveal">
+                        <div class="timeline-connector"></div>
+                        <div class="absolute left-0 top-1 w-6 h-6 rounded-full bg-gh-subtle-dark border-4 border-gh-inset-dark flex items-center justify-center z-10"></div>
+                        
+                        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+                            <div>
+                                <h3 class="text-xl font-bold text-gh-fg-dark">Digital Marketing Manager — Elements Production Services</h3>
+                                <div class="flex items-center gap-4 mt-2">
+                                    <div class="flex items-center gap-1.5 text-sm text-gh-muted-dark">
+                                        <span class="material-symbols-outlined text-[16px]">location_on</span> New Delhi
+                                    </div>
+                                    <div class="flex items-center gap-1.5 text-sm text-gh-muted-dark px-2.5 py-0.5 rounded-full border border-gh-border-dark italic">
+                                        Aug 2019 – Mar 2022
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="glass p-6 rounded-2xl">
+                            <div class="mb-8">
+                                <span class="text-xs font-bold text-gh-muted-dark uppercase tracking-widest mb-4 block">Brands managed:</span>
+                                <div class="flex flex-wrap gap-3">
+                                    <span class="px-3 py-1 bg-gh-subtle-dark border border-gh-border-dark rounded-md text-[13px] font-semibold text-gh-green">Veeba</span>
+                                    <span class="px-3 py-1 bg-gh-subtle-dark border border-gh-border-dark rounded-md text-[13px] font-semibold text-gh-accent">VGL (Vadodara Gas)</span>
+                                    <span class="px-3 py-1 bg-gh-subtle-dark border border-gh-border-dark rounded-md text-[13px] font-semibold text-gh-purple">ICare Eye Hospital</span>
+                                    <span class="px-3 py-1 bg-gh-subtle-dark border border-gh-border-dark rounded-md text-[13px] font-semibold text-gh-orange">Bridal Journey</span>
+                                    <span class="px-3 py-1 bg-gh-subtle-dark border border-gh-border-dark rounded-md text-[13px] font-semibold">+ 20 others</span>
+                                </div>
+                            </div>
+                            <div class="grid md:grid-cols-3 gap-6">
+                                <div class="space-y-3">
+                                    <span class="text-xs font-bold text-gh-accent uppercase tracking-wider">Performance</span>
+                                    <p class="text-[13px] text-gh-muted-dark">Managed complex Search & Social funnels across FMCG, Healthcare & Local segments.</p>
+                                </div>
+                                <div class="space-y-3">
+                                    <span class="text-xs font-bold text-gh-purple uppercase tracking-wider">Analytics</span>
+                                    <p class="text-[13px] text-gh-muted-dark">Built performance reporting frameworks from scratch using GTM & Data Studio.</p>
+                                </div>
+                                <div class="space-y-3">
+                                    <span class="text-xs font-bold text-gh-green uppercase tracking-wider">Conversion</span>
+                                    <p class="text-[13px] text-gh-muted-dark">Improved CPL by 25%+ through iterative landing page & funnel audits.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Previous Roles -->
+                    <div class="relative pl-10 reveal">
+                        <div class="timeline-connector"></div>
+                        <div class="absolute left-0 top-1 w-6 h-6 rounded-full bg-gh-subtle-dark border-4 border-gh-inset-dark z-10"></div>
+                        <h3 class="text-lg font-bold text-gh-fg-dark mb-8">Early Career & Specializations</h3>
+                        
+                        <div class="grid sm:grid-cols-2 gap-6">
+                            <div class="p-5 border border-gh-border-dark bg-gh-subtle-dark/30 rounded-xl hover:bg-gh-subtle-dark/50 transition-all">
+                                <div class="flex justify-between items-start mb-3">
+                                    <h4 class="font-bold text-gh-fg-dark">Digital Marketing Specialist</h4>
+                                    <span class="text-[10px] bg-gh-border-dark px-2 py-0.5 rounded text-gh-fg-dark">2019</span>
+                                </div>
+                                <div class="text-[12px] text-gh-muted-dark mb-1">VcareAll Solution Pvt Ltd</div>
+                                <p class="text-[13px] text-gh-muted-dark">Performance basics & SEO. Supported Google Ads campaign scaling.</p>
+                            </div>
+
+                            <div class="p-5 border border-gh-border-dark bg-gh-subtle-dark/30 rounded-xl hover:bg-gh-subtle-dark/50 transition-all">
+                                <div class="flex justify-between items-start mb-3">
+                                    <h4 class="font-bold text-gh-fg-dark">SEO Analyst</h4>
+                                    <span class="text-[10px] bg-gh-border-dark px-2 py-0.5 rounded text-gh-fg-dark">2019</span>
+                                </div>
+                                <div class="text-[12px] text-gh-muted-dark mb-1">PaGaLGuY</div>
+                                <p class="text-[13px] text-gh-muted-dark">Link building & on-page growth for high-traffic education forum.</p>
+                            </div>
+
+                            <div class="p-5 border border-gh-border-dark bg-gh-subtle-dark/30 rounded-xl hover:bg-gh-subtle-dark/50 transition-all">
+                                <div class="flex justify-between items-start mb-3">
+                                    <h4 class="font-bold text-gh-fg-dark">Marketing Manager</h4>
+                                    <span class="text-[10px] bg-gh-border-dark px-2 py-0.5 rounded text-gh-fg-dark">2018</span>
+                                </div>
+                                <div class="text-[12px] text-gh-muted-dark mb-1">Bmyraahi.com</div>
+                                <p class="text-[13px] text-gh-muted-dark">Handled complete 360° growth: SEO, SMM, Email and Sourcing.</p>
+                            </div>
+
+                            <div class="p-5 border border-gh-border-dark bg-gh-subtle-dark/30 rounded-xl hover:bg-gh-subtle-dark/50 transition-all">
+                                <div class="flex justify-between items-start mb-3">
+                                    <h4 class="font-bold text-gh-fg-dark">Product Marketing Associate</h4>
+                                    <span class="text-[10px] bg-gh-border-dark px-2 py-0.5 rounded text-gh-fg-dark">2017</span>
+                                </div>
+                                <div class="text-[12px] text-gh-muted-dark mb-1">Yamunix</div>
+                                <p class="text-[13px] text-gh-muted-dark">Fundamentals of product growth and user acquisition loops.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════ -->
+        <!-- CORE EXPERTISE GRID -->
+        <!-- ═══════════════════════════════════════════════ -->
+        <section class="py-24 border-b border-gh-border-dark bg-gh-canvas-dark relative">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                <div class="text-center mb-16 reveal">
+                    <h2 class="text-3xl font-extrabold text-gh-fg-dark mb-4 tracking-tight">Core Expertise</h2>
+                    <p class="text-gh-muted-dark max-w-2xl mx-auto">Specialized in building end-to-end growth ecosystems where marketing meets data.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Performance Marketing -->
+                    <div class="glass p-8 rounded-2xl glass-hover transition-all reveal relative overflow-hidden group">
+                        <div class="card-accent" style="--gh-accent: #2f81f7;"></div>
+                        <span class="material-symbols-outlined text-gh-accent text-4xl mb-6 group-hover:scale-110 transition-transform">ads_click</span>
+                        <h3 class="text-lg font-bold text-gh-fg-dark mb-4">Performance Marketing</h3>
+                        <ul class="text-[13px] text-gh-muted-dark space-y-3">
+                            <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-gh-accent"></span> Google Search & Display</li>
+                            <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-gh-accent"></span> Meta Ads (FB & IG)</li>
+                            <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-gh-accent"></span> YouTube Video Campaigns</li>
+                            <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-gh-accent"></span> Budget Scaling ($$$)</li>
+                        </ul>
+                    </div>
+
+                    <!-- Analytics & Tracking -->
+                    <div class="glass p-8 rounded-2xl glass-hover transition-all reveal reveal-delay-1 relative overflow-hidden group">
+                        <div class="card-accent" style="--gh-accent: #a371f7;"></div>
+                        <span class="material-symbols-outlined text-gh-purple text-4xl mb-6 group-hover:scale-110 transition-transform">insights</span>
+                        <h3 class="text-lg font-bold text-gh-fg-dark mb-4">Analytics & Tracking</h3>
+                        <ul class="text-[13px] text-gh-muted-dark space-y-3">
+                            <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-gh-purple"></span> GA4 & GTM Expert</li>
+                            <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-gh-purple"></span> Event & Ecommerce Tracking</li>
+                            <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-gh-purple"></span> Multi-Touch Attribution</li>
+                            <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-gh-purple"></span> Server-Side Tracking</li>
+                        </ul>
+                    </div>
+
+                    <!-- CRM & Automation -->
+                    <div class="glass p-8 rounded-2xl glass-hover transition-all reveal reveal-delay-2 relative overflow-hidden group">
+                        <div class="card-accent" style="--gh-accent: #db6d28;"></div>
+                        <span class="material-symbols-outlined text-gh-orange text-4xl mb-6 group-hover:scale-110 transition-transform">terminal</span>
+                        <h3 class="text-lg font-bold text-gh-fg-dark mb-4">Connect (CRM focused)</h3>
+                        <ul class="text-[13px] text-gh-muted-dark space-y-3">
+                            <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-gh-orange"></span> Zoho CRM Implementation</li>
+                            <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-gh-orange"></span> Lead Lifecycle Design</li>
+                            <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-gh-orange"></span> Workflow Automation</li>
+                            <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-gh-orange"></span> Webhook & SDK Logic</li>
+                        </ul>
+                    </div>
+
+                    <!-- Retention -->
+                    <div class="glass p-8 rounded-2xl glass-hover transition-all reveal reveal-delay-3 relative overflow-hidden group">
+                        <div class="card-accent" style="--gh-accent: #3fb950;"></div>
+                        <span class="material-symbols-outlined text-gh-green text-4xl mb-6 group-hover:scale-110 transition-transform">mark_as_unread</span>
+                        <h3 class="text-lg font-bold text-gh-fg-dark mb-4">Communication</h3>
+                        <ul class="text-[13px] text-gh-muted-dark space-y-3">
+                            <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-gh-green"></span> WhatsApp Marketing (API)</li>
+                            <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-gh-green"></span> Email Drip Campaigns</li>
+                            <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-gh-green"></span> SMS Remarketing Alerts</li>
+                            <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-gh-green"></span> Customer Retention Loops</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════ -->
+        <!-- RESULTS / CASE STUDIES -->
+        <!-- ═══════════════════════════════════════════════ -->
+        <section class="py-24 border-b border-gh-border-dark grid-bg">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                <div class="flex flex-col md:flex-row items-end justify-between mb-16 reveal">
+                    <div class="max-w-xl">
+                        <span class="text-gh-accent font-bold text-[12px] uppercase tracking-widest mb-4 block">Proven Performance</span>
+                        <h2 class="text-4xl font-extrabold text-gh-fg-dark tracking-tight leading-tight">Case Studies & Impact</h2>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Case 1 -->
+                    <div class="glass p-10 rounded-3xl relative overflow-hidden reveal bg-gh-inset-dark/40 border border-gh-border-dark/80 group">
+                        <div class="flex items-center gap-3 mb-8">
+                            <div class="w-12 h-12 rounded-xl bg-gh-accent/10 border border-gh-accent/20 flex items-center justify-center">
+                                <span class="material-symbols-outlined text-gh-accent">hub</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gh-fg-dark">Full Funnel System — NEXT IAS</h3>
+                        </div>
+                        <p class="text-gh-muted-dark mb-8 leading-relaxed">Built the complete end-to-end ecosystem: <strong>Ads → Landing → Tracking → Zoho CRM</strong>. Integrated performance data directly with sales pipelines for 100% attribution visibility.</p>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="p-4 rounded-2xl bg-gh-canvas-dark border border-gh-border-dark group-hover:border-gh-accent/30 transition-colors">
+                                <div class="text-2xl font-bold text-gh-accent tracking-tighter">100%</div>
+                                <div class="text-[11px] text-gh-muted-dark uppercase font-bold tracking-wider">Funnel Clarity</div>
+                            </div>
+                            <div class="p-4 rounded-2xl bg-gh-canvas-dark border border-gh-border-dark group-hover:border-gh-purple/30 transition-colors">
+                                <div class="text-2xl font-bold text-gh-purple tracking-tighter">Zero</div>
+                                <div class="text-[11px] text-gh-muted-dark uppercase font-bold tracking-wider">Lead Leakage</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Case 2 -->
+                    <div class="glass p-10 rounded-3xl relative overflow-hidden reveal reveal-delay-1 bg-gh-inset-dark/40 border border-gh-border-dark/80 group">
+                        <div class="flex items-center gap-3 mb-8">
+                            <div class="w-12 h-12 rounded-xl bg-gh-green/10 border border-gh-green/20 flex items-center justify-center">
+                                <span class="material-symbols-outlined text-gh-green">finance</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gh-fg-dark">CPL Optimization Hero</h3>
+                        </div>
+                        <p class="text-gh-muted-dark mb-8 leading-relaxed">Managed multi-industry campaigns for 20+ brands. Focused on target optimization and data-driven creatives to drive down costs while improving quality.</p>
+                        <div class="p-6 rounded-2xl bg-gh-green/5 border border-gh-green/20">
+                            <div class="flex items-center justify-between mb-2 text-gh-green font-bold">
+                                <span>Typical Result:</span>
+                                <span>-20% to -40%</span>
+                            </div>
+                            <div class="h-2 w-full bg-gh-border-dark rounded-full overflow-hidden">
+                                <div class="h-full bg-gh-green w-[85%] animate-pulse"></div>
+                            </div>
+                            <div class="text-[11px] text-gh-muted-dark uppercase font-bold tracking-wider mt-2">Reduction in Cost Per Lead</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════ -->
+        <!-- TECH STACK MARQUEE -->
+        <!-- ═══════════════════════════════════════════════ -->
+        <section class="py-16 bg-gh-inset-dark overflow-hidden border-b border-gh-border-dark">
+            <div class="max-w-6xl mx-auto px-4 mb-10 text-center">
+                <span class="text-xs font-bold text-gh-muted-dark uppercase tracking-[0.2em]">Tools & Eco-system</span>
+            </div>
+            
+            <div class="relative">
+                <div class="marquee-container gap-8 md:gap-16">
+                    <!-- Set 1 -->
+                    <div class="flex items-center gap-3 text-gh-muted-dark hover:text-gh-accent transition-colors"><i class="fa-brands fa-google text-2xl"></i> <span class="font-bold">Google Ads</span></div>
+                    <div class="flex items-center gap-3 text-gh-muted-dark hover:text-gh-accent transition-colors"><i class="fa-brands fa-meta text-2xl"></i> <span class="font-bold">Meta Ads</span></div>
+                    <div class="flex items-center gap-3 text-gh-muted-dark hover:text-gh-purple transition-colors"><span class="material-symbols-outlined">analytics</span> <span class="font-bold">GA4</span></div>
+                    <div class="flex items-center gap-3 text-gh-muted-dark hover:text-gh-purple transition-colors"><span class="material-symbols-outlined">settings_input_component</span> <span class="font-bold">GTM</span></div>
+                    <div class="flex items-center gap-3 text-gh-muted-dark hover:text-gh-orange transition-colors"><span class="material-symbols-outlined">hub</span> <span class="font-bold">Zoho CRM</span></div>
+                    <div class="flex items-center gap-3 text-gh-muted-dark hover:text-gh-green transition-colors"><i class="fa-brands fa-whatsapp text-2xl"></i> <span class="font-bold">WhatsApp API</span></div>
+                    <div class="flex items-center gap-3 text-gh-muted-dark"><span class="material-symbols-outlined">dashboard</span> <span class="font-bold">Looker Studio</span></div>
+                    
+                    <!-- Repeat for endless effect -->
+                    <div class="flex items-center gap-3 text-gh-muted-dark hover:text-gh-accent transition-colors"><i class="fa-brands fa-google text-2xl"></i> <span class="font-bold">Google Ads</span></div>
+                    <div class="flex items-center gap-3 text-gh-muted-dark hover:text-gh-meta transition-colors"><i class="fa-brands fa-meta text-2xl"></i> <span class="font-bold">Meta Ads</span></div>
+                    <div class="flex items-center gap-3 text-gh-muted-dark hover:text-gh-purple transition-colors"><span class="material-symbols-outlined">analytics</span> <span class="font-bold">GA4</span></div>
+                    <div class="flex items-center gap-3 text-gh-muted-dark hover:text-gh-purple transition-colors"><span class="material-symbols-outlined">settings_input_component</span> <span class="font-bold">GTM</span></div>
+                    <div class="flex items-center gap-3 text-gh-muted-dark hover:text-gh-orange transition-colors"><span class="material-symbols-outlined">hub</span> <span class="font-bold">Zoho CRM</span></div>
+                    <div class="flex items-center gap-3 text-gh-muted-dark hover:text-gh-green transition-colors"><i class="fa-brands fa-whatsapp text-2xl"></i> <span class="font-bold">WhatsApp API</span></div>
+                    <div class="flex items-center gap-3 text-gh-muted-dark"><span class="material-symbols-outlined">dashboard</span> <span class="font-bold">Looker Studio</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════ -->
+        <!-- FINAL CTA -->
+        <!-- ═══════════════════════════════════════════════ -->
+        <section class="py-32 relative overflow-hidden bg-gh-inset-dark">
+            <div class="absolute inset-0 grid-overlay"></div>
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-gh-accent/10 rounded-full blur-[160px]"></div>
+
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 relative text-center reveal">
+                <span class="material-symbols-outlined text-gh-accent text-5xl mb-8">construction</span>
+                <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-8 tracking-tighter">
+                    You don’t need more ads —<br/>
+                    <span class="gradient-text">you need a system.</span>
+                </h2>
+                <div class="glass p-10 rounded-[40px] border border-gh-border-dark relative mb-12">
+                     <p class="text-xl text-gh-muted-dark mb-0">If you're struggling with <strong>High CPL</strong>, <strong>Broken Tracking</strong>, or <strong>Lead Leakage</strong>... let’s build a growth engine that scales with certainty.</p>
+                </div>
+                
+                <a href="contact.html" class="inline-flex items-center justify-center gap-4 px-10 py-5 text-lg text-white font-bold rounded-2xl btn-primary-highlight transition-all shadow-2xl">
+                    Let’s Build Something That Scales
+                    <span class="material-symbols-outlined">arrow_forward</span>
+                </a>
+                
+                <div class="mt-20 flex items-center justify-center gap-12 opacity-50 grayscale hover:grayscale-0 transition-all">
+                    <div class="flex items-center gap-2"><span class="material-symbols-outlined text-xs">verified_user</span> <span class="text-xs uppercase font-bold tracking-widest">Growth First</span></div>
+                    <div class="flex items-center gap-2"><span class="material-symbols-outlined text-xs">analytics</span> <span class="text-xs uppercase font-bold tracking-widest">Data Driven</span></div>
+                    <div class="flex items-center gap-2"><span class="material-symbols-outlined text-xs">hub</span> <span class="text-xs uppercase font-bold tracking-widest">Systematic</span></div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- FOOTER -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <footer class="py-8 bg-gh-inset-dark border-t border-gh-border-dark">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="flex items-center gap-2">
+                    <img alt="Atul Kumar" class="w-5 h-5 rounded-full border border-gh-border-dark" src="assets/images/profile.png" />
+                    <span class="text-sm text-gh-muted-dark">© 2026 Atul Kumar — Systems Architect</span>
+                </div>
+                <div class="flex items-center gap-4">
+                    <a href="https://linkedin.com" target="_blank" class="text-gh-muted-dark hover:text-gh-accent transition-colors"><i class="fa-brands fa-linkedin text-lg"></i></a>
+                    <a href="https://x.com" target="_blank" class="text-gh-muted-dark hover:text-gh-accent transition-colors"><i class="fa-brands fa-x-twitter text-lg"></i></a>
+                    <a href="https://github.com/Atulscript" target="_blank" class="text-gh-muted-dark hover:text-gh-accent transition-colors"><i class="fa-brands fa-github text-lg"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Reveal animation on scroll
+        const reveals = document.querySelectorAll(".reveal");
+        const reveal = () => {
+            reveals.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 80) {
+                    el.classList.add("visible");
+                }
+            });
+        };
+        window.addEventListener("scroll", reveal);
+        window.addEventListener("load", reveal); // Trigger on load
+
+        // Mobile Menu Logic
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMenu = document.getElementById('close-menu');
+
+        mobileMenuButton.onclick = () => mobileMenu.classList.remove('hidden');
+        closeMenu.onclick = () => mobileMenu.classList.add('hidden');
+    </script>
+    <script src="assets/js/calendar.js"></script>
+</body>
+
+</html>

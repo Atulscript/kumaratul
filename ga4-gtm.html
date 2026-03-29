@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html class="scroll-smooth dark" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport" />
+    <meta name="theme-color" content="#0d1117" />
+    <title>Google Analytics 4 & GTM Services | GA4 Expert | Atul Kumar</title>
+    <meta name="description" content="Transform your business data with expert GA4 and Google Tag Manager services. Custom implementation, auditing, and data analysis to track metrics that matter — by Atul Kumar." />
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/site-core.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "gh-canvas-dark": "#0d1117", "gh-subtle-dark": "#21262d",
+                        "gh-inset-dark": "#010409", "gh-border-dark": "#30363d",
+                        "gh-fg-dark": "#e6edf3", "gh-muted-dark": "#8b949e",
+                        "gh-accent": "#2f81f7", "gh-green": "#238636",
+                        "gh-purple": "#a371f7", "gh-yellow": "#d29922",
+                        "gh-red": "#f85149", "gh-orange": "#d29922"
+                    },
+                    fontFamily: {
+                        sans: ["Inter", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica", "Arial", "sans-serif"],
+                        mono: ["'JetBrains Mono'", "SFMono-Regular", "Consolas", "'Liberation Mono'", "Menlo", "monospace"],
+                    }
+                }
+            }
+        };
+    </script>
+    <style type="text/tailwindcss">
+        :root {
+            --accent-color: #238636;
+            --accent-rgb: 35, 134, 54;
+        }
+        .glass { background: rgba(13,17,23,0.7); backdrop-filter: blur(12px); }
+        .reveal { opacity: 0; transform: translateY(20px); transition: all 0.7s cubic-bezier(0.22,1,0.36,1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .shimmer-bg { background: linear-gradient(90deg,rgba(255,255,255,0) 0%,rgba(255,255,255,0.05) 50%,rgba(255,255,255,0) 100%); background-size:200% 100%; animation:shimmer 2s infinite; }
+        @keyframes shimmer { 0%{background-position:-200% 0} 100%{background-position:200% 0} }
+        .gradient-border { background: linear-gradient(135deg, #2f81f7, #a371f7); padding: 1px; border-radius: 16px; }
+        .faq-answer { display: none; }
+        .faq-item.open .faq-answer { display: block; }
+        .faq-item.open .faq-icon { transform: rotate(45deg); }
+        .faq-icon { transition: transform 0.3s ease; }
+        .field {
+            border-radius: 0.75rem; 
+            border-width: 1px; 
+            border-color: #30363d; 
+            background-color: rgba(22, 27, 34, 0.7); 
+            padding-left: 1rem; 
+            padding-right: 1rem; 
+            padding-top: 0.75rem; 
+            padding-bottom: 0.75rem; 
+            font-size: 15px; 
+            color: #e6edf3; 
+            outline: none;
+            appearance: none;
+        }
+        .field:focus {
+            border-color: #0969da;
+            box-shadow: 0 0 0 3px rgba(9, 105, 218, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-gh-inset-dark text-gh-fg-dark font-sans antialiased selection:bg-gh-accent selection:text-white">
+
+    <!-- NAVIGATION -->
+    <nav class="sticky top-0 z-50 w-full border-b border-gh-border-dark bg-gh-canvas-dark/80 backdrop-blur-md transition-all duration-300">
+        <div class="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
+            <!-- Left: Logo -->
+            <div class="flex items-center gap-4">
+                <a class="flex items-center gap-2.5 group" href="index.html">
+                    <div class="w-8 h-8 rounded-full overflow-hidden border border-gh-border-dark group-hover:border-gh-accent transition-colors">
+                        <img alt="Atul Kumar" class="w-full h-full object-cover" src="assets/images/profile.png" />
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-[14px] font-bold tracking-tight text-gh-fg-dark leading-none">Atul Kumar</span>
+                        <span class="text-[11px] text-gh-muted-dark font-medium leading-none mt-1">Growth, Backed by Data</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Center: Menu (Desktop) -->
+            <div class="hidden md:flex items-center justify-center flex-1 gap-1">
+                <a class="px-3 py-1.5 rounded-md text-[14px] font-medium text-gh-muted-dark hover:bg-gh-subtle-dark hover:text-gh-fg-dark transition-colors" href="index.html">🏠 Home</a>
+                <a class="px-3 py-1.5 rounded-md text-[14px] font-medium text-gh-muted-dark hover:bg-gh-subtle-dark hover:text-gh-fg-dark transition-colors" href="about.html">📑 About</a>
+                
+                <!-- What I Do Dropdown -->
+                <div class="relative group/what">
+                    <button class="flex items-center gap-0.5 px-3 py-1.5 rounded-md text-[14px] font-medium text-gh-fg-dark bg-gh-subtle-dark border border-gh-border-dark">
+                        🛠️ What I Do <span class="material-symbols-outlined text-[16px] group-hover/what:rotate-180 transition-transform duration-200">expand_more</span>
+                    </button>
+                    <div class="absolute top-full left-1/2 -translate-x-1/2 mt-1 w-64 bg-gh-canvas-dark border border-gh-border-dark rounded-xl shadow-2xl py-2 hidden group-hover/what:block z-50 overflow-hidden">
+                        <a href="ga4-gtm.html" class="flex items-center gap-3 px-4 py-2.5 text-[13px] text-gh-fg-dark bg-gh-subtle-dark transition-colors">
+                            <span class="material-symbols-outlined text-[18px] text-gh-green">analytics</span>
+                            <div class="flex flex-col">
+                                <span class="font-semibold text-gh-fg-dark">Analytics & Tracking</span>
+                                <span class="text-[11px] opacity-70">GA4 + GTM Implementation</span>
+                            </div>
+                        </a>
+                        <a href="zoho-crm.html" class="flex items-center gap-3 px-4 py-2.5 text-[13px] text-gh-muted-dark hover:bg-gh-subtle-dark hover:text-gh-fg-dark transition-colors">
+                            <span class="material-symbols-outlined text-[18px] text-gh-yellow">hub</span>
+                            <div class="flex flex-col">
+                                <span class="font-semibold text-gh-fg-dark">CRM & Automation</span>
+                                <span class="text-[11px] opacity-70">Zoho CRM Workflows</span>
+                            </div>
+                        </a>
+                        <a href="google-ads.html" class="flex items-center gap-3 px-4 py-2.5 text-[13px] text-gh-muted-dark hover:bg-gh-subtle-dark hover:text-gh-fg-dark transition-colors">
+                            <span class="material-symbols-outlined text-[18px] text-gh-accent">ads_click</span>
+                            <div class="flex flex-col">
+                                <span class="font-semibold text-gh-fg-dark">Google Ads</span>
+                                <span class="text-[11px] opacity-70">Search & Performance Max</span>
+                            </div>
+                        </a>
+                        <a href="meta-ads.html" class="flex items-center gap-3 px-4 py-2.5 text-[13px] text-gh-muted-dark hover:bg-gh-subtle-dark hover:text-gh-fg-dark transition-colors">
+                            <span class="material-symbols-outlined text-[18px] text-gh-purple">thumb_up</span>
+                            <div class="flex flex-col">
+                                <span class="font-semibold text-gh-fg-dark">Meta Ads</span>
+                                <span class="text-[11px] opacity-70">Facebook & Instagram</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <a class="px-3 py-1.5 rounded-md text-[14px] font-medium text-gh-muted-dark hover:bg-gh-subtle-dark hover:text-gh-fg-dark transition-colors" href="contact.html">💬 Contact</a>
+            </div>
+
+            <!-- Right: CTA -->
+            <div class="flex items-center gap-3">
+                <a class="hidden sm:flex items-center gap-1.5 px-4 py-1.5 rounded-lg bg-gh-accent text-[13px] font-bold text-white hover:bg-gh-accent/90 transition-all shadow-lg shadow-gh-accent/20 open-calendar" href="javascript:void(0)">
+                    <span class="material-symbols-outlined text-[18px]">calendar_today</span> Book a Call
+                </a>
+                <button id="mobile-menu-button" class="md:hidden flex items-center justify-center p-2 rounded-md hover:bg-gh-subtle-dark text-gh-muted-dark hover:text-gh-fg-dark transition-colors">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gh-canvas-dark border-b border-gh-border-dark overflow-hidden transition-all duration-300">
+            <div class="px-4 py-4 space-y-1">
+                <a class="block px-3 py-2 rounded-md text-[15px] font-medium text-gh-muted-dark hover:bg-gh-subtle-dark hover:text-gh-fg-dark" href="index.html">🏠 Home</a>
+                <a class="block px-3 py-2 rounded-md text-[15px] font-medium text-gh-muted-dark hover:bg-gh-subtle-dark hover:text-gh-fg-dark" href="about.html">✨ About</a>
+                
+                <div class="py-2">
+                    <p class="px-3 text-[11px] font-bold text-gh-muted-dark uppercase tracking-wider mb-1">🛠️ What I Do</p>
+                    <a class="block px-3 py-2 pl-6 rounded-md text-[14px] text-gh-fg-dark bg-gh-subtle-dark" href="ga4-gtm.html">Analytics & Tracking</a>
+                    <a class="block px-3 py-2 pl-6 rounded-md text-[14px] text-gh-muted-dark hover:bg-gh-subtle-dark hover:text-gh-fg-dark" href="zoho-crm.html">CRM & Automation</a>
+                    <a class="block px-3 py-2 pl-6 rounded-md text-[14px] text-gh-muted-dark hover:bg-gh-subtle-dark hover:text-gh-fg-dark" href="google-ads.html">Google Ads</a>
+                    <a class="block px-3 py-2 pl-6 rounded-md text-[14px] text-gh-muted-dark hover:bg-gh-subtle-dark hover:text-gh-fg-dark" href="meta-ads.html">Meta Ads</a>
+                </div>
+
+                <a class="block px-3 py-2 rounded-md text-[15px] font-medium text-gh-muted-dark hover:bg-gh-subtle-dark hover:text-gh-fg-dark" href="contact.html">💬 Contact</a>
+                <a class="block px-3 py-2.5 mt-4 rounded-xl text-[14px] font-bold text-white bg-gh-accent hover:bg-gh-accent/90 transition-all text-center shadow-lg shadow-gh-accent/20 open-calendar" href="javascript:void(0)">
+                    Book a Discovery Call
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-4">
+        <!-- ═══ HERO ═══ -->
+        <section class="banner py-10 md:py-16 overflow-hidden bg-gh-canvas-dark border-b border-gh-border-dark relative">
+            <div class="absolute inset-0 pointer-events-none">
+                <div class="absolute top-0 left-1/4 w-96 h-96 bg-gh-green/5 rounded-full blur-3xl"></div>
+                <div class="absolute bottom-0 right-1/4 w-80 h-80 bg-gh-accent/5 rounded-full blur-3xl"></div>
+            </div>
+            <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
+                <div class="grid lg:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
+                    <div class="text-center lg:text-left">
+                        <div
+                            class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-gh-green/30 bg-gh-green/10 text-[12px] font-semibold text-gh-green mb-6 reveal">
+                            <span class="w-1.5 h-1.5 rounded-full bg-gh-green animate-pulse"></span>
+                            GA4 & GTM Analytics Expert
+                        </div>
+                        <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold leading-[1.1] tracking-tight text-white mt-6">
+                            Master Your Data With <span class="text-gh-green">Analytics & Tracking</span>
+                        </h1>
+                        <p class="mt-6 max-w-2xl text-[14px] sm:text-[16px] leading-relaxed text-mist mx-auto lg:mx-0 font-normal">
+                            I implement advanced GA4 and GTM systems that turn raw traffic into actionable business insights. Stop guessing and start scaling with data-driven precision.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start mb-6 mt-10 reveal">
+                            <a href="#lead-form"
+                                class="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-white font-bold rounded-xl btn-primary-highlight transition-all shadow-lg text-[15px] relative overflow-hidden group">
+                                <span class="material-symbols-outlined text-[18px] relative z-10">troubleshoot</span>
+                                <span class="relative z-10">Get Free Audit</span>
+                            </a>
+                            <a href="javascript:void(0)"
+                                class="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-gh-accent text-white font-bold rounded-xl hover:bg-gh-accent/90 transition-all shadow-lg shadow-gh-accent/20 text-[15px] open-calendar">
+                                <span class="material-symbols-outlined text-[18px]">calendar_today</span>
+                                Book a Discovery Call
+                            </a>
+                        </div>
+
+                        <!-- Stats row -->
+                        <div class="mt-12 grid grid-cols-3 gap-5 max-w-xl mx-auto lg:mx-0 reveal">
+                            <div class="bg-gh-subtle-dark border border-gh-border-dark rounded-xl p-5 text-center">
+                                <div class="text-2xl font-extrabold text-gh-green tracking-tighter">50+</div>
+                                <div class="text-[11px] text-gh-muted-dark uppercase font-bold mt-1.5 tracking-widest">Brands Tracked
+                                </div>
+                            </div>
+                            <div class="bg-gh-subtle-dark border border-gh-border-dark rounded-xl p-5 text-center">
+                                <div class="text-2xl font-extrabold text-gh-accent tracking-tighter">50%+</div>
+                                <div class="text-[11px] text-gh-muted-dark uppercase font-bold mt-1.5 tracking-widest">Accuracy Lift
+                                </div>
+                            </div>
+                            <div class="bg-gh-subtle-dark border border-gh-border-dark rounded-xl p-5 text-center">
+                                <div class="text-2xl font-extrabold text-gh-purple tracking-tighter">7–14</div>
+                                <div class="text-[11px] text-gh-muted-dark uppercase font-bold mt-1.5 tracking-widest">Days to Live
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <aside id="lead-form" class="reveal lg:justify-self-end">
+                        <div class="w-full rounded-xl bg-[#111316] border border-[#21262d] p-6 sm:p-7 lg:w-[420px]">
+                            <div class="mb-5 flex items-center justify-between">
+                                <h2 class="font-display text-2xl font-extrabold text-white">Request Growth Audit</h2>
+                                <span class="rounded-md bg-amber/20 px-2 py-1 text-[11px] font-semibold text-amber">2
+                                    Spots / Month</span>
+                            </div>
+                            <p class="mb-6 text-sm text-mist">Tell me where the funnel is breaking. I'll provide a <span class="text-white font-semibold">Free Audit ($500 Value)</span> with your highest-impact next steps.</p>
+
+                            <form id="leadCaptureForm" class="space-y-3">
+                                <input class="field w-full" type="text" name="name" placeholder="Full name" required />
+                                <input class="field w-full" type="email" name="email" placeholder="Work email"
+                                    required />
+                                <input class="field w-full" type="url" name="website" placeholder="Website URL"
+                                    required />
+                                <textarea class="field w-full" name="goal" rows="3"
+                                    placeholder="What is your primary goal? (tracking fixes, server-side CAPI, custom dashboard?)"
+                                    required></textarea>
+                                <button type="submit"
+                                    class="w-full rounded-xl px-4 py-3 text-sm font-semibold text-white transition btn-primary-highlight">Send
+                                    My Audit Request</button>
+                            </form>
+
+                            <div id="leadSuccess"
+                                class="mt-4 hidden rounded-xl border border-gh-green/40 bg-gh-green/10 p-4 text-sm text-gh-green">
+                                Request prepared. Your email app should open now. If not, use the quick options below.
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ SERVICES ═══ -->
+        <section id="services" class="py-14 md:py-20 border-b border-gh-border-dark bg-gh-inset-dark">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6">
+                <div class="text-center mb-16 reveal">
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-white mb-3 tracking-tight">Data-Driven Growth Pillars</h2>
+                    <p class="text-[14px] sm:text-[15px] text-mist max-w-xl mx-auto">Standardization of your data layer is the first step toward algorithmic dominance.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-5">
+
+                    <!-- Service 1: Audit -->
+                    <div class="bg-[#111316] border border-[#21262d] rounded-xl p-6 sm:p-8 hover:border-[#30363d] transition-all reveal group">
+                        <h3 class="text-[20px] sm:text-[22px] font-bold text-gh-fg-dark mb-3 leading-tight tracking-tight group-hover:text-gh-accent transition-colors">GA4 &amp; GTM Audit</h3>
+                        <div class="flex flex-wrap items-center gap-2 mb-4">
+                            <span class="text-[11px] font-bold px-2 py-0.5 rounded border border-[#30363d] bg-[#161b22] text-gh-accent tracking-widest uppercase">Analytics</span>
+                            <span class="text-[11px] text-gh-muted-dark">•</span>
+                            <span class="text-[11px] font-bold px-2 py-0.5 rounded border border-[#30363d] bg-[#161b22] text-gh-fg-dark tracking-widest uppercase">Tracking</span>
+                            <span class="text-[11px] text-gh-muted-dark">•</span>
+                            <span class="text-[11px] font-bold px-2 py-0.5 rounded border border-[#30363d] bg-[#161b22] text-gh-fg-dark tracking-widest uppercase">Data Quality</span>
+                        </div>
+                        <p class="text-[14px] sm:text-[15px] text-gh-muted-dark mb-5 leading-relaxed opacity-90">Full implementation review that identifies tracking gaps and improves data accuracy by up to 50%. From event tracking to custom dimensions &mdash; you&apos;ll trust your numbers again.</p>
+                        <ul class="space-y-2 mb-6 list-none">
+                            <li class="text-[14px] text-gh-muted-dark flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-gh-accent"></span> In-depth analysis of current tracking setup</li>
+                            <li class="text-[14px] text-gh-muted-dark flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-gh-accent"></span> Data quality &amp; conversion tracking validation</li>
+                            <li class="text-[14px] text-gh-muted-dark flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-gh-accent"></span> GTM tags, triggers &amp; variable audit</li>
+                            <li class="text-[14px] text-gh-muted-dark flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-gh-accent"></span> Tracking gap identification &amp; troubleshooting</li>
+                        </ul>
+                        <a href="javascript:void(0)" class="open-calendar inline-flex items-center gap-1.5 text-[14px] font-bold text-gh-accent hover:underline underline-offset-4">Get an Audit <span class="material-symbols-outlined text-[16px]">arrow_forward</span></a>
+                    </div>
+
+                    <!-- Service 2: Implementation -->
+                    <div class="bg-[#111316] border border-[#21262d] rounded-xl p-6 sm:p-8 hover:border-[#30363d] transition-all reveal group">
+                        <h3 class="text-[20px] sm:text-[22px] font-bold text-gh-fg-dark mb-3 leading-tight tracking-tight group-hover:text-gh-green transition-colors">GA4 Implementation</h3>
+                        <div class="flex flex-wrap items-center gap-2 mb-4">
+                            <span class="text-[11px] font-bold px-2 py-0.5 rounded border border-[#30363d] bg-[#161b22] text-gh-green tracking-widest uppercase">Setup</span>
+                            <span class="text-[11px] text-gh-muted-dark">•</span>
+                            <span class="text-[11px] font-bold px-2 py-0.5 rounded border border-[#30363d] bg-[#161b22] text-gh-fg-dark tracking-widest uppercase">Migration</span>
+                            <span class="text-[11px] text-gh-muted-dark">•</span>
+                            <span class="text-[11px] font-bold px-2 py-0.5 rounded border border-[#30363d] bg-[#161b22] text-gh-fg-dark tracking-widest uppercase">E-commerce</span>
+                        </div>
+                        <p class="text-[14px] sm:text-[15px] text-gh-muted-dark mb-5 leading-relaxed opacity-90">Seamless transition from Universal Analytics or fresh setup for new properties. Custom event mapping that captures every stage of the user journey, from first click to purchase.</p>
+                        <ul class="space-y-2 mb-6 list-none">
+                            <li class="text-[14px] text-gh-muted-dark flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-gh-green"></span> Custom GA4 Property &amp; Data Stream setup</li>
+                            <li class="text-[14px] text-gh-muted-dark flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-gh-green"></span> Standard &amp; Enhanced measurement config</li>
+                            <li class="text-[14px] text-gh-muted-dark flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-gh-green"></span> Full E-commerce tracking (Shopify, WC, etc.)</li>
+                            <li class="text-[14px] text-gh-muted-dark flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-gh-green"></span> Lead Form &amp; Funnel tracking implementation</li>
+                        </ul>
+                        <a href="javascript:void(0)" class="open-calendar inline-flex items-center gap-1.5 text-[14px] font-bold text-gh-green hover:underline underline-offset-4">Start Implementation <span class="material-symbols-outlined text-[16px]">arrow_forward</span></a>
+                    </div>
+
+                    <!-- Service 3: Quick Consultation -->
+                    <div class="bg-[#111316] border border-[#21262d] rounded-xl p-6 sm:p-8 hover:border-[#30363d] transition-all reveal group">
+                        <h3 class="text-[20px] sm:text-[22px] font-bold text-gh-fg-dark mb-3 leading-tight tracking-tight group-hover:text-gh-purple transition-colors">GA4 &amp; GTM Consultation</h3>
+                        <div class="flex flex-wrap items-center gap-2 mb-4">
+                            <span class="text-[11px] font-bold px-2 py-0.5 rounded border border-[#30363d] bg-[#161b22] text-gh-purple tracking-widest uppercase">1-hr Call</span>
+                            <span class="text-[11px] text-gh-muted-dark">•</span>
+                            <span class="text-[11px] font-bold px-2 py-0.5 rounded border border-[#30363d] bg-[#161b22] text-gh-fg-dark tracking-widest uppercase">Debugging</span>
+                            <span class="text-[11px] text-gh-muted-dark">•</span>
+                            <span class="text-[11px] font-bold px-2 py-0.5 rounded border border-[#30363d] bg-[#161b22] text-gh-fg-dark tracking-widest uppercase">Quick Fix</span>
+                        </div>
+                        <p class="text-[14px] sm:text-[15px] text-gh-muted-dark mb-5 leading-relaxed opacity-90">Stuck with GA4 or need fast advice? Book an hour and cut through the confusion. Save days of trial and error &mdash; we&apos;ll tackle your toughest data challenges together.</p>
+                        <ul class="space-y-2 mb-6 list-none">
+                            <li class="text-[14px] text-gh-muted-dark flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-gh-purple"></span> Quick GA4 &amp; GTM bug triage</li>
+                            <li class="text-[14px] text-gh-muted-dark flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-gh-purple"></span> Faulty report scanning &amp; diagnosis</li>
+                            <li class="text-[14px] text-gh-muted-dark flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-gh-purple"></span> Tag config checks &amp; GTM deployment</li>
+                            <li class="text-[14px] text-gh-muted-dark flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-gh-purple"></span> Critical data issues identified fast</li>
+                        </ul>
+                        <a href="https://wa.me/918010663137?text=Hi%2C%20I%27d%20like%20to%20book%20a%201-hr%20Analytics%20consultation." target="_blank" class="inline-flex items-center gap-1.5 text-[14px] font-bold text-gh-purple hover:underline underline-offset-4">WhatsApp for Consultation <span class="material-symbols-outlined text-[16px]">arrow_forward</span></a>
+                    </div>
+
+                    <!-- Service 4: Data Analysis & Reporting -->
+                    <div class="bg-[#111316] border border-[#21262d] rounded-xl p-6 sm:p-8 hover:border-[#30363d] transition-all reveal group">
+                        <h3 class="text-[20px] sm:text-[22px] font-bold text-gh-fg-dark mb-3 leading-tight tracking-tight group-hover:text-gh-yellow transition-colors">Data Analysis &amp; Reporting</h3>
+                        <div class="flex flex-wrap items-center gap-2 mb-4">
+                            <span class="text-[11px] font-bold px-2 py-0.5 rounded border border-[#30363d] bg-[#161b22] text-gh-orange tracking-widest uppercase">Looker Studio</span>
+                            <span class="text-[11px] text-gh-muted-dark">•</span>
+                            <span class="text-[11px] font-bold px-2 py-0.5 rounded border border-[#30363d] bg-[#161b22] text-gh-fg-dark tracking-widest uppercase">KPI Tracking</span>
+                            <span class="text-[11px] text-gh-muted-dark">•</span>
+                            <span class="text-[11px] font-bold px-2 py-0.5 rounded border border-[#30363d] bg-[#161b22] text-gh-fg-dark tracking-widest uppercase">Dashboards</span>
+                        </div>
+                        <p class="text-[14px] sm:text-[15px] text-gh-muted-dark mb-5 leading-relaxed opacity-90">Reports that actually answer your business questions. GA4 exploration reports and Looker Studio dashboards tailored to your goals &mdash; keeping your team aligned and strategy data-backed.</p>
+                        <ul class="space-y-2 mb-6 list-none">
+                            <li class="text-[14px] text-gh-muted-dark flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-gh-yellow"></span> Custom GA4 &amp; Looker Studio dashboard creation</li>
+                            <li class="text-[14px] text-gh-muted-dark flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-gh-yellow"></span> Stakeholder-specific KPI &amp; funnel reports</li>
+                            <li class="text-[14px] text-gh-muted-dark flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-gh-yellow"></span> Goal measurement &amp; conversion attribution</li>
+                            <li class="text-[14px] text-gh-muted-dark flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-gh-yellow"></span> Multi-source data reporting integration</li>
+                        </ul>
+                        <a href="javascript:void(0)" class="open-calendar inline-flex items-center gap-1.5 text-[14px] font-bold text-gh-orange hover:underline underline-offset-4">Get Reporting Setup <span class="material-symbols-outlined text-[16px]">arrow_forward</span></a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ WHY GA4 + GTM ═══ -->
+        <section class="py-14 md:py-20 border-b border-gh-border-dark bg-gh-canvas-dark">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6">
+                <div class="text-center mb-12 reveal">
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-gh-fg-dark mb-3 tracking-tight">Why GA4 & GTM Together?</h2>
+                    <p class="text-[14px] text-gh-muted-dark font-mono bg-gh-subtle-dark border border-gh-border-dark inline-block px-4 py-1.5 rounded-full mt-2">Tools don't fail. Implementation does.</p>
+                </div>
+                <div class="grid sm:grid-cols-2 gap-6 reveal">
+                    <div class="bg-gh-subtle-dark border border-gh-border-dark rounded-2xl p-6">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-xl bg-gh-accent/15 border border-gh-accent/25 flex items-center justify-center">
+                                <span class="material-symbols-outlined text-[20px] text-gh-accent">monitoring</span>
+                            </div>
+                            <h3 class="text-[16px] font-bold text-gh-fg-dark">What GA4 Does</h3>
+                        </div>
+                        <p class="text-[13px] text-gh-muted-dark leading-relaxed mb-4">GA4 is an analytics platform that collects and processes data about your website visitors, providing insights about user behavior — event-based, privacy-centric, and built for a cookieless future.</p>
+                        <ul class="space-y-2">
+                            <li class="flex items-center gap-2 text-[13px] text-gh-muted-dark"><span class="w-1 h-1 rounded-full bg-gh-accent flex-shrink-0"></span>Cross-platform user tracking</li>
+                            <li class="flex items-center gap-2 text-[13px] text-gh-muted-dark"><span class="w-1 h-1 rounded-full bg-gh-accent flex-shrink-0"></span>Machine learning–driven insights</li>
+                            <li class="flex items-center gap-2 text-[13px] text-gh-muted-dark"><span class="w-1 h-1 rounded-full bg-gh-accent flex-shrink-0"></span>Predictive metrics & audience creation</li>
+                            <li class="flex items-center gap-2 text-[13px] text-gh-muted-dark"><span class="w-1 h-1 rounded-full bg-gh-accent flex-shrink-0"></span>Deep Google Ads integration</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gh-subtle-dark border border-gh-border-dark rounded-2xl p-6">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-xl bg-gh-purple/15 border border-gh-purple/25 flex items-center justify-center">
+                                <span class="material-symbols-outlined text-[20px] text-gh-purple">tag</span>
+                            </div>
+                            <h3 class="text-[16px] font-bold text-gh-fg-dark">What GTM Does</h3>
+                        </div>
+                        <p class="text-[13px] text-gh-muted-dark leading-relaxed mb-4">GTM is a tag management system that lets you implement and manage tracking tags without modifying website code — giving flexibility, faster deployment, and centralized control over all tracking scripts.</p>
+                        <ul class="space-y-2">
+                            <li class="flex items-center gap-2 text-[13px] text-gh-muted-dark"><span class="w-1 h-1 rounded-full bg-gh-purple flex-shrink-0"></span>No-code tag deployment</li>
+                            <li class="flex items-center gap-2 text-[13px] text-gh-muted-dark"><span class="w-1 h-1 rounded-full bg-gh-purple flex-shrink-0"></span>Reduced developer dependency</li>
+                            <li class="flex items-center gap-2 text-[13px] text-gh-muted-dark"><span class="w-1 h-1 rounded-full bg-gh-purple flex-shrink-0"></span>Scalable tracking architecture</li>
+                            <li class="flex items-center gap-2 text-[13px] text-gh-muted-dark"><span class="w-1 h-1 rounded-full bg-gh-purple flex-shrink-0"></span>Data layer & variable management</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Benefit strip -->
+                <div class="mt-8 grid sm:grid-cols-3 gap-4 reveal">
+                    <div class="bg-gh-subtle-dark border border-gh-border-dark rounded-xl p-5 text-center">
+                        <span class="material-symbols-outlined text-[28px] text-gh-green mb-2 block">verified</span>
+                        <h4 class="text-[14px] font-bold text-gh-fg-dark mb-1">Accurate Data</h4>
+                        <p class="text-[12px] text-gh-muted-dark">Trust your numbers — every event fires correctly and every conversion is validated.</p>
+                    </div>
+                    <div class="bg-gh-subtle-dark border border-gh-border-dark rounded-xl p-5 text-center">
+                        <span class="material-symbols-outlined text-[28px] text-gh-accent mb-2 block">hub</span>
+                        <h4 class="text-[14px] font-bold text-gh-fg-dark mb-1">Platform Integration</h4>
+                        <p class="text-[12px] text-gh-muted-dark">GA4 integrated with Google Ads, Meta, Search Console, and your CRM seamlessly.</p>
+                    </div>
+                    <div class="bg-gh-subtle-dark border border-gh-border-dark rounded-xl p-5 text-center">
+                        <span class="material-symbols-outlined text-[28px] text-gh-purple mb-2 block">lock</span>
+                        <h4 class="text-[14px] font-bold text-gh-fg-dark mb-1">Privacy Compliant</h4>
+                        <p class="text-[12px] text-gh-muted-dark">GDPR & CCPA aligned — consent management, data anonymization, retention policies.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ HOW I WORK ═══ -->
+        <section class="py-14 md:py-20 border-b border-gh-border-dark bg-gh-inset-dark">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6">
+                <div class="text-center mb-10 reveal">
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-gh-fg-dark mb-3 tracking-tight">My Implementation Process</h2>
+                    <p class="text-[14px] text-gh-muted-dark">You get clarity within days, not months.</p>
+                </div>
+                <div class="bg-gh-subtle-dark border border-gh-border-dark rounded-2xl p-6 sm:p-8 reveal">
+                    <div class="space-y-5">
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-full bg-gh-accent flex items-center justify-center text-white text-[13px] font-extrabold flex-shrink-0">1</div>
+                            <div><h3 class="text-[15px] font-bold text-gh-fg-dark">Audit & Issue Identification</h3><p class="text-[13px] text-gh-muted-dark mt-0.5">Full review of existing GA4, GTM, and Ads setup. Document every gap and data discrepancy.</p></div>
+                        </div>
+                        <div class="border-l-2 border-gh-border-dark ml-4 pl-4 h-4"></div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-full bg-gh-green flex items-center justify-center text-white text-[13px] font-extrabold flex-shrink-0">2</div>
+                            <div><h3 class="text-[15px] font-bold text-gh-fg-dark">Tracking Architecture Planning</h3><p class="text-[13px] text-gh-muted-dark mt-0.5">Design the event taxonomy and data layer structure aligned with your business goals.</p></div>
+                        </div>
+                        <div class="border-l-2 border-gh-border-dark ml-4 pl-4 h-4"></div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-full bg-gh-purple flex items-center justify-center text-white text-[13px] font-extrabold flex-shrink-0">3</div>
+                            <div><h3 class="text-[15px] font-bold text-gh-fg-dark">GA4 + GTM Implementation</h3><p class="text-[13px] text-gh-muted-dark mt-0.5">Build all tags, triggers, and variables. Deploy via GTM. Connect Google Ads, Meta Pixel, CRM.</p></div>
+                        </div>
+                        <div class="border-l-2 border-gh-border-dark ml-4 pl-4 h-4"></div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-full bg-gh-yellow flex items-center justify-center text-white text-[13px] font-extrabold flex-shrink-0">4</div>
+                            <div><h3 class="text-[15px] font-bold text-gh-fg-dark">Testing & Validation</h3><p class="text-[13px] text-gh-muted-dark mt-0.5">Preview mode, real event testing via GA4 DebugView, cross-checking against CRM and server logs.</p></div>
+                        </div>
+                        <div class="border-l-2 border-gh-border-dark ml-4 pl-4 h-4"></div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-full bg-gh-orange flex items-center justify-center text-white text-[13px] font-extrabold flex-shrink-0">5</div>
+                            <div><h3 class="text-[15px] font-bold text-gh-fg-dark">Reporting & Dashboard Setup</h3><p class="text-[13px] text-gh-muted-dark mt-0.5">Looker Studio dashboard connected. You see campaign-level funnel data, KPIs, and conversion paths from day one.</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ TESTIMONIALS ═══ -->
+        <section id="testimonials" class="py-14 md:py-20 border-b border-gh-border-dark bg-gh-canvas-dark">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6">
+                <div class="text-center mb-12 reveal">
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-gh-fg-dark mb-3 tracking-tight">What Clients Say</h2>
+                    <p class="text-[14px] text-gh-muted-dark">Verified recommendations from industry leaders.</p>
+                </div>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                    <!-- Card 1 -->
+                    <div class="bg-gh-subtle-dark border border-gh-border-dark rounded-xl p-6 hover:border-gh-accent/20 transition-all reveal relative group overflow-hidden">
+                        <div class="absolute top-0 right-0 w-16 h-16 bg-[#0a66c2]/5 rotate-45 translate-x-8 -translate-y-8 group-hover:bg-[#0a66c2]/10 transition-all"></div>
+                        <div class="flex justify-between items-start mb-4">
+                            <i class="fa-brands fa-linkedin text-[#0a66c2] text-[20px]"></i>
+                            <div class="flex gap-0.5"><span class="text-gh-yellow text-[11px]">★★★★★</span></div>
+                        </div>
+                        <p class="text-[13px] text-gh-muted-dark leading-relaxed mb-6 italic">"He was instrumental in getting all our Google Analytics reporting working after we moved from WordPress to Pardot forms. He wrapped up the project by delivering a <span class="text-gh-green font-semibold">Looker Studio dashboard</span> our marketing team now uses for reporting monthly."</p>
+                        <div class="flex items-center gap-3 pt-4 border-t border-gh-border-dark">
+                            <div class="w-10 h-10 rounded-full bg-gh-accent/15 flex items-center justify-center text-gh-accent text-[14px] font-bold border border-gh-accent/20">E</div>
+                            <div>
+                                <div class="flex items-center gap-1.5">
+                                    <p class="text-[13px] font-bold text-gh-fg-dark">Emily Schacher</p>
+                                    <span class="material-symbols-outlined text-[14px] text-gh-accent">verified</span>
+                                </div>
+                                <p class="text-[11px] text-gh-muted-dark leading-tight mt-0.5">Digital Marketing Manager, Mantel Group</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="bg-gh-subtle-dark border border-gh-border-dark rounded-xl p-6 hover:border-gh-green/20 transition-all reveal relative group overflow-hidden">
+                        <div class="absolute top-0 right-0 w-16 h-16 bg-[#0a66c2]/5 rotate-45 translate-x-8 -translate-y-8 group-hover:bg-[#0a66c2]/10 transition-all"></div>
+                        <div class="flex justify-between items-start mb-4">
+                            <i class="fa-brands fa-linkedin text-[#0a66c2] text-[20px]"></i>
+                            <div class="flex gap-0.5"><span class="text-gh-yellow text-[11px]">★★★★★</span></div>
+                        </div>
+                        <p class="text-[13px] text-gh-muted-dark leading-relaxed mb-6 italic">"He set up our GTM, CAPI, Google Conversions, and GA4 infrastructure and <span class="text-gh-green font-semibold">absolutely nailed it</span>. Professional, knowledgeable, and incredibly process-driven. He went beyond the original scope and delivered a detailed internal documentation pack."</p>
+                        <div class="flex items-center gap-3 pt-4 border-t border-gh-border-dark">
+                            <div class="w-10 h-10 rounded-full bg-gh-green/15 flex items-center justify-center text-gh-green text-[14px] font-bold border border-gh-green/20">A</div>
+                            <div>
+                                <div class="flex items-center gap-1.5">
+                                    <p class="text-[13px] font-bold text-gh-fg-dark">Abhishek Kumar</p>
+                                    <span class="material-symbols-outlined text-[14px] text-gh-accent">verified</span>
+                                </div>
+                                <p class="text-[11px] text-gh-muted-dark leading-tight mt-0.5">Head of Marketing, Lorien Finance</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="bg-gh-subtle-dark border border-gh-border-dark rounded-xl p-6 hover:border-gh-purple/20 transition-all reveal relative group overflow-hidden">
+                        <div class="absolute top-0 right-0 w-16 h-16 bg-[#0a66c2]/5 rotate-45 translate-x-8 -translate-y-8 group-hover:bg-[#0a66c2]/10 transition-all"></div>
+                        <div class="flex justify-between items-start mb-4">
+                            <i class="fa-brands fa-linkedin text-[#0a66c2] text-[20px]"></i>
+                            <div class="flex gap-0.5"><span class="text-gh-yellow text-[11px]">★★★★★</span></div>
+                        </div>
+                        <p class="text-[13px] text-gh-muted-dark leading-relaxed mb-6 italic">"He <span class="text-gh-green font-semibold">swiftly resolved errors</span> in our Google Ads conversion tracking and addressed multiple issues in GTM and GA4. His expertise ensured we achieved our tracking goals in a timely and efficient manner."</p>
+                        <div class="flex items-center gap-3 pt-4 border-t border-gh-border-dark">
+                            <div class="w-10 h-10 rounded-full bg-gh-purple/15 flex items-center justify-center text-gh-purple text-[14px] font-bold border border-gh-purple/20">H</div>
+                            <div>
+                                <div class="flex items-center gap-1.5">
+                                    <p class="text-[13px] font-bold text-gh-fg-dark">Henryk Stoeckert</p>
+                                    <span class="material-symbols-outlined text-[14px] text-gh-accent">verified</span>
+                                </div>
+                                <p class="text-[11px] text-gh-muted-dark leading-tight mt-0.5">Co-founder, Tomspike.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ FAQ ═══ -->
+        <section class="py-14 md:py-20 border-b border-gh-border-dark bg-gh-inset-dark">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6">
+                <div class="text-center mb-12 reveal">
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-gh-fg-dark mb-3 tracking-tight">Frequently Asked Questions</h2>
+                    <p class="text-[14px] text-gh-muted-dark">Everything you need to know about GA4 & GTM implementation.</p>
+                </div>
+                <div class="space-y-3 reveal" id="faq-container">
+
+                    <div class="faq-item bg-gh-subtle-dark border border-gh-border-dark rounded-xl overflow-hidden">
+                        <button class="faq-toggle w-full flex items-center justify-between px-6 py-4 text-left">
+                            <span class="text-[14px] font-semibold text-gh-fg-dark">Why should I migrate from Universal Analytics to GA4?</span>
+                            <span class="material-symbols-outlined faq-icon text-[20px] text-gh-muted-dark flex-shrink-0 ml-4">add</span>
+                        </button>
+                        <div class="faq-answer px-6 pb-5">
+                            <p class="text-[13px] text-gh-muted-dark leading-relaxed">Universal Analytics stopped processing new data on July 1, 2023. GA4 offers a more privacy-focused, event-based data model with enhanced machine learning capabilities. It provides better cross-platform tracking, improved user-centric metrics, and is built to work in a cookieless future.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-gh-subtle-dark border border-gh-border-dark rounded-xl overflow-hidden">
+                        <button class="faq-toggle w-full flex items-center justify-between px-6 py-4 text-left">
+                            <span class="text-[14px] font-semibold text-gh-fg-dark">What benefits does Google Tag Manager provide?</span>
+                            <span class="material-symbols-outlined faq-icon text-[20px] text-gh-muted-dark flex-shrink-0 ml-4">add</span>
+                        </button>
+                        <div class="faq-answer px-6 pb-5">
+                            <p class="text-[13px] text-gh-muted-dark leading-relaxed">Google Tag Manager allows you to implement and manage marketing and analytics tags without modifying your website code. This provides greater flexibility, faster deployment of tracking changes, reduced dependency on developers, and centralized control over all tracking scripts on your site.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-gh-subtle-dark border border-gh-border-dark rounded-xl overflow-hidden">
+                        <button class="faq-toggle w-full flex items-center justify-between px-6 py-4 text-left">
+                            <span class="text-[14px] font-semibold text-gh-fg-dark">How long does a typical GA4 implementation take?</span>
+                            <span class="material-symbols-outlined faq-icon text-[20px] text-gh-muted-dark flex-shrink-0 ml-4">add</span>
+                        </button>
+                        <div class="faq-answer px-6 pb-5">
+                            <p class="text-[13px] text-gh-muted-dark leading-relaxed">The timeline varies based on your website complexity. A basic implementation can be completed in 2–3 weeks, while more complex setups with multiple conversion points and custom events might take 4–6 weeks to fully implement and validate.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-gh-subtle-dark border border-gh-border-dark rounded-xl overflow-hidden">
+                        <button class="faq-toggle w-full flex items-center justify-between px-6 py-4 text-left">
+                            <span class="text-[14px] font-semibold text-gh-fg-dark">Can you help with data privacy compliance (GDPR/CCPA)?</span>
+                            <span class="material-symbols-outlined faq-icon text-[20px] text-gh-muted-dark flex-shrink-0 ml-4">add</span>
+                        </button>
+                        <div class="faq-answer px-6 pb-5">
+                            <p class="text-[13px] text-gh-muted-dark leading-relaxed">Yes. I can configure your analytics implementation to align with GDPR and CCPA regulations — including consent management setup, data anonymization where needed, and data retention policies to balance analytics needs with privacy requirements.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-gh-subtle-dark border border-gh-border-dark rounded-xl overflow-hidden">
+                        <button class="faq-toggle w-full flex items-center justify-between px-6 py-4 text-left">
+                            <span class="text-[14px] font-semibold text-gh-fg-dark">Can you integrate GA4 with Google Ads, Meta, and other platforms?</span>
+                            <span class="material-symbols-outlined faq-icon text-[20px] text-gh-muted-dark flex-shrink-0 ml-4">add</span>
+                        </button>
+                        <div class="faq-answer px-6 pb-5">
+                            <p class="text-[13px] text-gh-muted-dark leading-relaxed">Yes. I can integrate GA4 with Google Ads, Google Search Console, Meta Ads, and other advertising platforms. These integrations enable better attribution, audience creation, and performance analysis across your entire marketing ecosystem.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-gh-subtle-dark border border-gh-border-dark rounded-xl overflow-hidden">
+                        <button class="faq-toggle w-full flex items-center justify-between px-6 py-4 text-left">
+                            <span class="text-[14px] font-semibold text-gh-fg-dark">What's the difference between a GA4 audit and implementation?</span>
+                            <span class="material-symbols-outlined faq-icon text-[20px] text-gh-muted-dark flex-shrink-0 ml-4">add</span>
+                        </button>
+                        <div class="faq-answer px-6 pb-5">
+                            <p class="text-[13px] text-gh-muted-dark leading-relaxed">A GA4 audit evaluates your existing setup to identify tracking gaps and data quality issues. An implementation involves setting up GA4 from scratch or completely reconfiguring an existing setup to align with your business goals and ensure accurate data collection.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-gh-subtle-dark border border-gh-border-dark rounded-xl overflow-hidden">
+                        <button class="faq-toggle w-full flex items-center justify-between px-6 py-4 text-left">
+                            <span class="text-[14px] font-semibold text-gh-fg-dark">Do you provide ongoing support after implementation?</span>
+                            <span class="material-symbols-outlined faq-icon text-[20px] text-gh-muted-dark flex-shrink-0 ml-4">add</span>
+                        </button>
+                        <div class="faq-answer px-6 pb-5">
+                            <p class="text-[13px] text-gh-muted-dark leading-relaxed">Yes. I offer ongoing support packages to maintain and enhance your analytics setup — including regular audits, adding new tracking as needed, troubleshooting issues, and guidance on how to interpret and act on the data you're collecting.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-gh-subtle-dark border border-gh-border-dark rounded-xl overflow-hidden">
+                        <button class="faq-toggle w-full flex items-center justify-between px-6 py-4 text-left">
+                            <span class="text-[14px] font-semibold text-gh-fg-dark">Can you implement enhanced ecommerce tracking in GA4?</span>
+                            <span class="material-symbols-outlined faq-icon text-[20px] text-gh-muted-dark flex-shrink-0 ml-4">add</span>
+                        </button>
+                        <div class="faq-answer px-6 pb-5">
+                            <p class="text-[13px] text-gh-muted-dark leading-relaxed">Yes. I can implement comprehensive ecommerce tracking in GA4 that captures the entire shopping journey — from product impressions and clicks to cart interactions and purchases, including revenue, transaction IDs, product details, coupon usage, and refunds.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ FINAL CTA ═══ -->
+        <section class="py-20 md:py-32 bg-gh-canvas-dark relative overflow-hidden">
+            <div class="mesh absolute inset-0 opacity-40 pointer-events-none"></div>
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center relative z-10 reveal">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gh-fg-dark mb-4 tracking-tight leading-tight">Stop Guessing. Start Scaling with <br class="hidden md:block"/><span class="text-gh-green">Accurate Data.</span></h2>
+                <p class="text-[15px] sm:text-[16px] text-gh-muted-dark mb-8 max-w-2xl mx-auto leading-relaxed">Let's fix your tracking and unlock the real insights your business deserves. Setup your high-precision analytics engine in 14 days.</p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="javascript:void(0)" class="open-calendar w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 bg-gh-green hover:bg-gh-green/90 text-white font-bold rounded-xl active:scale-95 transition-all shadow-xl shadow-gh-green/25 text-[16px]">
+                        <span class="material-symbols-outlined text-[20px]">troubleshoot</span>Get Free Tracking Audit
+                    </a>
+                    <a href="https://wa.me/918010663137?text=Hi%2C%20I%27m%20looking%20for%20GA4%20%26%20GTM%20Analytics%20services." target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold rounded-xl active:scale-95 transition-all shadow-xl shadow-[#25D366]/25 text-[16px]">
+                        <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.414 0 .004 5.412 0 12.049c0 2.123.554 4.197 1.607 6.06L0 24l6.117-1.605a11.8 11.8 0 005.925 1.585h.005c6.637 0 12.046-5.412 12.05-12.049a11.829 11.829 0 00-3.411-8.525"/></svg>
+                        WhatsApp Me
+                    </a>
+                </div>
+                <div class="mt-8 inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-gh-border-dark bg-gh-subtle-dark text-[13px] sm:text-[14px] text-gh-muted-dark font-medium">
+                    <span class="material-symbols-outlined text-[18px] text-gh-green">verified</span>
+                    No long-term contracts. Just clean, reliable data.
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-8 border-t border-gh-border-dark bg-gh-inset-dark">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+            <div class="flex flex-wrap justify-center gap-4 sm:gap-6 mb-4">
+                <a href="privacy-policy.html" class="text-sm text-gh-muted-dark hover:text-gh-fg-dark transition-colors">Privacy Policy</a>
+                <a href="terms.html" class="text-sm text-gh-muted-dark hover:text-gh-fg-dark transition-colors">Terms</a>
+                <a href="contact.html" class="text-sm text-gh-muted-dark hover:text-gh-fg-dark transition-colors">Contact</a>
+            </div>
+            <p class="text-sm text-gh-muted-dark">© 2026 Atul Kumar. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/calendar.js"></script>
+    <script>
+        // Intersection Observer for Reveal
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Scroll Logic for Sticky CTA
+        const heroSection = document.querySelector('section');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > (heroSection?.offsetHeight || 600) - 100) {
+                document.body.classList.add('scrolled-past-hero');
+            } else {
+                document.body.classList.remove('scrolled-past-hero');
+            }
+        });
+
+        // Mobile Menu Logic
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.onclick = () => {
+                mobileMenu.classList.toggle('hidden');
+                const icon = mobileMenuButton.querySelector('.material-symbols-outlined');
+                if (icon) icon.textContent = mobileMenu.classList.contains('hidden') ? 'menu' : 'close';
+            };
+
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.onclick = () => {
+                    mobileMenu.classList.add('hidden');
+                };
+            });
+        }
+
+        // FAQ accordion
+        document.querySelectorAll('.faq-toggle').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.closest('.faq-item');
+                const isOpen = item.classList.contains('open');
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+                if (!isOpen) item.classList.add('open');
+            });
+        });
+
+        const leadForm = document.getElementById("leadCaptureForm");
+        const leadSuccess = document.getElementById("leadSuccess");
+        const salesEmail = "connect@kumaratul.com";
+
+        if (leadForm) {
+            leadForm.addEventListener("submit", (event) => {
+                event.preventDefault();
+                const formData = new FormData(leadForm);
+                const name = formData.get("name");
+                const subject = `GA4/GTM Audit Request - ${name}`;
+                const body = `Name: ${name}\nEmail: ${formData.get("email")}\nWebsite: ${formData.get("website")}\nGoal: ${formData.get("goal")}\n\nSource: GA4-GTM LP`;
+                const mailtoUrl = `mailto:${salesEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                window.location.href = mailtoUrl;
+                leadSuccess.classList.remove("hidden");
+                leadForm.reset();
+            });
+        }
+    </script>
+
+    <!-- Sticky Mobile CTA -->
+    <div class="sticky-cta-mobile">
+        <div class="flex items-center gap-3">
+            <a href="#services" class="flex-1 bg-gh-green text-white text-[14px] font-bold py-3 rounded-lg text-center active:scale-95 transition-all">
+                Fix My Tracking
+            </a>
+            <a href="javascript:void(0)" class="open-calendar w-12 h-11 flex items-center justify-center bg-gh-subtle-dark border border-gh-border-dark rounded-lg text-gh-fg-dark transition-all active:scale-95">
+                <span class="material-symbols-outlined text-[20px]">calendar_today</span>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

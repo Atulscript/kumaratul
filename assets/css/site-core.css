@@ -1,0 +1,105 @@
+/* Unified Design System for Kumaratul.com CTAs & Animations */
+
+/* 1. Core Design Tokens */
+:root {
+    --gh-accent: #2f81f7;
+    --gh-green: #238636;
+    --gh-purple: #a371f7;
+    --gh-orange: #db6d28;
+    --gh-border: #30363d;
+    --gh-bg-dark: #0d1117;
+    --accent-rgb: 47, 129, 247; /* Default Blue */
+}
+
+/* 2. Ultimate CTA Highlighters */
+.btn-primary-highlight {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    animation: cta-pulse-glow 5s infinite;
+    z-index: 10;
+    background-color: rgb(var(--accent-rgb)) !important;
+}
+
+.btn-primary-highlight:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(var(--accent-rgb), 0.3);
+}
+
+.btn-primary-highlight:active {
+    transform: scale(0.98);
+}
+
+/* Premium Shimmer Effect */
+.btn-primary-highlight::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -60%;
+    width: 20%;
+    height: 200%;
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.15) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: rotate(25deg);
+    animation: shimmer-swipe 4s infinite cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes shimmer-swipe {
+    0% { left: -60%; }
+    50%, 100% { left: 140%; }
+}
+
+@keyframes cta-pulse-glow {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(var(--accent-rgb), 0.2); }
+    50% { box-shadow: 0 0 20px 4px rgba(var(--accent-rgb), 0.4); }
+}
+
+/* 3. Global Reveal Animations */
+.reveal-fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal-fade-up.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 4. Glassmorphism Utilities */
+.glass-effect {
+    background: rgba(13, 17, 23, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--gh-border);
+}
+
+/* 5. Sticky CTA (Service Pages) */
+.sticky-cta-mobile {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 12px 16px;
+    background: rgba(13, 17, 23, 0.95);
+    backdrop-filter: blur(8px);
+    border-top: 1px solid var(--gh-border);
+    z-index: 1000;
+    display: none; /* Controlled by media query and scroll */
+}
+
+@media (max-width: 640px) {
+    .scrolled-past-hero .sticky-cta-mobile {
+        display: block;
+        animation: slide-up-cta 0.4s ease-out;
+    }
+}
+
+@keyframes slide-up-cta {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+}
