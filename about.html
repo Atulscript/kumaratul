@@ -142,17 +142,6 @@
         }
         .glass:hover .card-accent { opacity: 1; }
 
-        /* Marquee Animation for Tools */
-        @keyframes marquee {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-        .marquee-container {
-            display: flex;
-            width: fit-content;
-            animation: marquee 30s linear infinite;
-        }
-        .marquee-container:hover { animation-play-state: paused; }
     </style>
 </head>
 
@@ -434,12 +423,12 @@ ROI Focused</div>
                         <div class="glass p-6 rounded-2xl">
                             <div class="mb-8">
                                 <span class="text-xs font-bold text-gh-muted-dark uppercase tracking-widest mb-4 block">Brands managed:</span>
-                                <div class="flex flex-wrap gap-3">
+                                <div class="flex flex-wrap gap-3 whitespace-nowrap">
                                     <span class="px-3 py-1 bg-gh-subtle-dark border border-gh-border-dark rounded-md text-[13px] font-semibold text-gh-green">Veeba</span>
                                     <span class="px-3 py-1 bg-gh-subtle-dark border border-gh-border-dark rounded-md text-[13px] font-semibold text-gh-accent">VGL (Vadodara Gas)</span>
                                     <span class="px-3 py-1 bg-gh-subtle-dark border border-gh-border-dark rounded-md text-[13px] font-semibold text-gh-purple">ICare Eye Hospital</span>
                                     <span class="px-3 py-1 bg-gh-subtle-dark border border-gh-border-dark rounded-md text-[13px] font-semibold text-gh-orange">Bridal Journey</span>
-                                    <span class="px-3 py-1 bg-gh-subtle-dark border border-gh-border-dark rounded-md text-[13px] font-semibold">+ 20 others</span>
+                                    <span class="px-3 py-1 bg-gh-subtle-dark border border-gh-border-dark rounded-md text-[13px] font-semibold text-gh-muted-dark opacity-70">+ 20 others</span>
                                 </div>
                             </div>
                             <div class="grid md:grid-cols-3 gap-6">
@@ -580,7 +569,7 @@ ROI Focused</div>
             <div class="max-w-6xl mx-auto px-4 sm:px-6">
                 <div class="flex flex-col md:flex-row items-end justify-between mb-16 reveal">
                     <div class="max-w-xl">
-                        <span class="text-gh-accent font-bold text-[12px] uppercase tracking-widest mb-4 block">Proven Performance</span>
+                        <span class="text-gh-accent font-bold text-[12px] uppercase tracking-widest mb-4 block whitespace-nowrap">Proven Performance</span>
                         <h2 class="text-4xl font-extrabold text-gh-fg-dark tracking-tight leading-tight">Case Studies & Impact</h2>
                     </div>
                 </div>
@@ -634,30 +623,38 @@ ROI Focused</div>
         <!-- ═══════════════════════════════════════════════ -->
         <!-- TECH STACK MARQUEE -->
         <!-- ═══════════════════════════════════════════════ -->
-        <section class="py-16 bg-gh-inset-dark overflow-hidden border-b border-gh-border-dark">
-            <div class="max-w-6xl mx-auto px-4 mb-10 text-center">
+        <section class="py-8 bg-gh-inset-dark overflow-hidden border-b border-gh-border-dark">
+            <div class="max-w-6xl mx-auto px-4 mb-4 text-center">
                 <span class="text-xs font-bold text-gh-muted-dark uppercase tracking-[0.2em]">Tools & Eco-system</span>
             </div>
             
             <div class="relative">
-                <div class="marquee-container gap-8 md:gap-16">
+                <div class="marquee-container gap-8 md:gap-16 whitespace-nowrap">
                     <!-- Set 1 -->
-                    <div class="flex items-center gap-3 text-gh-muted-dark hover:text-gh-accent transition-colors"><i class="fa-brands fa-google text-2xl"></i> <span class="font-bold">Google Ads</span></div>
-                    <div class="flex items-center gap-3 text-gh-muted-dark hover:text-gh-accent transition-colors"><i class="fa-brands fa-meta text-2xl"></i> <span class="font-bold">Meta Ads</span></div>
-                    <div class="flex items-center gap-3 text-gh-muted-dark hover:text-gh-purple transition-colors"><span class="material-symbols-outlined">analytics</span> <span class="font-bold">GA4</span></div>
-                    <div class="flex items-center gap-3 text-gh-muted-dark hover:text-gh-purple transition-colors"><span class="material-symbols-outlined">settings_input_component</span> <span class="font-bold">GTM</span></div>
-                    <div class="flex items-center gap-3 text-gh-muted-dark hover:text-gh-orange transition-colors"><span class="material-symbols-outlined">hub</span> <span class="font-bold">Zoho CRM</span></div>
-                    <div class="flex items-center gap-3 text-gh-muted-dark hover:text-gh-green transition-colors"><i class="fa-brands fa-whatsapp text-2xl"></i> <span class="font-bold">WhatsApp API</span></div>
-                    <div class="flex items-center gap-3 text-gh-muted-dark"><span class="material-symbols-outlined">dashboard</span> <span class="font-bold">Looker Studio</span></div>
+                    <div class="flex items-center gap-3 text-gh-muted-dark hover:text-gh-accent transition-colors flex-shrink-0"><i class="fa-brands fa-google text-2xl"></i> <span class="font-bold">Google Ads</span></div>
+                    <div class="flex items-center gap-3 text-gh-muted-dark hover:text-gh-accent transition-colors flex-shrink-0"><i class="fa-brands fa-meta text-2xl"></i> <span class="font-bold">Meta Ads</span></div>
+                    <div class="flex items-center gap-3 text-gh-muted-dark hover:text-gh-purple transition-colors flex-shrink-0"><span class="material-symbols-outlined">analytics</span> <span class="font-bold">GA4</span></div>
+                    <div class="flex items-center gap-3 text-gh-muted-dark hover:text-gh-purple transition-colors flex-shrink-0"><span class="material-symbols-outlined">settings_input_component</span> <span class="font-bold">GTM</span></div>
+                    <div class="flex items-center gap-3 text-gh-muted-dark hover:text-gh-orange transition-colors flex-shrink-0"><span class="material-symbols-outlined">hub</span> <span class="font-bold">Zoho CRM</span></div>
+                    <div class="flex items-center gap-3 text-gh-muted-dark hover:text-gh-green transition-colors flex-shrink-0"><i class="fa-brands fa-whatsapp text-2xl"></i> <span class="font-bold">WhatsApp Marketing</span></div>
+                    <div class="flex items-center gap-3 text-gh-muted-dark flex-shrink-0"><span class="material-symbols-outlined">dashboard</span> <span class="font-bold">Looker Studio</span></div>
+                    <div class="flex items-center gap-3 text-gh-muted-dark flex-shrink-0"><span class="material-symbols-outlined">code</span> <span class="font-bold">HTML/CSS</span></div>
+                    <div class="flex items-center gap-3 text-gh-muted-dark flex-shrink-0"><i class="fa-brands fa-js text-2xl"></i> <span class="font-bold">Javascript</span></div>
+                    <div class="flex items-center gap-3 text-gh-muted-dark flex-shrink-0"><span class="material-symbols-outlined">mail</span> <span class="font-bold">Email Marketing</span></div>
+                    <div class="flex items-center gap-3 text-gh-muted-dark flex-shrink-0"><span class="material-symbols-outlined">database</span> <span class="font-bold">SQL</span></div>
                     
                     <!-- Repeat for endless effect -->
-                    <div class="flex items-center gap-3 text-gh-muted-dark hover:text-gh-accent transition-colors"><i class="fa-brands fa-google text-2xl"></i> <span class="font-bold">Google Ads</span></div>
-                    <div class="flex items-center gap-3 text-gh-muted-dark hover:text-gh-meta transition-colors"><i class="fa-brands fa-meta text-2xl"></i> <span class="font-bold">Meta Ads</span></div>
-                    <div class="flex items-center gap-3 text-gh-muted-dark hover:text-gh-purple transition-colors"><span class="material-symbols-outlined">analytics</span> <span class="font-bold">GA4</span></div>
-                    <div class="flex items-center gap-3 text-gh-muted-dark hover:text-gh-purple transition-colors"><span class="material-symbols-outlined">settings_input_component</span> <span class="font-bold">GTM</span></div>
-                    <div class="flex items-center gap-3 text-gh-muted-dark hover:text-gh-orange transition-colors"><span class="material-symbols-outlined">hub</span> <span class="font-bold">Zoho CRM</span></div>
-                    <div class="flex items-center gap-3 text-gh-muted-dark hover:text-gh-green transition-colors"><i class="fa-brands fa-whatsapp text-2xl"></i> <span class="font-bold">WhatsApp API</span></div>
-                    <div class="flex items-center gap-3 text-gh-muted-dark"><span class="material-symbols-outlined">dashboard</span> <span class="font-bold">Looker Studio</span></div>
+                    <div class="flex items-center gap-3 text-gh-muted-dark hover:text-gh-accent transition-colors flex-shrink-0"><i class="fa-brands fa-google text-2xl"></i> <span class="font-bold">Google Ads</span></div>
+                    <div class="flex items-center gap-3 text-gh-muted-dark hover:text-gh-meta transition-colors flex-shrink-0"><i class="fa-brands fa-meta text-2xl"></i> <span class="font-bold">Meta Ads</span></div>
+                    <div class="flex items-center gap-3 text-gh-muted-dark hover:text-gh-purple transition-colors flex-shrink-0"><span class="material-symbols-outlined">analytics</span> <span class="font-bold">GA4</span></div>
+                    <div class="flex items-center gap-3 text-gh-muted-dark hover:text-gh-purple transition-colors flex-shrink-0"><span class="material-symbols-outlined">settings_input_component</span> <span class="font-bold">GTM</span></div>
+                    <div class="flex items-center gap-3 text-gh-muted-dark hover:text-gh-orange transition-colors flex-shrink-0"><span class="material-symbols-outlined">hub</span> <span class="font-bold">Zoho CRM</span></div>
+                    <div class="flex items-center gap-3 text-gh-muted-dark hover:text-gh-green transition-colors flex-shrink-0"><i class="fa-brands fa-whatsapp text-2xl"></i> <span class="font-bold">WhatsApp Marketing</span></div>
+                    <div class="flex items-center gap-3 text-gh-muted-dark flex-shrink-0"><span class="material-symbols-outlined">dashboard</span> <span class="font-bold">Looker Studio</span></div>
+                    <div class="flex items-center gap-3 text-gh-muted-dark flex-shrink-0"><span class="material-symbols-outlined">code</span> <span class="font-bold">HTML/CSS</span></div>
+                    <div class="flex items-center gap-3 text-gh-muted-dark flex-shrink-0"><i class="fa-brands fa-js text-2xl"></i> <span class="font-bold">Javascript</span></div>
+                    <div class="flex items-center gap-3 text-gh-muted-dark flex-shrink-0"><span class="material-symbols-outlined">mail</span> <span class="font-bold">Email Marketing</span></div>
+                    <div class="flex items-center gap-3 text-gh-muted-dark flex-shrink-0"><span class="material-symbols-outlined">database</span> <span class="font-bold">SQL</span></div>
                 </div>
             </div>
         </section>

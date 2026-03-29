@@ -103,3 +103,19 @@
     from { transform: translateY(100%); }
     to { transform: translateY(0); }
 }
+
+/* 6. Marquee Animation for Tools */
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.marquee-container {
+    display: flex;
+    width: fit-content;
+    animation: marquee 40s linear infinite; /* Slightly slower for better readability */
+}
+
+.marquee-container:hover {
+    animation-play-state: paused;
+}
