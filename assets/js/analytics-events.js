@@ -1,5 +1,7 @@
-window.onclick = function(e) {
+window.addEventListener("click", function(e) {
     if (e.target.closest('.open-calendar')) {
-        gtag('event', 'Clicked On Book Meeting');
+        console.log("Event Fired");
+
+        gtag('event', 'clicked_book_meeting');
     }
-};
+});
