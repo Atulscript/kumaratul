@@ -1,32 +1,36 @@
 /**
- * Universal CTA & Navigation Tracking Logic
- * Captures clicks on all elements with the 'cta-track' class.
+ * Universal Unified Tracking Logic
+ * Captures clicks on elements with 'cta-track' (buttons/CTAs) 
+ * or 'nav-track' (navigation menu items).
  */
 document.addEventListener('click', function(e) {
-    const cta = e.target.closest('.cta-track');
+    // Check for both CTA buttons and Nav items
+    const tracker = e.target.closest('.cta-track, .nav-track');
     
-    if (cta) {
-        const ctaData = {
-            event: 'track_cta',
-            cta_text: cta.innerText.trim() || cta.getAttribute('aria-label') || 'unlabeled',
-            cta_service: cta.getAttribute('data-cta-service') || 'general',
-            cta_location: cta.getAttribute('data-cta-location') || 'body',
-            cta_type: cta.getAttribute('data-cta-type') || 'click',
+    if (tracker) {
+        const isNav = tracker.classList.contains('nav-track');
+        
+        const trackingData = {
+            event: isNav ? 'track_navigation' : 'track_cta',
+            cta_text: tracker.innerText.trim() || tracker.getAttribute('aria-label') || 'unlabeled',
+            cta_service: tracker.getAttribute('data-cta-service') || 'general',
+            cta_location: tracker.getAttribute('data-cta-location') || 'body',
+            cta_type: tracker.getAttribute('data-cta-type') || (isNav ? 'navigation' : 'click'),
             page_path: window.location.pathname,
-            url: cta.href || 'no-link'
+            url: tracker.href || 'no-link'
         };
 
         // Push to GTM DataLayer
         window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push(ctaData);
+        window.dataLayer.push(trackingData);
 
         // Optional debugging
-        console.log('📊 CTA Tracked:', ctaData);
+        console.log(`📊 ${isNav ? 'Nav' : 'CTA'} Tracked:`, trackingData);
     }
 });
 
 /**
- * Handle Form Submissions Tracking
+ * Global Form Submission Tracking
  */
 document.addEventListener('submit', function(e) {
     const form = e.target;
