@@ -1,7 +1,9 @@
-window.addEventListener("click", function(e) {
-    if (e.target.closest('.open-calendar')) {
-        console.log("Event Fired");
+window.onclick = function(e) {
+    let el = e.target;
+    // Optimized: using closest() to catch the button even if an icon inside is clicked
+    let cta = el.closest('.cta-btn');
 
-        gtag('event', 'clicked_book_meeting');
+    if (cta) {
+        console.log("CTA Clicked:", cta.innerText.trim() || cta.getAttribute('aria-label') || "Generic CTA");
     }
-});
+};
