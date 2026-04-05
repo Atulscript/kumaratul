@@ -119,10 +119,11 @@
 
             <!-- Center: Menu (Desktop) -->
             <div class="hidden md:flex items-center justify-center flex-1 gap-1">
+                <a class="cta-track px-3 py-1.5 rounded-md text-[14px] font-medium text-gh-muted-dark hover:bg-gh-subtle-dark hover:text-gh-fg-dark transition-colors"
+                    href="./" data-cta-service="Meta Ads" data-cta-location="header" data-cta-type="navigation">🏠 Home</a>
                 <a class="px-3 py-1.5 rounded-md text-[14px] font-medium text-gh-muted-dark hover:bg-gh-subtle-dark hover:text-gh-fg-dark transition-colors"
-                    href="./">🏠 Home</a>
-                <a class="px-3 py-1.5 rounded-md text-[14px] font-medium text-gh-muted-dark hover:bg-gh-subtle-dark hover:text-gh-fg-dark transition-colors"
-                    href="about.html" data-cta-service="Meta Ads" data-cta-location="header" data-cta-type="navigation">📑 About</a>
+                    href="about.html" data-cta-service="Meta Ads" data-cta-location="header"
+                    data-cta-type="navigation">📑 About</a>
 
                 <!-- What I Do Dropdown -->
                 <div class="relative group/what">
@@ -134,7 +135,8 @@
                     <div
                         class="absolute top-full left-1/2 -translate-x-1/2 mt-1 w-64 bg-gh-canvas-dark border border-gh-border-dark rounded-xl shadow-2xl py-2 hidden group-hover/what:block z-50 overflow-hidden">
                         <a href="ga4-gtm.html"
-                            class="flex items-center gap-3 px-4 py-2.5 text-[13px] text-gh-muted-dark hover:bg-gh-subtle-dark hover:text-gh-fg-dark transition-colors">
+                            class="cta-track flex items-center gap-3 px-4 py-2.5 text-[13px] text-gh-muted-dark hover:bg-gh-subtle-dark hover:text-gh-fg-dark transition-colors"
+                            data-cta-service="analytics" data-cta-location="header" data-cta-type="navigation">
                             <span class="material-symbols-outlined text-[18px] text-gh-green">analytics</span>
                             <div class="flex flex-col">
                                 <span class="font-semibold text-gh-fg-dark">Analytics & Tracking</span>
@@ -142,7 +144,8 @@
                             </div>
                         </a>
                         <a href="zoho-crm.html"
-                            class="flex items-center gap-3 px-4 py-2.5 text-[13px] text-gh-muted-dark hover:bg-gh-subtle-dark hover:text-gh-fg-dark transition-colors">
+                            class="cta-track flex items-center gap-3 px-4 py-2.5 text-[13px] text-gh-muted-dark hover:bg-gh-subtle-dark hover:text-gh-fg-dark transition-colors"
+                            data-cta-service="CRM Automation" data-cta-location="header" data-cta-type="navigation">
                             <span class="material-symbols-outlined text-[18px] text-gh-yellow">hub</span>
                             <div class="flex flex-col">
                                 <span class="font-semibold text-gh-fg-dark">CRM & Automation</span>
@@ -150,7 +153,8 @@
                             </div>
                         </a>
                         <a href="google-ads.html"
-                            class="flex items-center gap-3 px-4 py-2.5 text-[13px] text-gh-muted-dark hover:bg-gh-subtle-dark hover:text-gh-fg-dark transition-colors">
+                            class="cta-track flex items-center gap-3 px-4 py-2.5 text-[13px] text-gh-muted-dark hover:bg-gh-subtle-dark hover:text-gh-fg-dark transition-colors"
+                            data-cta-service="google Ads" data-cta-location="header" data-cta-type="navigation">
                             <span class="material-symbols-outlined text-[18px] text-gh-accent">ads_click</span>
                             <div class="flex flex-col">
                                 <span class="font-semibold text-gh-fg-dark">Google Ads</span>
@@ -158,7 +162,8 @@
                             </div>
                         </a>
                         <a href="meta-ads.html"
-                            class="flex items-center gap-3 px-4 py-2.5 text-[13px] text-gh-muted-dark hover:bg-gh-subtle-dark hover:text-gh-fg-dark transition-colors">
+                            class="cta-track flex items-center gap-3 px-4 py-2.5 text-[13px] text-gh-muted-dark hover:bg-gh-subtle-dark hover:text-gh-fg-dark transition-colors"
+                            data-cta-service="Meta Ads" data-cta-location="header" data-cta-type="navigation">
                             <span class="material-symbols-outlined text-[18px] text-gh-purple">thumb_up</span>
                             <div class="flex flex-col">
                                 <span class="font-semibold text-gh-fg-dark">Meta Ads</span>
@@ -169,13 +174,15 @@
                 </div>
 
                 <a class="px-3 py-1 rounded-md text-[14px] font-medium text-gh-muted-dark hover:bg-gh-subtle-dark hover:text-gh-fg-dark transition-colors"
-                    href="contact.html" data-cta-service="Meta Ads" data-cta-location="header" data-cta-type="navigation">💬 Contact</a>
+                    href="contact.html" data-cta-service="Meta Ads" data-cta-location="header"
+                    data-cta-type="navigation">💬 Contact</a>
             </div>
 
             <!-- Right: CTA -->
             <div class="flex items-center gap-3">
                 <a class="cta-track hidden sm:flex items-center gap-1.5 px-4 py-1.5 rounded-lg bg-gh-accent text-[13px] font-bold text-white hover:bg-gh-accent/90 transition-all shadow-lg shadow-gh-accent/20 open-calendar"
-                    href="javascript:void(0)" data-cta-service="Meta Ads" data-cta-location="header" data-cta-type="scheduling">
+                    href="javascript:void(0)" data-cta-service="Meta Ads" data-cta-location="header"
+                    data-cta-type="scheduling">
                     <span class="material-symbols-outlined text-[18px]">calendar_today</span> Book a Discovery Call
                 </a>
                 <button id="mobile-menu-button"
@@ -189,28 +196,30 @@
         <div id="mobile-menu"
             class="hidden md:hidden bg-gh-canvas-dark border-b border-gh-border-dark overflow-hidden transition-all duration-300">
             <div class="px-4 py-4 space-y-1">
-                <a class="block px-3 py-2 rounded-md text-[15px] font-medium text-gh-muted-dark hover:bg-gh-subtle-dark hover:text-gh-fg-dark"
-                    href="./">🏠 Home</a>
-                <a class="block px-3 py-2 rounded-md text-[15px] font-medium text-gh-muted-dark hover:bg-gh-subtle-dark hover:text-gh-fg-dark"
-                    href="about.html">📑 About</a>
+                <a class="cta-track block px-3 py-2 rounded-md text-[15px] font-medium text-gh-muted-dark hover:bg-gh-subtle-dark hover:text-gh-fg-dark"
+                    href="./" data-cta-service="Meta Ads" data-cta-location="header" data-cta-type="navigation">🏠 Home</a>
+                <a class="cta-track block px-3 py-2 rounded-md text-[15px] font-medium text-gh-muted-dark hover:bg-gh-subtle-dark hover:text-gh-fg-dark"
+                    href="about.html" data-cta-service="Meta Ads" data-cta-location="header" data-cta-type="navigation">📑 About</a>
 
                 <div class="py-2">
                     <p class="px-3 text-[11px] font-bold text-gh-muted-dark uppercase tracking-wider mb-1">🛠️ What I Do
                     </p>
-                    <a class="block px-3 py-2 pl-6 rounded-md text-[14px] text-gh-muted-dark hover:bg-gh-subtle-dark hover:text-gh-fg-dark"
-                        href="ga4-gtm.html">📊 Analytics & Tracking</a>
-                    <a class="block px-3 py-2 pl-6 rounded-md text-[14px] text-gh-muted-dark hover:bg-gh-subtle-dark hover:text-gh-fg-dark"
-                        href="zoho-crm.html">🏗️ CRM & Automation</a>
-                    <a class="block px-3 py-2 pl-6 rounded-md text-[14px] text-gh-muted-dark hover:bg-gh-subtle-dark hover:text-gh-fg-dark"
-                        href="google-ads.html">🎯 Google Ads</a>
-                    <a class="block px-3 py-2 pl-6 rounded-md text-[14px] text-gh-muted-dark hover:bg-gh-subtle-dark hover:text-gh-fg-dark"
-                        href="meta-ads.html">📱 Meta Ads</a>
+                    <a class="cta-track block px-3 py-2 pl-6 rounded-md text-[14px] text-gh-muted-dark hover:bg-gh-subtle-dark hover:text-gh-fg-dark"
+                        href="ga4-gtm.html" data-cta-service="analytics" data-cta-location="header" data-cta-type="navigation">📊 Analytics & Tracking</a>
+                    <a class="cta-track block px-3 py-2 pl-6 rounded-md text-[14px] text-gh-muted-dark hover:bg-gh-subtle-dark hover:text-gh-fg-dark"
+                        href="zoho-crm.html" data-cta-service="CRM Automation" data-cta-location="header" data-cta-type="navigation">🏗️ CRM & Automation</a>
+                    <a class="cta-track block px-3 py-2 pl-6 rounded-md text-[14px] text-gh-muted-dark hover:bg-gh-subtle-dark hover:text-gh-fg-dark"
+                        href="google-ads.html" data-cta-service="google Ads" data-cta-location="header" data-cta-type="navigation">🎯 Google Ads</a>
+                    <a class="cta-track block px-3 py-2 pl-6 rounded-md text-[14px] text-gh-muted-dark hover:bg-gh-subtle-dark hover:text-gh-fg-dark"
+                        href="meta-ads.html" data-cta-service="Meta Ads" data-cta-location="header" data-cta-type="navigation">📱 Meta Ads</a>
                 </div>
 
-                <a class="block px-3 py-2 rounded-md text-[15px] font-medium text-gh-muted-dark hover:bg-gh-subtle-dark hover:text-gh-fg-dark"
-                    href="contact.html" data-cta-service="Meta Ads" data-cta-location="header" data-cta-type="navigation">💬 Contact</a>
+                <a class="cta-track block px-3 py-2 rounded-md text-[15px] font-medium text-gh-muted-dark hover:bg-gh-subtle-dark hover:text-gh-fg-dark"
+                    href="contact.html" data-cta-service="Meta Ads" data-cta-location="header"
+                    data-cta-type="navigation">💬 Contact</a>
                 <a class="cta-track block px-3 py-2.5 mt-4 rounded-xl text-[14px] font-bold text-white bg-gh-accent hover:bg-gh-accent/90 transition-all text-center shadow-lg shadow-gh-accent/20 open-calendar"
-                    href="javascript:void(0)" data-cta-service="Meta Ads" data-cta-location="header" data-cta-type="scheduling">
+                    href="javascript:void(0)" data-cta-service="Meta Ads" data-cta-location="header"
+                    data-cta-type="scheduling">
                     Book a Discovery Call
                 </a>
             </div>
@@ -280,7 +289,8 @@
                             <span class="flex items-center gap-1">
                                 <span class="material-symbols-outlined text-[14px]">mail</span>
                                 <a href="mailto:connect@kumaratul.com" class="cta-track text-gh-accent hover:underline"
-                                    data-cta-service="Meta Ads" data-cta-location="hero" data-cta-type="contact">connect@kumaratul.com</a>
+                                    data-cta-service="Meta Ads" data-cta-location="hero"
+                                    data-cta-type="contact">connect@kumaratul.com</a>
                             </span>
                         </div>
 
@@ -576,7 +586,8 @@
                         </ul>
                         <a href="google-ads.html"
                             class="cta-track inline-flex items-center gap-1.5 text-[14px] font-bold text-gh-accent hover:underline underline-offset-4"
-                            data-cta-service="google Ads" data-cta-location="body_section" data-cta-type="navigation">View Paid Ads
+                            data-cta-service="google Ads" data-cta-location="body_section"
+                            data-cta-type="navigation">View Paid Ads
                             Services <span class="material-symbols-outlined text-[16px]">arrow_forward</span></a>
                     </div>
                     <!-- Card 2 -->
@@ -609,7 +620,8 @@
                         <a href="https://wa.me/918010663137?text=Hi%2C%20I%27d%20like%20to%20book%20a%201-hr%20Analytics%20consultation."
                             target="_blank"
                             class="cta-track inline-flex items-center gap-1.5 text-[14px] font-bold text-gh-purple hover:underline underline-offset-4"
-                            data-cta-service="analytics" data-cta-location="body_section" data-cta-type="whatsapp">WhatsApp for
+                            data-cta-service="analytics" data-cta-location="body_section"
+                            data-cta-type="whatsapp">WhatsApp for
                             Consultation <span class="material-symbols-outlined text-[16px]">arrow_forward</span></a>
                     </div>
                     <!-- Card 3 -->
@@ -642,7 +654,8 @@
                         </ul>
                         <a href="zoho-crm.html"
                             class="cta-track inline-flex items-center gap-1.5 text-[14px] font-bold text-gh-yellow hover:underline underline-offset-4"
-                            data-cta-service="CRM Automation" data-cta-location="body_section" data-cta-type="navigation">Explore CRM
+                            data-cta-service="CRM Automation" data-cta-location="body_section"
+                            data-cta-type="navigation">Explore CRM
                             Automation <span class="material-symbols-outlined text-[16px]">arrow_forward</span></a>
                     </div>
                     <!-- Card 4 -->
@@ -677,7 +690,8 @@
                         <a href="https://wa.me/918010663137?text=Hi%2C%20I%27d%20like%20to%20get%20a%20Funnel%20Review."
                             target="_blank"
                             class="cta-track inline-flex items-center gap-1.5 text-[14px] font-bold text-gh-red hover:underline underline-offset-4"
-                            data-cta-service="Meta Ads" data-cta-location="body_section" data-cta-type="whatsapp">Get Funnel Review
+                            data-cta-service="Meta Ads" data-cta-location="body_section" data-cta-type="whatsapp">Get
+                            Funnel Review
                             <span class="material-symbols-outlined text-[16px]">arrow_forward</span></a>
                     </div>
                 </div>
@@ -944,7 +958,8 @@
                 <div class="flex flex-col sm:flex-row gap-3 justify-center">
                     <a href="javascript:void(0)"
                         class="cta-track open-calendar w-full sm:w-auto px-6 py-3.5 sm:py-3 bg-gh-accent hover:bg-gh-accent/90 text-white font-bold rounded-xl btn-primary-highlight transition-all shadow-lg shadow-gh-accent/20 text-[15px]"
-                        data-cta-service="Meta Ads" data-cta-location="body_section" data-cta-type="scheduling">Get Free Growth
+                        data-cta-service="Meta Ads" data-cta-location="body_section" data-cta-type="scheduling">Get Free
+                        Growth
                         Audit</a>
                     <a href="https://wa.me/918010663137" target="_blank"
                         class="cta-track w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 sm:py-3 bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold rounded-xl transition-all shadow-lg shadow-[#25D366]/20 text-[15px]"
