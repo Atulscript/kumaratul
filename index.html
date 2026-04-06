@@ -3,8 +3,20 @@
 
 <head>
     <meta charset="utf-8" />
-    <!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) {
+    <!-- Google Tag Manager & Consent Mode v2 -->
+    <script>
+        // Consent Mode v2 Default
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('consent', 'default', {
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_ad_personalization': 'denied',
+            'analytics_storage': 'denied',
+            'wait_for_metadata': 500
+        });
+        
+        (function (w, d, s, l, i) {
             w[l] = w[l] || []; w[l].push({
                 'gtm.start':
                     new Date().getTime(), event: 'gtm.js'
@@ -26,7 +38,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=JetBrains+Mono:wght@400;700&display=swap"
         rel="stylesheet" media="print" onload="this.media='all'" />
     <noscript>
         <link
@@ -77,13 +89,23 @@
         };
     </script>
 
+    <style>
+        /* CRITICAL ABOVE-THE-FOLD CSS (Inlined for FCP) */
+        :root { --gh-accent: #2f81f7; --gh-bg-dark: #0d1117; }
+        body { background: var(--gh-bg-dark); color: #e6edf3; }
+        .hero-section { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+        @media (min-width: 768px) { .hero-section { padding-top: 4rem; padding-bottom: 4rem; } }
+        .glass { background: rgba(13,17,23,0.7); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+        .reveal { opacity: 0; transform: translateY(10px); }
+        .reveal.active { opacity: 1; transform: translateY(0); transition: all 0.6s cubic-bezier(0.22,1,0.36,1); }
+        .marquee-container { display: flex; width: fit-content; animation: marquee 30s linear infinite; }
+        @media (max-width: 768px) { .marquee-container { animation-duration: 60s; } } /* Slower on mobile to save CPU */
+        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+    </style>
     <style type="text/tailwindcss">
         :root {
             --accent-rgb: 47, 129, 247;
         }
-        .glass { background: rgba(13,17,23,0.7); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
-        .reveal { opacity: 0; transform: translateY(20px); transition: all 0.8s cubic-bezier(0.22,1,0.36,1); }
-        .reveal.active { opacity: 1; transform: translateY(0); }
         .status-pulse { animation: pulse-sm 2s cubic-bezier(0.4,0,0.6,1) infinite; }
         @keyframes pulse-sm { 0%,100%{opacity:1} 50%{opacity:.5} }
         .gradient-text { background: linear-gradient(90deg,#2f81f7,#a371f7,#2f81f7); background-size:200% auto; -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; animation:gradient-flow 4s linear infinite; }
@@ -242,7 +264,11 @@
                             <div
                                 class="relative w-24 h-24 sm:w-32 sm:h-32 rounded-full overflow-hidden border-2 border-gh-border-dark bg-gh-canvas-dark">
                                 <img alt="Atul Kumar" class="w-full h-full object-cover rounded-full"
-                                    src="assets/images/profile.png" loading="eager" width="128" height="128" />
+                                    src="assets/images/profile.png" 
+                                    srcset="assets/images/profile.png 128w, assets/images/profile.png 256w"
+                                    sizes="(max-width: 640px) 96px, 128px"
+                                    fetchpriority="high"
+                                    loading="eager" width="128" height="128" />
                             </div>
                             <div
                                 class="absolute bottom-1 right-1 w-4 h-4 bg-gh-green border-4 border-gh-canvas-dark rounded-full">
@@ -457,91 +483,38 @@
             </div>
         </section>
 
-        <!-- ═══ TECH STACK STRIP ═══ -->
-        <section class="py-8 bg-gh-inset-dark overflow-hidden border-b border-gh-border-dark">
+        <!-- ═══ TECH STACK STRIP (Optimized DOM) ═══ -->
+        <section class="py-8 bg-gh-inset-dark overflow-hidden border-b border-gh-border-dark marquee-section">
             <div class="max-w-6xl mx-auto px-4 mb-4 text-center">
                 <span class="text-xs font-bold text-gh-muted-dark uppercase tracking-[0.2em]">Tools & Eco-system</span>
             </div>
 
-            <div class="relative">
+            <div class="relative overflow-hidden">
                 <div class="marquee-container gap-8 md:gap-16 whitespace-nowrap">
-                    <!-- Set 1 -->
-                    <div
-                        class="flex items-center gap-3 text-gh-muted-dark hover:text-gh-accent transition-colors flex-shrink-0">
-                        <i class="fa-brands fa-google text-2xl"></i> <span class="font-bold">Google Ads</span>
+                    <!-- Unit 1 -->
+                    <div class="flex items-center gap-12 text-gh-muted-dark font-bold text-sm">
+                        <span class="flex items-center gap-2"><i class="fa-brands fa-google text-2xl"></i> Google Ads</span>
+                        <span class="flex items-center gap-2"><i class="fa-brands fa-meta text-2xl"></i> Meta Ads</span>
+                        <span class="flex items-center gap-2"><span class="material-symbols-outlined">analytics</span> GA4</span>
+                        <span class="flex items-center gap-2"><span class="material-symbols-outlined">settings_input_component</span> GTM</span>
+                        <span class="flex items-center gap-2"><span class="material-symbols-outlined">hub</span> Zoho CRM</span>
+                        <span class="flex items-center gap-2"><i class="fa-brands fa-whatsapp text-2xl"></i> WhatsApp</span>
+                        <span class="flex items-center gap-2"><span class="material-symbols-outlined">dashboard</span> Looker</span>
+                        <span class="flex items-center gap-2"><i class="fa-brands fa-js text-2xl"></i> Javascript</span>
+                        <span class="flex items-center gap-2"><span class="material-symbols-outlined">database</span> SQL</span>
                     </div>
-                    <div
-                        class="flex items-center gap-3 text-gh-muted-dark hover:text-gh-accent transition-colors flex-shrink-0">
-                        <i class="fa-brands fa-meta text-2xl"></i> <span class="font-bold">Meta Ads</span>
+                    <!-- Unit 2 (Repeat for animation) -->
+                    <div class="flex items-center gap-12 text-gh-muted-dark font-bold text-sm" aria-hidden="true">
+                        <span class="flex items-center gap-2"><i class="fa-brands fa-google text-2xl"></i> Google Ads</span>
+                        <span class="flex items-center gap-2"><i class="fa-brands fa-meta text-2xl"></i> Meta Ads</span>
+                        <span class="flex items-center gap-2"><span class="material-symbols-outlined">analytics</span> GA4</span>
+                        <span class="flex items-center gap-2"><span class="material-symbols-outlined">settings_input_component</span> GTM</span>
+                        <span class="flex items-center gap-2"><span class="material-symbols-outlined">hub</span> Zoho CRM</span>
+                        <span class="flex items-center gap-2"><i class="fa-brands fa-whatsapp text-2xl"></i> WhatsApp</span>
+                        <span class="flex items-center gap-2"><span class="material-symbols-outlined">dashboard</span> Looker</span>
+                        <span class="flex items-center gap-2"><i class="fa-brands fa-js text-2xl"></i> Javascript</span>
+                        <span class="flex items-center gap-2"><span class="material-symbols-outlined">database</span> SQL</span>
                     </div>
-                    <div
-                        class="flex items-center gap-3 text-gh-muted-dark hover:text-gh-purple transition-colors flex-shrink-0">
-                        <span class="material-symbols-outlined">analytics</span> <span class="font-bold">GA4</span>
-                    </div>
-                    <div
-                        class="flex items-center gap-3 text-gh-muted-dark hover:text-gh-purple transition-colors flex-shrink-0">
-                        <span class="material-symbols-outlined">settings_input_component</span> <span
-                            class="font-bold">GTM</span>
-                    </div>
-                    <div
-                        class="flex items-center gap-3 text-gh-muted-dark hover:text-gh-orange transition-colors flex-shrink-0">
-                        <span class="material-symbols-outlined">hub</span> <span class="font-bold">Zoho CRM</span>
-                    </div>
-                    <div
-                        class="flex items-center gap-3 text-gh-muted-dark hover:text-gh-green transition-colors flex-shrink-0">
-                        <i class="fa-brands fa-whatsapp text-2xl"></i> <span class="font-bold">WhatsApp Marketing</span>
-                    </div>
-                    <div class="flex items-center gap-3 text-gh-muted-dark flex-shrink-0"><span
-                            class="material-symbols-outlined">dashboard</span> <span class="font-bold">Looker
-                            Studio</span></div>
-                    <div class="flex items-center gap-3 text-gh-muted-dark flex-shrink-0"><span
-                            class="material-symbols-outlined">code</span> <span class="font-bold">HTML/CSS</span></div>
-                    <div class="flex items-center gap-3 text-gh-muted-dark flex-shrink-0"><i
-                            class="fa-brands fa-js text-2xl"></i> <span class="font-bold">Javascript</span></div>
-                    <div class="flex items-center gap-3 text-gh-muted-dark flex-shrink-0"><span
-                            class="material-symbols-outlined">mail</span> <span class="font-bold">Email Marketing</span>
-                    </div>
-                    <div class="flex items-center gap-3 text-gh-muted-dark flex-shrink-0"><span
-                            class="material-symbols-outlined">database</span> <span class="font-bold">SQL</span></div>
-
-                    <!-- Repeat for endless effect -->
-                    <div
-                        class="flex items-center gap-3 text-gh-muted-dark hover:text-gh-accent transition-colors flex-shrink-0">
-                        <i class="fa-brands fa-google text-2xl"></i> <span class="font-bold">Google Ads</span>
-                    </div>
-                    <div
-                        class="flex items-center gap-3 text-gh-muted-dark hover:text-gh-meta transition-colors flex-shrink-0">
-                        <i class="fa-brands fa-meta text-2xl"></i> <span class="font-bold">Meta Ads</span>
-                    </div>
-                    <div
-                        class="flex items-center gap-3 text-gh-muted-dark hover:text-gh-purple transition-colors flex-shrink-0">
-                        <span class="material-symbols-outlined">analytics</span> <span class="font-bold">GA4</span>
-                    </div>
-                    <div
-                        class="flex items-center gap-3 text-gh-muted-dark hover:text-gh-purple transition-colors flex-shrink-0">
-                        <span class="material-symbols-outlined">settings_input_component</span> <span
-                            class="font-bold">GTM</span>
-                    </div>
-                    <div
-                        class="flex items-center gap-3 text-gh-muted-dark hover:text-gh-orange transition-colors flex-shrink-0">
-                        <span class="material-symbols-outlined">hub</span> <span class="font-bold">Zoho CRM</span>
-                    </div>
-                    <div
-                        class="flex items-center gap-3 text-gh-muted-dark hover:text-gh-green transition-colors flex-shrink-0">
-                        <i class="fa-brands fa-whatsapp text-2xl"></i> <span class="font-bold">WhatsApp Marketing</span>
-                    </div>
-                    <div class="flex items-center gap-3 text-gh-muted-dark flex-shrink-0"><span
-                            class="material-symbols-outlined">dashboard</span> <span class="font-bold">Looker
-                            Studio</span></div>
-                    <div class="flex items-center gap-3 text-gh-muted-dark flex-shrink-0"><span
-                            class="material-symbols-outlined">code</span> <span class="font-bold">HTML/CSS</span></div>
-                    <div class="flex items-center gap-3 text-gh-muted-dark flex-shrink-0"><i
-                            class="fa-brands fa-js text-2xl"></i> <span class="font-bold">Javascript</span></div>
-                    <div class="flex items-center gap-3 text-gh-muted-dark flex-shrink-0"><span
-                            class="material-symbols-outlined">mail</span> <span class="font-bold">Email Marketing</span>
-                    </div>
-                    <div class="flex items-center gap-3 text-gh-muted-dark flex-shrink-0"><span
-                            class="material-symbols-outlined">database</span> <span class="font-bold">SQL</span></div>
                 </div>
             </div>
         </section>
@@ -1011,6 +984,9 @@
     </div>
 
     <script src="assets/js/calendar.js"></script>
+    <!-- GSAP for Smooth Parallax -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="assets/js/analytics-events.js"></script>
     <script>
         // Scroll Logic for Sticky CTA
@@ -1045,6 +1021,54 @@
                 if (icon) icon.textContent = 'menu';
             });
         });
+
+        // ════ ANTIGRAVITY (Smooth Parallax) with GSAP ════
+        (function antigravityScroll() {
+            // Check for performance / reduction of motion
+            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            const isHighPerformance = (navigator.hardwareConcurrency || 4) >= 4;
+
+            if (!prefersReducedMotion && isHighPerformance && window.gsap) {
+                gsap.registerPlugin(ScrollTrigger);
+
+                // Antigravity for Hero Section
+                gsap.to('.lg\\:col-span-2.reveal', {
+                    yPercent: -15,
+                    ease: "none",
+                    scrollTrigger: {
+                        trigger: ".hero-section",
+                        start: "top top",
+                        end: "bottom top",
+                        scrub: true
+                    }
+                });
+
+                gsap.to('.lg\\:col-span-3.reveal', {
+                    yPercent: 10,
+                    ease: "none",
+                    scrollTrigger: {
+                        trigger: ".hero-section",
+                        start: "top top",
+                        end: "bottom top",
+                        scrub: true
+                    }
+                });
+
+                // Subtle Antigravity for Expertise Cards
+                document.querySelectorAll('#expertise .reveal').forEach(card => {
+                    gsap.to(card, {
+                        y: -30,
+                        ease: "power1.inOut",
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top bottom",
+                            end: "bottom top",
+                            scrub: 1
+                        }
+                    });
+                });
+            }
+        })();
     </script>
 </body>
 
