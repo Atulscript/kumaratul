@@ -29,7 +29,6 @@
     <link rel="preload" as="image" href="assets/images/profile.png" fetchpriority="high">
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfMZhrib2Bg-4.woff2" crossorigin>
     <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport" />
     <meta name="theme-color" content="#0d1117" />
     <title>Atul Kumar | Performance Marketing &amp; Revenue Systems Specialist</title>
@@ -253,7 +252,7 @@
 
     <main class="pt-4">
         <!-- ═══ HERO ═══ -->
-        <section class="relative py-10 md:py-16 overflow-hidden bg-gh-canvas-dark border-b border-gh-border-dark">
+        <section class="hero-section relative py-10 md:py-16 overflow-hidden bg-gh-canvas-dark border-b border-gh-border-dark">
             <div class="max-w-6xl mx-auto px-4 sm:px-6">
                 <div class="grid lg:grid-cols-5 gap-8 lg:gap-12 items-start">
                     <!-- Left: Mobile-first hero profile -->
@@ -1034,7 +1033,7 @@
                 gsap.registerPlugin(ScrollTrigger);
 
                 // Antigravity for Hero Section
-                gsap.to('.lg\\:col-span-2.reveal', {
+                gsap.to('.hero-section .lg\\:col-span-2', {
                     yPercent: -15,
                     ease: "none",
                     scrollTrigger: {
@@ -1045,7 +1044,7 @@
                     }
                 });
 
-                gsap.to('.lg\\:col-span-3.reveal', {
+                gsap.to('.hero-section .lg\\:col-span-3', {
                     yPercent: 10,
                     ease: "none",
                     scrollTrigger: {
